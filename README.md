@@ -1,13 +1,12 @@
 # Awesome-VLM-Papers-And-Models
 A most Frontend Collection and survey of vision-language model papers, and models GitHub repository
 
-Below we compile *awesome* papers and model and github repositories that  
-- **evaluate** Large Language Models (LLMs) from a perspective of Social Science.
-- **align** LLMs from a perspective of Social Science.
-- employ LLMs to **facilitate research, address issues, and enhance tools** in Social Science.
+Below we compile *awesome* papers and model and github repositories that 
+- **State-of-the-Art VLMs** Collection of VLMs from 2022-2024.
+- **applications** applications of VLMs in embodied AI, robotics, etc.
+- **evaluate** VLM benchmarks and corresponding link to the works
 - contribute **surveys**, **perspectives**, and **datasets** on the above topics.
 
-The above taxonomies are by no means orthogonal. For example, evaluations require simulations. We categorize these papers based on our understanding of their focus. This collection has **a special focus on Psychology and Human Values**.
 
 Welcome to contribute and discuss!
 
@@ -21,7 +20,7 @@ Welcome to contribute and discuss!
 
 * 1. [📚 Survey](#Survey)
 * 2. [🗂️ Dataset](#Dataset)
-* 3. [🔎 Evaluating LLM](#EvaluatingLLM)
+* 3. [🔎 Evaluating VLM](#EvaluatingLLM)
 	* 3.1. [❤️ Value](#Value)
 	* 3.2. [🩷 Personality](#Personality)
 	* 3.3. [🔞 Morality](#Morality)
