@@ -65,45 +65,46 @@ Welcome to contribute and discuss!
 
 ### Datasets for VLM 
 
+
 | Benchmark Dataset                                        | Metric Type        |     Evaluation Method    | Source                 | Size (K) | Project 							|
 |----------------------------------------------------------|:------------------:|:------------------------:|:-----------------------:|:---------:|:----------------------------------:|
-| [MMTBench](https://arxiv.org/pdf/2404.16006)         	        | Multiple Choice    | Acc                      | AI Experts               | 30.1 | [Project](https://github.com/tylin/coco-caption)|
-| [MM-Vet](https://arxiv.org/pdf/2308.02490)					| LLM Eval           | Acc                      | Human                    | 0.2  | [Project](https://github.com/yuweihao/MM-Vet) |
-| [MM-En/CN](https://arxiv.org/pdf/2307.06281) 					 | Multiple Choice    | Acc                      | Human                    | 3.2   |[Project](https://arxiv.org/pdf/2307.06281v3)|
+| [MMTBench](https://arxiv.org/pdf/2404.16006)         	        | Multiple Choice    | Acc                      | AI Experts               | 30.1 | [Github](https://github.com/tylin/coco-caption)|
+| [MM-Vet](https://arxiv.org/pdf/2308.02490)					| LLM Eval           | Acc                      | Human                    | 0.2  | [Github](https://github.com/yuweihao/MM-Vet) |
+| [MM-En/CN](https://arxiv.org/pdf/2307.06281) 					 | Multiple Choice    | Acc                      | Human                    | 3.2   |[Github](https://github.com/open-compass/VLMEvalKit)|
 | [GQA](https://arxiv.org/abs/2305.13245)						| Answer Matching	| Acc, Consistency, Validity | Seed with Synthetic | 22,000 |[Project](https://cs.stanford.edu/people/dorarad/gqa/index.html)|
 | [VCR](https://arxiv.org/abs/1811.10830)						| Multiple Choice    | Acc    					| MTurks                  | 290| [Project](https://visualcommonsense.com/)|
-| [VQAv2](https://arxiv.org/pdf/1505.00468)						| Yes/No; Answer Matching | Acc, F1  			| MTurks                  | 1,100| [Project](https://github.com/salesforce/LAVIS/blob/main/dataset_card/vqav2.md)|
+| [VQAv2](https://arxiv.org/pdf/1505.00468)						| Yes/No; Answer Matching | Acc, F1  			| MTurks                  | 1,100| [Github](https://github.com/salesforce/LAVIS/blob/main/dataset_card/vqav2.md)|
 | [MMMU](https://arxiv.org/pdf/2311.16502)						| Answer Matching; Multiple Choice				| Acc    | College Students        | 11.5 |[Project](https://mmmu-benchmark.github.io/) |
-| [SEEDBench](https://arxiv.org/pdf/2307.16125)					| Multiple Choice    | Acc                      | Synthetic                | 19 |[Project](https://github.com/AILab-CVC/SEED-Bench) |
-| [RealWorld QA](https://x.ai/blog/grok-1.5v)					| Multiple Choice    | Acc                      | Human                    | 0.765|[Project](https://huggingface.co/datasets/visheratin/realworldqa)
+| [SEEDBench](https://arxiv.org/pdf/2307.16125)					| Multiple Choice    | Acc                      | Synthetic                | 19 |[Github](https://github.com/AILab-CVC/SEED-Bench) |
+| [RealWorld QA](https://x.ai/blog/grok-1.5v)					| Multiple Choice    | Acc                      | Human                    | 0.765|[Huggingface](https://huggingface.co/datasets/visheratin/realworldqa)
 | [MMMU-Pro](https://arxiv.org/pdf/2409.02813)					| Multiple Choice    | Acc                      | Human                    | 3.64  |[Project](https://mmmu-benchmark.github.io/#leaderboard)|
 | [DPG-Bench](https://arxiv.org/pdf/2403.05135)					| Semantic Alignment | Alignment Score          | Synthetic                | 1.06   |[Project](https://ella-diffusion.github.io)|
 | [MSCOCO-30K](https://arxiv.org/pdf/1405.0312)					| BLEU, Rouge, Similarity | Similarity Score      | MTurks                  | 30 |[Project](https://cocodataset.org/#home)|
-| [TextVQA](https://arxiv.org/pdf/1904.08920)					| Answer Matching    | Acc                      | CrowdSource              | 45		|[Project](https://github.com/facebookresearch/mmf)|
+| [TextVQA](https://arxiv.org/pdf/1904.08920)					| Answer Matching    | Acc                      | CrowdSource              | 45		|[Github](https://github.com/facebookresearch/mmf)|
 | [DocVQA](https://arxiv.org/pdf/2007.00398)					| Answer Matching    | Acc                      | CrowdSource              | 50 |[Project](https://www.docvqa.org/)|
-| [CMMLU](https://arxiv.org/pdf/2306.09212)						| Multiple Choice    | Acc                      | College Students         | 11.5|[Project](https://github.com/haonan-li/CMMLU)|
+| [CMMLU](https://arxiv.org/pdf/2306.09212)						| Multiple Choice    | Acc                      | College Students         | 11.5|[Github](https://github.com/haonan-li/CMMLU)|
 | [C-Eval](https://arxiv.org/pdf/2305.08322)					| Multiple Choice    | Acc                      | Human                    | 13.9|[Project](https://cevalbenchmark.com/)|
-| [TextVQA](https://arxiv.org/pdf/1904.08920)					| Answer Matching    | Acc                      | Expert Human             | 28.6	|[Project](https://github.com/facebookresearch/mmf)|
+| [TextVQA](https://arxiv.org/pdf/1904.08920)					| Answer Matching    | Acc                      | Expert Human             | 28.6	|[Github](https://github.com/facebookresearch/mmf)|
 | [MathVista](https://arxiv.org/pdf/2310.02255)					| Answer Matching/Multiple Choice | Acc              | Human                    | 6.15  |[Project](https://mathvista.github.io/)|
 | [MathVision](https://arxiv.org/pdf/2402.14804) 				| Answer Matching/Multiple Choice | Acc              | College Students         | 3.04 |[Project](https://mathvision-cuhk.github.io/)|
-| [OCRBench](https://arxiv.org/pdf/2305.07895)					| Answer Matching (ANLS) | Acc                   | Human                    | 1 |[Project](https://github.com/Yuliang-Liu/MultimodalOCR)|
-| [MME](https://arxiv.org/pdf/2306.13394)						| Yes/No             | Acc                      | Human                    | 2.8 |[Project](https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models/tree/Evaluation)|
+| [OCRBench](https://arxiv.org/pdf/2305.07895)					| Answer Matching (ANLS) | Acc                   | Human                    | 1 |[Github](https://github.com/Yuliang-Liu/MultimodalOCR)|
+| [MME](https://arxiv.org/pdf/2306.13394)						| Yes/No             | Acc                      | Human                    | 2.8 |[Github](https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models/tree/Evaluation)|
 | [InfographicVQA](https://arxiv.org/pdf/2104.12756) 			| Answer Matching    | Acc                      | CrowdSource              | 30|[Project](https://www.docvqa.org/)|
 | [AI2D](https://arxiv.org/pdf/1603.07396)						| Answer Matching    | Acc                      | CrowdSource              | 1 |[Project](https://ai2d.med.upenn.edu/)|
-| [ChartQA](https://arxiv.org/abs/2203.10244)					| Answer Matching    | Acc                      | CrowdSource/Synthetic    | 32.7 |[Project](https://github.com/vis-nlp/ChartQA)|
-| [GenEval](https://arxiv.org/pdf/2310.11513)					| CLIPScore/GenEval  | Similarity Score         | MTurks                  | 1.2	|[Project](https://github.com/djghosh13/geneval)|
+| [ChartQA](https://arxiv.org/abs/2203.10244)					| Answer Matching    | Acc                      | CrowdSource/Synthetic    | 32.7 |[Github](https://github.com/vis-nlp/ChartQA)|
+| [GenEval](https://arxiv.org/pdf/2310.11513)					| CLIPScore/GenEval  | Similarity Score         | MTurks                  | 1.2	|[Github](https://github.com/djghosh13/geneval)|
 | [T2I-CompBench](https://arxiv.org/pdf/2307.06350)				| Multiple Metrics   | Similarity Score         | Synthetic                | 6 |[Project](https://karine-h.github.io/T2I-CompBench/)|
-| [HallusionBench](https://arxiv.org/pdf/2310.14566)			| Yes/No             | Acc                      | Human                    | 1.13|[Project](https://github.com/tianyi-lab/HallusionBench)|
-| [POPE](https://arxiv.org/pdf/2305.10355)						| Yes/No             | Acc/Precision/Recall/F1  | Human                    | 9 |[Project](https://github.com/RUCAIBox/POPE)|
-| [MMLU](https://arxiv.org/pdf/2009.03300)						| Multiple Choice    | Acc                      | Human                    | 15.9	|[Project](https://github.com/hendrycks/test)|
+| [HallusionBench](https://arxiv.org/pdf/2310.14566)			| Yes/No             | Acc                      | Human                    | 1.13|[Github](https://github.com/tianyi-lab/HallusionBench)|
+| [POPE](https://arxiv.org/pdf/2305.10355)						| Yes/No             | Acc/Precision/Recall/F1  | Human                    | 9 |[Github](https://github.com/RUCAIBox/POPE)|
+| [MMLU](https://arxiv.org/pdf/2009.03300)						| Multiple Choice    | Acc                      | Human                    | 15.9	|[Github](https://github.com/hendrycks/test)|
 | [MMStar](https://arxiv.org/pdf/2403.20330)					| Multiple Choice    | Acc                      | Human                    | 1.5 |[Project](https://mmstar-benchmark.github.io/)|
-| [M3GIA](https://arxiv.org/pdf/2406.05343)						| Multiple Choice    | Acc                      | Human                    | 1.8                   |[Project](https://huggingface.co/datasets/Songweii/M3GIA)|
-| [InternetAGIEval](https://arxiv.org/pdf/2304.06364)			| Multiple Choice/Answer Matching | Acc/F1      | Human                    | 8.06    |[Project](https://github.com/ruixiangcui/AGIEval)|
+| [M3GIA](https://arxiv.org/pdf/2406.05343)						| Multiple Choice    | Acc                      | Human                    | 1.8 |[Huggingface](https://huggingface.co/datasets/Songweii/M3GIA)|
+| [InternetAGIEval](https://arxiv.org/pdf/2304.06364)			| Multiple Choice/Answer Matching | Acc/F1      | Human                    | 8.06    |[Github](https://github.com/ruixiangcui/AGIEval)|
 | [EgoSchem](https://arxiv.org/pdf/2308.09126)					| Multiple Choice    | Acc                      | Synthetic/Human          | 5     |[Project](https://egoschema.github.io/)|
-| [MVBench](https://arxiv.org/pdf/2311.17005)					| Multiple Choice    | Acc                      | Synthetic/Human          | 4    |[Project](https://github.com/OpenGVLab/Ask-Anything)|
-| [MLVU](https://arxiv.org/pdf/2406.04264) 						| Multiple Choice    | Acc                      | Synthetic/Human          | 2.6   |[Project](https://github.com/JUNJIE99/MLVU)|
+| [MVBench](https://arxiv.org/pdf/2311.17005)					| Multiple Choice    | Acc                      | Synthetic/Human          | 4    |[Github](https://github.com/OpenGVLab/Ask-Anything)|
+| [MLVU](https://arxiv.org/pdf/2406.04264) 						| Multiple Choice    | Acc                      | Synthetic/Human          | 2.6   |[Github](https://github.com/JUNJIE99/MLVU)|
 | [VideoMME](https://arxiv.org/pdf/2405.21075)  | Multiple Choice    | Acc                      | Experts                  | 2.7                   |[Project](https://video-mme.github.io/)|
-| [Perception-Test](https://arxiv.org/pdf/2305.13786)			| Multiple Choice    | Acc                      | CrowdSource       | 11.6 |[Project](https://github.com/google-deepmind/perception_test)|
+| [Perception-Test](https://arxiv.org/pdf/2305.13786)			| Multiple Choice    | Acc                      | CrowdSource       | 11.6 |[Github](https://github.com/google-deepmind/perception_test)|
 
 
 
