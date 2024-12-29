@@ -18,7 +18,7 @@ Welcome to contribute and discuss!
 
 ## Table of Contents
 
-* 1. [📚 Survey](#Survey)
+* 1. [📚 SoTA VLMs](#Survey)
 * 2. [🗂️ Dataset](#Dataset)
 * 3. [🔎 Evaluating VLM](#EvaluatingLLM)
 	* 3.1. [❤️ Value](#Value)
