@@ -19,7 +19,7 @@ Welcome to contribute and discuss!
 ## Table of Contents
 
 * 1. [📚 SoTA VLMs](#Survey)
-* 2. [🗂️ Dataset](#Dataset)
+* 2. [🗂️ Dataset and Evaluation](#Dataset)
 * 3. [🔎 Evaluating VLM](#EvaluatingLLM)
 	* 3.1. [❤️ Value](#Value)
 	* 3.2. [🩷 Personality](#Personality)
@@ -63,7 +63,7 @@ Welcome to contribute and discuss!
 - **COMPO: Community Preferences for Language Model Personalization**, 2024.10, [[paper]](https://arxiv.org/pdf/2410.16027).
 - **Cultural Commonsense Knowledge for Intercultural Dialogues**, CIKM 2024, [[paper]](https://dl.acm.org/doi/pdf/10.1145/3627673.3679768), [[dataset]](https://mango.mpi-inf.mpg.de/).
 
-### Datasets for VLM 
+### Datasets and Evaluation for VLM 
 
 
 | Benchmark Dataset                                        | Metric Type        |     Evaluation Method    | Source                 | Size (K) | Project 							|
