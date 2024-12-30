@@ -3,8 +3,8 @@ A most Frontend Collection and survey of vision-language model papers, and model
 
 Below we compile *awesome* papers and model and github repositories that 
 - **State-of-the-Art VLMs** Collection of VLMs from 2022-2024.
-- **applications** applications of VLMs in embodied AI, robotics, etc.
-- **evaluate** VLM benchmarks and corresponding link to the works
+- **Evaluate** VLM benchmarks and corresponding link to the works
+- **Applications** applications of VLMs in embodied AI, robotics, etc.
 - contribute **surveys**, **perspectives**, and **datasets** on the above topics.
 
 
@@ -36,7 +36,7 @@ Welcome to contribute and discuss!
 ##  1. <a name='vlms'></a>📚 SoTA VLMs 
 | Model                                                        | Year | Architecture   | Training Data               | Parameters     | Vision Encoder/Tokenizer                       | Pretrained Backbone Model                          |
 |--------------------------------------------------------------|------|----------------|-----------------------------|----------------|-----------------------------------------------|---------------------------------------------------|
-| [VisualBERT](https://arxiv.org/pdf/1908.03557)                                                   | 2019 | Encoder-only   | COCO                        | 110M           | Faster R-CNN                                  | Pretrained from scratch                           |
+| [VisualBERT](https://arxiv.org/pdf/1908.03557)                                                   | 2019 | Encoder-only   | [COCO](https://cocodataset.org/#home)                        | 110M           | Faster R-CNN                                  | Pretrained from scratch                           |
 | [CLIP](https://arxiv.org/pdf/2103.00020)                                                         | 2021 | Encoder-decoder| 400M image-text pairs       | 63M-355M       | ViT/ResNet                                   | Pretrained from scratch                           |
 | [BLIP](https://arxiv.org/pdf/2201.12086)                                                         | 2022 | Encoder-decoder| 129M image-text pairs       | 223M-400M      | ViT-B/L/g                                    | Pretrained from scratch                           |
 | [Flamingo](https://arxiv.org/pdf/2204.14198)                                                     | 2022 | Decoder-only   | 185M images                 | 80B            | Custom                                       | Chinchilla                                        |
@@ -56,17 +56,11 @@ Welcome to contribute and discuss!
 | [LLaMA 3.2-vision](https://arxiv.org/pdf/2407.21783)                                            | 2024 | Decoder-only   | Undisclosed                 | 11B-90B        | CLIP                                         | LLaMA-3.1                                        |
 | [Baichuan Ocean Mini](https://arxiv.org/pdf/2410.08565)                                          | 2024 | Decoder-only   | Image/Video/Audio/Text      | 7B             | CLIP ViT-L/14                                | Baichuan                                         |
 | [TransFusion](https://arxiv.org/pdf/2408.11039)                                                  | 2024 | Encoder-decoder| Undisclosed                 | 7B             | VAE Encoder                                  | Pretrained from scratch on transformer architecture |
-| [DeepSeek-VL2](https://arxiv.org/pdf/2412.10302)                                                 | 2024 | Decoder-only   | WiT, WikiHow                | 4.5B x 74      | SigLIP/SAMB                                  | DeepSeekMoE                                      |
+| [DeepSeek-VL2](https://arxiv.org/pdf/2412.10302)                                                 | 2024 | Decoder-only   | [WiT](https://huggingface.co/datasets/google/wit), [WikiHow](https://huggingface.co/datasets/ajibawa-2023/WikiHow)                | 4.5B x 74      | SigLIP/SAMB                                  | DeepSeekMoE                                      |
 
 
 
-##  2. <a name='Dataset'></a>🗂️ Dataset
-
-- ⭐️ **ValueBench: Towards Comprehensively Evaluating Value Orientations and Understanding of Large Language Models**, ACL 2024, [[paper]](https://arxiv.org/abs/2406.04214), [[code]](https://github.com/Value4AI/ValueBench).
-- https://lit.eecs.umich.edu/downloads.html
-- **COMPO: Community Preferences for Language Model Personalization**, 2024.10, [[paper]](https://arxiv.org/pdf/2410.16027).
-- **Cultural Commonsense Knowledge for Intercultural Dialogues**, CIKM 2024, [[paper]](https://dl.acm.org/doi/pdf/10.1145/3627673.3679768), [[dataset]](https://mango.mpi-inf.mpg.de/).
-
+##  2. <a name='Dataset'></a>🗂️ Benchmarks and Evaluation
 ### Datasets and Evaluation for VLM 
 
 
