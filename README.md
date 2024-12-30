@@ -56,6 +56,32 @@ Welcome to contribute and discuss!
 - **From Instructions to Intrinsic Human Values -- A Survey of Alignment Goals for Big Models**, 2023.08, [[paper]](https://arxiv.org/abs/2308.12014), [[repo]](https://github.com/ValueCompass/Alignment-Goal-Survey).
 
 
+| Model                                                        | Year | Architecture   | Training Data               | Parameters     | Vision Encoder/Tokenizer                       | Pretrained Backbone Model                          |
+|--------------------------------------------------------------|------|----------------|-----------------------------|----------------|-----------------------------------------------|---------------------------------------------------|
+| [VisualBERT](https://arxiv.org/pdf/1908.03557)                                                   | 2019 | Encoder-only   | COCO                        | 110M           | Faster R-CNN                                  | Pretrained from scratch                           |
+| [CLIP](https://arxiv.org/pdf/2103.00020)                                                         | 2021 | Encoder-decoder| 400M image-text pairs       | 63M-355M       | ViT/ResNet                                   | Pretrained from scratch                           |
+| [BLIP](https://arxiv.org/pdf/2201.12086)                                                         | 2022 | Encoder-decoder| 129M image-text pairs       | 223M-400M      | ViT-B/L/g                                    | Pretrained from scratch                           |
+| [Flamingo](https://arxiv.org/pdf/2204.14198)                                                     | 2022 | Decoder-only   | 185M images                 | 80B            | Custom                                       | Chinchilla                                        |
+| [BLIP-2](https://arxiv.org/pdf/2301.12597)                                                       | 2023 | Encoder-decoder| 129M image-text pairs       | 7B-13B         | ViT-g                                        | Open Pretrained Transformer (OPT)                |
+| [GPT-4V](https://arxiv.org/pdf/2309.17421)                                                       | 2023 | Decoder-only   | Undisclosed                 | Undisclosed    | Undisclosed                                  | Undisclosed                                       |
+| [Gemini](https://arxiv.org/pdf/2312.11805)                                                       | 2023 | Decoder-only   | Undisclosed                 | Undisclosed    | Undisclosed                                  | Undisclosed                                       |
+| [LLaVA-1.5](https://arxiv.org/pdf/2310.03744)                                                  | 2023 | Decoder-only   | 558K image-text pairs       | 13B            | CLIP ViT-L/14                                | Vicuna                                           |
+| [PaLM-E](https://arxiv.org/pdf/2303.03378)                                                       | 2023 | Decoder-only   | Multiple sources            | 562B           | ViT                                          | PaLM                                             |
+| [CogVLM](https://arxiv.org/pdf/2311.03079)                                                       | 2023 | Encoder-decoder| 100M image-text pairs       | 18B            | CLIP ViT-L/14                                | Vicuna                                           |
+| [InstructBLIP](https://arxiv.org/pdf/2305.06500)                                                 | 2023 | Encoder-decoder| Multiple sources            | 13B            | ViT                                          | Flan-T5, Vicuna                                  |
+| [InternVL](https://arxiv.org/pdf/2312.14238)                                                     | 2023 | Encoder-decoder| 800M image-text pairs       | 7B/20B         | Eva CLIP ViT-g                               | QLLaMA                                           |
+| [Claude 3](https://claude.ai/new)                                                     | 2024 | Decoder-only   | Undisclosed                 | Undisclosed    | Undisclosed                                  | Undisclosed                                       |
+| [Emu3](https://arxiv.org/pdf/2409.18869)                                                         | 2024 | Decoder-only   | 1B image-text pairs         | 7B             | MoVQGAN                                      | LLaMA-2                                     |
+| [NVLM](https://arxiv.org/pdf/2409.11402)                                                         | 2024 | Encoder-decoder| 1.4B image-text pairs       | 8B-24B         | Custom ViT                                   | Qwen-2-Instruct                                  |
+| [Qwen2-VL](https://arxiv.org/pdf/2409.12191)                                                     | 2024 | Decoder-only   | 1B+ image-text pairs        | 7B-14B         | EVA-CLIP ViT-L                               | Qwen-2                                           |
+| [Pixtral](https://arxiv.org/pdf/2410.07073)                                                      | 2024 | Decoder-only   | Undisclosed                 | 12B            | CLIP ViT-L/14                                | Mistral Large 2                                  |
+| [LLaMA 3.2-vision](https://arxiv.org/pdf/2407.21783)                                            | 2024 | Decoder-only   | Undisclosed                 | 11B-90B        | CLIP                                         | LLaMA-3.1                                        |
+| [Baichuan Ocean Mini](https://arxiv.org/pdf/2410.08565)                                          | 2024 | Decoder-only   | Image/Video/Audio/Text      | 7B             | CLIP ViT-L/14                                | Baichuan                                         |
+| [TransFusion](https://arxiv.org/pdf/2408.11039)                                                  | 2024 | Encoder-decoder| Undisclosed                 | 7B             | VAE Encoder                                  | Pretrained from scratch on transformer architecture |
+| [DeepSeek-VL2](https://arxiv.org/pdf/2412.10302)                                                 | 2024 | Decoder-only   | WiT, WikiHow                | 4.5B x 74      | SigLIP/SAMB                                  | DeepSeekMoE                                      |
+
+
+
 ##  2. <a name='Dataset'></a>🗂️ Dataset
 
 - ⭐️ **ValueBench: Towards Comprehensively Evaluating Value Orientations and Understanding of Large Language Models**, ACL 2024, [[paper]](https://arxiv.org/abs/2406.04214), [[code]](https://github.com/Value4AI/ValueBench).
@@ -73,33 +99,33 @@ Welcome to contribute and discuss!
 | [MM-En/CN](https://arxiv.org/pdf/2307.06281) 					 | Multiple Choice    | Acc                      | Human                    | 3.2   |[Github Repo](https://github.com/open-compass/VLMEvalKit)|
 | [GQA](https://arxiv.org/abs/2305.13245)						| Answer Matching	| Acc, Consistency, Validity | Seed with Synthetic | 22,000 |[Website](https://cs.stanford.edu/people/dorarad/gqa/index.html)|
 | [VCR](https://arxiv.org/abs/1811.10830)						| Multiple Choice    | Acc    					| MTurks                  | 290| [Website](https://visualcommonsense.com/)|
-| [VQAv2](https://arxiv.org/pdf/1505.00468)						| Yes/No; Answer Matching | Acc, F1  			| MTurks                  | 1,100| [Github Repo](https://github.com/salesforce/LAVIS/blob/main/dataset_card/vqav2.md)|
+| [VQAv2](https://arxiv.org/pdf/1505.00468)						| Yes/No <br> Answer Matching | Acc, F1  			| MTurks                  | 1,100| [Github Repo](https://github.com/salesforce/LAVIS/blob/main/dataset_card/vqav2.md)|
 | [MMMU](https://arxiv.org/pdf/2311.16502)						| Answer Matching; Multiple Choice				| Acc    | College Students        | 11.5 |[Website](https://mmmu-benchmark.github.io/) |
 | [SEEDBench](https://arxiv.org/pdf/2307.16125)					| Multiple Choice    | Acc                      | Synthetic                | 19 |[Github Repo](https://github.com/AILab-CVC/SEED-Bench) |
 | [RealWorld QA](https://x.ai/blog/grok-1.5v)					| Multiple Choice    | Acc                      | Human                    | 0.765|[Huggingface](https://huggingface.co/datasets/visheratin/realworldqa)|
 | [MMMU-Pro](https://arxiv.org/pdf/2409.02813)					| Multiple Choice    | Acc                      | Human                    | 3.64  |[Website](https://mmmu-benchmark.github.io/#leaderboard)|
 | [DPG-Bench](https://arxiv.org/pdf/2403.05135)					| Semantic Alignment | Alignment Score          | Synthetic                | 1.06   |[Website](https://ella-diffusion.github.io)|
-| [MSCOCO-30K](https://arxiv.org/pdf/1405.0312)					| BLEU, Rouge, Similarity | Similarity Score      | MTurks                  | 30 |[Website](https://cocodataset.org/#home)|
+| [MSCOCO-30K](https://arxiv.org/pdf/1405.0312)					| BLEU <br> Rouge <br> Similarity | Similarity Score      | MTurks                  | 30 |[Website](https://cocodataset.org/#home)|
 | [TextVQA](https://arxiv.org/pdf/1904.08920)					| Answer Matching    | Acc                      | CrowdSource              | 45		|[Github Repo](https://github.com/facebookresearch/mmf)|
 | [DocVQA](https://arxiv.org/pdf/2007.00398)					| Answer Matching    | Acc                      | CrowdSource              | 50 |[Website](https://www.docvqa.org/)|
 | [CMMLU](https://arxiv.org/pdf/2306.09212)						| Multiple Choice    | Acc                      | College Students         | 11.5|[Github Repo](https://github.com/haonan-li/CMMLU)|
 | [C-Eval](https://arxiv.org/pdf/2305.08322)					| Multiple Choice    | Acc                      | Human                    | 13.9|[Website](https://cevalbenchmark.com/)|
 | [TextVQA](https://arxiv.org/pdf/1904.08920)					| Answer Matching    | Acc                      | Expert Human             | 28.6	|[Github Repo](https://github.com/facebookresearch/mmf)|
-| [MathVista](https://arxiv.org/pdf/2310.02255)					| Answer Matching/Multiple Choice | Acc              | Human                    | 6.15  |[Website](https://mathvista.github.io/)|
-| [MathVision](https://arxiv.org/pdf/2402.14804) 				| Answer Matching/Multiple Choice | Acc              | College Students         | 3.04 |[Website](https://mathvision-cuhk.github.io/)|
+| [MathVista](https://arxiv.org/pdf/2310.02255)					| Answer Matching <br> Multiple Choice | Acc              | Human                    | 6.15  |[Website](https://mathvista.github.io/)|
+| [MathVision](https://arxiv.org/pdf/2402.14804) 				| Answer Matching <br> Multiple Choice | Acc              | College Students         | 3.04 |[Website](https://mathvision-cuhk.github.io/)|
 | [OCRBench](https://arxiv.org/pdf/2305.07895)					| Answer Matching (ANLS) | Acc                   | Human                    | 1 |[Github Repo](https://github.com/Yuliang-Liu/MultimodalOCR)|
 | [MME](https://arxiv.org/pdf/2306.13394)						| Yes/No             | Acc                      | Human                    | 2.8 |[Github Repo](https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models/tree/Evaluation)|
 | [InfographicVQA](https://arxiv.org/pdf/2104.12756) 			| Answer Matching    | Acc                      | CrowdSource              | 30|[Website](https://www.docvqa.org/)|
 | [AI2D](https://arxiv.org/pdf/1603.07396)						| Answer Matching    | Acc                      | CrowdSource              | 1 |[Website](https://ai2d.med.upenn.edu/)|
 | [ChartQA](https://arxiv.org/abs/2203.10244)					| Answer Matching    | Acc                      | CrowdSource/Synthetic    | 32.7 |[Github Repo](https://github.com/vis-nlp/ChartQA)|
-| [GenEval](https://arxiv.org/pdf/2310.11513)					| CLIPScore/GenEval  | Similarity Score         | MTurks                  | 1.2	|[Github Repo](https://github.com/djghosh13/geneval)|
+| [GenEval](https://arxiv.org/pdf/2310.11513)					| CLIPScore <br> GenEval  | Similarity Score         | MTurks                  | 1.2	|[Github Repo](https://github.com/djghosh13/geneval)|
 | [T2I-CompBench](https://arxiv.org/pdf/2307.06350)				| Multiple Metrics   | Similarity Score         | Synthetic                | 6 |[Website](https://karine-h.github.io/T2I-CompBench/)|
 | [HallusionBench](https://arxiv.org/pdf/2310.14566)			| Yes/No             | Acc                      | Human                    | 1.13|[Github Repo](https://github.com/tianyi-lab/HallusionBench)|
 | [POPE](https://arxiv.org/pdf/2305.10355)						| Yes/No             | Acc/Precision/Recall/F1  | Human                    | 9 |[Github Repo](https://github.com/RUCAIBox/POPE)|
 | [MMLU](https://arxiv.org/pdf/2009.03300)						| Multiple Choice    | Acc                      | Human                    | 15.9	|[Github Repo](https://github.com/hendrycks/test)|
 | [MMStar](https://arxiv.org/pdf/2403.20330)					| Multiple Choice    | Acc                      | Human                    | 1.5 |[Website](https://mmstar-benchmark.github.io/)|
 | [M3GIA](https://arxiv.org/pdf/2406.05343)						| Multiple Choice    | Acc                      | Human                    | 1.8 |[Huggingface](https://huggingface.co/datasets/Songweii/M3GIA)|
-| [InternetAGIEval](https://arxiv.org/pdf/2304.06364)			| Multiple Choice/Answer Matching | Acc/F1      | Human                    | 8.06    |[Github Repo](https://github.com/ruixiangcui/AGIEval)|
+| [InternetAGIEval](https://arxiv.org/pdf/2304.06364)			| Multiple Choice <br> Answer Matching | Acc/F1      | Human                    | 8.06    |[Github Repo](https://github.com/ruixiangcui/AGIEval)|
 | [EgoSchem](https://arxiv.org/pdf/2308.09126)					| Multiple Choice    | Acc                      | Synthetic/Human          | 5     |[Website](https://egoschema.github.io/)|
 | [MVBench](https://arxiv.org/pdf/2311.17005)					| Multiple Choice    | Acc                      | Synthetic/Human          | 4    |[Github Repo](https://github.com/OpenGVLab/Ask-Anything)|
 | [MLVU](https://arxiv.org/pdf/2406.04264) 						| Multiple Choice    | Acc                      | Synthetic/Human          | 2.6   |[Github Repo](https://github.com/JUNJIE99/MLVU)|
