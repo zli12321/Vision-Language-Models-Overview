@@ -21,6 +21,10 @@ Welcome to contribute and discuss!
 * 1. [📚 SoTA VLMs](#Survey)
 * 2. [🗂️ Dataset and Evaluation](#Dataset)
 * 4. [⚒️ Applications](#Toolenhancement)
+	* 4.1. 	[Embodied VLM agents](#EmbodiedVLMagents)
+	* 4.2.	[Generative Visual Media Applications](GenerativeVisualMediaApplications)
+	* 4.3.	[Robotics and Embodied AI](RoboticsandEmbodiedAI)
+	* 4.4.	[Human-Centered AI](#Human-CenteredAI)
 * 5. [⛑️ Alignment](#Alignment)
 	* 5.1. [🌈 Pluralistic Alignment](#PluralisticAlignment)
 * 6. [🚀 Simulation](#Simulation)
@@ -133,7 +137,20 @@ Welcome to contribute and discuss!
 - **PsyDI: Towards a Personalized and Progressively In-depth Chatbot for Psychological Measurements**, 2024, [[paper]](https://arxiv.org/abs/2408.03337), [[code]](https://github.com/opendilab/PsyDI).
 - **ChatFive: Enhancing User Experience in Likert Scale Personality Test through Interactive Conversation with LLM Agents**, CUI 2024, [[paper]](https://dl.acm.org/doi/abs/10.1145/3640794.3665572)
 - **LLM Agents for Psychology: A Study on Gamified Assessments**, 2024.02, [[paper]](https://arxiv.org/abs/2402.12326).
-- **Generative Social Choice**, 2023.09, [[paper]](https://arxiv.org/abs/2309.01291)
+- **Generative Social Choice**, 2023.09, [[paper]](https://arxiv.org/abs/2309.01291).
+
+
+###	4.1.  <a name='EmbodiedVLMagents'></a>Embodied VLM agents
+- **VQA: Visual Question Answering**, 2016, [[paper]](https://arxiv.org/pdf/1505.00468).
+- **Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI**, 2024, [[paper]](https://arxiv.org/pdf/2407.06886v1).
+- **ChartLlama: A Multimodal LLM for Chart Understanding and Generation**, 2023, [[paper]](https://arxiv.org/pdf/2311.16483).
+- **SciDoc2Diagrammer-MAF: Towards Generation of Scientific Diagrams from Documents guided by Multi-Aspect Feedback Refinement**, 2024, [[paper]](https://arxiv.org/pdf/2409.19242).
+
+### 4.2. <a name='GenerativeVisualMediaApplications'></a>Generative Visual Media Applications
+
+### 4.3. <a name='RoboticsandEmbodiedAI'></a>Robotics and Embodied AI
+
+### 4.4. <a name='Human-CenteredAI'></a>Human-Centered AI
 
 ##  5. <a name='Alignment'></a>⛑️ Alignment
 
