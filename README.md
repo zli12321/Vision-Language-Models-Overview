@@ -20,13 +20,6 @@ Welcome to contribute and discuss!
 
 * 1. [📚 SoTA VLMs](#Survey)
 * 2. [🗂️ Dataset and Evaluation](#Dataset)
-* 3. [🔎 Evaluating VLM](#EvaluatingLLM)
-	* 3.1. [❤️ Value](#Value)
-	* 3.2. [🩷 Personality](#Personality)
-	* 3.3. [🔞 Morality](#Morality)
-	* 3.4. [🎤 Opinion](#Opinion)
-	* 3.5. [💚 General Preference](#GeneralPreference)
-	* 3.6. [🧠 Ability](#Ability)
 * 4. [⚒️ Tool enhancement](#Toolenhancement)
 * 5. [⛑️ Alignment](#Alignment)
 	* 5.1. [🌈 Pluralistic Alignment](#PluralisticAlignment)
@@ -107,109 +100,6 @@ Welcome to contribute and discuss!
 | [Perception-Test](https://arxiv.org/pdf/2305.13786)			| Multiple Choice    | Acc                      | CrowdSource       | 11.6 |[Github Repo](https://github.com/google-deepmind/perception_test)|
 
 
-
-##  3. <a name='EvaluatingLLM'></a>🔎 Evaluating LLM
-
-- **Quantifying ai psychology: A psychometrics benchmark for large language models**, 2024.07, [[paper]](https://arxiv.org/abs/2406.17675).
-
-###  3.1. <a name='Value'></a>❤️ Value
-
-- ⭐️ **Measuring Human and AI Values based on Generative Psychometrics with Large Language Models**, 2024.09, [[paper]](https://arxiv.org/abs/2409.12106), [[code]](https://github.com/Value4AI/gpv).
-
-- ⭐️ **ValueBench: Towards Comprehensively Evaluating Value Orientations and Understanding of Large Language Models**, ACL 2024, [[paper]](https://arxiv.org/abs/2406.04214), [[code]](https://github.com/Value4AI/ValueBench).
-
-- **NORMAD: A Framework for Measuring the Cultural Adaptability of Large Language Models**, 2024.10, [[paper]](https://arxiv.org/abs/2404.12464).
-
-- **LOCALVALUEBENCH: A Collaboratively Built and Extensible Benchmark for Evaluating Localized Value Alignment and Ethical Safety in Large Language Models**, 2024.08, [[paper]](https://arxiv.org/abs/2408.01460).
-
-- **Stick to your role! Stability of personal values expressed in large language models**, 2024.08, [[paper]](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0309114).
-
-- **Raising the Bar: Investigating the Values of Large Language Models via Generative Evolving Testing**, 2024.07, [[paper]](https://arxiv.org/abs/2406.14230).
-
-- **Do LLMs have Consistent Values?**, 2024.07, [[paper]](https://arxiv.org/abs/2407.12878).
-
-- **CLAVE: An Adaptive Framework for Evaluating Values of LLM Generated Responses**, 2024.07, [[paper]](https://arxiv.org/abs/2407.10725).
-
-- **Are Large Language Models Consistent over Value-laden Questions?**, 2024.07, [[paper]](https://arxiv.org/abs/2407.02996).
-
-- **Beyond Human Norms: Unveiling Unique Values of Large Language Models through Interdisciplinary Approaches**, 2024.04, [[paper]](https://arxiv.org/abs/2404.12744).
-
-- **Heterogeneous Value Evaluation for Large Language Models**, 2023.03, [[paper]](https://arxiv.org/abs/2305.17147), [[code]](https://github.com/zowiezhang/A2EHV).
-
-- **Measuring Value Understanding in Language Models through Discriminator-Critique Gap**, 2023.10, [[paper]](https://arxiv.org/abs/2310.00378).
-
-- **Value FULCRA: Mapping Large Language Models to the Multidimensional Spectrum of Basic Human Values**, 2023.11, [[paper]](https://arxiv.org/abs/2311.10766).
-
-- **Value Kaleidoscope: Engaging AI with Pluralistic Human Values, Rights, and Duties**, AAAI24, [[paper]](https://arxiv.org/abs/2309.00779), [[code]](https://github.com/tsor13/kaleido).
-
-- **High-Dimension Human Value Representation in Large Language Models**, 2024.04, [[paper]](https://arxiv.org/abs/2404.07900), [[code]](https://github.com/HLTCHKUST/UniVaR).
-
-
-###  3.2. <a name='Personality'></a>🩷 Personality
-
-- **Incharacter: Evaluating personality fidelity in role-playing agents through psychological interviews**, ACL 2024, [[paper]](https://aclanthology.org/2024.acl-long.102/), [[code]](https://github.com/Neph0s/InCharacter)
-
-- [*MBTI*] **Open Models, Closed Minds? On Agents Capabilities in Mimicking Human Personalities through Open Large Language Models**, 2024.01, [[paper]](https://arxiv.org/abs/2401.07115)
-
-- **Who is ChatGPT? Benchmarking LLMs' Psychological Portrayal Using PsychoBench**, ICLR 2024, [[paper]](https://arxiv.org/abs/2310.01386), [[code]](https://github.com/CUHK-ARISE/PsychoBench)
-
-- [*BFI*] **AI Psychometrics: Assessing the Psychological Profiles of Large Language Models Through Psychometric Inventories**, Journal, 2024.01, [[paper]](https://journals.sagepub.com/doi/full/10.1177/17456916231214460)
-
-- **Does Role-Playing Chatbots Capture the Character Personalities? Assessing Personality Traits for Role-Playing Chatbots**, 2023.10, [[paper]](https://arxiv.org/abs/2310.17976)
-
-- [*MBTI*] **Do LLMs Possess a Personality? Making the MBTI Test an Amazing Evaluation for Large Language Models**, 2023.07, [[paper]](https://arxiv.org/abs/2307.16180)
-
-- [*MBTI*] **Can ChatGPT Assess Human Personalities? A General Evaluation Framework**, 2023.03, EMNLP 2023, [[paper]](https://arxiv.org/abs/2303.01248), [[code]](https://github.com/Kali-Hac/ChatGPT-MBTI).
-
-- [*BFI*] **Personality Traits in Large Language Models**, 2023.07, [[paper]](https://arxiv.org/abs/2307.00184)
-
-- [*BFI*] **Revisiting the Reliability of Psychological Scales on Large Language Models**, 2023.05, [[paper]](https://arxiv.org/abs/2305.19926)
-
-- [*BFI*] **Systematic Evaluation of GPT-3 for Zero-Shot Personality Estimation**, ACL 2023 workshop, [[paper]](https://arxiv.org/abs/2306.01183)
-
-
-- [*BFI*] **Have Large Language Models Developed a Personality?: Applicability of Self-Assessment Tests in Measuring Personality in LLMs**, 2023.05, [[paper]](https://arxiv.org/abs/2305.14693)
-
-- [*BFI*] **Evaluating and Inducing Personality in Pre-trained Language Models**, NeurIPS 2023 (spotlight), [[paper]](https://arxiv.org/abs/2206.07550)
-
-
-- [*BFI*] **Identifying and Manipulating the Personality Traits of Language Models**, 2022,12, [[paper]](https://arxiv.org/abs/2212.10276)
-
-- **Who is GPT-3? An Exploration of Personality, Values and Demographics**, 2022.09, [[paper]](https://arxiv.org/abs/2209.14338)
-
-- **Does GPT-3 Demonstrate Psychopathy? Evaluating Large Language Models from a Psychological Perspective**, 2022.12, [[paper]](https://arxiv.org/abs/2212.10529)
-
-
-###  3.3. <a name='Morality'></a>🔞 Morality
-
-- **Aligning AI With Shared Human Values**, 2020, [[paper]](https://arxiv.org/abs/2008.02275).
-- **Exploring the psychology of GPT-4's Moral and Legal Reasoning**, 2023.08, [[paper]](https://arxiv.org/abs/2308.01264).
-- **Probing the Moral Development of Large Language Models through Defining Issues Test**
-- **Moral Foundations of Large Language Models**, 2023.10, [[paper]](https://arxiv.org/abs/2310.15337).
-- **Moral Mimicry: Large Language Models Produce Moral Rationalizations Tailored to Political Identity**, 2023.06, [[paper]](https://arxiv.org/abs/2209.12106)
-- **Evaluating the Moral Beliefs Encoded in LLMs**, 2023.07, [[paper]](https://arxiv.org/abs/2307.14324)
-
-###  3.4. <a name='Opinion'></a>🎤 Opinion
-
-- **More human than human: measuring ChatGPT political bias**, 2023, [[paper]](https://link.springer.com/article/10.1007/s11127-023-01097-2).
-
-- **Towards Measuring the Representation of Subjective Global Opinions in Language Models**, 2023.07, [[paper]](https://arxiv.org/abs/2306.16388), [[website]](https://llmglobalvalues.anthropic.com/).
-
-###  3.5. <a name='GeneralPreference'></a>💚 General Preference
-
-- **Diverging Preferences: When do Annotators Disagree and do Models Know?**, 2024.10, [[paper]](https://arxiv.org/abs/2410.14632).
-
-###  3.6. <a name='Ability'></a>🧠 Ability 
-- **Replication for Language Models: Problems, Principles, and Best Practice for Political Science**, 2024.10, [[paper]](https://arthurspirling.org/documents/BarriePalmerSpirling_TrustMeBro.pdf).
-- **Can Language Models Reason about Individualistic Human Values and Preferences?**, 2024.10, [[paper]](https://arxiv.org/abs/2410.03868).
-- **Language Models in Sociological Research: An Application to Classifying Large Administrative Data and Measuring Religiosity**, 2021, [[paper]](https://journals.sagepub.com/doi/full/10.1177/00811750211053370).
-- **Can Large Language Models Transform Computational Social Science?**, 2023, [[paper]](https://arxiv.org/abs/2305.03514), [[code]](https://github.com/SALT-NLP/LLMs_for_CSS).
-- **SOTOPIA: Interactive Evaluation for Social Intelligence in Language Agents**, 2023, [[paper]](https://arxiv.org/pdf/2310.11667.pdf), [[code]](https://www.sotopia.world/).
-- **Exploring Collaboration Mechanisms for LLM Agents: A Social Psychology View**, 2023, [[paper]](https://arxiv.org/abs/2310.02124), [[code]](https://github.com/zjunlp/MachineSoM).
-- **Playing repeated games with Large Language Models**, 2023.05, [[paper]](https://arxiv.org/abs/2305.16867).
-- **Machine Psychology: Investigating Emergent Capabilities and Behavior in Large Language Models Using Psychological Methods**, 2023, [[paper]](https://arxiv.org/abs/2303.13988).
-- **Using cognitive psychology to understand GPT-3**, 2023.02, PNAS, [[paper]](https://www.pnas.org/doi/full/10.1073/pnas.2218523120?doi=10.1073%2Fpnas.2218523120).
-- **Large language models as a substitute for human experts in annotating political text**, 2024.02, [[paper]](https://journals.sagepub.com/doi/10.1177/20531680241236239).
 
 ##  4. <a name='Toolenhancement'></a>⚒️ Tool enhancement
 - **AI can help humans find common ground in democratic deliberation**, 2024.10, Science, [[paper]](https://www.science.org/doi/10.1126/science.adq2852).
