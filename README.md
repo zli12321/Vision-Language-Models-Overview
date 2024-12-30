@@ -64,7 +64,7 @@ Welcome to contribute and discuss!
 ### Datasets and Evaluation for VLM 
 
 
-| Benchmark Dataset                                        | Metric Type        |     Evaluation Method    | Source                 | Size (K) | Project 							|
+| Benchmark Dataset                                        | Eval Metric       |     Evaluation Method    | Benchmark Annotation Source           | Size (K) | Project 							|
 |----------------------------------------------------------|:------------------:|:------------------------:|:-----------------------:|:---------:|:----------------------------------:|
 | [MMTBench](https://arxiv.org/pdf/2404.16006)         	        | Multiple Choice    | Acc                      | AI Experts               | 30.1 | [Github Repo](https://github.com/tylin/coco-caption)|
 | [MM-Vet](https://arxiv.org/pdf/2308.02490)					| LLM Eval           | Acc                      | Human                    | 0.2  | [Github Repo](https://github.com/yuweihao/MM-Vet) |
