@@ -59,6 +59,7 @@ Welcome to contribute and discuss!
 | [DeepSeek-VL2](https://arxiv.org/pdf/2412.10302)             | 2024 | Decoder-only   | [WiT](https://huggingface.co/datasets/google/wit), [WikiHow](https://huggingface.co/datasets/ajibawa-2023/WikiHow) | 4.5B x 74      | SigLIP/SAMB                                  | [DeepSeekMoE](https://arxiv.org/pdf/2412.10302)                                      |
 
 
+
 ##  2. <a name='Dataset'></a>🗂️ Benchmarks and Evaluation
 ### Datasets and Evaluation for VLM 
 
