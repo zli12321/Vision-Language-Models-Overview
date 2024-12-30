@@ -20,7 +20,7 @@ Welcome to contribute and discuss!
 
 * 1. [📚 SoTA VLMs](#Survey)
 * 2. [🗂️ Dataset and Evaluation](#Dataset)
-* 4. [⚒️ Tool enhancement](#Toolenhancement)
+* 4. [⚒️ Applications](#Toolenhancement)
 * 5. [⛑️ Alignment](#Alignment)
 	* 5.1. [🌈 Pluralistic Alignment](#PluralisticAlignment)
 * 6. [🚀 Simulation](#Simulation)
