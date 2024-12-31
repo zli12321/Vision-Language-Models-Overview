@@ -24,7 +24,8 @@ Welcome to contribute and discuss!
 	* 4.1. 	[Embodied VLM agents](#EmbodiedVLMagents)
 	* 4.2.	[Generative Visual Media Applications](GenerativeVisualMediaApplications)
 	* 4.3.	[Robotics and Embodied AI](RoboticsandEmbodiedAI)
-	* 4.4.	[Human-Centered AI](#Human-CenteredAI)
+	* 4.4.	[Manipulation](#Manipulation)
+	* 4.5.	[Navigation](#Navigation)
 * 5. [⛑️ Alignment](#Alignment)
 	* 5.1. [🌈 Pluralistic Alignment](#PluralisticAlignment)
 * 6. [🚀 Simulation](#Simulation)
@@ -115,15 +116,67 @@ Welcome to contribute and discuss!
 ###	4.1.  <a name='EmbodiedVLMagents'></a>Embodied VLM agents
 - **VQA: Visual Question Answering**, 2016, [[paper]](https://arxiv.org/pdf/1505.00468).
 - **Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI**, 2024, [[paper]](https://arxiv.org/pdf/2407.06886v1).
+- **ScreenAI: A Vision-Language Model for UI and Infographics Understanding**, 2024, [[paper]](https://arxiv.org/pdf/2402.04615)
 - **ChartLlama: A Multimodal LLM for Chart Understanding and Generation**, 2023, [[paper]](https://arxiv.org/pdf/2311.16483).
 - **SciDoc2Diagrammer-MAF: Towards Generation of Scientific Diagrams from Documents guided by Multi-Aspect Feedback Refinement**, 2024, [[paper]](https://arxiv.org/pdf/2409.19242).
-
+- **Training a Vision Language Model as Smartphone Assistant**, 2024, [[paper]](https://arxiv.org/pdf/2404.08755)
+- **Screenagent: A vision language model-driven computer control agent**, 2024, [[paper]](https://arxiv.org/pdf/2402.07945)
+- **Embodied vision-language programmer from environmental feedback**, 2024, [[paper]](https://arxiv.org/pdf/2310.08588)
 ### 4.2. <a name='GenerativeVisualMediaApplications'></a>Generative Visual Media Applications
 
 ### 4.3. <a name='RoboticsandEmbodiedAI'></a>Robotics and Embodied AI
+- **AHA: A Vision-Language-Model for Detecting and Reasoning Over Failures in Robotic Manipulation**, 2024, [[paper]](https://arxiv.org/pdf/2410.00371)
+- **SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities**, 2024, [[paper]](https://arxiv.org/pdf/2401.12168)
+- **LANCAR: Leveraging Language for Context-Aware Robot Locomotion in Unstructured Environments**, 2024, [[paper]](https://arxiv.org/pdf/2310.00481)
+- **Vision-language model-driven scene understanding and robotic object manipulation**, 2024, [[paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10711845)
+- **Guiding Long-Horizon Task and Motion Planning with Vision Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2410.02193)
+- **AutoTAMP: Autoregressive Task and Motion Planning with LLMs as Translators and Checkers**, 2024,[[paper]](https://arxiv.org/pdf/2306.06531)
+- **Vima: General robot manipulation with multimodal prompts**, 2023, [[paper]](https://arxiv.org/pdf/2210.03094)
+- **Instruct2Act: Mapping Multi-modality Instructions to Robotic Actions with Large Language Model**, 2023, [[paper]](https://arxiv.org/pdf/2305.11176)
+- **ZSON: Zero-Shot Object-Goal Navigation using Multimodal Goal Embeddings**, 2023, [[paper]](https://arxiv.org/pdf/2206.12403)
+- **LOC-ZSON: Language-driven Object-Centric Zero-Shot Object Retrieval and Navigation**, 2024, [[paper]](https://arxiv.org/pdf/2405.05363)
+- **VLFM: Vision-Language Frontier Maps for Zero-Shot Semantic Navigation**, 2023, [[paper]](https://arxiv.org/pdf/2312.03275)
+- **VLM-Social-Nav: Socially Aware Robot Navigation through Scoring using Vision-Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2404.00210)
+- **VLM See, Robot Do: Human Demo Video to Robot Action Plan via Vision Language Model**, 2024, [[paper]](https://arxiv.org/pdf/2410.08792)
+- **Scalable Multi-Robot Collaboration with Large Language Models: Centralized or Decentralized Systems?**, 2023, [[paper]](https://arxiv.org/pdf/2309.15943)
+- **DART-LLM: Dependency-Aware Multi-Robot Task Decomposition and Execution using Large Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2411.09022)
+- **MotionLM: Multi-Agent Motion Forecasting as Language Modeling**, 2024, [[paper]](https://arxiv.org/pdf/2309.16534)
+- **MotionGPT: Human Motion as a Foreign Language**, 2023, [[paper]](https://arxiv.org/pdf/2306.14795)
+- **Learning Reward for Robot Skills Using Large Language Models via Self-Alignment**, 2024, [[paper]](https://arxiv.org/pdf/2405.07162)
+- **Language to Rewards for Robotic Skill Synthesis**, 2023, [[paper]](https://arxiv.org/pdf/2306.08647)
+- **Eureka: Human-Level Reward Design via Coding Large Language Models**, 2023, [paper](https://arxiv.org/pdf/2310.12931)
+### 4.4. <a name='Manipulation'></a>Manipulation
+- **Vima: General robot manipulation with multimodal prompts**, 2023, [[paper]](https://arxiv.org/pdf/2210.03094)
+- **Instruct2Act: Mapping Multi-modality Instructions to Robotic Actions with Large Language Model**, 2023, [[paper]](https://arxiv.org/pdf/2305.11176)
+- **RoboVQA: Multimodal Long-Horizon Reasoning for Robotics**, 2023, [[paper]](https://arxiv.org/pdf/2311.00899)
+- **Open X-Embodiment: Robotic Learning Datasets and RT-X Models**,2024, [[paper]](https://arxiv.org/pdf/2310.08864)
+- **RT-1: Robotics Transformer for Real-World Control at Scale**, 2022, [[paper]](RT-1: Robotics Transformer for Real-World Control at Scale)
+- **RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control**, 2023, [[paper]](https://arxiv.org/pdf/2307.15818)
 
-### 4.4. <a name='Human-CenteredAI'></a>Human-Centered AI
-
+### 4.5. <a name='Navigation'></a>Navigation
+- **ZSON: Zero-Shot Object-Goal Navigation using Multimodal Goal Embeddings**, 2022, [[paper]](https://arxiv.org/pdf/2206.12403)
+- **LM-Nav: Robotic Navigation with Large Pre-Trained Models of Language, Vision, and Action**, 2022, [[paper]](https://arxiv.org/pdf/2207.04429)
+- **NaVILA: Legged Robot Vision-Language-Action Model for Navigation**, 2024, [[paper]](https://arxiv.org/pdf/2412.04453)
+- **VLFM: Vision-Language Frontier Maps for Zero-Shot Semantic Navigation**, 2023, [[paper]](https://arxiv.org/pdf/2312.03275)
+- **Navigation with Large Language Models: Semantic Guesswork as a Heuristic for Planning**, 2023, [[paper]](https://arxiv.org/pdf/2310.10103)
+- **LOC-ZSON: Language-driven Object-Centric Zero-Shot Object Retrieval and Navigation**, 2024, [[paper]](https://arxiv.org/pdf/2405.05363)
+- **Integrated Task and Motion Planning**, 2020, [[paper]](https://arxiv.org/pdf/2010.01083)
+### 4.6. <a name='Human-robot Interaction'></a>Human-robot Interaction
+- **MUTEX: Learning Unified Policies from Multimodal Task Specifications**, 2023, [[paper]](https://arxiv.org/pdf/2309.14320)
+- **LaMI: Large Language Models for Multi-Modal Human-Robot Interaction**, 2024, [[paper]](https://arxiv.org/pdf/2401.15174)
+- **DART-LLM: Dependency-Aware Multi-Robot Task Decomposition and Execution using Large Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2411.09022)
+- **VLM-Social-Nav: Socially Aware Robot Navigation through Scoring using Vision-Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2404.00210)
+### 4.6. <a name='Autonomous Driving'></a>Autonomous Driving
+- **VLPD: Context-Aware Pedestrian Detection via Vision-Language Semantic Self-Supervision**, 2023, [[paper]](https://arxiv.org/pdf/2304.03135)
+- **Referring Multi-Object Tracking**, 2023, [[paper]](https://arxiv.org/pdf/2303.03366)
+- **DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2402.12289)
+- **GPT-Driver: Learning to Drive with GPT**, 2023, [[paper]](https://arxiv.org/pdf/2310.01415)
+- **LanguageMPC: Large Language Models as Decision Makers for Autonomous Driving**, 2023, [[paper]](https://arxiv.org/pdf/2310.03026)
+- **Driving with LLMs: Fusing Object-Level Vector Modality for Explainable Autonomous Driving**, 2023, [[paper]](https://arxiv.org/pdf/2310.01957)
+- **MotionLM: Multi-Agent Motion Forecasting as Language Modeling**, 2024, [[paper]](https://arxiv.org/pdf/2309.16534)
+- **DiLu: A Knowledge-Driven Approach to Autonomous Driving with Large Language Models**, 2023, [[paper]](https://arxiv.org/pdf/2309.16292)
+- **VLP: Vision Language Planning for Autonomous Driving**, 2024, [[paper]](https://arxiv.org/pdf/2401.05577)
+- **DriveGPT4: Interpretable End-to-end Autonomous Driving via Large Language Model**, 2023, [[paper]](https://arxiv.org/pdf/2310.01412)
 
 ##  6. <a name='Simulation'></a>🚀 Simulation
 - **OASIS: Open Agents Social Interaction Simulations on One Million Agents**, 2024.11, [[paper]](https://arxiv.org/abs/2411.11581), [[code]](https://github.com/camel-ai/oasis).
