@@ -104,7 +104,7 @@ Welcome to contribute and discuss!
 | [VideoMME](https://arxiv.org/pdf/2405.21075)            | Multiple Choice    | Experts                | 2.7       | [Website](https://video-mme.github.io/)|
 | [Perception-Test](https://arxiv.org/pdf/2305.13786)	 | Multiple Choice    | CrowdSource            | 11.6      | [Github Repo](https://github.com/google-deepmind/perception_test)|
 
-##  4. <a name='Toolenhancement'></a>⚒️ Tool enhancement
+##  4. <a name='Toolenhancement'></a>⚒️ Applications
 - **AI can help humans find common ground in democratic deliberation**, 2024.10, Science, [[paper]](https://www.science.org/doi/10.1126/science.adq2852).
 - **PsyDI: Towards a Personalized and Progressively In-depth Chatbot for Psychological Measurements**, 2024, [[paper]](https://arxiv.org/abs/2408.03337), [[code]](https://github.com/opendilab/PsyDI).
 - **ChatFive: Enhancing User Experience in Likert Scale Personality Test through Interactive Conversation with LLM Agents**, CUI 2024, [[paper]](https://dl.acm.org/doi/abs/10.1145/3640794.3665572)
