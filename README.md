@@ -20,19 +20,19 @@ Welcome to contribute and discuss!
 
 * 1. [📚 SoTA VLMs](#vlms)
 * 2. [🗂️ Dataset and Evaluation](#Dataset)
-* 4. [⚒️ Applications](#Toolenhancement)
-	* 4.1. 	[Embodied VLM agents](#EmbodiedVLMagents)
-	* 4.2.	[Generative Visual Media Applications](GenerativeVisualMediaApplications)
-	* 4.3.	[Robotics and Embodied AI](RoboticsandEmbodiedAI)
-		* 4.3.1.  [Manipulation](#Manipulation)
-		* 4.3.2.  [Navigation](#Navigation)
-		* 4.3.3.  [Human-robot Interaction](#HumanRobotInteraction)
-  		* 4.3.4.  [Autonomous Driving](#AutonomousDriving)
-	* 4.4. [Human-Centered AI](Human-CenteredAI)
-		* 4.4.1. [Web Agent](#WebAgent)
-		* 4.4.2. [Accessibility](#Accessibility)
-		* 4.4.3. [Healthcare](#Healthcare)
-		* 4.4.4. [Social Goodness](#SocialGoodness)
+* 3. [⚒️ Applications](#Toolenhancement)
+	* 3.1. 	[Embodied VLM agents](#EmbodiedVLMagents)
+	* 3.2.	[Generative Visual Media Applications](GenerativeVisualMediaApplications)
+	* 3.3.	[Robotics and Embodied AI](RoboticsandEmbodiedAI)
+		* 3.3.1.  [Manipulation](#Manipulation)
+		* 3.3.2.  [Navigation](#Navigation)
+		* 3.3.3.  [Human-robot Interaction](#HumanRobotInteraction)
+  		* 3.3.4.  [Autonomous Driving](#AutonomousDriving)
+	* 3.4. [Human-Centered AI](Human-CenteredAI)
+		* 3.4.1. [Web Agent](#WebAgent)
+		* 3.4.2. [Accessibility](#Accessibility)
+		* 3.4.3. [Healthcare](#Healthcare)
+		* 3.4.4. [Social Goodness](#SocialGoodness)
 * 5. [⛑️ Alignment](#Alignment)
 	* 5.1. [🌈 Pluralistic Alignment](#PluralisticAlignment)
 * 6. [🚀 Simulation](#Simulation)
@@ -112,15 +112,8 @@ Welcome to contribute and discuss!
 | [VideoMME](https://arxiv.org/pdf/2405.21075)            | Multiple Choice    | Experts                | 2.7       | [Website](https://video-mme.github.io/)|
 | [Perception-Test](https://arxiv.org/pdf/2305.13786)	 | Multiple Choice    | CrowdSource            | 11.6      | [Github Repo](https://github.com/google-deepmind/perception_test)|
 
-##  4. <a name='Toolenhancement'></a>⚒️ Applications
-- **AI can help humans find common ground in democratic deliberation**, 2024.10, Science, [[paper]](https://www.science.org/doi/10.1126/science.adq2852).
-- **PsyDI: Towards a Personalized and Progressively In-depth Chatbot for Psychological Measurements**, 2024, [[paper]](https://arxiv.org/abs/2408.03337), [[code]](https://github.com/opendilab/PsyDI).
-- **ChatFive: Enhancing User Experience in Likert Scale Personality Test through Interactive Conversation with LLM Agents**, CUI 2024, [[paper]](https://dl.acm.org/doi/abs/10.1145/3640794.3665572)
-- **LLM Agents for Psychology: A Study on Gamified Assessments**, 2024.02, [[paper]](https://arxiv.org/abs/2402.12326).
-- **Generative Social Choice**, 2023.09, [[paper]](https://arxiv.org/abs/2309.01291).
-
-
-###	4.1.  <a name='EmbodiedVLMagents'></a>Embodied VLM agents
+##  3. <a name='Toolenhancement'></a>⚒️ Applications
+###	3.1.  <a name='EmbodiedVLMagents'></a>Embodied VLM agents
 - **VQA: Visual Question Answering**, 2016, [[paper]](https://arxiv.org/pdf/1505.00468).
 - **Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI**, 2024, [[paper]](https://arxiv.org/pdf/2407.06886v1).
 - **ScreenAI: A Vision-Language Model for UI and Infographics Understanding**, 2024, [[paper]](https://arxiv.org/pdf/2402.04615)
@@ -129,9 +122,9 @@ Welcome to contribute and discuss!
 - **Training a Vision Language Model as Smartphone Assistant**, 2024, [[paper]](https://arxiv.org/pdf/2404.08755)
 - **Screenagent: A vision language model-driven computer control agent**, 2024, [[paper]](https://arxiv.org/pdf/2402.07945)
 - **Embodied vision-language programmer from environmental feedback**, 2024, [[paper]](https://arxiv.org/pdf/2310.08588)
-### 4.2. <a name='GenerativeVisualMediaApplications'></a>Generative Visual Media Applications
+### 3.2. <a name='GenerativeVisualMediaApplications'></a>Generative Visual Media Applications
 
-### 4.3. <a name='RoboticsandEmbodiedAI'></a>Robotics and Embodied AI
+### 3.3. <a name='RoboticsandEmbodiedAI'></a>Robotics and Embodied AI
 - **Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI**, 2024, [[paper]](https://arxiv.org/pdf/2407.06886).
 - **AHA: A Vision-Language-Model for Detecting and Reasoning Over Failures in Robotic Manipulation**, 2024, [[paper]](https://arxiv.org/pdf/2410.00371), [[website]](https://aha-vlm.github.io/).
 - **SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities**, 2024, [[paper]](https://arxiv.org/pdf/2401.12168), [[website]](https://spatial-vlm.github.io/).
@@ -151,7 +144,7 @@ Welcome to contribute and discuss!
 - **LLM-Driven Robots Risk Enacting Discrimination, Violence, and Unlawful Actions**, 2024, [[paper]](https://arxiv.org/pdf/2406.08824).
 - **Highlighting the Safety Concerns of Deploying LLMs/VLMs in Robotics**, 2024, [[paper]](https://arxiv.org/pdf/2402.10340), [[website]](https://wuxiyang1996.github.io/adversary-vlm-robotics/).
 
-#### 4.3.1. <a name='Manipulation'></a>Manipulation
+#### 3.3.1. <a name='Manipulation'></a>Manipulation
 - **VIMA: General Robot Manipulation with Multimodal Prompts**, 2022, [[paper]](https://arxiv.org/pdf/2210.03094), [[website]](https://vimalabs.github.io/).
 - **Instruct2act: Mapping multi-modality instructions to robotic actions with large language model**, 2023, [[paper]](https://arxiv.org/pdf/2305.11176).
 - **Creative Robot Tool Use with Large Language Models**, 2023, [[paper]](https://arxiv.org/pdf/2310.13065), [[website]](https://creative-robotool.github.io/).
@@ -160,7 +153,7 @@ Welcome to contribute and discuss!
 - **RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control**, 2023, [[paper]](https://arxiv.org/pdf/2307.15818), [[website]](https://robotics-transformer2.github.io/).
 - **Open X-Embodiment: Robotic Learning Datasets and RT-X Models**, 2023, [[paper]](https://arxiv.org/pdf/2310.08864), [[website]](https://robotics-transformer-x.github.io/).
 
-#### 4.3.2. <a name='Navigation'></a>Navigation
+#### 3.3.2. <a name='Navigation'></a>Navigation
 - **ZSON: Zero-Shot Object-Goal Navigation using Multimodal Goal Embeddings**, 2022, [[paper]](https://arxiv.org/pdf/2206.12403).
 - **LOC-ZSON: Language-driven Object-Centric Zero-Shot Object Retrieval and Navigation**, 2024, [[paper]](https://arxiv.org/pdf/2405.05363).
 - **LM-Nav: Robotic Navigation with Large Pre-Trained Models of Language, Vision, and Action**, 2022, [[paper]](https://arxiv.org/pdf/2207.04429), [[website]](https://sites.google.com/view/lmnav).
@@ -168,12 +161,12 @@ Welcome to contribute and discuss!
 - **VLFM: Vision-Language Frontier Maps for Zero-Shot Semantic Navigation**, 2024, [[paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10610712&casa_token=qvFCSt20n0MAAAAA:MSC4P7bdlfQuMRFrmIl706B-G8ejcxH9ZKROKETL1IUZIW7m_W4hKW-kWrxw-F8nykoysw3WYHnd)
 - **Navigation with Large Language Models: Semantic Guesswork as a Heuristic for Planning**, 2023, [[paper]](https://arxiv.org/pdf/2310.10103), [[website]](https://sites.google.com/view/lfg-nav/). 
 
-#### 4.3.3. <a name='HumanRobotInteraction'></a>Human-robot Interaction
+#### 3.3.3. <a name='HumanRobotInteraction'></a>Human-robot Interaction
 - **MUTEX: Learning Unified Policies from Multimodal Task Specifications**, 2023, [[paper]](https://arxiv.org/pdf/2309.14320), [[website]](https://ut-austin-rpl.github.io/MUTEX/). 
 - **LaMI: Large Language Models for Multi-Modal Human-Robot Interaction**, 2024, [[paper]](https://arxiv.org/pdf/2401.15174), [[website]](https://hri-eu.github.io/Lami/).
 - **VLM-Social-Nav: Socially Aware Robot Navigation through Scoring using Vision-Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2404.00210). 
 
-#### 4.3.4. <a name='AutonomousDriving'></a>Autonomous Driving
+#### 3.3.4. <a name='AutonomousDriving'></a>Autonomous Driving
 - **DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models**, 2024, [[paper]](https://arxiv.org/abs/2402.12289), [[website]](https://tsinghua-mars-lab.github.io/DriveVLM/).
 - **GPT-Driver: Learning to Drive with GPT**, 2023, [[paper]](https://arxiv.org/abs/2310.01415).
 - **LanguageMPC: Large Language Models as Decision Makers for Autonomous Driving**, 2023, [[paper]](https://arxiv.org/abs/2310.03026), [[website]](https://sites.google.com/view/llm-mpc).
@@ -185,33 +178,33 @@ Welcome to contribute and discuss!
 - **VLP: Vision Language Planning for Autonomous Driving**, 2024, [[paper]](https://arxiv.org/pdf/2401.05577).
 - **DriveGPT4: Interpretable End-to-end Autonomous Driving via Large Language Model**, 2023, [[paper]](https://arxiv.org/abs/2310.01412).
 
-### 4.4. <a name='Human-CenteredAI'></a>Human-Centered AI
+### 3.4. <a name='Human-CenteredAI'></a>Human-Centered AI
 - **DLF: Disentangled-Language-Focused Multimodal Sentiment Analysis**, 2024, [[paper]](https://arxiv.org/pdf/2412.12225), [[code]](https://github.com/pwang322/DLF).
 - **LIT: Large Language Model Driven Intention Tracking for Proactive Human-Robot Collaboration -- A Robot Sous-Chef Application**, 2024, [[paper]](https://arxiv.org/abs/2406.13787).
 - **Pretrained Language Models as Visual Planners for Human Assistance**, 2023, [[paper]](https://arxiv.org/pdf/2304.09179).
 - **Promoting AI Equity in Science: Generalized Domain Prompt Learning for Accessible VLM Research**, 2024, [[paper]](https://arxiv.org/pdf/2405.08668).
 - **Image and Data Mining in Reticular Chemistry Using GPT-4V**, 2023, [[paper]](https://arxiv.org/pdf/2312.05468).
 
-#### 4.4.1. <a name='WebAgent'></a>Web Agent
+#### 3.4.1. <a name='WebAgent'></a>Web Agent
 - **A Real-World WebAgent with Planning, Long Context Understanding, and Program Synthesis**, 2023, [[paper]](https://arxiv.org/pdf/2307.12856).
 - **CogAgent: A Visual Language Model for GUI Agents**, 2023, [[paper]](https://arxiv.org/pdf/2312.08914), [[code]](https://github.com/THUDM/CogAgent).
 - **WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models**, 2024, [[paper]](https://arxiv.org/pdf/2401.13919), [[code]](https://github.com/MinorJerry/WebVoyager).
 - **ShowUI: One Vision-Language-Action Model for GUI Visual Agent**, 2024, [[paper]](https://arxiv.org/pdf/2411.17465), [[code]](https://github.com/showlab/ShowUI).
 - **ScreenAgent: A Vision Language Model-driven Computer Control Agent**, 2024, [[paper]](https://arxiv.org/pdf/2402.07945), [[code]](https://github.com/niuzaisheng/ScreenAgent).
 
-#### 4.4.2. <a name='Accessibility'></a>Accessibility
+#### 3.4.2. <a name='Accessibility'></a>Accessibility
 - **X-World: Accessibility, Vision, and Autonomy Meet**, 2021, [[paper]](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhang_X-World_Accessibility_Vision_and_Autonomy_Meet_ICCV_2021_paper.pdf).
 - **Context-Aware Image Descriptions for Web Accessibility**, 2024, [[paper]](https://arxiv.org/pdf/2409.03054).
 - **Improving VR Accessibility Through Automatic 360 Scene Description Using Multimodal Large Language Models**, 2024, [[paper]](https://dl.acm.org/doi/10.1145/3691573.3691619).
 
-#### 4.4.3. <a name='Healthcare'></a>Healthcare
+#### 3.4.3. <a name='Healthcare'></a>Healthcare
 - **VisionUnite: A Vision-Language Foundation Model for Ophthalmology Enhanced with Clinical Knowledge**, 2024, [[paper]](https://arxiv.org/pdf/2408.02865), [[code]](https://github.com/HUANGLIZI/VisionUnite).
 - **Multimodal Healthcare AI: Identifying and Designing Clinically Relevant Vision-Language Applications for Radiology**, 2024, [[paper]](https://arxiv.org/pdf/2402.14252).
 - **M-FLAG: Medical Vision-Language Pre-training with Frozen Language Models and Latent Space Geometry Optimization**, 2023, [[paper]](https://arxiv.org/pdf/2307.08347).
 - **MedCLIP: Contrastive Learning from Unpaired Medical Images and Text**, 2022, [[paper]](https://arxiv.org/pdf/2210.10163), [[code]](https://github.com/RyanWangZf/MedCLIP).
 - **Med-Flamingo: a Multimodal Medical Few-shot Learner**, 2023, [[paper]](https://arxiv.org/pdf/2307.15189), [[code]](https://github.com/snap-stanford/med-flamingo).
 
-#### 4.4.4. <a name='SocialGoodness'></a>Social Goodness
+#### 3.4.4. <a name='SocialGoodness'></a>Social Goodness
 - **Analyzing K-12 AI education: A large language model study of classroom instruction on learning theories, pedagogy, tools, and AI literacy**, 2024, [[paper]](https://www.sciencedirect.com/science/article/pii/S2666920X24000985).
 - **Students Rather Than Experts: A New AI For Education Pipeline To Model More Human-Like And Personalised Early Adolescences**, 2024, [[paper]](https://arxiv.org/pdf/2410.15701).
 - **Harnessing Large Vision and Language Models in Agriculture: A Review**, 2024, [[paper]](https://arxiv.org/pdf/2407.19679).
