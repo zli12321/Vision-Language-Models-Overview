@@ -26,7 +26,7 @@ Welcome to contribute and discuss!
 	* 4.3.	[Robotics and Embodied AI](RoboticsandEmbodiedAI)
 		* 4.3.1.  [Manipulation](#Manipulation)
 		* 4.3.2.  [Navigation](#Navigation)
-    		* 4.3.3.  [Human-robot Interaction](#HumanRobotInteraction)
+		* 4.3.3.  [Human-robot Interaction](#HumanRobotInteraction)
         	* 4.3.4.  [Autonomous Driving](#AutonomousDriving)
          * 4.4. [Human-Centered AI](Human-CenteredAI)
 * 5. [⛑️ Alignment](#Alignment)
