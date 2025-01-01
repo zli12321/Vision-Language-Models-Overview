@@ -28,7 +28,11 @@ Welcome to contribute and discuss!
 		* 4.3.2.  [Navigation](#Navigation)
 		* 4.3.3.  [Human-robot Interaction](#HumanRobotInteraction)
   		* 4.3.4.  [Autonomous Driving](#AutonomousDriving)
-      	* 4.4. [Human-Centered AI](Human-CenteredAI)
+	* 4.4. [Human-Centered AI](Human-CenteredAI)
+		* 4.4.1. [Web Agent](#WebAgent)
+		* 4.4.2. [Accessibility](#Accessibility)
+		* 4.4.3. [Healthcare](#Healthcare)
+		* 4.4.4. [Social Goodness](#SocialGoodness)
 * 5. [⛑️ Alignment](#Alignment)
 	* 5.1. [🌈 Pluralistic Alignment](#PluralisticAlignment)
 * 6. [🚀 Simulation](#Simulation)
@@ -180,6 +184,44 @@ Welcome to contribute and discuss!
 - **DiLu: A Knowledge-Driven Approach to Autonomous Driving with Large Language Models**, 2023, [[paper]](https://arxiv.org/abs/2309.16292), [[website]](https://pjlab-adg.github.io/DiLu/).
 - **VLP: Vision Language Planning for Autonomous Driving**, 2024, [[paper]](https://arxiv.org/pdf/2401.05577).
 - **DriveGPT4: Interpretable End-to-end Autonomous Driving via Large Language Model**, 2023, [[paper]](https://arxiv.org/abs/2310.01412).
+
+### 4.4. <a name='Human-CenteredAI'></a>Human-Centered AI
+- **DLF: Disentangled-Language-Focused Multimodal Sentiment Analysis**, 2024, [[paper]](https://arxiv.org/pdf/2412.12225), [[code]](https://github.com/pwang322/DLF).
+- **LIT: Large Language Model Driven Intention Tracking for Proactive Human-Robot Collaboration -- A Robot Sous-Chef Application**, 2024, [[paper]](https://arxiv.org/abs/2406.13787).
+- **Pretrained Language Models as Visual Planners for Human Assistance**, 2023, [[paper]](https://arxiv.org/pdf/2304.09179).
+- **Promoting AI Equity in Science: Generalized Domain Prompt Learning for Accessible VLM Research**, 2024, [[paper]](https://arxiv.org/pdf/2405.08668).
+- **Image and Data Mining in Reticular Chemistry Using GPT-4V**, 2023, [[paper]](https://arxiv.org/pdf/2312.05468).
+
+#### 4.4.1. <a name='WebAgent'></a>Web Agent
+- **A Real-World WebAgent with Planning, Long Context Understanding, and Program Synthesis**, 2023, [[paper]](https://arxiv.org/pdf/2307.12856).
+- **CogAgent: A Visual Language Model for GUI Agents**, 2023, [[paper]](https://arxiv.org/pdf/2312.08914), [[code]](https://github.com/THUDM/CogAgent).
+- **WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models**, 2024, [[paper]](https://arxiv.org/pdf/2401.13919), [[code]](https://github.com/MinorJerry/WebVoyager).
+- **ShowUI: One Vision-Language-Action Model for GUI Visual Agent**, 2024, [[paper]](https://arxiv.org/pdf/2411.17465), [[code]](https://github.com/showlab/ShowUI).
+- **ScreenAgent: A Vision Language Model-driven Computer Control Agent**, 2024, [[paper]](https://arxiv.org/pdf/2402.07945), [[code]](https://github.com/niuzaisheng/ScreenAgent).
+
+#### 4.4.2. <a name='Accessibility'></a>Accessibility
+- **X-World: Accessibility, Vision, and Autonomy Meet**, 2021, [[paper]](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhang_X-World_Accessibility_Vision_and_Autonomy_Meet_ICCV_2021_paper.pdf).
+- **Context-Aware Image Descriptions for Web Accessibility**, 2024, [[paper]](https://arxiv.org/pdf/2409.03054).
+- **Improving VR Accessibility Through Automatic 360 Scene Description Using Multimodal Large Language Models**, 2024, [[paper]](https://dl.acm.org/doi/10.1145/3691573.3691619).
+
+#### 4.4.3. <a name='Healthcare'></a>Healthcare
+- **VisionUnite: A Vision-Language Foundation Model for Ophthalmology Enhanced with Clinical Knowledge**, 2024, [[paper]](https://arxiv.org/pdf/2408.02865), [[code]](https://github.com/HUANGLIZI/VisionUnite).
+- **Multimodal Healthcare AI: Identifying and Designing Clinically Relevant Vision-Language Applications for Radiology**, 2024, [[paper]](https://arxiv.org/pdf/2402.14252).
+- **M-FLAG: Medical Vision-Language Pre-training with Frozen Language Models and Latent Space Geometry Optimization**, 2023, [[paper]](https://arxiv.org/pdf/2307.08347).
+- **MedCLIP: Contrastive Learning from Unpaired Medical Images and Text**, 2022, [[paper]](https://arxiv.org/pdf/2210.10163), [[code]](https://github.com/RyanWangZf/MedCLIP).
+- **Med-Flamingo: a Multimodal Medical Few-shot Learner**, 2023, [[paper]](https://arxiv.org/pdf/2307.15189), [[code]](https://github.com/snap-stanford/med-flamingo).
+
+#### 4.4.4. <a name='SocialGoodness'></a>Social Goodness
+- **Analyzing K-12 AI education: A large language model study of classroom instruction on learning theories, pedagogy, tools, and AI literacy**, 2024, [[paper]](https://www.sciencedirect.com/science/article/pii/S2666920X24000985).
+- **Students Rather Than Experts: A New AI For Education Pipeline To Model More Human-Like And Personalised Early Adolescences**, 2024, [[paper]](https://arxiv.org/pdf/2410.15701).
+- **Harnessing Large Vision and Language Models in Agriculture: A Review**, 2024, [[paper]](https://arxiv.org/pdf/2407.19679).
+- **A Vision-Language Model for Predicting Potential Distribution Land of Soybean Double Cropping**, 2024, [[paper]](https://www.frontiersin.org/journals/environmental-science/articles/10.3389/fenvs.2024.1515752/abstract).
+- **Vision Language Model is NOT All You Need: Augmentation Strategies for Molecule Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2407.09043), [[code]](https://github.com/Namkyeong/AMOLE).
+- **DrawEduMath: Evaluating Vision Language Models with Expert-Annotated Students’ Hand-Drawn Math Images**, 2024, [[paper]](https://openreview.net/pdf?id=0vQYvcinij).
+- **MultiMath: Bridging Visual and Mathematical Reasoning for Large Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2409.00147), [[code]](https://github.com/pengshuai-rin/MultiMath).
+- **Vision-Language Models Meet Meteorology: Developing Models for Extreme Weather Events Detection with Heatmaps**, 2024, [[paper]](https://arxiv.org/pdf/2406.09838), [[code]](https://github.com/AlexJJJChen/Climate-Zoo).
+- **He is very intelligent, she is very beautiful? On Mitigating Social Biases in Language Modelling and Generation**, 2021, [[paper]](https://aclanthology.org/2021.findings-acl.397.pdf).
+- **UrbanVLP: Multi-Granularity Vision-Language Pretraining for Urban Region Profiling**, 2024, [[paper]](https://arxiv.org/pdf/2403.168318).
 
 ##  6. <a name='Simulation'></a>🚀 Simulation
 - **OASIS: Open Agents Social Interaction Simulations on One Million Agents**, 2024.11, [[paper]](https://arxiv.org/abs/2411.11581), [[code]](https://github.com/camel-ai/oasis).
