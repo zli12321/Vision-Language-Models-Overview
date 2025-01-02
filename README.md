@@ -33,11 +33,13 @@ Welcome to contribute and discuss!
 		* 3.4.2. [Accessibility](#Accessibility)
 		* 3.4.3. [Healthcare](#Healthcare)
 		* 3.4.4. [Social Goodness](#SocialGoodness)
-* 5. [⛑️ Alignment](#Alignment)
-	* 5.1. [🌈 Pluralistic Alignment](#PluralisticAlignment)
-* 6. [🚀 Simulation](#Simulation)
-* 7. [👁️‍🗨️ Perspective](#Perspective)
-
+* 5. [⛑️ Challenges](#Challenges)
+	* 5.1. [Hallucination](#Hallucination)
+	* 5.2. [Safety](#Safety)
+	* 5.3. [Fairness](#Fairness)
+	* 5.4. [Multi-modality Alignment](#MultimodalityAlignment)
+ 	* 5.5. [Efficient Training and Fine-Tuning](#EfficientTrainingandFineTuning)
+ 	* 5.6. [Scarce of High-quality Dataset](#ScarceofHighqualityDataset)
 
 ---
 
@@ -216,33 +218,57 @@ Welcome to contribute and discuss!
 - **He is very intelligent, she is very beautiful? On Mitigating Social Biases in Language Modelling and Generation**, 2021, [[paper]](https://aclanthology.org/2021.findings-acl.397.pdf).
 - **UrbanVLP: Multi-Granularity Vision-Language Pretraining for Urban Region Profiling**, 2024, [[paper]](https://arxiv.org/pdf/2403.168318).
 
-##  6. <a name='Simulation'></a>🚀 Simulation
-- **OASIS: Open Agents Social Interaction Simulations on One Million Agents**, 2024.11, [[paper]](https://arxiv.org/abs/2411.11581), [[code]](https://github.com/camel-ai/oasis).
-- **Generative Agent Simulations of 1,000 People**, 2024.11, [[paper]](https://arxiv.org/abs/2411.10109).
-- **Social Science Meets LLMs: How Reliable Are Large Language Models in Social Simulations?**, 2024.11, [[paper]](https://arxiv.org/abs/2410.23426).
-- **Multi-expert Prompting Improves Reliability, Safety, and Usefulness of Large Language Models**, EMNLP 2024, [[paper]](https://arxiv.org/pdf/2411.00492).
-- **Simulating Opinion Dynamics with Networks of LLM-based Agents**, NAACL Findings 2024, [[paper]](https://aclanthology.org/2024.findings-naacl.211.pdf) [[code]](https://github.com/yunshiuan/llm-agent-opinion-dynamics)
-- **Beyond demographics: Aligning role-playing llm-based agents using human belief networks**, EMNLP Findings 2024, [[paper]](https://arxiv.org/pdf/2406.17232)
-- **The Wisdom of Partisan Crowds: Comparing Collective Intelligence in Humans and LLM-based Agents**, CogSci 2024, [[paper]](https://escholarship.org/content/qt3k67x8s5/qt3k67x8s5_noSplash_f34c019b5fef5ecab5b70e30108f787c.pdf)
-- **Large Language Models can Achieve Social Balance**, 2024.10, [[paper]](https://arxiv.org/abs/2410.04054).
-- **On the limits of agency in agent-based models**, 2024.09, [[paper]](https://arxiv.org/abs/2409.10568), [[code]](https://github.com/AgentTorch/AgentTorch).
-- **United in Diversity? Contextual Biases in LLM-Based Predictions of the 2024 European Parliament Elections**, 2024.09, [[paper]](https://arxiv.org/abs/2409.09045).
-- **Out of One, Many: Using Language Models to Simulate Human Samples**, 2022, [[paper]](https://arxiv.org/abs/2209.06899).
-- **Social Simulacra: Creating Populated Prototypes for Social Computing Systems**, 2022, [[paper]](https://dl.acm.org/doi/abs/10.1145/3526113.3545616).
-- **Generative Agents: Interactive Simulacra of Human Behavior**, 2023, [[paper]](https://arxiv.org/abs/2304.03442), [[code]](https://github.com/joonspk-research/generative_agents).
-- **Using Large Language Models to Simulate Multiple Humans and Replicate Human Subject Studies**, 2023, [[paper]](https://proceedings.mlr.press/v202/aher23a.html), [[code]](https://github.com/GatiAher/Using-Large-Language-Models-to-Replicate-Human-Subject-Studies).
-- **Large Language Models as Simulated Economic Agents: What Can We Learn from Homo Silicus?**, 2023 [[paper]](https://www.nber.org/papers/w31122), [[code]](https://github.com/johnjosephhorton/homo_silicus).
-- **$S^3$: Social-network Simulation System with Large Language Model-Empowered Agents**, 2023, [[paper]](https://arxiv.org/abs/2307.14984).
-- **Rethinking the Buyer’s Inspection Paradox in Information Markets with Language Agents**, 2023, [[paper]](https://openreview.net/forum?id=6werMQy1uz).
-- **SocioDojo: Building Lifelong Analytical Agents with Real-world Text and Time Series**, 2023, [[paper]](https://openreview.net/forum?id=s9z0HzWJJp).
-- **Humanoid Agents: Platform for Simulating Human-like Generative Agents**, 2023, [[paper]](https://arxiv.org/abs/2310.05418), [[code]](https://github.com/HumanoidAgents/HumanoidAgents).
-- **When Large Language Model based Agent Meets User Behavior Analysis: A Novel User Simulation Paradigm**, 2023, [[paper]](https://arxiv.org/abs/2306.02552), [[code]](https://github.com/RUC-GSAI/YuLan-Rec).
-- **Large Language Model-Empowered Agents for Simulating Macroeconomic Activities**, 2023, [[paper]](https://arxiv.org/abs/2310.10436).
-- **Generative Agent-Based Modeling: Unveiling Social System Dynamics through Coupling Mechanistic Models with Generative Artificial Intelligence**, 2023, [[paper]](https://arxiv.org/abs/2309.11456).
-- **Using Imperfect Surrogates for Downstream Inference: Design-based Supervised Learning for Social Science Applications of Large Language Models**, 2023.06, NeurIPS 2023, [[paper]](https://arxiv.org/abs/2306.04746).
-- **Epidemic Modeling with Generative Agents**, 2023.07, [[paper]](https://arxiv.org/abs/2307.04986), [[code]](https://github.com/bear96/GABM-Epidemic).
-- **Emergent analogical reasoning in large language models**, 2023.08, nature human behavior, [[paper]](https://www.nature.com/articles/s41562-023-01659-w).
-- **MetaAgents: Simulating Interactions of Human Behaviors for LLM-based Task-oriented Coordination via Collaborative Generative Agents**, 2023.10, [[paper]](https://arxiv.org/abs/2310.06500).
-- **War and Peace (WarAgent): Large Language Model-based Multi-Agent Simulation of World Wars**, 2023.11, [[paper]](https://arxiv.org/abs/2311.17227), [[code]](https://github.com/agiresearch/WarAgent).
-- **Emergence of Social Norms in Large Language Model-based Agent Societies**, 2024.03, [[paper]](https://arxiv.org/abs/2403.08251), [[code]](https://github.com/sxswz213/CRSEC).
-- **Large Content And Behavior Models To Understand, Simulate, And Optimize Content And Behavior**, ICLR-2024, [[paper]](https://openreview.net/forum?id=TrKq4Wlwcz)
+## 5. <a name='Challenges'>Challenges
+### 5.1 <a name='Hallucination'></a>Hallucination
+- **Object Hallucination in Image Captioning**, 2018, [[paper]](https://arxiv.org/pdf/1809.02156).
+- **Evaluating Object Hallucination in Large Vision-Language Models**, 2023, [[paper]](https://arxiv.org/pdf/2305.10355), [[code]](https://github.com/RUCAIBox/POPE).
+- **Detecting and Preventing Hallucinations in Large Vision Language Models**, 2023, [[paper]](https://arxiv.org/pdf/2308.06394).
+- **HallE-Control: Controlling Object Hallucination in Large Multimodal Models**, 2023, [[paper]](https://arxiv.org/pdf/2310.01779), [[code]](https://github.com/bronyayang/HallE_Control).
+- **Hallu-PI: Evaluating Hallucination in Multi-modal Large Language Models within Perturbed Inputs**, 2024, [[paper]](https://arxiv.org/pdf/2408.01355), [[code]](https://github.com/NJUNLP/Hallu-PI).
+- **BEAF: Observing BEfore-AFter Changes to Evaluate Hallucination in Vision-language Models**, 2024, [[paper]](https://arxiv.org/pdf/2407.13442), [[website]](https://beafbench.github.io/).
+- **HallusionBench: An Advanced Diagnostic Suite for Entangled Language Hallucination and Visual Illusion in Large Vision-Language Models**, 2023, [[paper]](https://arxiv.org/pdf/2310.14566), [[code]](https://github.com/tianyi-lab/HallusionBench).
+- **AUTOHALLUSION: Automatic Generation of Hallucination Benchmarks for Vision-Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2406.10900), [[website]](https://wuxiyang1996.github.io/autohallusion_page/).
+- **Mitigating Hallucination in Large Multi-Modal Models via Robust Instruction Tuning**, 2023, [[paper]](https://arxiv.org/pdf/2306.14565), [[code]](https://github.com/FuxiaoLiu/LRV-Instruction).
+- **Hal-Eval: A Universal and Fine-grained Hallucination Evaluation Framework for Large Vision Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2402.15721), [[code]](https://github.com/WisdomShell/hal-eval).
+- **AMBER: An LLM-free Multi-dimensional Benchmark for MLLMs Hallucination Evaluation**, 2023, [[paper]](https://arxiv.org/pdf/2311.07397), [[code]](https://github.com/junyangwang0410/AMBER).
+
+### 5.2 <a name='Safety'></a>Safety
+- **JailbreakZoo: Survey, Landscapes, and Horizons in Jailbreaking Large Language and Vision-Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2407.01599), [[website]](https://chonghan-chen.com/llm-jailbreak-zoo-survey/).
+- **Safe-VLN: Collision Avoidance for Vision-and-Language Navigation of Autonomous Robots Operating in Continuous Environments**, 2023, [[paper]](https://arxiv.org/pdf/2311.02817).
+- **SafeBench: A Safety Evaluation Framework for Multimodal Large Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2410.18927).
+- **JailBreakV: A Benchmark for Assessing the Robustness of MultiModal Large Language Models against Jailbreak Attacks**, 2024, [[paper]](https://arxiv.org/pdf/2404.03027).
+- **SHIELD: An Evaluation Benchmark for Face Spoofing and Forgery Detection with Multimodal Large Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2402.04178), [[code]](https://github.com/laiyingxin2/SHIELD).
+- **Images are Achilles' Heel of Alignment: Exploiting Visual Vulnerabilities for Jailbreaking Multimodal Large Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2403.09792).
+- **Jailbreaking Attack against Multimodal Large Language Model**, 2024, [[paper]](https://arxiv.org/pdf/2402.02309).
+
+### 5.3 <a name='Fairness'></a>Fairness
+- **Hallucination of Multimodal Large Language Models: A Survey**, 2024, [[paper]](https://arxiv.org/pdf/2404.18930).
+- **Bias and Fairness in Large Language Models: A Survey**, 2023, [[paper]](https://arxiv.org/pdf/2309.00770).
+- **Fairness and Bias in Multimodal AI: A Survey**, 2024, [[paper]](https://arxiv.org/pdf/2406.19097).
+- **Multi-Modal Bias: Introducing a Framework for Stereotypical Bias Assessment beyond Gender and Race in Vision–Language Models**, 2023, [[paper]](http://gerard.demelo.org/papers/multimodal-bias.pdf).
+- **FMBench: Benchmarking Fairness in Multimodal Large Language Models on Medical Tasks**, 2024, [[paper]](https://arxiv.org/pdf/2410.01089).
+- **FairCLIP: Harnessing Fairness in Vision-Language Learning**, 2024, [[paper]](https://arxiv.org/pdf/2403.19949).
+- **FairMedFM: Fairness Benchmarking for Medical Imaging Foundation Models**, 2024, [[paper]](https://arxiv.org/pdf/2407.00983).
+- **Benchmarking Vision Language Models for Cultural Understanding**, 2024, [[paper]](https://arxiv.org/pdf/2407.10920).
+
+### 5.4 <a name='MultimodalityAlignment'></a>Multi-modality Alignment
+- **Mitigating Hallucinations in Large Vision-Language Models with Instruction Contrastive Decoding**, 2024, [[paper]](https://arxiv.org/pdf/2403.18715).
+- **Enhancing Visual-Language Modality Alignment in Large Vision Language Models via Self-Improvement**, 2024, [[paper]](https://arxiv.org/pdf/2405.15973).
+- **Assessing and Learning Alignment of Unimodal Vision and Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2412.04616), [[website]](https://lezhang7.github.io/sail.github.io/).
+- **Extending Multi-modal Contrastive Representations**, 2023, [[paper]](https://arxiv.org/pdf/2310.08884), [[code]](https://github.com/MCR-PEFT/Ex-MCR).
+- **OneLLM: One Framework to Align All Modalities with Language**, 2023, [[paper]](https://arxiv.org/pdf/2312.03700), [[code]](https://github.com/csuhan/OneLLM).
+
+### 5.5 <a name=' EfficientTrainingandFineTuning'></a> Efficient Training and Fine-Tuning
+- **VILA: On Pre-training for Visual Language Models**, 2023, [[paper]](https://arxiv.org/pdf/2312.07533). 
+- **SimVLM: Simple Visual Language Model Pretraining with Weak Supervision**, 2021, [[paper]](https://arxiv.org/pdf/2108.10904). 
+- **LoRA: Low-Rank Adaptation of Large Language Models**, 2021, [[paper]](https://arxiv.org/pdf/2106.09685), [[code]](https://github.com/microsoft/LoRA).
+- **QLoRA: Efficient Finetuning of Quantized LLMs**, 2023, [[paper]](https://arxiv.org/pdf/2305.14314).
+- **Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback**, 2022, [[paper]](https://arxiv.org/pdf/2204.05862), [[code]](https://github.com/anthropics/hh-rlhf).
+- **RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback**, 2023, [[paper]](https://arxiv.org/pdf/2309.00267).
+
+### 5.6 <a name='ScarceofHighqualityDataset'></a>Scarce of High-quality Dataset
+- **SLIP: Self-supervision meets Language-Image Pre-training**, 2021, [[paper]](https://arxiv.org/pdf/2112.12750), [[code]](https://github.com/facebookresearch/SLIP).
+- **Synthetic Vision: Training Vision-Language Models to Understand Physics**, 2024, [[paper]](https://arxiv.org/pdf/2412.08619).
+- **Synth2: Boosting Visual-Language Models with Synthetic Captions and Image Embeddings**, 2024, [[paper]](https://arxiv.org/pdf/2403.07750).
+- **KALIE: Fine-Tuning Vision-Language Models for Open-World Manipulation without Robot Data**, 2024, [[paper]](https://arxiv.org/pdf/2409.14066).
+- **Web Agents with World Models: Learning and Leveraging Environment Dynamics in Web Navigation**, 2024, [[paper]](https://arxiv.org/pdf/2410.13232).
