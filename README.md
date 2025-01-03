@@ -116,7 +116,6 @@ Welcome to contribute and discuss!
 
 ##  3. <a name='Toolenhancement'></a>⚒️ Applications
 ###	3.1.  <a name='EmbodiedVLMagents'></a>Embodied VLM agents
-- **VQA: Visual Question Answering**, 2016, [[paper]](https://arxiv.org/pdf/1505.00468).
 - **Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI**, 2024, [[paper]](https://arxiv.org/pdf/2407.06886v1).
 - **ScreenAI: A Vision-Language Model for UI and Infographics Understanding**, 2024, [[paper]](https://arxiv.org/pdf/2402.04615)
 - **ChartLlama: A Multimodal LLM for Chart Understanding and Generation**, 2023, [[paper]](https://arxiv.org/pdf/2311.16483).
