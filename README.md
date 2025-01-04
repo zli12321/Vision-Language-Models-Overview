@@ -240,7 +240,7 @@ Welcome to contribute and discuss!
 - **He is very intelligent, she is very beautiful? On Mitigating Social Biases in Language Modelling and Generation**, 2021, [[paper]](https://aclanthology.org/2021.findings-acl.397.pdf).
 - **UrbanVLP: Multi-Granularity Vision-Language Pretraining for Urban Region Profiling**, 2024, [[paper]](https://arxiv.org/pdf/2403.168318).
 
-## 4. <a name='Challenges'>Challenges
+## 4. <a name='Challenges'></a>Challenges
 ### 4.1 <a name='Hallucination'></a>Hallucination
 - **Object Hallucination in Image Captioning**, 2018, [[paper]](https://arxiv.org/pdf/1809.02156).
 - **Evaluating Object Hallucination in Large Vision-Language Models**, 2023, [[paper]](https://arxiv.org/pdf/2305.10355), [[code]](https://github.com/RUCAIBox/POPE).
@@ -296,7 +296,8 @@ Welcome to contribute and discuss!
 - **Web Agents with World Models: Learning and Leveraging Environment Dynamics in Web Navigation**, 2024, [[paper]](https://arxiv.org/pdf/2410.13232).
 
 
-## 5. <a name='Citation'>Citation
+## 5. <a name='Citation'></a>Citation
 
 ```
+aaa
 ```
