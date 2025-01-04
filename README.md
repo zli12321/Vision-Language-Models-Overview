@@ -296,7 +296,7 @@ Welcome to contribute and discuss!
 - **Web Agents with World Models: Learning and Leveraging Environment Dynamics in Web Navigation**, 2024, [[paper]](https://arxiv.org/pdf/2410.13232).
 
 
-## 5. <a name='Citation'></a>Citation
+## 5. <a name='Citations'></a>Citation
 
 ```
 aaa
