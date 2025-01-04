@@ -20,6 +20,8 @@ Welcome to contribute and discuss!
 
 * 1. [📚 SoTA VLMs](#vlms)
 * 2. [🗂️ Dataset and Evaluation](#Dataset)
+	* 2.1.  [Datasets and Evaluation for VLM](#DatasetforVLM)
+	* 2.2.  [Benchmark Datasets, Simulators and Generative Models for Embodied VLM](#DatasetforEmbodiedVLM) 
 * 3. [⚒️ Applications](#Toolenhancement)
 	* 3.1. 	[Embodied VLM agents](#EmbodiedVLMagents)
 	* 3.2.	[Generative Visual Media Applications](GenerativeVisualMediaApplications)
@@ -71,7 +73,7 @@ Welcome to contribute and discuss!
 
 
 ##  2. <a name='Dataset'></a>🗂️ Benchmarks and Evaluation
-### Datasets and Evaluation for VLM 
+### 2.1. <a name='DatasetforVLM'></a> Datasets and Evaluation for VLM
 
 
 | Benchmark Dataset                                        | Metric Type        | Source                 | Size (K) | Project 							|
@@ -113,6 +115,25 @@ Welcome to contribute and discuss!
 | [MLVU](https://arxiv.org/pdf/2406.04264) 				 | Multiple Choice    | Synthetic/Human        | 2.6       | [Github Repo](https://github.com/JUNJIE99/MLVU)|
 | [VideoMME](https://arxiv.org/pdf/2405.21075)            | Multiple Choice    | Experts                | 2.7       | [Website](https://video-mme.github.io/)|
 | [Perception-Test](https://arxiv.org/pdf/2305.13786)	 | Multiple Choice    | CrowdSource            | 11.6      | [Github Repo](https://github.com/google-deepmind/perception_test)|
+
+### 2.2. <a name='DatasetforEmbodiedVLM'></a> Benchmark Datasets, Simulators and Generative Models for Embodied VLM 
+| Benchmark                                                                                                                                     |             Domain              |                Type                |                                                     		Project					                                                     |
+|-----------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------:|:----------------------------------:|:----------------------------------------------------------------------------------------------------------------------:|
+| [Habitat](https://arxiv.org/pdf/1904.01201), [Habitat 2.0](https://arxiv.org/pdf/2106.14405), [Habitat 3.0](https://arxiv.org/pdf/2310.13724) |      Robotics (Navigation)      |        Simulator + Dataset         |                                           [Website](https://aihabitat.org/)                                            |
+| [Gibson](https://arxiv.org/pdf/1808.10654)                                                                                                    |      Robotics (Navigation)      |        Simulator + Dataset         |           [Website](http://gibsonenv.stanford.edu/), [Github Repo](https://github.com/StanfordVL/GibsonEnv)            |
+| [iGibson1.0](https://arxiv.org/pdf/2012.02924), [iGibson2.0](https://arxiv.org/pdf/2108.03272)                                                |      Robotics (Navigation)      |        Simulator + Dataset         |            [Website](https://svl.stanford.edu/igibson/), [Document](https://stanfordvl.github.io/iGibson/)             |
+| [Isaac Gym](https://arxiv.org/pdf/2108.10470)                                                                                                 |      Robotics (Navigation)      |             Simulator              |      [Website](https://developer.nvidia.com/isaac-gym), [Github Repo](https://github.com/isaac-sim/IsaacGymEnvs)       |
+| [Isaac Lab](https://arxiv.org/pdf/2301.04195)                                                                                                 |      Robotics (Navigation)      |             Simulator              | [Website](https://isaac-sim.github.io/IsaacLab/main/index.html), [Github Repo](https://github.com/isaac-sim/IsaacLab)  |
+| [VIMA-Bench](https://arxiv.org/pdf/2210.03094)                                                                                                |     Robotics (Manipulation)     |             Simulator              |                [Website](https://vimalabs.github.io/), [Github Repo](https://github.com/vimalabs/VIMA)                 |
+| [VLMbench](https://arxiv.org/pdf/2206.08522)                                                                                                  |     Robotics (Manipulation)     |             Simulator              |                                 [Github Repo](https://github.com/eric-ai-lab/VLMbench)                                 |
+| [CALVIN](https://arxiv.org/pdf/2112.03227)                                                                                                    |     Robotics (Manipulation)     |             Simulator              |              [Website](http://calvin.cs.uni-freiburg.de/), [Github Repo](https://github.com/mees/calvin)               |
+| [GemBench](https://arxiv.org/pdf/2410.01345)                                                                                                  |     Robotics (Manipulation)     |             Simulator              | [Website](https://www.di.ens.fr/willow/research/gembench/), [Github Repo](https://github.com/vlc-robot/robot-3dlotus/) | 
+| [WebArena](https://arxiv.org/pdf/2307.13854)                                                                                                  |            Web Agent            |             Simulator              |                [Website](https://webarena.dev/), [Github Repo](https://github.com/web-arena-x/webarena)                |
+| [UniSim](https://openreview.net/pdf?id=sFyTZEqmUY)                                                                                            |     Robotics (Manipulation)     |   Generative Model, World Model    |                                [Website](https://universal-simulator.github.io/unisim/)                                |
+| [GAIA-1](https://arxiv.org/pdf/2309.17080)                                                                                                    | Robotics (Automonous Driving)   |   Generative Model, World Model    |                                [Website](https://wayve.ai/thinking/introducing-gaia1/)                                 |                                                                                                   
+| [LWM](https://arxiv.org/pdf/2402.08268)                                                                                                       |           Embodied AI           |   Generative Model, World Model    |        [Website](https://largeworldmodel.github.io/lwm/), [Github Repo](https://github.com/LargeWorldModel/LWM)        |
+| [Genesis](https://github.com/Genesis-Embodied-AI/Genesis)                                                                                     |           Embodied AI           |   Generative Model, World Model    |                             [Github Repo](https://github.com/Genesis-Embodied-AI/Genesis)                              |
+
 
 ##  3. <a name='Toolenhancement'></a>⚒️ Applications
 ###	3.1.  <a name='EmbodiedVLMagents'></a>Embodied VLM agents
