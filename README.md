@@ -5,7 +5,7 @@ Below we compile *awesome* papers and model and github repositories that
 - **State-of-the-Art VLMs** Collection of VLMs from 2022-2024.
 - **Evaluate** VLM benchmarks and corresponding link to the works
 - **Applications** applications of VLMs in embodied AI, robotics, etc.
-- contribute **surveys**, **perspectives**, and **datasets** on the above topics.
+- Contribute **surveys**, **perspectives**, and **datasets** on the above topics.
 
 
 Welcome to contribute and discuss!
