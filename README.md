@@ -35,13 +35,15 @@ Welcome to contribute and discuss!
 		* 3.4.2. [Accessibility](#Accessibility)
 		* 3.4.3. [Healthcare](#Healthcare)
 		* 3.4.4. [Social Goodness](#SocialGoodness)
-* 5. [⛑️ Challenges](#Challenges)
+* 4. [⛑️ Challenges](#Challenges)
 	* 5.1. [Hallucination](#Hallucination)
 	* 5.2. [Safety](#Safety)
 	* 5.3. [Fairness](#Fairness)
 	* 5.4. [Multi-modality Alignment](#MultimodalityAlignment)
  	* 5.5. [Efficient Training and Fine-Tuning](#EfficientTrainingandFineTuning)
  	* 5.6. [Scarce of High-quality Dataset](#ScarceofHighqualityDataset)
+* 5. [⛑️ Citation](#Citations)
+
 
 ---
 
@@ -238,8 +240,8 @@ Welcome to contribute and discuss!
 - **He is very intelligent, she is very beautiful? On Mitigating Social Biases in Language Modelling and Generation**, 2021, [[paper]](https://aclanthology.org/2021.findings-acl.397.pdf).
 - **UrbanVLP: Multi-Granularity Vision-Language Pretraining for Urban Region Profiling**, 2024, [[paper]](https://arxiv.org/pdf/2403.168318).
 
-## 5. <a name='Challenges'>Challenges
-### 5.1 <a name='Hallucination'></a>Hallucination
+## 4. <a name='Challenges'>Challenges
+### 4.1 <a name='Hallucination'></a>Hallucination
 - **Object Hallucination in Image Captioning**, 2018, [[paper]](https://arxiv.org/pdf/1809.02156).
 - **Evaluating Object Hallucination in Large Vision-Language Models**, 2023, [[paper]](https://arxiv.org/pdf/2305.10355), [[code]](https://github.com/RUCAIBox/POPE).
 - **Detecting and Preventing Hallucinations in Large Vision Language Models**, 2023, [[paper]](https://arxiv.org/pdf/2308.06394).
@@ -252,7 +254,7 @@ Welcome to contribute and discuss!
 - **Hal-Eval: A Universal and Fine-grained Hallucination Evaluation Framework for Large Vision Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2402.15721), [[code]](https://github.com/WisdomShell/hal-eval).
 - **AMBER: An LLM-free Multi-dimensional Benchmark for MLLMs Hallucination Evaluation**, 2023, [[paper]](https://arxiv.org/pdf/2311.07397), [[code]](https://github.com/junyangwang0410/AMBER).
 
-### 5.2 <a name='Safety'></a>Safety
+### 4.2 <a name='Safety'></a>Safety
 - **JailbreakZoo: Survey, Landscapes, and Horizons in Jailbreaking Large Language and Vision-Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2407.01599), [[website]](https://chonghan-chen.com/llm-jailbreak-zoo-survey/).
 - **Safe-VLN: Collision Avoidance for Vision-and-Language Navigation of Autonomous Robots Operating in Continuous Environments**, 2023, [[paper]](https://arxiv.org/pdf/2311.02817).
 - **SafeBench: A Safety Evaluation Framework for Multimodal Large Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2410.18927).
@@ -261,7 +263,7 @@ Welcome to contribute and discuss!
 - **Images are Achilles' Heel of Alignment: Exploiting Visual Vulnerabilities for Jailbreaking Multimodal Large Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2403.09792).
 - **Jailbreaking Attack against Multimodal Large Language Model**, 2024, [[paper]](https://arxiv.org/pdf/2402.02309).
 
-### 5.3 <a name='Fairness'></a>Fairness
+### 4.3 <a name='Fairness'></a>Fairness
 - **Hallucination of Multimodal Large Language Models: A Survey**, 2024, [[paper]](https://arxiv.org/pdf/2404.18930).
 - **Bias and Fairness in Large Language Models: A Survey**, 2023, [[paper]](https://arxiv.org/pdf/2309.00770).
 - **Fairness and Bias in Multimodal AI: A Survey**, 2024, [[paper]](https://arxiv.org/pdf/2406.19097).
@@ -271,14 +273,14 @@ Welcome to contribute and discuss!
 - **FairMedFM: Fairness Benchmarking for Medical Imaging Foundation Models**, 2024, [[paper]](https://arxiv.org/pdf/2407.00983).
 - **Benchmarking Vision Language Models for Cultural Understanding**, 2024, [[paper]](https://arxiv.org/pdf/2407.10920).
 
-### 5.4 <a name='MultimodalityAlignment'></a>Multi-modality Alignment
+### 4.4 <a name='MultimodalityAlignment'></a>Multi-modality Alignment
 - **Mitigating Hallucinations in Large Vision-Language Models with Instruction Contrastive Decoding**, 2024, [[paper]](https://arxiv.org/pdf/2403.18715).
 - **Enhancing Visual-Language Modality Alignment in Large Vision Language Models via Self-Improvement**, 2024, [[paper]](https://arxiv.org/pdf/2405.15973).
 - **Assessing and Learning Alignment of Unimodal Vision and Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2412.04616), [[website]](https://lezhang7.github.io/sail.github.io/).
 - **Extending Multi-modal Contrastive Representations**, 2023, [[paper]](https://arxiv.org/pdf/2310.08884), [[code]](https://github.com/MCR-PEFT/Ex-MCR).
 - **OneLLM: One Framework to Align All Modalities with Language**, 2023, [[paper]](https://arxiv.org/pdf/2312.03700), [[code]](https://github.com/csuhan/OneLLM).
 
-### 5.5 <a name=' EfficientTrainingandFineTuning'></a> Efficient Training and Fine-Tuning
+### 4.5 <a name=' EfficientTrainingandFineTuning'></a> Efficient Training and Fine-Tuning
 - **VILA: On Pre-training for Visual Language Models**, 2023, [[paper]](https://arxiv.org/pdf/2312.07533). 
 - **SimVLM: Simple Visual Language Model Pretraining with Weak Supervision**, 2021, [[paper]](https://arxiv.org/pdf/2108.10904). 
 - **LoRA: Low-Rank Adaptation of Large Language Models**, 2021, [[paper]](https://arxiv.org/pdf/2106.09685), [[code]](https://github.com/microsoft/LoRA).
@@ -286,9 +288,15 @@ Welcome to contribute and discuss!
 - **Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback**, 2022, [[paper]](https://arxiv.org/pdf/2204.05862), [[code]](https://github.com/anthropics/hh-rlhf).
 - **RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback**, 2023, [[paper]](https://arxiv.org/pdf/2309.00267).
 
-### 5.6 <a name='ScarceofHighqualityDataset'></a>Scarce of High-quality Dataset
+### 4.6 <a name='ScarceofHighqualityDataset'></a>Scarce of High-quality Dataset
 - **SLIP: Self-supervision meets Language-Image Pre-training**, 2021, [[paper]](https://arxiv.org/pdf/2112.12750), [[code]](https://github.com/facebookresearch/SLIP).
 - **Synthetic Vision: Training Vision-Language Models to Understand Physics**, 2024, [[paper]](https://arxiv.org/pdf/2412.08619).
 - **Synth2: Boosting Visual-Language Models with Synthetic Captions and Image Embeddings**, 2024, [[paper]](https://arxiv.org/pdf/2403.07750).
 - **KALIE: Fine-Tuning Vision-Language Models for Open-World Manipulation without Robot Data**, 2024, [[paper]](https://arxiv.org/pdf/2409.14066).
 - **Web Agents with World Models: Learning and Leveraging Environment Dynamics in Web Navigation**, 2024, [[paper]](https://arxiv.org/pdf/2410.13232).
+
+
+## 5. <a name='Citation'>Citation
+
+```
+```
