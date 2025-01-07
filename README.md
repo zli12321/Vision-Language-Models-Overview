@@ -299,5 +299,13 @@ Welcome to contribute and discuss!
 ## 5. <a name='Citations'></a>Citation
 
 ```
-TBD
+@misc{li2025benchmarkevaluationsapplicationschallenges,
+      title={Benchmark Evaluations, Applications, and Challenges of Large Vision Language Models: A Survey}, 
+      author={Zongxia Li and Xiyang Wu and Hongyang Du and Huy Nghiem and Guangyao Shi},
+      year={2025},
+      eprint={2501.02189},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2501.02189}, 
+}
 ```
