@@ -117,6 +117,10 @@ Welcome to contribute and discuss!
 | [MLVU](https://arxiv.org/pdf/2406.04264) 				 | Multiple Choice    | Synthetic/Human        | 2.6       | [Github Repo](https://github.com/JUNJIE99/MLVU)|
 | [VideoMME](https://arxiv.org/pdf/2405.21075)            | Multiple Choice    | Experts                | 2.7       | [Website](https://video-mme.github.io/)|
 | [Perception-Test](https://arxiv.org/pdf/2305.13786)	 | Multiple Choice    | CrowdSource            | 11.6      | [Github Repo](https://github.com/google-deepmind/perception_test)|
+| [VQAScore](https://arxiv.org/pdf/2404.01291)	 	| Yes/No   | AI Expert            | 665    	 | [Github Repo](https://github.com/linzhiqiu/t2v_metrics)|
+| [GenAI-Bench](https://arxiv.org/pdf/2406.13743)	 	| Human Ratings    |	Human           | 80.0    	 | [Huggingface](https://huggingface.co/datasets/BaiqiL/GenAI-Bench)|
+| [NaturalBench](https://arxiv.org/pdf/2410.14669)	 	| Yes/No <br> Multiple Choice   |	Human           | 10.0   	 | [Huggingface](https://huggingface.co/datasets/BaiqiL/NaturalBench/blob/main/README.md)|
+
 
 ### 2.2. <a name='DatasetforEmbodiedVLM'></a> Benchmark Datasets, Simulators and Generative Models for Embodied VLM 
 | Benchmark                                                                                                                                     |             Domain              |                Type                |                                                     		Project					                                                     |
