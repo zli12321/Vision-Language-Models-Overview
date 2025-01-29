@@ -71,6 +71,8 @@ Welcome to contribute and discuss!
 | [Baichuan Ocean Mini](https://arxiv.org/pdf/2410.08565)      | 2024 | Decoder-only   | Image/Video/Audio/Text      | 7B             | CLIP ViT-L/14                                | [Baichuan](https://arxiv.org/pdf/2309.10305)                                         |
 | [TransFusion](https://arxiv.org/pdf/2408.11039)              | 2024 | Encoder-decoder| Undisclosed                 | 7B             | VAE Encoder                                  | Pretrained from scratch on transformer architecture |
 | [DeepSeek-VL2](https://arxiv.org/pdf/2412.10302)             | 2024 | Decoder-only   | [WiT](https://huggingface.co/datasets/google/wit), [WikiHow](https://huggingface.co/datasets/ajibawa-2023/WikiHow) | 4.5B x 74      | SigLIP/SAMB                                  | [DeepSeekMoE](https://arxiv.org/pdf/2412.10302)                                      |
+| [DeepSeek-Janus-Pro](https://janusai.pro/wp-content/uploads/2025/01/janus_pro_tech_report.pdf)             | 2025 | Decoder-only   | Undisclosed | 7B     | SigLIP                                | [DeepSeek-Janus-Pro](https://huggingface.co/deepseek-ai/Janus-Pro-7B)                                      |
+
 
 
 
