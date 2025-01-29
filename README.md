@@ -2,7 +2,7 @@
 A most Frontend Collection and survey of vision-language model papers, and models GitHub repository
 
 Below we compile *awesome* papers and model and github repositories that 
-- **State-of-the-Art VLMs** Collection of VLMs starting from 2022 (we'll keep updating new models and benchmarks).
+- **State-of-the-Art VLMs** Collection of newest to oldest VLMs (we'll keep updating new models and benchmarks).
 - **Evaluate** VLM benchmarks and corresponding link to the works
 - **Applications** applications of VLMs in embodied AI, robotics, etc.
 - Contribute **surveys**, **perspectives**, and **datasets** on the above topics.
