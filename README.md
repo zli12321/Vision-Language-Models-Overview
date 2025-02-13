@@ -17,7 +17,7 @@ Welcome to contribute and discuss!
 ---
 
 ## Table of Contents
-* 0. [📄 Paper Link](https://arxiv.org/abs/2501.02189)
+* 0. [📄 Paper Link](https://arxiv.org/abs/2501.02189)/[⛑️ Citation](#Citations)
 * 1. [📚 SoTA VLMs](#vlms)
 * 2. [🗂️ Dataset and Evaluation](#Dataset)
 	* 2.1.  [Datasets and Evaluation for VLM](#DatasetforVLM)
@@ -42,7 +42,6 @@ Welcome to contribute and discuss!
 	* 5.4. [Multi-modality Alignment](#MultimodalityAlignment)
  	* 5.5. [Efficient Training and Fine-Tuning](#EfficientTrainingandFineTuning)
  	* 5.6. [Scarce of High-quality Dataset](#ScarceofHighqualityDataset)
-* 5. [⛑️ Citation](#Citations)
 
 
 ---
