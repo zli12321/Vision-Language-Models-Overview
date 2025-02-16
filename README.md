@@ -85,6 +85,7 @@ Welcome to contribute and discuss!
 | Benchmark Dataset                                        | Metric Type        | Source                 | Size (K) | Project 							|
 |----------------------------------------------------------|:------------------:|:-----------------------:|:---------:|:----------------------------------:|
 | [MMTBench](https://arxiv.org/pdf/2404.16006)             | Multiple Choice    | AI Experts             | 30.1      | [Github Repo](https://github.com/tylin/coco-caption)|
+| [PHYSBENCH](https://arxiv.org/pdf/2501.16411)             | Multiple Choice    | Graduate STEM Students           | 100      | [Github Repo](https://github.com/USC-GVL/PhysBench)|
 | [MM-Vet](https://arxiv.org/pdf/2308.02490)				 | LLM Eval           | Human                  | 0.2       | [Github Repo](https://github.com/yuweihao/MM-Vet) |
 | [MM-En/CN](https://arxiv.org/pdf/2307.06281) 			 | Multiple Choice    | Human                  | 3.2       | [Github Repo](https://github.com/open-compass/VLMEvalKit)|
 | [GQA](https://arxiv.org/abs/2305.13245)					 | Answer Matching	   | Seed with Synthetic    | 22,000    | [Website](https://cs.stanford.edu/people/dorarad/gqa/index.html)|
