@@ -185,6 +185,7 @@ Welcome to contribute and discuss!
 - **RT-1: Robotics Transformer for Real-World Control at Scale**, 2022, [[paper]](https://robotics-transformer1.github.io/assets/rt1.pdf), [[website]](https://robotics-transformer1.github.io/).
 - **RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control**, 2023, [[paper]](https://arxiv.org/pdf/2307.15818), [[website]](https://robotics-transformer2.github.io/).
 - **Open X-Embodiment: Robotic Learning Datasets and RT-X Models**, 2023, [[paper]](https://arxiv.org/pdf/2310.08864), [[website]](https://robotics-transformer-x.github.io/).
+- **ExploRLLM: Guiding Exploration in Reinforcement Learning with Large Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2403.09583), [[website]](https://explorllm.github.io/).
 
 #### 3.3.2. <a name='Navigation'></a>Navigation
 - **ZSON: Zero-Shot Object-Goal Navigation using Multimodal Goal Embeddings**, 2022, [[paper]](https://arxiv.org/pdf/2206.12403).
