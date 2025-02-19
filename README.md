@@ -84,6 +84,7 @@ Welcome to contribute and discuss!
 
 | Benchmark Dataset                                        | Metric Type        | Source                 | Size (K) | Project 							|
 |----------------------------------------------------------|:------------------:|:-----------------------:|:---------:|:----------------------------------:|
+| [MovieChat](https://arxiv.org/abs/2307.16449)             | LLM Eval    | Human           | 1K      | [Github Repo](https://rese1f.github.io/MovieChat/)|
 | [PHYSBENCH](https://arxiv.org/pdf/2501.16411)             | Multiple Choice    | Graduate STEM Students           | 100      | [Github Repo](https://github.com/USC-GVL/PhysBench)|
 | [MMTBench](https://arxiv.org/pdf/2404.16006)             | Multiple Choice    | AI Experts             | 30.1      | [Github Repo](https://github.com/tylin/coco-caption)|
 | [MM-Vet](https://arxiv.org/pdf/2308.02490)				 | LLM Eval           | Human                  | 0.2       | [Github Repo](https://github.com/yuweihao/MM-Vet) |
