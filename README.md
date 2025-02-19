@@ -177,6 +177,7 @@ Welcome to contribute and discuss!
 - **Robots Enact Malignant Stereotypes**, 2022, [[paper]](https://arxiv.org/pdf/2207.11569), [[website]](https://sites.google.com/view/robots-enact-stereotypes). 
 - **LLM-Driven Robots Risk Enacting Discrimination, Violence, and Unlawful Actions**, 2024, [[paper]](https://arxiv.org/pdf/2406.08824).
 - **Highlighting the Safety Concerns of Deploying LLMs/VLMs in Robotics**, 2024, [[paper]](https://arxiv.org/pdf/2402.10340), [[website]](https://wuxiyang1996.github.io/adversary-vlm-robotics/).
+- **EmbodiedBench: Comprehensive Benchmarking Multi-modal Large Language Models for Vision-Driven Embodied Agents**, 2025, [[paper]](https://arxiv.org/abs/2502.09560), [[website]](https://embodiedbench.github.io/), [[code & dataset]](https://github.com/EmbodiedBench/EmbodiedBench).
 
 #### 3.3.1. <a name='Manipulation'></a>Manipulation
 - **VIMA: General Robot Manipulation with Multimodal Prompts**, 2022, [[paper]](https://arxiv.org/pdf/2210.03094), [[website]](https://vimalabs.github.io/).
