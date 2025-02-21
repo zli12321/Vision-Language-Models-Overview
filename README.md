@@ -81,53 +81,30 @@ Welcome to contribute and discuss!
 
 ##  2. <a name='Dataset'></a>🗂️ Benchmarks and Evaluation
 ### 2.1. <a name='DatasetforVLM'></a> Datasets and Evaluation for VLM
-
-
-| Benchmark Dataset                                        | Metric Type        | Source                 | Size (K) | Project 							|
-|----------------------------------------------------------|:------------------:|:-----------------------:|:---------:|:----------------------------------:|
-| [MovieChat](https://arxiv.org/abs/2307.16449)             | LLM Eval    | Human           | 1K      | [Github Repo](https://rese1f.github.io/MovieChat/)|
-| [PHYSBENCH](https://arxiv.org/pdf/2501.16411)             | Multiple Choice    | Graduate STEM Students           | 100      | [Github Repo](https://github.com/USC-GVL/PhysBench)|
-| [MMTBench](https://arxiv.org/pdf/2404.16006)             | Multiple Choice    | AI Experts             | 30.1      | [Github Repo](https://github.com/tylin/coco-caption)|
-| [MM-Vet](https://arxiv.org/pdf/2308.02490)				 | LLM Eval           | Human                  | 0.2       | [Github Repo](https://github.com/yuweihao/MM-Vet) |
-| [MM-En/CN](https://arxiv.org/pdf/2307.06281) 			 | Multiple Choice    | Human                  | 3.2       | [Github Repo](https://github.com/open-compass/VLMEvalKit)|
-| [GQA](https://arxiv.org/abs/2305.13245)					 | Answer Matching	   | Seed with Synthetic    | 22,000    | [Website](https://cs.stanford.edu/people/dorarad/gqa/index.html)|
-| [VCR](https://arxiv.org/abs/1811.10830)					 | Multiple Choice    | MTurks                | 290        | [Website](https://visualcommonsense.com/)|
-| [VQAv2](https://arxiv.org/pdf/1505.00468)				 | Yes/No <br> Answer Matching | MTurks | 1,100     | [Github Repo](https://github.com/salesforce/LAVIS/blob/main/dataset_card/vqav2.md)|
-| [MMMU](https://arxiv.org/pdf/2311.16502)				 | Answer Matching; Multiple Choice | College Students | 11.5 | [Website](https://mmmu-benchmark.github.io/) |
-| [SEEDBench](https://arxiv.org/pdf/2307.16125)			 | Multiple Choice    | Synthetic              | 19        | [Github Repo](https://github.com/AILab-CVC/SEED-Bench) |
-| [RealWorld QA](https://x.ai/blog/grok-1.5v)				 | Multiple Choice    | Human                  | 0.765     | [Huggingface](https://huggingface.co/datasets/visheratin/realworldqa)|
-| [MMMU-Pro](https://arxiv.org/pdf/2409.02813)			 | Multiple Choice    | Human                  | 3.64      | [Website](https://mmmu-benchmark.github.io/#leaderboard)|
-| [DPG-Bench](https://arxiv.org/pdf/2403.05135)			 | Semantic Alignment | Synthetic              | 1.06      | [Website](https://ella-diffusion.github.io)|
-| [MSCOCO-30K](https://arxiv.org/pdf/1405.0312)			 | BLEU, Rouge, Similarity | MTurks             | 30        | [Website](https://cocodataset.org/#home)|
-| [TextVQA](https://arxiv.org/pdf/1904.08920)			 | Answer Matching    | CrowdSource            | 45        | [Github Repo](https://github.com/facebookresearch/mmf)|
-| [DocVQA](https://arxiv.org/pdf/2007.00398)				 | Answer Matching    | CrowdSource            | 50        | [Website](https://www.docvqa.org/)|
-| [CMMLU](https://arxiv.org/pdf/2306.09212)				 | Multiple Choice    | College Students       | 11.5      | [Github Repo](https://github.com/haonan-li/CMMLU)|
-| [C-Eval](https://arxiv.org/pdf/2305.08322)				 | Multiple Choice    | Human                  | 13.9      | [Website](https://cevalbenchmark.com/)|
-| [TextVQA](https://arxiv.org/pdf/1904.08920)			 | Answer Matching    | Expert Human           | 28.6      | [Github Repo](https://github.com/facebookresearch/mmf)|
-| [MathVista](https://arxiv.org/pdf/2310.02255)			 | Answer Matching <br> Multiple Choice | Human   | 6.15      | [Website](https://mathvista.github.io/)|
-| [MathVision](https://arxiv.org/pdf/2402.14804) 		 | Answer Matching <br> Multiple Choice | College Students | 3.04 | [Website](https://mathvision-cuhk.github.io/)|
-| [OCRBench](https://arxiv.org/pdf/2305.07895)			 | Answer Matching (ANLS) | Human               | 1         | [Github Repo](https://github.com/Yuliang-Liu/MultimodalOCR)|
-| [MME](https://arxiv.org/pdf/2306.13394)					 | Yes/No             | Human                  | 2.8       | [Github Repo](https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models/tree/Evaluation)|
-| [InfographicVQA](https://arxiv.org/pdf/2104.12756) 	 | Answer Matching    | CrowdSource            | 30        | [Website](https://www.docvqa.org/)|
-| [AI2D](https://arxiv.org/pdf/1603.07396)				 | Answer Matching    | CrowdSource            | 1         | [Website](https://ai2d.med.upenn.edu/)|
-| [ChartQA](https://arxiv.org/abs/2203.10244)			 | Answer Matching    | CrowdSource/Synthetic  | 32.7      | [Github Repo](https://github.com/vis-nlp/ChartQA)|
-| [GenEval](https://arxiv.org/pdf/2310.11513)			 | CLIPScore <br> GenEval  | MTurks             | 1.2       | [Github Repo](https://github.com/djghosh13/geneval)|
-| [T2I-CompBench](https://arxiv.org/pdf/2307.06350)		 | Multiple Metrics   | Synthetic              | 6         | [Website](https://karine-h.github.io/T2I-CompBench/)|
-| [HallusionBench](https://arxiv.org/pdf/2310.14566)		 | Yes/No             | Human                  | 1.13      | [Github Repo](https://github.com/tianyi-lab/HallusionBench)|
-| [POPE](https://arxiv.org/pdf/2305.10355)				 | Yes/No             | Human                  | 9         | [Github Repo](https://github.com/RUCAIBox/POPE)|
-| [MMLU](https://arxiv.org/pdf/2009.03300)				 | Multiple Choice    | Human                  | 15.9      | [Github Repo](https://github.com/hendrycks/test)|
-| [MMStar](https://arxiv.org/pdf/2403.20330)				 | Multiple Choice    | Human                  | 1.5       | [Website](https://mmstar-benchmark.github.io/)|
-| [M3GIA](https://arxiv.org/pdf/2406.05343)				 | Multiple Choice    | Human                  | 1.8       | [Huggingface](https://huggingface.co/datasets/Songweii/M3GIA)|
-| [InternetAGIEval](https://arxiv.org/pdf/2304.06364)	 | Multiple Choice <br> Answer Matching | Human   | 8.06      | [Github Repo](https://github.com/ruixiangcui/AGIEval)|
-| [EgoSchem](https://arxiv.org/pdf/2308.09126)			 | Multiple Choice    | Synthetic/Human        | 5         | [Website](https://egoschema.github.io/)|
-| [MVBench](https://arxiv.org/pdf/2311.17005)			 | Multiple Choice    | Synthetic/Human        | 4         | [Github Repo](https://github.com/OpenGVLab/Ask-Anything)|
-| [MLVU](https://arxiv.org/pdf/2406.04264) 				 | Multiple Choice    | Synthetic/Human        | 2.6       | [Github Repo](https://github.com/JUNJIE99/MLVU)|
-| [VideoMME](https://arxiv.org/pdf/2405.21075)            | Multiple Choice    | Experts                | 2.7       | [Website](https://video-mme.github.io/)|
-| [Perception-Test](https://arxiv.org/pdf/2305.13786)	 | Multiple Choice    | CrowdSource            | 11.6      | [Github Repo](https://github.com/google-deepmind/perception_test)|
-| [VQAScore](https://arxiv.org/pdf/2404.01291)	 	| Yes/No   | AI Expert            | 665    	 | [Github Repo](https://github.com/linzhiqiu/t2v_metrics)|
-| [GenAI-Bench](https://arxiv.org/pdf/2406.13743)	 	| Human Ratings    |	Human           | 80.0    	 | [Huggingface](https://huggingface.co/datasets/BaiqiL/GenAI-Bench)|
-| [NaturalBench](https://arxiv.org/pdf/2410.14669)	 	| Yes/No <br> Multiple Choice   |	Human           | 10.0   	 | [Huggingface](https://huggingface.co/datasets/BaiqiL/NaturalBench/blob/main/README.md)|
-
+| Benchmark Dataset                                        | Domain                                       | Metric Type        | Source                 | Size (K) | Project |
+|----------------------------------------------------------|----------------------------------------------|--------------------|------------------------|----------|---------|
+| [MovieChat](https://arxiv.org/abs/2307.16449)           | Multimodal general intelligence             | LLM Eval          | Human                  | 1K       | [Github Repo](https://rese1f.github.io/MovieChat/) |
+| [PHYSBENCH](https://arxiv.org/pdf/2501.16411)           | Visual math reasoning                       | Multiple Choice   | Graduate STEM Students | 100      | [Github Repo](https://github.com/USC-GVL/PhysBench) |
+| [MMTBench](https://arxiv.org/pdf/2404.16006)           | Visual reasoning, understanding, recognition, and question answering | Multiple Choice | AI Experts | 30.1 | [Github Repo](https://github.com/tylin/coco-caption) |
+| [MM-Vet](https://arxiv.org/pdf/2308.02490)             | Optical Character Recognition (OCR) / Visual reasoning | LLM Eval | Human | 0.2 | [Github Repo](https://github.com/yuweihao/MM-Vet) |
+| [MM-En/CN](https://arxiv.org/pdf/2307.06281)           | Multilingual multimodal understanding       | Multiple Choice   | Human                  | 3.2      | [Github Repo](https://github.com/open-compass/VLMEvalKit) |
+| [GQA](https://arxiv.org/abs/2305.13245)                | Visual reasoning, understanding, recognition, and question answering | Answer Matching | Seed with Synthetic | 22,000 | [Website](https://cs.stanford.edu/people/dorarad/gqa/index.html) |
+| [VCR](https://arxiv.org/abs/1811.10830)                | Visual reasoning, understanding, recognition, and question answering | Multiple Choice | MTurks | 290 | [Website](https://visualcommonsense.com/) |
+| [VQAv2](https://arxiv.org/pdf/1505.00468)              | Visual reasoning, understanding, recognition, and question answering | Yes/No, Answer Matching | MTurks | 1,100 | [Github Repo](https://github.com/salesforce/LAVIS/blob/main/dataset_card/vqav2.md) |
+| [MMMU](https://arxiv.org/pdf/2311.16502)               | Visual reasoning, understanding, recognition, and question answering | Answer Matching, Multiple Choice | College Students | 11.5 | [Website](https://mmmu-benchmark.github.io/) |
+| [TextVQA](https://arxiv.org/pdf/1904.08920)           | Visual text understanding                   | Answer Matching   | Expert Human           | 28.6     | [Github Repo](https://github.com/facebookresearch/mmf) |
+| [DocVQA](https://arxiv.org/pdf/2007.00398)            | Visual text understanding                   | Answer Matching   | CrowdSource            | 50       | [Website](https://www.docvqa.org/) |
+| [MSCOCO-30K](https://arxiv.org/pdf/1405.0312)         | Text-to-Image generation                    | BLEU, Rouge, Similarity | MTurks | 30 | [Website](https://cocodataset.org/#home) |
+| [ChartQA](https://arxiv.org/abs/2203.10244)           | Chart graphic understanding                 | Answer Matching   | CrowdSource/Synthetic  | 32.7     | [Github Repo](https://github.com/vis-nlp/ChartQA) |
+| [Perception-Test](https://arxiv.org/pdf/2305.13786)   | Video understanding                         | Multiple Choice   | CrowdSource            | 11.6     | [Github Repo](https://github.com/google-deepmind/perception_test) |
+| [MMLU](https://arxiv.org/pdf/2009.03300)             | Multimodal general intelligence             | Multiple Choice   | Human                  | 15.9     | [Github Repo](https://github.com/hendrycks/test) |
+| [MMStar](https://arxiv.org/pdf/2403.20330)           | Multimodal general intelligence             | Multiple Choice   | Human                  | 1.5      | [Website](https://mmstar-benchmark.github.io/) |
+| [VideoMME](https://arxiv.org/pdf/2405.21075)         | Video understanding                         | Multiple Choice   | Experts                | 2.7      | [Website](https://video-mme.github.io/) |
+| [EgoSchem](https://arxiv.org/pdf/2308.09126)         | Video understanding                         | Multiple Choice   | Synthetic/Human        | 5        | [Website](https://egoschema.github.io/) |
+| [HallusionBench](https://arxiv.org/pdf/2310.14566)   | Hallucination                               | Yes/No            | Human                  | 1.13     | [Github Repo](https://github.com/tianyi-lab/HallusionBench) |
+| [POPE](https://arxiv.org/pdf/2305.10355)             | Hallucination                               | Yes/No            | Human                  | 9        | [Github Repo](https://github.com/RUCAIBox/POPE) |
+| [GenAI-Bench](https://arxiv.org/pdf/2406.13743)      | Text-to-Image generation                    | Human Ratings     | Human                  | 80.0     | [Huggingface](https://huggingface.co/datasets/BaiqiL/GenAI-Bench) |
+| [NaturalBench](https://arxiv.org/pdf/2410.14669)     | Multimodal general intelligence             | Yes/No, Multiple Choice | Human | 10.0 | [Huggingface](https://huggingface.co/datasets/BaiqiL/NaturalBench/blob/main/README.md) |
 
 ### 2.2. <a name='DatasetforEmbodiedVLM'></a> Benchmark Datasets, Simulators and Generative Models for Embodied VLM 
 | Benchmark                                                                                                                                     |             Domain              |                Type                |                                                     		Project					                                                     |
