@@ -83,7 +83,7 @@ Welcome to contribute and discuss!
 ### 2.1. <a name='DatasetforVLM'></a> Datasets and Evaluation for VLM
 | Benchmark Dataset                                        | Domain                                       | Metric Type        | Source                 | Size (K) | Project |
 |----------------------------------------------------------|----------------------------------------------|--------------------|------------------------|----------|---------|
-| [MovieChat](https://arxiv.org/abs/2307.16449)           | Multimodal general intelligence             | LLM Eval          | Human                  | 1K       | [Github Repo](https://rese1f.github.io/MovieChat/) |
+| [MovieChat](https://arxiv.org/abs/2307.16449)           | Video understanding             | LLM Eval          | Human                  | 1K       | [Github Repo](https://rese1f.github.io/MovieChat/) |
 | [PHYSBENCH](https://arxiv.org/pdf/2501.16411)           | Visual math reasoning                       | Multiple Choice   | Graduate STEM Students | 100      | [Github Repo](https://github.com/USC-GVL/PhysBench) |
 | [MMTBench](https://arxiv.org/pdf/2404.16006)           | Visual reasoning, understanding, recognition, and question answering | Multiple Choice | AI Experts | 30.1 | [Github Repo](https://github.com/tylin/coco-caption) |
 | [MM-Vet](https://arxiv.org/pdf/2308.02490)             | Optical Character Recognition (OCR) / Visual reasoning | LLM Eval | Human | 0.2 | [Github Repo](https://github.com/yuweihao/MM-Vet) |
