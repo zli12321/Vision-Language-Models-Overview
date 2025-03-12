@@ -146,55 +146,70 @@ Welcome to contribute and discuss!
 - [LMM-R1](https://github.com/TideDra/lmm-r1)
 
 
-##  4. <a name='Toolenhancement'></a>⚒️ Applications
-###	4.1.  <a name='EmbodiedVLMagents'></a>Embodied VLM agents
-- Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI, 2024, [[paper]](https://arxiv.org/pdf/2407.06886v1).
-- ScreenAI: A Vision-Language Model for UI and Infographics Understanding, 2024, [[paper]](https://arxiv.org/pdf/2402.04615)
-- ChartLlama: A Multimodal LLM for Chart Understanding and Generation, 2023, [[paper]](https://arxiv.org/pdf/2311.16483).
-- SciDoc2Diagrammer-MAF: Towards Generation of Scientific Diagrams from Documents guided by Multi-Aspect Feedback Refinement, 2024, [[paper]](https://arxiv.org/pdf/2409.19242).
-- Training a Vision Language Model as Smartphone Assistant, 2024, [[paper]](https://arxiv.org/pdf/2404.08755)
-- Screenagent: A vision language model-driven computer control agent, 2024, [[paper]](https://arxiv.org/pdf/2402.07945)
-- Embodied vision-language programmer from environmental feedback, 2024, [[paper]](https://arxiv.org/pdf/2310.08588)
+## ⚒️ Applications
+
+### 4.1 Embodied VLM Agents
+
+| Title | Year | Paper Link |
+|----------------|------|------------|
+| Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI | 2024 | [📄 Paper](https://arxiv.org/pdf/2407.06886v1) |
+| ScreenAI: A Vision-Language Model for UI and Infographics Understanding | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.04615) |
+| ChartLlama: A Multimodal LLM for Chart Understanding and Generation | 2023 | [📄 Paper](https://arxiv.org/pdf/2311.16483) |
+| SciDoc2Diagrammer-MAF: Towards Generation of Scientific Diagrams from Documents guided by Multi-Aspect Feedback Refinement | 2024 | [📄 Paper](https://arxiv.org/pdf/2409.19242) |
+| Training a Vision Language Model as Smartphone Assistant | 2024 | [📄 Paper](https://arxiv.org/pdf/2404.08755) |
+| ScreenAgent: A Vision-Language Model-Driven Computer Control Agent | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.07945) |
+| Embodied Vision-Language Programmer from Environmental Feedback | 2024 | [📄 Paper](https://arxiv.org/pdf/2310.08588) |
+
+
 ### 4.2. <a name='GenerativeVisualMediaApplications'></a>Generative Visual Media Applications
 
 ### 4.3. <a name='RoboticsandEmbodiedAI'></a>Robotics and Embodied AI
-- **Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI**, 2024, [[paper]](https://arxiv.org/pdf/2407.06886).
-- **AHA: A Vision-Language-Model for Detecting and Reasoning Over Failures in Robotic Manipulation**, 2024, [[paper]](https://arxiv.org/pdf/2410.00371), [[website]](https://aha-vlm.github.io/).
-- **SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities**, 2024, [[paper]](https://arxiv.org/pdf/2401.12168), [[website]](https://spatial-vlm.github.io/).
-- **Vision-language model-driven scene understanding and robotic object manipulation**, 2024, [[paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10711845&casa_token=to4vCckCewMAAAAA:2ykeIrubUOxwJ1rhwwakorQFAwUUBQhL_Ct7dnYBceWU5qYXiCoJp_yQkmJbmtiEVuX2jcpvB92n&tag=1).
-- **Guiding Long-Horizon Task and Motion Planning with Vision Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2410.02193), [[website]](https://zt-yang.github.io/vlm-tamp-robot/).
-- **AutoTAMP: Autoregressive Task and Motion Planning with LLMs as Translators and Checkers**, 2023, [[paper]](https://arxiv.org/pdf/2306.06531), [[website]](https://yongchao98.github.io/MIT-REALM-AutoTAMP/).
-- **VLM See, Robot Do: Human Demo Video to Robot Action Plan via Vision Language Model**, 2024, [[paper]](https://arxiv.org/pdf/2410.08792).
-- **Scalable Multi-Robot Collaboration with Large Language Models: Centralized or Decentralized Systems?**, 2023, [[paper]](https://arxiv.org/pdf/2309.15943), [[website]](https://yongchao98.github.io/MIT-REALM-Multi-Robot/).
-- **DART-LLM: Dependency-Aware Multi-Robot Task Decomposition and Execution using Large Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2411.09022), [[website]](https://wyd0817.github.io/project-dart-llm/). 
-- **Motiongpt: Human motion as a foreign language**, 2023, [[paper]](https://proceedings.neurips.cc/paper_files/paper/2023/file/3fbf0c1ea0716c03dea93bb6be78dd6f-Paper-Conference.pdf), [[code]](https://github.com/OpenMotionLab/MotionGPT).
-- **Learning Reward for Robot Skills Using Large Language Models via Self-Alignment**, 2024, [[paper]](https://arxiv.org/pdf/2405.07162).
-- **Language to Rewards for Robotic Skill Synthesis**, 2023, [[paper]](https://language-to-reward.github.io/assets/l2r.pdf), [[website]](https://language-to-reward.github.io/). 
-- **Eureka: Human-Level Reward Design via Coding Large Language Models**, 2023, [[paper]](https://arxiv.org/pdf/2310.12931), [[website]](https://eureka-research.github.io/). 
-- **Integrated Task and Motion Planning**, 2020, [[paper]](https://arxiv.org/pdf/2010.01083).
-- **Jailbreaking LLM-Controlled Robots**, 2024, [[paper]](https://arxiv.org/pdf/2410.13691), [[website]](https://robopair.org/). 
-- **Robots Enact Malignant Stereotypes**, 2022, [[paper]](https://arxiv.org/pdf/2207.11569), [[website]](https://sites.google.com/view/robots-enact-stereotypes). 
-- **LLM-Driven Robots Risk Enacting Discrimination, Violence, and Unlawful Actions**, 2024, [[paper]](https://arxiv.org/pdf/2406.08824).
-- **Highlighting the Safety Concerns of Deploying LLMs/VLMs in Robotics**, 2024, [[paper]](https://arxiv.org/pdf/2402.10340), [[website]](https://wuxiyang1996.github.io/adversary-vlm-robotics/).
-- **EmbodiedBench: Comprehensive Benchmarking Multi-modal Large Language Models for Vision-Driven Embodied Agents**, 2025, [[paper]](https://arxiv.org/abs/2502.09560), [[website]](https://embodiedbench.github.io/), [[code & dataset]](https://github.com/EmbodiedBench/EmbodiedBench).
+| Title | Year | Paper | Website | Code |
+|----------------|------|--------|---------|------|
+| AHA: A Vision-Language-Model for Detecting and Reasoning Over Failures in Robotic Manipulation | 2024 | [📄 Paper](https://arxiv.org/pdf/2410.00371) | [🌍 Website](https://aha-vlm.github.io/) | - |
+| SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities | 2024 | [📄 Paper](https://arxiv.org/pdf/2401.12168) | [🌍 Website](https://spatial-vlm.github.io/) | - |
+| Vision-language model-driven scene understanding and robotic object manipulation | 2024 | [📄 Paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10711845&casa_token=to4vCckCewMAAAAA:2ykeIrubUOxwJ1rhwwakorQFAwUUBQhL_Ct7dnYBceWU5qYXiCoJp_yQkmJbmtiEVuX2jcpvB92n&tag=1) | - | - |
+| Guiding Long-Horizon Task and Motion Planning with Vision Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2410.02193) | [🌍 Website](https://zt-yang.github.io/vlm-tamp-robot/) | - |
+| AutoTAMP: Autoregressive Task and Motion Planning with LLMs as Translators and Checkers | 2023 | [📄 Paper](https://arxiv.org/pdf/2306.06531) | [🌍 Website](https://yongchao98.github.io/MIT-REALM-AutoTAMP/) | - |
+| VLM See, Robot Do: Human Demo Video to Robot Action Plan via Vision Language Model | 2024 | [📄 Paper](https://arxiv.org/pdf/2410.08792) | - | - |
+| Scalable Multi-Robot Collaboration with Large Language Models: Centralized or Decentralized Systems? | 2023 | [📄 Paper](https://arxiv.org/pdf/2309.15943) | [🌍 Website](https://yongchao98.github.io/MIT-REALM-Multi-Robot/) | - |
+| DART-LLM: Dependency-Aware Multi-Robot Task Decomposition and Execution using Large Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2411.09022) | [🌍 Website](https://wyd0817.github.io/project-dart-llm/) | - |
+| MotionGPT: Human Motion as a Foreign Language | 2023 | [📄 Paper](https://proceedings.neurips.cc/paper_files/paper/2023/file/3fbf0c1ea0716c03dea93bb6be78dd6f-Paper-Conference.pdf) | - | [💾 Code](https://github.com/OpenMotionLab/MotionGPT) |
+| Learning Reward for Robot Skills Using Large Language Models via Self-Alignment | 2024 | [📄 Paper](https://arxiv.org/pdf/2405.07162) | - | - |
+| Language to Rewards for Robotic Skill Synthesis | 2023 | [📄 Paper](https://language-to-reward.github.io/assets/l2r.pdf) | [🌍 Website](https://language-to-reward.github.io/) | - |
+| Eureka: Human-Level Reward Design via Coding Large Language Models | 2023 | [📄 Paper](https://arxiv.org/pdf/2310.12931) | [🌍 Website](https://eureka-research.github.io/) | - |
+| Integrated Task and Motion Planning | 2020 | [📄 Paper](https://arxiv.org/pdf/2010.01083) | - | - |
+| Jailbreaking LLM-Controlled Robots | 2024 | [📄 Paper](https://arxiv.org/pdf/2410.13691) | [🌍 Website](https://robopair.org/) | - |
+| Robots Enact Malignant Stereotypes | 2022 | [📄 Paper](https://arxiv.org/pdf/2207.11569) | [🌍 Website](https://sites.google.com/view/robots-enact-stereotypes) | - |
+| LLM-Driven Robots Risk Enacting Discrimination, Violence, and Unlawful Actions | 2024 | [📄 Paper](https://arxiv.org/pdf/2406.08824) | - | - |
+| Highlighting the Safety Concerns of Deploying LLMs/VLMs in Robotics | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.10340) | [🌍 Website](https://wuxiyang1996.github.io/adversary-vlm-robotics/) | - |
+| EmbodiedBench: Comprehensive Benchmarking Multi-modal Large Language Models for Vision-Driven Embodied Agents | 2025 | [📄 Paper](https://arxiv.org/abs/2502.09560) | [🌍 Website](https://embodiedbench.github.io/) | [💾 Code & Dataset](https://github.com/EmbodiedBench/EmbodiedBench) |
+
+
 
 #### 4.3.1. <a name='Manipulation'></a>Manipulation
-- **VIMA: General Robot Manipulation with Multimodal Prompts**, 2022, [[paper]](https://arxiv.org/pdf/2210.03094), [[website]](https://vimalabs.github.io/).
-- **Instruct2act: Mapping multi-modality instructions to robotic actions with large language model**, 2023, [[paper]](https://arxiv.org/pdf/2305.11176).
-- **Creative Robot Tool Use with Large Language Models**, 2023, [[paper]](https://arxiv.org/pdf/2310.13065), [[website]](https://creative-robotool.github.io/).
-- **Robovqa: Multimodal long-horizon reasoning for robotics**, 2024, [[paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10610216).
-- **RT-1: Robotics Transformer for Real-World Control at Scale**, 2022, [[paper]](https://robotics-transformer1.github.io/assets/rt1.pdf), [[website]](https://robotics-transformer1.github.io/).
-- **RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control**, 2023, [[paper]](https://arxiv.org/pdf/2307.15818), [[website]](https://robotics-transformer2.github.io/).
-- **Open X-Embodiment: Robotic Learning Datasets and RT-X Models**, 2023, [[paper]](https://arxiv.org/pdf/2310.08864), [[website]](https://robotics-transformer-x.github.io/).
-- **ExploRLLM: Guiding Exploration in Reinforcement Learning with Large Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2403.09583), [[website]](https://explorllm.github.io/).
+| Title | Year | Paper | Website | Code |
+|----------------|------|--------|---------|------|
+| VIMA: General Robot Manipulation with Multimodal Prompts | 2022 | [📄 Paper](https://arxiv.org/pdf/2210.03094) | [🌍 Website](https://vimalabs.github.io/) |
+| Instruct2Act: Mapping Multi-Modality Instructions to Robotic Actions with Large Language Model | 2023 | [📄 Paper](https://arxiv.org/pdf/2305.11176) | - | - |
+| Creative Robot Tool Use with Large Language Models | 2023 | [📄 Paper](https://arxiv.org/pdf/2310.13065) | [🌍 Website](https://creative-robotool.github.io/) | - |
+| RoboVQA: Multimodal Long-Horizon Reasoning for Robotics | 2024 | [📄 Paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10610216) | - | - |
+| RT-1: Robotics Transformer for Real-World Control at Scale | 2022 | [📄 Paper](https://robotics-transformer1.github.io/assets/rt1.pdf) | [🌍 Website](https://robotics-transformer1.github.io/) | - |
+| RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control | 2023 | [📄 Paper](https://arxiv.org/pdf/2307.15818) | [🌍 Website](https://robotics-transformer2.github.io/) | - |
+| Open X-Embodiment: Robotic Learning Datasets and RT-X Models | 2023 | [📄 Paper](https://arxiv.org/pdf/2310.08864) | [🌍 Website](https://robotics-transformer-x.github.io/) | - |
+| ExploRLLM: Guiding Exploration in Reinforcement Learning with Large Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2403.09583) | [🌍 Website](https://explorllm.github.io/) | - |
+
 
 #### 4.3.2. <a name='Navigation'></a>Navigation
-- **ZSON: Zero-Shot Object-Goal Navigation using Multimodal Goal Embeddings**, 2022, [[paper]](https://arxiv.org/pdf/2206.12403).
-- **LOC-ZSON: Language-driven Object-Centric Zero-Shot Object Retrieval and Navigation**, 2024, [[paper]](https://arxiv.org/pdf/2405.05363).
-- **LM-Nav: Robotic Navigation with Large Pre-Trained Models of Language, Vision, and Action**, 2022, [[paper]](https://arxiv.org/pdf/2207.04429), [[website]](https://sites.google.com/view/lmnav).
-- **NaVILA: Legged Robot Vision-Language-Action Model for Navigation**, 2022, [[paper]](https://arxiv.org/pdf/2412.04453), [[website]](https://navila-bot.github.io/).
-- **VLFM: Vision-Language Frontier Maps for Zero-Shot Semantic Navigation**, 2024, [[paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10610712&casa_token=qvFCSt20n0MAAAAA:MSC4P7bdlfQuMRFrmIl706B-G8ejcxH9ZKROKETL1IUZIW7m_W4hKW-kWrxw-F8nykoysw3WYHnd)
-- **Navigation with Large Language Models: Semantic Guesswork as a Heuristic for Planning**, 2023, [[paper]](https://arxiv.org/pdf/2310.10103), [[website]](https://sites.google.com/view/lfg-nav/). 
+| Title | Year | Paper | Website | Code |
+|----------------|------|--------|---------|------|
+| ZSON: Zero-Shot Object-Goal Navigation using Multimodal Goal Embeddings | 2022 | [📄 Paper](https://arxiv.org/pdf/2206.12403) | - | - |
+| LOC-ZSON: Language-driven Object-Centric Zero-Shot Object Retrieval and Navigation | 2024 | [📄 Paper](https://arxiv.org/pdf/2405.05363) | - | - |
+| LM-Nav: Robotic Navigation with Large Pre-Trained Models of Language, Vision, and Action | 2022 | [📄 Paper](https://arxiv.org/pdf/2207.04429) | [🌍 Website](https://sites.google.com/view/lmnav) | - |
+| NaVILA: Legged Robot Vision-Language-Action Model for Navigation | 2022 | [📄 Paper](https://arxiv.org/pdf/2412.04453) | [🌍 Website](https://navila-bot.github.io/) | - |
+| VLFM: Vision-Language Frontier Maps for Zero-Shot Semantic Navigation | 2024 | [📄 Paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10610712&casa_token=qvFCSt20n0MAAAAA:MSC4P7bdlfQuMRFrmIl706B-G8ejcxH9ZKROKETL1IUZIW7m_W4hKW-kWrxw-F8nykoysw3WYHnd) | - | - |
+| Navigation with Large Language Models: Semantic Guesswork as a Heuristic for Planning | 2023 | [📄 Paper](https://arxiv.org/pdf/2310.10103) | [🌍 Website](https://sites.google.com/view/lfg-nav/) | - |
+
 
 #### 4.3.3. <a name='HumanRobotInteraction'></a>Human-robot Interaction
 - **MUTEX: Learning Unified Policies from Multimodal Task Specifications**, 2023, [[paper]](https://arxiv.org/pdf/2309.14320), [[website]](https://ut-austin-rpl.github.io/MUTEX/). 
