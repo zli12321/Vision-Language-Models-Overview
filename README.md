@@ -23,9 +23,9 @@ Welcome to contribute and discuss!
 * 2. [🗂️ Dataset and Evaluation](#Dataset)
 	* 2.1.  [Datasets and Evaluation for VLM](#DatasetforVLM)
 	* 2.2.  [Benchmark Datasets, Simulators and Generative Models for Embodied VLM](#DatasetforEmbodiedVLM)
-* 3. [🗂️ Post-Training](#posttraining)
-	* 3.1.  [Datasets and Evaluation for VLM](#DatasetforVLM)
-	* 3.2.  [Benchmark Datasets, Simulators and Generative Models for Embodied VLM](#DatasetforEmbodiedVLM) 
+* 3. # 🔥 [💑 Post-Training](#posttraining) 🔥
+	* 3.1.  [RL Alignment for VLM (reproducing the aha moment!)](#alignment)
+	* 3.2.  [Regular finetuning (SFT)](#sft) 
 
 * 4. [⚒️ Applications](#Toolenhancement)
 	* 4.1. 	[Embodied VLM agents](#EmbodiedVLMagents)
@@ -131,20 +131,11 @@ Welcome to contribute and discuss!
 
 
 ##  3. <a name='posttraining'></a>⚒️ Post-Training
-###	3.1.  <a name='EmbodiedVLMagents'></a>Embodied VLM agents
-- **Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI**, 2024, [[paper]](https://arxiv.org/pdf/2407.06886v1).
-- **ScreenAI: A Vision-Language Model for UI and Infographics Understanding**, 2024, [[paper]](https://arxiv.org/pdf/2402.04615)
-- **ChartLlama: A Multimodal LLM for Chart Understanding and Generation**, 2023, [[paper]](https://arxiv.org/pdf/2311.16483).
-- **SciDoc2Diagrammer-MAF: Towards Generation of Scientific Diagrams from Documents guided by Multi-Aspect Feedback Refinement**, 2024, [[paper]](https://arxiv.org/pdf/2409.19242).
-- **Training a Vision Language Model as Smartphone Assistant**, 2024, [[paper]](https://arxiv.org/pdf/2404.08755)
-- **Screenagent: A vision language model-driven computer control agent**, 2024, [[paper]](https://arxiv.org/pdf/2402.07945)
-- **Embodied vision-language programmer from environmental feedback**, 2024, [[paper]](https://arxiv.org/pdf/2310.08588)
-### 3.2. <a name='GenerativeVisualMediaApplications'></a>Generative Visual Media Applications
+### 3.1.  <a name='alignment'></a>RL Alignment for VLM
+- **MM-Eureka: Exploring Visual Aha Moment with Rule-based Large-scale Reinforcement Learning**, 2025, [[paper]](https://arxiv.org/abs/2503.07365).
+- **MM-RLHF: The Next Step Forward in Multimodal LLM Alignment**, 2025, [[paper]](https://arxiv.org/abs/2502.10391)
+### 3.2. <a name='sft'></a>Finetuning for VLM
 
-### 3.3. <a name='RoboticsandEmbodiedAI'></a>Robotics and Embodied AI
-- **Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI**, 2024, [[paper]](https://arxiv.org/pdf/2407.06886).
-- **AHA: A Vision-Language-Model for Detecting and Reasoning Over Failures in Robotic Manipulation**, 2024, [[paper]](https://arxiv.org/pdf/2410.00371), [[website]](https://aha-vlm.github.io/).
-- **SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities**, 2024, [[paper]](https://arxiv.org/pdf/2401.12168), [[website]](https://spatial-vlm.github.io/).
 
 ##  4. <a name='Toolenhancement'></a>⚒️ Applications
 ###	4.1.  <a name='EmbodiedVLMagents'></a>Embodied VLM agents
