@@ -148,13 +148,13 @@ Welcome to contribute and discuss!
 
 ##  4. <a name='Toolenhancement'></a>⚒️ Applications
 ###	4.1.  <a name='EmbodiedVLMagents'></a>Embodied VLM agents
-- **Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI**, 2024, [[paper]](https://arxiv.org/pdf/2407.06886v1).
-- **ScreenAI: A Vision-Language Model for UI and Infographics Understanding**, 2024, [[paper]](https://arxiv.org/pdf/2402.04615)
-- **ChartLlama: A Multimodal LLM for Chart Understanding and Generation**, 2023, [[paper]](https://arxiv.org/pdf/2311.16483).
-- **SciDoc2Diagrammer-MAF: Towards Generation of Scientific Diagrams from Documents guided by Multi-Aspect Feedback Refinement**, 2024, [[paper]](https://arxiv.org/pdf/2409.19242).
-- **Training a Vision Language Model as Smartphone Assistant**, 2024, [[paper]](https://arxiv.org/pdf/2404.08755)
-- **Screenagent: A vision language model-driven computer control agent**, 2024, [[paper]](https://arxiv.org/pdf/2402.07945)
-- **Embodied vision-language programmer from environmental feedback**, 2024, [[paper]](https://arxiv.org/pdf/2310.08588)
+- Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI, 2024, [[paper]](https://arxiv.org/pdf/2407.06886v1).
+- ScreenAI: A Vision-Language Model for UI and Infographics Understanding, 2024, [[paper]](https://arxiv.org/pdf/2402.04615)
+- ChartLlama: A Multimodal LLM for Chart Understanding and Generation, 2023, [[paper]](https://arxiv.org/pdf/2311.16483).
+- SciDoc2Diagrammer-MAF: Towards Generation of Scientific Diagrams from Documents guided by Multi-Aspect Feedback Refinement, 2024, [[paper]](https://arxiv.org/pdf/2409.19242).
+- Training a Vision Language Model as Smartphone Assistant, 2024, [[paper]](https://arxiv.org/pdf/2404.08755)
+- Screenagent: A vision language model-driven computer control agent, 2024, [[paper]](https://arxiv.org/pdf/2402.07945)
+- Embodied vision-language programmer from environmental feedback, 2024, [[paper]](https://arxiv.org/pdf/2310.08588)
 ### 4.2. <a name='GenerativeVisualMediaApplications'></a>Generative Visual Media Applications
 
 ### 4.3. <a name='RoboticsandEmbodiedAI'></a>Robotics and Embodied AI
