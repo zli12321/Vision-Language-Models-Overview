@@ -26,6 +26,8 @@ Welcome to contribute and discuss!
 * 3. ### 🔥 [💑 Post-Training](#posttraining) 🔥
 	* 3.1.  [RL Alignment for VLM (reproducing the aha moment!)](#alignment)
 	* 3.2.  [Regular finetuning (SFT)](#sft) 
+	* 3.3.  [VLM Alignment Github](#vlm_github)
+
 
 * 4. [⚒️ Applications](#Toolenhancement)
 	* 4.1. 	[Embodied VLM agents](#EmbodiedVLMagents)
@@ -134,7 +136,14 @@ Welcome to contribute and discuss!
 ### 3.1.  <a name='alignment'></a>RL Alignment for VLM
 - **MM-Eureka: Exploring Visual Aha Moment with Rule-based Large-scale Reinforcement Learning**, 2025, [[paper]](https://arxiv.org/abs/2503.07365).
 - **MM-RLHF: The Next Step Forward in Multimodal LLM Alignment**, 2025, [[paper]](https://arxiv.org/abs/2502.10391)
+- **LMM-R1: Empowering 3B LMMs with Strong Reasoning Abilities Through Two-Stage Rule-Based RL**, 2025, [[paper]](https://arxiv.org/pdf/2503.07536)
 ### 3.2. <a name='sft'></a>Finetuning for VLM
+
+### 3.3. <a name='vlm_github'></a>VLM Alignment github
+- [LLaMAFactory](https://github.com/hiyouga/LLaMA-Factory)
+- [MM-Eureka-Zero](https://github.com/ModalMinds/MM-EUREKA/tree/main)
+- [MM-rlhf](https://github.com/Kwai-YuanQi/MM-RLHF)
+- [LMM-R1](https://github.com/TideDra/lmm-r1)
 
 
 ##  4. <a name='Toolenhancement'></a>⚒️ Applications
