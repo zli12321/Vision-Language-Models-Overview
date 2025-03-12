@@ -1,4 +1,4 @@
-# Benchmark and Evaluations, Alignment, Applications, and Challenges of Large Vision Language Models
+# Benchmark and Evaluations, RL Alignment, Applications, and Challenges of Large Vision Language Models
 A most Frontend Collection and survey of vision-language model papers, and models GitHub repository
 
 Below we compile *awesome* papers and model and github repositories that 
