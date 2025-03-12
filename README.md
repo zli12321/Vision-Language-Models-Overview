@@ -134,19 +134,25 @@ Welcome to contribute and discuss!
 
 ##  3. <a name='posttraining'></a>⚒️ Post-Training
 ### 3.1.  <a name='alignment'></a>RL Alignment for VLM
-- **MM-Eureka: Exploring Visual Aha Moment with Rule-based Large-scale Reinforcement Learning**, 2025, [[paper]](https://arxiv.org/abs/2503.07365).
-- **MM-RLHF: The Next Step Forward in Multimodal LLM Alignment**, 2025, [[paper]](https://arxiv.org/abs/2502.10391)
-- **LMM-R1: Empowering 3B LMMs with Strong Reasoning Abilities Through Two-Stage Rule-Based RL**, 2025, [[paper]](https://arxiv.org/pdf/2503.07536)
+| Title | Year | Paper | Website | Code |
+|----------------|------|--------|---------|------|
+| MM-Eureka: Exploring Visual Aha Moment with Rule-based Large-scale Reinforcement Learning | 2025 | [📄 Paper](https://arxiv.org/abs/2503.07365) | - | - |
+| MM-RLHF: The Next Step Forward in Multimodal LLM Alignment | 2025 | [📄 Paper](https://arxiv.org/abs/2502.10391) | - | - |
+| LMM-R1: Empowering 3B LMMs with Strong Reasoning Abilities Through Two-Stage Rule-Based RL | 2025 | [📄 Paper](https://arxiv.org/pdf/2503.07536) | - | - |
+
+
 ### 3.2. <a name='sft'></a>Finetuning for VLM
 
 ### 3.3. <a name='vlm_github'></a>VLM Alignment github
-- [LLaMAFactory](https://github.com/hiyouga/LLaMA-Factory)
-- [MM-Eureka-Zero](https://github.com/ModalMinds/MM-EUREKA/tree/main)
-- [MM-rlhf](https://github.com/Kwai-YuanQi/MM-RLHF)
-- [LMM-R1](https://github.com/TideDra/lmm-r1)
+| Project | Repository Link |
+|----------------|----------------|
+| LLaMAFactory | [🔗 GitHub](https://github.com/hiyouga/LLaMA-Factory) |
+| MM-Eureka-Zero | [🔗 GitHub](https://github.com/ModalMinds/MM-EUREKA/tree/main) |
+| MM-RLHF | [🔗 GitHub](https://github.com/Kwai-YuanQi/MM-RLHF) |
+| LMM-R1 | [🔗 GitHub](https://github.com/TideDra/lmm-r1) |
 
 
-## ⚒️ Applications
+## 4. <a name='Toolenhancement'></a> ⚒️ Applications
 
 ### 4.1 Embodied VLM Agents
 
@@ -212,114 +218,152 @@ Welcome to contribute and discuss!
 
 
 #### 4.3.3. <a name='HumanRobotInteraction'></a>Human-robot Interaction
-- **MUTEX: Learning Unified Policies from Multimodal Task Specifications**, 2023, [[paper]](https://arxiv.org/pdf/2309.14320), [[website]](https://ut-austin-rpl.github.io/MUTEX/). 
-- **LaMI: Large Language Models for Multi-Modal Human-Robot Interaction**, 2024, [[paper]](https://arxiv.org/pdf/2401.15174), [[website]](https://hri-eu.github.io/Lami/).
-- **VLM-Social-Nav: Socially Aware Robot Navigation through Scoring using Vision-Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2404.00210). 
+| Title | Year | Paper | Website | Code |
+|----------------|------|--------|---------|------|
+| MUTEX: Learning Unified Policies from Multimodal Task Specifications | 2023 | [📄 Paper](https://arxiv.org/pdf/2309.14320) | [🌍 Website](https://ut-austin-rpl.github.io/MUTEX/) | - |
+| LaMI: Large Language Models for Multi-Modal Human-Robot Interaction | 2024 | [📄 Paper](https://arxiv.org/pdf/2401.15174) | [🌍 Website](https://hri-eu.github.io/Lami/) | - |
+| VLM-Social-Nav: Socially Aware Robot Navigation through Scoring using Vision-Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2404.00210) | - | - |
+
 
 #### 4.3.4. <a name='AutonomousDriving'></a>Autonomous Driving
-- **DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models**, 2024, [[paper]](https://arxiv.org/abs/2402.12289), [[website]](https://tsinghua-mars-lab.github.io/DriveVLM/).
-- **GPT-Driver: Learning to Drive with GPT**, 2023, [[paper]](https://arxiv.org/abs/2310.01415).
-- **LanguageMPC: Large Language Models as Decision Makers for Autonomous Driving**, 2023, [[paper]](https://arxiv.org/abs/2310.03026), [[website]](https://sites.google.com/view/llm-mpc).
-- **Driving with LLMs: Fusing Object-Level Vector Modality for Explainable Autonomous Driving**, 2023, [[paper]](https://arxiv.org/abs/2310.01957).
-- **Referring Multi-Object Tracking**, 2023, [[paper]](https://arxiv.org/pdf/2303.03366), [[code]](https://github.com/wudongming97/RMOT).
-- **VLPD: Context-Aware Pedestrian Detection via Vision-Language Semantic Self-Supervision**, 2023, [[paper]](https://arxiv.org/pdf/2304.03135), [[code]](https://github.com/lmy98129/VLPD).
-- **MotionLM: Multi-Agent Motion Forecasting as Language Modeling**, 2023, [[paper]](https://arxiv.org/pdf/2309.16534).
-- **DiLu: A Knowledge-Driven Approach to Autonomous Driving with Large Language Models**, 2023, [[paper]](https://arxiv.org/abs/2309.16292), [[website]](https://pjlab-adg.github.io/DiLu/).
-- **VLP: Vision Language Planning for Autonomous Driving**, 2024, [[paper]](https://arxiv.org/pdf/2401.05577).
-- **DriveGPT4: Interpretable End-to-end Autonomous Driving via Large Language Model**, 2023, [[paper]](https://arxiv.org/abs/2310.01412).
+| Title | Year | Paper | Website | Code |
+|----------------|------|--------|---------|------|
+| DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models | 2024 | [📄 Paper](https://arxiv.org/abs/2402.12289) | [🌍 Website](https://tsinghua-mars-lab.github.io/DriveVLM/) | - |
+| GPT-Driver: Learning to Drive with GPT | 2023 | [📄 Paper](https://arxiv.org/abs/2310.01415) | - | - |
+| LanguageMPC: Large Language Models as Decision Makers for Autonomous Driving | 2023 | [📄 Paper](https://arxiv.org/abs/2310.03026) | [🌍 Website](https://sites.google.com/view/llm-mpc) | - |
+| Driving with LLMs: Fusing Object-Level Vector Modality for Explainable Autonomous Driving | 2023 | [📄 Paper](https://arxiv.org/abs/2310.01957) | - | - |
+| Referring Multi-Object Tracking | 2023 | [📄 Paper](https://arxiv.org/pdf/2303.03366) | - | [💾 Code](https://github.com/wudongming97/RMOT) |
+| VLPD: Context-Aware Pedestrian Detection via Vision-Language Semantic Self-Supervision | 2023 | [📄 Paper](https://arxiv.org/pdf/2304.03135) | - | [💾 Code](https://github.com/lmy98129/VLPD) |
+| MotionLM: Multi-Agent Motion Forecasting as Language Modeling | 2023 | [📄 Paper](https://arxiv.org/pdf/2309.16534) | - | - |
+| DiLu: A Knowledge-Driven Approach to Autonomous Driving with Large Language Models | 2023 | [📄 Paper](https://arxiv.org/abs/2309.16292) | [🌍 Website](https://pjlab-adg.github.io/DiLu/) | - |
+| VLP: Vision Language Planning for Autonomous Driving | 2024 | [📄 Paper](https://arxiv.org/pdf/2401.05577) | - | - |
+| DriveGPT4: Interpretable End-to-end Autonomous Driving via Large Language Model | 2023 | [📄 Paper](https://arxiv.org/abs/2310.01412) | - | - |
+
 
 ### 4.4. <a name='Human-CenteredAI'></a>Human-Centered AI
-- **DLF: Disentangled-Language-Focused Multimodal Sentiment Analysis**, 2024, [[paper]](https://arxiv.org/pdf/2412.12225), [[code]](https://github.com/pwang322/DLF).
-- **LIT: Large Language Model Driven Intention Tracking for Proactive Human-Robot Collaboration -- A Robot Sous-Chef Application**, 2024, [[paper]](https://arxiv.org/abs/2406.13787).
-- **Pretrained Language Models as Visual Planners for Human Assistance**, 2023, [[paper]](https://arxiv.org/pdf/2304.09179).
-- **Promoting AI Equity in Science: Generalized Domain Prompt Learning for Accessible VLM Research**, 2024, [[paper]](https://arxiv.org/pdf/2405.08668).
-- **Image and Data Mining in Reticular Chemistry Using GPT-4V**, 2023, [[paper]](https://arxiv.org/pdf/2312.05468).
+| Title | Year | Paper | Website | Code |
+|----------------|------|--------|---------|------|
+| DLF: Disentangled-Language-Focused Multimodal Sentiment Analysis | 2024 | [📄 Paper](https://arxiv.org/pdf/2412.12225) | - | [💾 Code](https://github.com/pwang322/DLF) |
+| LIT: Large Language Model Driven Intention Tracking for Proactive Human-Robot Collaboration – A Robot Sous-Chef Application | 2024 | [📄 Paper](https://arxiv.org/abs/2406.13787) | - | - |
+| Pretrained Language Models as Visual Planners for Human Assistance | 2023 | [📄 Paper](https://arxiv.org/pdf/2304.09179) | - | - |
+| Promoting AI Equity in Science: Generalized Domain Prompt Learning for Accessible VLM Research | 2024 | [📄 Paper](https://arxiv.org/pdf/2405.08668) | - | - |
+| Image and Data Mining in Reticular Chemistry Using GPT-4V | 2023 | [📄 Paper](https://arxiv.org/pdf/2312.05468) | - | - |
 
 #### 4.4.1. <a name='WebAgent'></a>Web Agent
-- **A Real-World WebAgent with Planning, Long Context Understanding, and Program Synthesis**, 2023, [[paper]](https://arxiv.org/pdf/2307.12856).
-- **CogAgent: A Visual Language Model for GUI Agents**, 2023, [[paper]](https://arxiv.org/pdf/2312.08914), [[code]](https://github.com/THUDM/CogAgent).
-- **WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models**, 2024, [[paper]](https://arxiv.org/pdf/2401.13919), [[code]](https://github.com/MinorJerry/WebVoyager).
-- **ShowUI: One Vision-Language-Action Model for GUI Visual Agent**, 2024, [[paper]](https://arxiv.org/pdf/2411.17465), [[code]](https://github.com/showlab/ShowUI).
-- **ScreenAgent: A Vision Language Model-driven Computer Control Agent**, 2024, [[paper]](https://arxiv.org/pdf/2402.07945), [[code]](https://github.com/niuzaisheng/ScreenAgent).
+| Title | Year | Paper | Website | Code |
+|----------------|------|--------|---------|------|
+| A Real-World WebAgent with Planning, Long Context Understanding, and Program Synthesis | 2023 | [📄 Paper](https://arxiv.org/pdf/2307.12856) | - | - |
+| CogAgent: A Visual Language Model for GUI Agents | 2023 | [📄 Paper](https://arxiv.org/pdf/2312.08914) | - | [💾 Code](https://github.com/THUDM/CogAgent) |
+| WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2401.13919) | - | [💾 Code](https://github.com/MinorJerry/WebVoyager) |
+| ShowUI: One Vision-Language-Action Model for GUI Visual Agent | 2024 | [📄 Paper](https://arxiv.org/pdf/2411.17465) | - | [💾 Code](https://github.com/showlab/ShowUI) |
+| ScreenAgent: A Vision Language Model-driven Computer Control Agent | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.07945) | - | [💾 Code](https://github.com/niuzaisheng/ScreenAgent) |
+
 
 #### 4.4.2. <a name='Accessibility'></a>Accessibility
-- **X-World: Accessibility, Vision, and Autonomy Meet**, 2021, [[paper]](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhang_X-World_Accessibility_Vision_and_Autonomy_Meet_ICCV_2021_paper.pdf).
-- **Context-Aware Image Descriptions for Web Accessibility**, 2024, [[paper]](https://arxiv.org/pdf/2409.03054).
-- **Improving VR Accessibility Through Automatic 360 Scene Description Using Multimodal Large Language Models**, 2024, [[paper]](https://dl.acm.org/doi/10.1145/3691573.3691619).
+| Title | Year | Paper | Website | Code |
+|----------------|------|--------|---------|------|
+| X-World: Accessibility, Vision, and Autonomy Meet | 2021 | [📄 Paper](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhang_X-World_Accessibility_Vision_and_Autonomy_Meet_ICCV_2021_paper.pdf) | - | - |
+| Context-Aware Image Descriptions for Web Accessibility | 2024 | [📄 Paper](https://arxiv.org/pdf/2409.03054) | - | - |
+| Improving VR Accessibility Through Automatic 360 Scene Description Using Multimodal Large Language Models | 2024 | [📄 Paper](https://dl.acm.org/doi/10.1145/3691573.3691619) | - | -
+
 
 #### 4.4.3. <a name='Healthcare'></a>Healthcare
-- **VisionUnite: A Vision-Language Foundation Model for Ophthalmology Enhanced with Clinical Knowledge**, 2024, [[paper]](https://arxiv.org/pdf/2408.02865), [[code]](https://github.com/HUANGLIZI/VisionUnite).
-- **Multimodal Healthcare AI: Identifying and Designing Clinically Relevant Vision-Language Applications for Radiology**, 2024, [[paper]](https://arxiv.org/pdf/2402.14252).
-- **M-FLAG: Medical Vision-Language Pre-training with Frozen Language Models and Latent Space Geometry Optimization**, 2023, [[paper]](https://arxiv.org/pdf/2307.08347).
-- **MedCLIP: Contrastive Learning from Unpaired Medical Images and Text**, 2022, [[paper]](https://arxiv.org/pdf/2210.10163), [[code]](https://github.com/RyanWangZf/MedCLIP).
-- **Med-Flamingo: a Multimodal Medical Few-shot Learner**, 2023, [[paper]](https://arxiv.org/pdf/2307.15189), [[code]](https://github.com/snap-stanford/med-flamingo).
+| Title | Year | Paper | Website | Code |
+|----------------|------|--------|---------|------|
+| VisionUnite: A Vision-Language Foundation Model for Ophthalmology Enhanced with Clinical Knowledge | 2024 | [📄 Paper](https://arxiv.org/pdf/2408.02865) | - | [💾 Code](https://github.com/HUANGLIZI/VisionUnite) |
+| Multimodal Healthcare AI: Identifying and Designing Clinically Relevant Vision-Language Applications for Radiology | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.14252) | - | - |
+| M-FLAG: Medical Vision-Language Pre-training with Frozen Language Models and Latent Space Geometry Optimization | 2023 | [📄 Paper](https://arxiv.org/pdf/2307.08347) | - | - |
+| MedCLIP: Contrastive Learning from Unpaired Medical Images and Text | 2022 | [📄 Paper](https://arxiv.org/pdf/2210.10163) | - | [💾 Code](https://github.com/RyanWangZf/MedCLIP) |
+| Med-Flamingo: A Multimodal Medical Few-Shot Learner | 2023 | [📄 Paper](https://arxiv.org/pdf/2307.15189) | - | [💾 Code](https://github.com/snap-stanford/med-flamingo) |
+
 
 #### 4.4.4. <a name='SocialGoodness'></a>Social Goodness
-- **Analyzing K-12 AI education: A large language model study of classroom instruction on learning theories, pedagogy, tools, and AI literacy**, 2024, [[paper]](https://www.sciencedirect.com/science/article/pii/S2666920X24000985).
-- **Students Rather Than Experts: A New AI For Education Pipeline To Model More Human-Like And Personalised Early Adolescences**, 2024, [[paper]](https://arxiv.org/pdf/2410.15701).
-- **Harnessing Large Vision and Language Models in Agriculture: A Review**, 2024, [[paper]](https://arxiv.org/pdf/2407.19679).
-- **A Vision-Language Model for Predicting Potential Distribution Land of Soybean Double Cropping**, 2024, [[paper]](https://www.frontiersin.org/journals/environmental-science/articles/10.3389/fenvs.2024.1515752/abstract).
-- **Vision Language Model is NOT All You Need: Augmentation Strategies for Molecule Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2407.09043), [[code]](https://github.com/Namkyeong/AMOLE).
-- **DrawEduMath: Evaluating Vision Language Models with Expert-Annotated Students’ Hand-Drawn Math Images**, 2024, [[paper]](https://openreview.net/pdf?id=0vQYvcinij).
-- **MultiMath: Bridging Visual and Mathematical Reasoning for Large Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2409.00147), [[code]](https://github.com/pengshuai-rin/MultiMath).
-- **Vision-Language Models Meet Meteorology: Developing Models for Extreme Weather Events Detection with Heatmaps**, 2024, [[paper]](https://arxiv.org/pdf/2406.09838), [[code]](https://github.com/AlexJJJChen/Climate-Zoo).
-- **He is very intelligent, she is very beautiful? On Mitigating Social Biases in Language Modelling and Generation**, 2021, [[paper]](https://aclanthology.org/2021.findings-acl.397.pdf).
-- **UrbanVLP: Multi-Granularity Vision-Language Pretraining for Urban Region Profiling**, 2024, [[paper]](https://arxiv.org/pdf/2403.168318).
+| Title | Year | Paper | Website | Code |
+|----------------|------|--------|---------|------|
+| Analyzing K-12 AI Education: A Large Language Model Study of Classroom Instruction on Learning Theories, Pedagogy, Tools, and AI Literacy | 2024 | [📄 Paper](https://www.sciencedirect.com/science/article/pii/S2666920X24000985) | - | - |
+| Students Rather Than Experts: A New AI for Education Pipeline to Model More Human-Like and Personalized Early Adolescence | 2024 | [📄 Paper](https://arxiv.org/pdf/2410.15701) | - | - |
+| Harnessing Large Vision and Language Models in Agriculture: A Review | 2024 | [📄 Paper](https://arxiv.org/pdf/2407.19679) | - | - |
+| A Vision-Language Model for Predicting Potential Distribution Land of Soybean Double Cropping | 2024 | [📄 Paper](https://www.frontiersin.org/journals/environmental-science/articles/10.3389/fenvs.2024.1515752/abstract) | - | - |
+| Vision-Language Model is NOT All You Need: Augmentation Strategies for Molecule Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2407.09043) | - | [💾 Code](https://github.com/Namkyeong/AMOLE) |
+| DrawEduMath: Evaluating Vision Language Models with Expert-Annotated Students’ Hand-Drawn Math Images | 2024 | [📄 Paper](https://openreview.net/pdf?id=0vQYvcinij) | - | - |
+| MultiMath: Bridging Visual and Mathematical Reasoning for Large Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2409.00147) | - | [💾 Code](https://github.com/pengshuai-rin/MultiMath) |
+| Vision-Language Models Meet Meteorology: Developing Models for Extreme Weather Events Detection with Heatmaps | 2024 | [📄 Paper](https://arxiv.org/pdf/2406.09838) | - | [💾 Code](https://github.com/AlexJJJChen/Climate-Zoo) |
+| He is Very Intelligent, She is Very Beautiful? On Mitigating Social Biases in Language Modeling and Generation | 2021 | [📄 Paper](https://aclanthology.org/2021.findings-acl.397.pdf) | - | - |
+| UrbanVLP: Multi-Granularity Vision-Language Pretraining for Urban Region Profiling | 2024 | [📄 Paper](https://arxiv.org/pdf/2403.168318) | - | - |
+
 
 ## 5. <a name='Challenges'></a>Challenges
 ### 5.1 <a name='Hallucination'></a>Hallucination
-- **Object Hallucination in Image Captioning**, 2018, [[paper]](https://arxiv.org/pdf/1809.02156).
-- **Evaluating Object Hallucination in Large Vision-Language Models**, 2023, [[paper]](https://arxiv.org/pdf/2305.10355), [[code]](https://github.com/RUCAIBox/POPE).
-- **Detecting and Preventing Hallucinations in Large Vision Language Models**, 2023, [[paper]](https://arxiv.org/pdf/2308.06394).
-- **HallE-Control: Controlling Object Hallucination in Large Multimodal Models**, 2023, [[paper]](https://arxiv.org/pdf/2310.01779), [[code]](https://github.com/bronyayang/HallE_Control).
-- **Hallu-PI: Evaluating Hallucination in Multi-modal Large Language Models within Perturbed Inputs**, 2024, [[paper]](https://arxiv.org/pdf/2408.01355), [[code]](https://github.com/NJUNLP/Hallu-PI).
-- **BEAF: Observing BEfore-AFter Changes to Evaluate Hallucination in Vision-language Models**, 2024, [[paper]](https://arxiv.org/pdf/2407.13442), [[website]](https://beafbench.github.io/).
-- **HallusionBench: An Advanced Diagnostic Suite for Entangled Language Hallucination and Visual Illusion in Large Vision-Language Models**, 2023, [[paper]](https://arxiv.org/pdf/2310.14566), [[code]](https://github.com/tianyi-lab/HallusionBench).
-- **AUTOHALLUSION: Automatic Generation of Hallucination Benchmarks for Vision-Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2406.10900), [[website]](https://wuxiyang1996.github.io/autohallusion_page/).
-- **Mitigating Hallucination in Large Multi-Modal Models via Robust Instruction Tuning**, 2023, [[paper]](https://arxiv.org/pdf/2306.14565), [[code]](https://github.com/FuxiaoLiu/LRV-Instruction).
-- **Hal-Eval: A Universal and Fine-grained Hallucination Evaluation Framework for Large Vision Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2402.15721), [[code]](https://github.com/WisdomShell/hal-eval).
-- **AMBER: An LLM-free Multi-dimensional Benchmark for MLLMs Hallucination Evaluation**, 2023, [[paper]](https://arxiv.org/pdf/2311.07397), [[code]](https://github.com/junyangwang0410/AMBER).
+| Title | Year | Paper | Website | Code |
+|----------------|------|--------|---------|------|
+| Object Hallucination in Image Captioning | 2018 | [📄 Paper](https://arxiv.org/pdf/1809.02156) | - | - |
+| Evaluating Object Hallucination in Large Vision-Language Models | 2023 | [📄 Paper](https://arxiv.org/pdf/2305.10355) | - | [💾 Code](https://github.com/RUCAIBox/POPE) |
+| Detecting and Preventing Hallucinations in Large Vision Language Models | 2023 | [📄 Paper](https://arxiv.org/pdf/2308.06394) | - | - |
+| HallE-Control: Controlling Object Hallucination in Large Multimodal Models | 2023 | [📄 Paper](https://arxiv.org/pdf/2310.01779) | - | [💾 Code](https://github.com/bronyayang/HallE_Control) |
+| Hallu-PI: Evaluating Hallucination in Multi-modal Large Language Models within Perturbed Inputs | 2024 | [📄 Paper](https://arxiv.org/pdf/2408.01355) | - | [💾 Code](https://github.com/NJUNLP/Hallu-PI) |
+| BEAF: Observing BEfore-AFter Changes to Evaluate Hallucination in Vision-Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2407.13442) | [🌍 Website](https://beafbench.github.io/) | - |
+| HallusionBench: An Advanced Diagnostic Suite for Entangled Language Hallucination and Visual Illusion in Large Vision-Language Models | 2023 | [📄 Paper](https://arxiv.org/pdf/2310.14566) | - | [💾 Code](https://github.com/tianyi-lab/HallusionBench) |
+| AUTOHALLUSION: Automatic Generation of Hallucination Benchmarks for Vision-Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2406.10900) | [🌍 Website](https://wuxiyang1996.github.io/autohallusion_page/) | - |
+| Mitigating Hallucination in Large Multi-Modal Models via Robust Instruction Tuning | 2023 | [📄 Paper](https://arxiv.org/pdf/2306.14565) | - | [💾 Code](https://github.com/FuxiaoLiu/LRV-Instruction) |
+| Hal-Eval: A Universal and Fine-grained Hallucination Evaluation Framework for Large Vision Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.15721) | - | [💾 Code](https://github.com/WisdomShell/hal-eval) |
+| AMBER: An LLM-free Multi-dimensional Benchmark for MLLMs Hallucination Evaluation | 2023 | [📄 Paper](https://arxiv.org/pdf/2311.07397) | - | [💾 Code](https://github.com/junyangwang0410/AMBER) |
+
 
 ### 5.2 <a name='Safety'></a>Safety
-- **JailbreakZoo: Survey, Landscapes, and Horizons in Jailbreaking Large Language and Vision-Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2407.01599), [[website]](https://chonghan-chen.com/llm-jailbreak-zoo-survey/).
-- **Safe-VLN: Collision Avoidance for Vision-and-Language Navigation of Autonomous Robots Operating in Continuous Environments**, 2023, [[paper]](https://arxiv.org/pdf/2311.02817).
-- **SafeBench: A Safety Evaluation Framework for Multimodal Large Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2410.18927).
-- **JailBreakV: A Benchmark for Assessing the Robustness of MultiModal Large Language Models against Jailbreak Attacks**, 2024, [[paper]](https://arxiv.org/pdf/2404.03027).
-- **SHIELD: An Evaluation Benchmark for Face Spoofing and Forgery Detection with Multimodal Large Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2402.04178), [[code]](https://github.com/laiyingxin2/SHIELD).
-- **Images are Achilles' Heel of Alignment: Exploiting Visual Vulnerabilities for Jailbreaking Multimodal Large Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2403.09792).
-- **Jailbreaking Attack against Multimodal Large Language Model**, 2024, [[paper]](https://arxiv.org/pdf/2402.02309).
+| Title | Year | Paper | Website | Code |
+|----------------|------|--------|---------|------|
+| JailbreakZoo: Survey, Landscapes, and Horizons in Jailbreaking Large Language and Vision-Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2407.01599) | [🌍 Website](https://chonghan-chen.com/llm-jailbreak-zoo-survey/) | - |
+| Safe-VLN: Collision Avoidance for Vision-and-Language Navigation of Autonomous Robots Operating in Continuous Environments | 2023 | [📄 Paper](https://arxiv.org/pdf/2311.02817) | - | - |
+| SafeBench: A Safety Evaluation Framework for Multimodal Large Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2410.18927) | - | - |
+| JailBreakV: A Benchmark for Assessing the Robustness of MultiModal Large Language Models against Jailbreak Attacks | 2024 | [📄 Paper](https://arxiv.org/pdf/2404.03027) | - | - |
+| SHIELD: An Evaluation Benchmark for Face Spoofing and Forgery Detection with Multimodal Large Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.04178) | - | [💾 Code](https://github.com/laiyingxin2/SHIELD) |
+| Images are Achilles' Heel of Alignment: Exploiting Visual Vulnerabilities for Jailbreaking Multimodal Large Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2403.09792) | - | - |
+| Jailbreaking Attack against Multimodal Large Language Model | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.02309) | - | - |
+
 
 ### 5.3 <a name='Fairness'></a>Fairness
-- **Hallucination of Multimodal Large Language Models: A Survey**, 2024, [[paper]](https://arxiv.org/pdf/2404.18930).
-- **Bias and Fairness in Large Language Models: A Survey**, 2023, [[paper]](https://arxiv.org/pdf/2309.00770).
-- **Fairness and Bias in Multimodal AI: A Survey**, 2024, [[paper]](https://arxiv.org/pdf/2406.19097).
-- **Multi-Modal Bias: Introducing a Framework for Stereotypical Bias Assessment beyond Gender and Race in Vision–Language Models**, 2023, [[paper]](http://gerard.demelo.org/papers/multimodal-bias.pdf).
-- **FMBench: Benchmarking Fairness in Multimodal Large Language Models on Medical Tasks**, 2024, [[paper]](https://arxiv.org/pdf/2410.01089).
-- **FairCLIP: Harnessing Fairness in Vision-Language Learning**, 2024, [[paper]](https://arxiv.org/pdf/2403.19949).
-- **FairMedFM: Fairness Benchmarking for Medical Imaging Foundation Models**, 2024, [[paper]](https://arxiv.org/pdf/2407.00983).
-- **Benchmarking Vision Language Models for Cultural Understanding**, 2024, [[paper]](https://arxiv.org/pdf/2407.10920).
+| Title | Year | Paper | Website | Code |
+|----------------|------|--------|---------|------|
+| Hallucination of Multimodal Large Language Models: A Survey | 2024 | [📄 Paper](https://arxiv.org/pdf/2404.18930) | - | - |
+| Bias and Fairness in Large Language Models: A Survey | 2023 | [📄 Paper](https://arxiv.org/pdf/2309.00770) | - | - |
+| Fairness and Bias in Multimodal AI: A Survey | 2024 | [📄 Paper](https://arxiv.org/pdf/2406.19097) | - | - |
+| Multi-Modal Bias: Introducing a Framework for Stereotypical Bias Assessment beyond Gender and Race in Vision–Language Models | 2023 | [📄 Paper](http://gerard.demelo.org/papers/multimodal-bias.pdf) | - | - |
+| FMBench: Benchmarking Fairness in Multimodal Large Language Models on Medical Tasks | 2024 | [📄 Paper](https://arxiv.org/pdf/2410.01089) | - | - |
+| FairCLIP: Harnessing Fairness in Vision-Language Learning | 2024 | [📄 Paper](https://arxiv.org/pdf/2403.19949) | - | - |
+| FairMedFM: Fairness Benchmarking for Medical Imaging Foundation Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2407.00983) | - | - |
+| Benchmarking Vision Language Models for Cultural Understanding | 2024 | [📄 Paper](https://arxiv.org/pdf/2407.10920) | - | - |
+
 
 ### 5.4 <a name='MultimodalityAlignment'></a>Multi-modality Alignment
-- **Mitigating Hallucinations in Large Vision-Language Models with Instruction Contrastive Decoding**, 2024, [[paper]](https://arxiv.org/pdf/2403.18715).
-- **Enhancing Visual-Language Modality Alignment in Large Vision Language Models via Self-Improvement**, 2024, [[paper]](https://arxiv.org/pdf/2405.15973).
-- **Assessing and Learning Alignment of Unimodal Vision and Language Models**, 2024, [[paper]](https://arxiv.org/pdf/2412.04616), [[website]](https://lezhang7.github.io/sail.github.io/).
-- **Extending Multi-modal Contrastive Representations**, 2023, [[paper]](https://arxiv.org/pdf/2310.08884), [[code]](https://github.com/MCR-PEFT/Ex-MCR).
-- **OneLLM: One Framework to Align All Modalities with Language**, 2023, [[paper]](https://arxiv.org/pdf/2312.03700), [[code]](https://github.com/csuhan/OneLLM).
+| Title | Year | Paper | Website | Code |
+|----------------|------|--------|---------|------|
+| Mitigating Hallucinations in Large Vision-Language Models with Instruction Contrastive Decoding | 2024 | [📄 Paper](https://arxiv.org/pdf/2403.18715) | - | - |
+| Enhancing Visual-Language Modality Alignment in Large Vision Language Models via Self-Improvement | 2024 | [📄 Paper](https://arxiv.org/pdf/2405.15973) | - | - |
+| Assessing and Learning Alignment of Unimodal Vision and Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2412.04616) | [🌍 Website](https://lezhang7.github.io/sail.github.io/) | - |
+| Extending Multi-modal Contrastive Representations | 2023 | [📄 Paper](https://arxiv.org/pdf/2310.08884) | - | [💾 Code](https://github.com/MCR-PEFT/Ex-MCR) |
+| OneLLM: One Framework to Align All Modalities with Language | 2023 | [📄 Paper](https://arxiv.org/pdf/2312.03700) | - | [💾 Code](https://github.com/csuhan/OneLLM) |
+
 
 ### 5.5 <a name=' EfficientTrainingandFineTuning'></a> Efficient Training and Fine-Tuning
-- **VILA: On Pre-training for Visual Language Models**, 2023, [[paper]](https://arxiv.org/pdf/2312.07533). 
-- **SimVLM: Simple Visual Language Model Pretraining with Weak Supervision**, 2021, [[paper]](https://arxiv.org/pdf/2108.10904). 
-- **LoRA: Low-Rank Adaptation of Large Language Models**, 2021, [[paper]](https://arxiv.org/pdf/2106.09685), [[code]](https://github.com/microsoft/LoRA).
-- **QLoRA: Efficient Finetuning of Quantized LLMs**, 2023, [[paper]](https://arxiv.org/pdf/2305.14314).
-- **Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback**, 2022, [[paper]](https://arxiv.org/pdf/2204.05862), [[code]](https://github.com/anthropics/hh-rlhf).
-- **RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback**, 2023, [[paper]](https://arxiv.org/pdf/2309.00267).
+| Title | Year | Paper | Website | Code |
+|----------------|------|--------|---------|------|
+| VILA: On Pre-training for Visual Language Models | 2023 | [📄 Paper](https://arxiv.org/pdf/2312.07533) | - | - |
+| SimVLM: Simple Visual Language Model Pretraining with Weak Supervision | 2021 | [📄 Paper](https://arxiv.org/pdf/2108.10904) | - | - |
+| LoRA: Low-Rank Adaptation of Large Language Models | 2021 | [📄 Paper](https://arxiv.org/pdf/2106.09685) | - | [💾 Code](https://github.com/microsoft/LoRA) |
+| QLoRA: Efficient Finetuning of Quantized LLMs | 2023 | [📄 Paper](https://arxiv.org/pdf/2305.14314) | - | - |
+| Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback | 2022 | [📄 Paper](https://arxiv.org/pdf/2204.05862) | - | [💾 Code](https://github.com/anthropics/hh-rlhf) |
+| RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback | 2023 | [📄 Paper](https://arxiv.org/pdf/2309.00267) | - | - |
+
 
 ### 5.6 <a name='ScarceofHighqualityDataset'></a>Scarce of High-quality Dataset
-- **SLIP: Self-supervision meets Language-Image Pre-training**, 2021, [[paper]](https://arxiv.org/pdf/2112.12750), [[code]](https://github.com/facebookresearch/SLIP).
-- **Synthetic Vision: Training Vision-Language Models to Understand Physics**, 2024, [[paper]](https://arxiv.org/pdf/2412.08619).
-- **Synth2: Boosting Visual-Language Models with Synthetic Captions and Image Embeddings**, 2024, [[paper]](https://arxiv.org/pdf/2403.07750).
-- **KALIE: Fine-Tuning Vision-Language Models for Open-World Manipulation without Robot Data**, 2024, [[paper]](https://arxiv.org/pdf/2409.14066).
-- **Web Agents with World Models: Learning and Leveraging Environment Dynamics in Web Navigation**, 2024, [[paper]](https://arxiv.org/pdf/2410.13232).
+| Title | Year | Paper | Website | Code |
+|----------------|------|--------|---------|------|
+| SLIP: Self-supervision meets Language-Image Pre-training | 2021 | [📄 Paper](https://arxiv.org/pdf/2112.12750) | - | [💾 Code](https://github.com/facebookresearch/SLIP) |
+| Synthetic Vision: Training Vision-Language Models to Understand Physics | 2024 | [📄 Paper](https://arxiv.org/pdf/2412.08619) | - | - |
+| Synth2: Boosting Visual-Language Models with Synthetic Captions and Image Embeddings | 2024 | [📄 Paper](https://arxiv.org/pdf/2403.07750) | - | - |
+| KALIE: Fine-Tuning Vision-Language Models for Open-World Manipulation without Robot Data | 2024 | [📄 Paper](https://arxiv.org/pdf/2409.14066) | - | - |
+| Web Agents with World Models: Learning and Leveraging Environment Dynamics in Web Navigation | 2024 | [📄 Paper](https://arxiv.org/pdf/2410.13232) | - | - |
+
 
 
 ## 6. <a name='Citations'></a>Citation
