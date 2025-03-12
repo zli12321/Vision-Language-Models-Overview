@@ -140,6 +140,7 @@ Welcome to contribute and discuss!
 | MM-Eureka: Exploring Visual Aha Moment with Rule-based Large-scale Reinforcement Learning | 2025 | [📄 Paper](https://arxiv.org/abs/2503.07365) | - | - |
 | MM-RLHF: The Next Step Forward in Multimodal LLM Alignment | 2025 | [📄 Paper](https://arxiv.org/abs/2502.10391) | - | - |
 | LMM-R1: Empowering 3B LMMs with Strong Reasoning Abilities Through Two-Stage Rule-Based RL | 2025 | [📄 Paper](https://arxiv.org/pdf/2503.07536) | - | - |
+| Vision-R1: Vision-R1: Incentivizing Reasoning Capability in Multimodal Large Language Models | 2025 | [📄 Paper](https://arxiv.org/abs/2503.06749) | - | - |
 
 
 ### 3.2. <a name='sft'></a>Finetuning for VLM
