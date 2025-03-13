@@ -135,12 +135,12 @@ Welcome to contribute and discuss!
 
 ##  3. <a name='posttraining'></a>⚒️ Post-Training
 ### 3.1.  <a name='alignment'></a>RL Alignment for VLM
-| Title | Year | Paper | Website | Code |
+| Title | Year | Paper | RL | Code |
 |----------------|------|--------|---------|------|
-| MM-Eureka: Exploring Visual Aha Moment with Rule-based Large-scale Reinforcement Learning | 2025 | [📄 Paper](https://arxiv.org/abs/2503.07365) | - | - |
-| MM-RLHF: The Next Step Forward in Multimodal LLM Alignment | 2025 | [📄 Paper](https://arxiv.org/abs/2502.10391) | - | - |
-| LMM-R1: Empowering 3B LMMs with Strong Reasoning Abilities Through Two-Stage Rule-Based RL | 2025 | [📄 Paper](https://arxiv.org/pdf/2503.07536) | - | - |
-| Vision-R1: Vision-R1: Incentivizing Reasoning Capability in Multimodal Large Language Models | 2025 | [📄 Paper](https://arxiv.org/abs/2503.06749) | - | - |
+| MM-Eureka: Exploring Visual Aha Moment with Rule-based Large-scale Reinforcement Learning | 2025 | [Paper](https://arxiv.org/abs/2503.07365) | [REINFORCE Leave-One-Out (RLOO)](https://openreview.net/pdf?id=r1lgTGL5DE) | - |
+| MM-RLHF: The Next Step Forward in Multimodal LLM Alignment | 2025 | [Paper](https://arxiv.org/abs/2502.10391) | DPO | - |
+| LMM-R1: Empowering 3B LMMs with Strong Reasoning Abilities Through Two-Stage Rule-Based RL | 2025 | [Paper](https://arxiv.org/pdf/2503.07536) | PPO | - |
+| Vision-R1: Vision-R1: Incentivizing Reasoning Capability in Multimodal Large Language Models | 2025 | [Paper](https://arxiv.org/abs/2503.06749) | GRPO | - |
 
 
 ### 3.2. <a name='sft'></a>Finetuning for VLM
@@ -160,13 +160,13 @@ Welcome to contribute and discuss!
 
 | Title | Year | Paper Link |
 |----------------|------|------------|
-| Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI | 2024 | [📄 Paper](https://arxiv.org/pdf/2407.06886v1) |
-| ScreenAI: A Vision-Language Model for UI and Infographics Understanding | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.04615) |
-| ChartLlama: A Multimodal LLM for Chart Understanding and Generation | 2023 | [📄 Paper](https://arxiv.org/pdf/2311.16483) |
+| Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI | 2024 | [Paper](https://arxiv.org/pdf/2407.06886v1) |
+| ScreenAI: A Vision-Language Model for UI and Infographics Understanding | 2024 | [Paper](https://arxiv.org/pdf/2402.04615) |
+| ChartLlama: A Multimodal LLM for Chart Understanding and Generation | 2023 | [Paper](https://arxiv.org/pdf/2311.16483) |
 | SciDoc2Diagrammer-MAF: Towards Generation of Scientific Diagrams from Documents guided by Multi-Aspect Feedback Refinement | 2024 | [📄 Paper](https://arxiv.org/pdf/2409.19242) |
-| Training a Vision Language Model as Smartphone Assistant | 2024 | [📄 Paper](https://arxiv.org/pdf/2404.08755) |
-| ScreenAgent: A Vision-Language Model-Driven Computer Control Agent | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.07945) |
-| Embodied Vision-Language Programmer from Environmental Feedback | 2024 | [📄 Paper](https://arxiv.org/pdf/2310.08588) |
+| Training a Vision Language Model as Smartphone Assistant | 2024 | [Paper](https://arxiv.org/pdf/2404.08755) |
+| ScreenAgent: A Vision-Language Model-Driven Computer Control Agent | 2024 | [Paper](https://arxiv.org/pdf/2402.07945) |
+| Embodied Vision-Language Programmer from Environmental Feedback | 2024 | [Paper](https://arxiv.org/pdf/2310.08588) |
 
 
 ### 4.2. <a name='GenerativeVisualMediaApplications'></a>Generative Visual Media Applications
