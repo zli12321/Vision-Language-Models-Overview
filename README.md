@@ -335,8 +335,8 @@ Welcome to contribute and discuss!
 | FairMedFM: Fairness Benchmarking for Medical Imaging Foundation Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2407.00983) | - | - |
 | Benchmarking Vision Language Models for Cultural Understanding | 2024 | [📄 Paper](https://arxiv.org/pdf/2407.10920) | - | - |
 
-
-### 5.4 <a name='MultimodalityAlignment'></a>Multi-modality Alignment
+#### 5.4 <a name='Alignment'></a>Alignment
+#### 5.4.1 <a name='MultimodalityAlignment'></a>Multi-modality Alignment
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
 | Mitigating Hallucinations in Large Vision-Language Models with Instruction Contrastive Decoding | 2024 | [📄 Paper](https://arxiv.org/pdf/2403.18715) | - | - |
@@ -345,6 +345,12 @@ Welcome to contribute and discuss!
 | Extending Multi-modal Contrastive Representations | 2023 | [📄 Paper](https://arxiv.org/pdf/2310.08884) | - | [💾 Code](https://github.com/MCR-PEFT/Ex-MCR) |
 | OneLLM: One Framework to Align All Modalities with Language | 2023 | [📄 Paper](https://arxiv.org/pdf/2312.03700) | - | [💾 Code](https://github.com/csuhan/OneLLM) |
 
+#### 5.4.2 <a name='CommonsenseAlignment'></a>Commonsense and Physics Alignment
+| Title | Year | Paper | Website | Code |
+|----------------|------|--------|---------|------|
+| VBench: Comprehensive BenchmarkSuite for Video Generative Models | 2023 | [📄 Paper](https://arxiv.org/pdf/2311.17982) | [🌍 Website](https://vchitect.github.io/VBench-project/) | [💾 Code](https://github.com/Vchitect/VBench) |
+| VBench++: Comprehensive and Versatile Benchmark Suite for Video Generative Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2411.13503) | [🌍 Website](https://vchitect.github.io/VBench-project/) | [💾 Code](https://github.com/Vchitect/VBench) |
+| PhysBench: Benchmarking and Enhancing VLMs for Physical World Understanding | 2024 | [📄 Paper](https://arxiv.org/pdf/2501.16411) | [🌍 Website](https://physbench.github.io/) | [💾 Code](https://github.com/USC-GVL/PhysBench) | 
 
 ### 5.5 <a name=' EfficientTrainingandFineTuning'></a> Efficient Training and Fine-Tuning
 | Title | Year | Paper | Website | Code |
