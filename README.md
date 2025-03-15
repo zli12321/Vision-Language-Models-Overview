@@ -113,6 +113,7 @@ Welcome to contribute and discuss!
 | [POPE](https://arxiv.org/pdf/2305.10355)             | Hallucination                               | Yes/No            | Human                  | 9        | [Github Repo](https://github.com/RUCAIBox/POPE) |
 | [GenAI-Bench](https://arxiv.org/pdf/2406.13743)      | Text-to-Image generation                    | Human Ratings     | Human                  | 80.0     | [Huggingface](https://huggingface.co/datasets/BaiqiL/GenAI-Bench) |
 | [NaturalBench](https://arxiv.org/pdf/2410.14669)     | Multimodal general intelligence             | Yes/No, Multiple Choice | Human | 10.0 | [Huggingface](https://huggingface.co/datasets/BaiqiL/NaturalBench/blob/main/README.md) |
+| [R1-Onevision](https://arxiv.org/pdf/2503.10615)     |  Visual reasoning, understanding, recognition | Multiple Choice | Human  | 155 | [Github Repo](https://github.com/Fancy-MLLM/R1-Onevision) |
 
 ### 2.2. <a name='DatasetforEmbodiedVLM'></a> Benchmark Datasets, Simulators and Generative Models for Embodied VLM 
 | Benchmark                                                                                                                                     |             Domain              |                Type                |                                                     		Project					                                                     |
