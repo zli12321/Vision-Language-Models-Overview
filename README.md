@@ -63,7 +63,8 @@ Welcome to contribute and discuss!
 | [Ocean-OCR](https://arxiv.org/abs/2501.15558)				   | 2025 | Decdoer-only	| Pure Text, Caption, [Interleaved](https://github.com/OpenGVLab/MM-Interleaved), [OCR](https://github.com/X-PLUG/mPLUG-DocOwl/tree/main/DocOwl1.5) | 3B | [NaViT](https://arxiv.org/pdf/2307.06304) | Pretrained from scratch      
 | [SmolVLM](https://huggingface.co/blog/smolervlm)             | 2025 | Decoder-only   | [SmolVLM-Instruct](https://huggingface.co/HuggingFaceTB/SmolVLM-Instruct/blob/main/smolvlm-data.pdf) | 250M & 500M     | SigLIP                                | [SmolLM](https://huggingface.co/blog/smollm)   
 | [DeepSeek-Janus-Pro](https://janusai.pro/wp-content/uploads/2025/01/janus_pro_tech_report.pdf)             | 2025 | Decoder-only   | Undisclosed | 7B     | SigLIP                                | [DeepSeek-Janus-Pro](https://huggingface.co/deepseek-ai/Janus-Pro-7B)                                      |
-| [DeepSeek-VL2](https://arxiv.org/pdf/2412.10302)             | 2024 | Decoder-only   | [WiT](https://huggingface.co/datasets/google/wit), [WikiHow](https://huggingface.co/datasets/ajibawa-2023/WikiHow) | 4.5B x 74      | SigLIP/SAMB                                  | [DeepSeekMoE](https://arxiv.org/pdf/2412.10302)                                      |
+| [Inst-IT](https://arxiv.org/abs/2412.03565) | 2024 | Decoder-only | [Inst-IT Dataset](https://huggingface.co/datasets/Inst-IT/Inst-It-Dataset), [LLaVA-NeXT-Data](https://huggingface.co/datasets/lmms-lab/LLaVA-NeXT-Data) | 7B | CLIP/Vicuna, SigLIP/Qwen2 | [LLaVA-NeXT](https://huggingface.co/liuhaotian/llava-v1.6-vicuna-7b) |
+ [DeepSeek-VL2](https://arxiv.org/pdf/2412.10302)             | 2024 | Decoder-only   | [WiT](https://huggingface.co/datasets/google/wit), [WikiHow](https://huggingface.co/datasets/ajibawa-2023/WikiHow) | 4.5B x 74      | SigLIP/SAMB                                  | [DeepSeekMoE](https://arxiv.org/pdf/2412.10302)                                      |
 | [xGen-MM (BLIP-3)](https://arxiv.org/pdf/2408.08872) | 2024 | Decoder-only | [MINT-1T](https://arxiv.org/pdf/2406.11271), [OBELICS](https://arxiv.org/pdf/2306.16527), [Caption](https://github.com/salesforce/LAVIS/tree/xgen-mm?tab=readme-ov-file#data-preparation) | 4B | ViT + [Perceiver Resampler](https://arxiv.org/pdf/2204.14198) | [Phi-3-mini](https://arxiv.org/pdf/2404.14219) |
 | [TransFusion](https://arxiv.org/pdf/2408.11039)              | 2024 | Encoder-decoder| Undisclosed                 | 7B             | VAE Encoder                                  | Pretrained from scratch on transformer architecture |
 | [Baichuan Ocean Mini](https://arxiv.org/pdf/2410.08565)      | 2024 | Decoder-only   | Image/Video/Audio/Text      | 7B             | CLIP ViT-L/14                                | [Baichuan](https://arxiv.org/pdf/2309.10305)                                         |
@@ -93,6 +94,7 @@ Welcome to contribute and discuss!
 ### 2.1. <a name='DatasetforVLM'></a> Datasets and Evaluation for VLM
 | Benchmark Dataset                                        | Domain                                       | Metric Type        | Source                 | Size (K) | Project |
 |----------------------------------------------------------|----------------------------------------------|--------------------|------------------------|----------|---------|
+| [Inst-IT-Bench](https://arxiv.org/abs/2412.03565) | Fine-grained Image and Video Understanding | Multiple Choice & LLM Eval | Human/Synthetic | 2K | [Github Repo](https://github.com/inst-it/inst-it) |
 | [MovieChat](https://arxiv.org/abs/2307.16449)           | Video understanding             | LLM Eval          | Human                  | 1K       | [Github Repo](https://rese1f.github.io/MovieChat/) |
 | [PHYSBENCH](https://arxiv.org/pdf/2501.16411)           | Visual math reasoning                       | Multiple Choice   | Graduate STEM Students | 100      | [Github Repo](https://github.com/USC-GVL/PhysBench) |
 | [MMTBench](https://arxiv.org/pdf/2404.16006)           | Visual reasoning, understanding, recognition, and question answering | Multiple Choice | AI Experts | 30.1 | [Github Repo](https://github.com/tylin/coco-caption) |
@@ -168,6 +170,7 @@ Welcome to contribute and discuss!
 ### 3.2. <a name='sft'></a>Finetuning for VLM
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| Inst-IT: Boosting Multimodal Instance Understanding via Explicit Visual Prompt Instruction Tuning | 2024 | [Paper](https://arxiv.org/abs/2412.03565) | [Website](https://inst-it.github.io/) | [Code](https://github.com/inst-it/inst-it) |
 | LLaVolta: Efficient Multi-modal Models via Stage-wise Visual Context Compression | 2024 | [Paper](https://arxiv.org/pdf/2406.20092) | [Website](https://beckschen.github.io/llavolta.html) | [Code](https://github.com/Beckschen/LLaVolta) |
 | ViTamin: Designing Scalable Vision Models in the Vision-Language Era | 2024 | [Paper](https://arxiv.org/pdf/2404.02132) | [Website](https://beckschen.github.io/vitamin.html) | [Code](https://github.com/Beckschen/ViTamin) |
 | Espresso: High Compression For Rich Extraction From Videos for Your Vision-Language Model | 2024 | [Paper](https://arxiv.org/pdf/2412.04729) | - | - |
@@ -421,6 +424,7 @@ Welcome to contribute and discuss!
 ### 5.6 <a name='ScarceofHighqualityDataset'></a>Scarce of High-quality Dataset
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| Inst-IT: Boosting Multimodal Instance Understanding via Explicit Visual Prompt Instruction Tuning | 2024 | [📄 Paper](https://arxiv.org/abs/2412.03565) | [Website](https://inst-it.github.io/) | [💾 Code](https://github.com/inst-it/inst-it) |
 | SLIP: Self-supervision meets Language-Image Pre-training | 2021 | [📄 Paper](https://arxiv.org/pdf/2112.12750) | - | [💾 Code](https://github.com/facebookresearch/SLIP) |
 | Synthetic Vision: Training Vision-Language Models to Understand Physics | 2024 | [📄 Paper](https://arxiv.org/pdf/2412.08619) | - | - |
 | Synth2: Boosting Visual-Language Models with Synthetic Captions and Image Embeddings | 2024 | [📄 Paper](https://arxiv.org/pdf/2403.07750) | - | - |
