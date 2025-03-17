@@ -216,7 +216,7 @@ Welcome to contribute and discuss!
 | ExploRLLM: Guiding Exploration in Reinforcement Learning with Large Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2403.09583) | [🌍 Website](https://explorllm.github.io/) | - |
 | AnyTouch: Learning Unified Static-Dynamic Representation across Multiple Visuo-tactile Sensors | 2025 | [📄 Paper](https://arxiv.org/pdf/2502.12191) | [🌍 Website](https://gewu-lab.github.io/AnyTouch/) | [💾 Code](https://github.com/GeWu-Lab/AnyTouch) |
 | Masked World Models for Visual Control | 2022 | [📄 Paper](https://arxiv.org/pdf/2206.14244)| [🌍 Website](https://sites.google.com/view/mwm-rl) | [💾 Code](https://github.com/younggyoseo/MWM) |
-| Multi-View Masked World Models for Visual Robotic Manipulation | 2023 | [📄 Paper](https://arxiv.org/pdf/2302.02408)| [🌍 Website](https://sites.google.com/view/mv-mwm) | [💾 Code]([https://github.com/younggyoseo/MWM](https://github.com/younggyoseo/MV-MWM)) |
+| Multi-View Masked World Models for Visual Robotic Manipulation | 2023 | [📄 Paper](https://arxiv.org/pdf/2302.02408)| [🌍 Website](https://sites.google.com/view/mv-mwm) | [💾 Code](https://github.com/younggyoseo/MV-MWM) |
 
 
 #### 4.3.2. <a name='Navigation'></a>Navigation
