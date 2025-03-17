@@ -196,9 +196,12 @@ Welcome to contribute and discuss!
 | Robots Enact Malignant Stereotypes | 2022 | [📄 Paper](https://arxiv.org/pdf/2207.11569) | [🌍 Website](https://sites.google.com/view/robots-enact-stereotypes) | - |
 | LLM-Driven Robots Risk Enacting Discrimination, Violence, and Unlawful Actions | 2024 | [📄 Paper](https://arxiv.org/pdf/2406.08824) | - | - |
 | Highlighting the Safety Concerns of Deploying LLMs/VLMs in Robotics | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.10340) | [🌍 Website](https://wuxiyang1996.github.io/adversary-vlm-robotics/) | - |
-| EmbodiedBench: Comprehensive Benchmarking Multi-modal Large Language Models for Vision-Driven Embodied Agents | 2025 | [📄 Paper](https://arxiv.org/abs/2502.09560) | [🌍 Website](https://embodiedbench.github.io/) | [💾 Code & Dataset](https://github.com/EmbodiedBench/EmbodiedBench) |
-
-
+| EmbodiedBench: Comprehensive Benchmarking Multi-modal Large Language Models for Vision-Driven Embodied Agents | 2025 | [📄 Paper](https://arxiv.org/pdf/2502.09560) | [🌍 Website](https://embodiedbench.github.io/) | [💾 Code & Dataset](https://github.com/EmbodiedBench/EmbodiedBench) |
+| Gemini Robotics: Bringing AI into the Physical World | 2025 | [📄 Technical Report](https://storage.googleapis.com/deepmind-media/gemini-robotics/gemini_robotics_report.pdf) | [🌍 Website](https://deepmind.google/technologies/gemini-robotics/) | - |
+| GR-2: A Generative Video-Language-Action Model with Web-Scale Knowledge for Robot Manipulation | 2024 | [📄 Paper](https://arxiv.org/pdf/2410.06158) | [🌍 Website](https://gr2-manipulation.github.io/) | - |
+| Magma: A Foundation Model for Multimodal AI Agents | 2025 | [📄 Paper](https://arxiv.org/pdf/2502.13130) | [🌍 Website](https://microsoft.github.io/Magma/) | [💾 Code](https://github.com/microsoft/Magma) |
+| DayDreamer: World Models for Physical Robot Learning | 2022 | [📄 Paper](https://arxiv.org/pdf/2206.14176)| [🌍 Website](https://danijar.com/project/daydreamer/) | [💾 Code](https://github.com/danijar/daydreamer) |
+| Hi Robot: Open-Ended Instruction Following with Hierarchical Vision-Language-Action Models | 2025 | [📄 Paper](https://arxiv.org/pdf/2206.14176)| - | - |
 
 #### 4.3.1. <a name='Manipulation'></a>Manipulation
 | Title | Year | Paper | Website | Code |
@@ -211,6 +214,9 @@ Welcome to contribute and discuss!
 | RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control | 2023 | [📄 Paper](https://arxiv.org/pdf/2307.15818) | [🌍 Website](https://robotics-transformer2.github.io/) | - |
 | Open X-Embodiment: Robotic Learning Datasets and RT-X Models | 2023 | [📄 Paper](https://arxiv.org/pdf/2310.08864) | [🌍 Website](https://robotics-transformer-x.github.io/) | - |
 | ExploRLLM: Guiding Exploration in Reinforcement Learning with Large Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2403.09583) | [🌍 Website](https://explorllm.github.io/) | - |
+| AnyTouch: Learning Unified Static-Dynamic Representation across Multiple Visuo-tactile Sensors | 2025 | [📄 Paper](https://arxiv.org/pdf/2502.12191) | [🌍 Website](https://gewu-lab.github.io/AnyTouch/) | [💾 Code](https://github.com/GeWu-Lab/AnyTouch) |
+| Masked World Models for Visual Control | 2022 | [📄 Paper](https://arxiv.org/pdf/2206.14244)| [🌍 Website](https://sites.google.com/view/mwm-rl) | [💾 Code](https://github.com/younggyoseo/MWM) |
+| Multi-View Masked World Models for Visual Robotic Manipulation | 2023 | [📄 Paper](https://arxiv.org/pdf/2302.02408)| [🌍 Website](https://sites.google.com/view/mv-mwm) | [💾 Code]([https://github.com/younggyoseo/MWM](https://github.com/younggyoseo/MV-MWM)) |
 
 
 #### 4.3.2. <a name='Navigation'></a>Navigation
@@ -222,6 +228,8 @@ Welcome to contribute and discuss!
 | NaVILA: Legged Robot Vision-Language-Action Model for Navigation | 2022 | [📄 Paper](https://arxiv.org/pdf/2412.04453) | [🌍 Website](https://navila-bot.github.io/) | - |
 | VLFM: Vision-Language Frontier Maps for Zero-Shot Semantic Navigation | 2024 | [📄 Paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10610712&casa_token=qvFCSt20n0MAAAAA:MSC4P7bdlfQuMRFrmIl706B-G8ejcxH9ZKROKETL1IUZIW7m_W4hKW-kWrxw-F8nykoysw3WYHnd) | - | - |
 | Navigation with Large Language Models: Semantic Guesswork as a Heuristic for Planning | 2023 | [📄 Paper](https://arxiv.org/pdf/2310.10103) | [🌍 Website](https://sites.google.com/view/lfg-nav/) | - |
+| Vi-LAD: Vision-Language Attention Distillation for Socially-Aware Robot Navigation in Dynamic Environments | 2025 | [📄 Paper](https://arxiv.org/pdf/2503.09820) | - | - |
+| Navigation World Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2412.03572) | [🌍 Website](https://www.amirbar.net/nwm/) | - |
 
 
 #### 4.3.3. <a name='HumanRobotInteraction'></a>Human-robot Interaction
@@ -363,6 +371,9 @@ Welcome to contribute and discuss!
 | VideoScore: Building Automatic Metrics to Simulate Fine-grained Human Feedback for Video Generation | 2024 | [📄 Paper](https://arxiv.org/pdf/2406.15252) | [🌍 Website](https://tiger-ai-lab.github.io/VideoScore/) | [💾 Code](https://github.com/TIGER-AI-Lab/VideoScore) |
 | WISE: A World Knowledge-Informed Semantic Evaluation for Text-to-Image Generation | 2025 | [📄 Paper](https://arxiv.org/pdf/2503.07265) | - | [💾 Code](https://github.com/PKU-YuanGroup/WISE) |
 | Content-Rich AIGC Video Quality Assessment via Intricate Text Alignment and Motion-Aware Consistency | 2025 | [📄 Paper](https://arxiv.org/pdf/2502.04076) | - | [💾 Code](https://github.com/littlespray/CRAVE) |
+| Your Large Vision-Language Model Only Needs A Few Attention Heads For Visual Grounding | 2025 | [📄 Paper](https://arxiv.org/pdf/2503.06287) | - | - |
+
+
 
 ### 5.5 <a name=' EfficientTrainingandFineTuning'></a> Efficient Training and Fine-Tuning
 | Title | Year | Paper | Website | Code |
