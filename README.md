@@ -172,6 +172,9 @@ Welcome to contribute and discuss!
 
 
 ### 4.2. <a name='GenerativeVisualMediaApplications'></a>Generative Visual Media Applications
+| Title | Year | Paper | Website | Code |
+|----------------|------|--------|---------|------|
+| GPT4Motion: Scripting Physical Motions in Text-to-Video Generation via Blender-Oriented GPT Planning | 2023 | [📄 Paper](https://arxiv.org/pdf/2311.12631) | [🌍 Website](https://gpt4motion.github.io/) | [💾 Code](https://github.com/jiaxilv/GPT4Motion) |
 
 ### 4.3. <a name='RoboticsandEmbodiedAI'></a>Robotics and Embodied AI
 | Title | Year | Paper | Website | Code |
@@ -346,13 +349,20 @@ Welcome to contribute and discuss!
 | Assessing and Learning Alignment of Unimodal Vision and Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2412.04616) | [🌍 Website](https://lezhang7.github.io/sail.github.io/) | - |
 | Extending Multi-modal Contrastive Representations | 2023 | [📄 Paper](https://arxiv.org/pdf/2310.08884) | - | [💾 Code](https://github.com/MCR-PEFT/Ex-MCR) |
 | OneLLM: One Framework to Align All Modalities with Language | 2023 | [📄 Paper](https://arxiv.org/pdf/2312.03700) | - | [💾 Code](https://github.com/csuhan/OneLLM) |
+| What You See is What You Read? Improving Text-Image Alignment Evaluation | 2023 | [📄 Paper](https://arxiv.org/pdf/2305.10400) | [🌍 Website](https://wysiwyr-itm.github.io/) | [💾 Code](https://github.com/yonatanbitton/wysiwyr) |
 
 #### 5.4.2 <a name='CommonsenseAlignment'></a>Commonsense and Physics Alignment
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
 | VBench: Comprehensive BenchmarkSuite for Video Generative Models | 2023 | [📄 Paper](https://arxiv.org/pdf/2311.17982) | [🌍 Website](https://vchitect.github.io/VBench-project/) | [💾 Code](https://github.com/Vchitect/VBench) |
 | VBench++: Comprehensive and Versatile Benchmark Suite for Video Generative Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2411.13503) | [🌍 Website](https://vchitect.github.io/VBench-project/) | [💾 Code](https://github.com/Vchitect/VBench) |
-| PhysBench: Benchmarking and Enhancing VLMs for Physical World Understanding | 2024 | [📄 Paper](https://arxiv.org/pdf/2501.16411) | [🌍 Website](https://physbench.github.io/) | [💾 Code](https://github.com/USC-GVL/PhysBench) | 
+| PhysBench: Benchmarking and Enhancing VLMs for Physical World Understanding | 2025 | [📄 Paper](https://arxiv.org/pdf/2501.16411) | [🌍 Website](https://physbench.github.io/) | [💾 Code](https://github.com/USC-GVL/PhysBench) | 
+| VideoPhy: Evaluating Physical Commonsense for Video Generation | 2024 | [📄 Paper](https://arxiv.org/pdf/2406.03520) | [🌍 Website](https://videophy.github.io/) | [💾 Code](https://github.com/Hritikbansal/videophy) | 
+| WorldSimBench: Towards Video Generation Models as World Simulators | 2024 | [📄 Paper](https://arxiv.org/pdf/2410.18072) | [🌍 Website](https://iranqin.github.io/WorldSimBench.github.io/) | - |
+| WorldModelBench: Judging Video Generation Models As World Models | 2025 | [📄 Paper](https://arxiv.org/pdf/2502.20694) | [🌍 Website](https://worldmodelbench-team.github.io/) | [💾 Code](https://github.com/WorldModelBench-Team/WorldModelBench/tree/main?tab=readme-ov-file) |
+| VideoScore: Building Automatic Metrics to Simulate Fine-grained Human Feedback for Video Generation | 2024 | [📄 Paper](https://arxiv.org/pdf/2406.15252) | [🌍 Website](https://tiger-ai-lab.github.io/VideoScore/) | [💾 Code](https://github.com/TIGER-AI-Lab/VideoScore) |
+| WISE: A World Knowledge-Informed Semantic Evaluation for Text-to-Image Generation | 2025 | [📄 Paper](https://arxiv.org/pdf/2503.07265) | - | [💾 Code](https://github.com/PKU-YuanGroup/WISE) |
+| Content-Rich AIGC Video Quality Assessment via Intricate Text Alignment and Motion-Aware Consistency | 2025 | [📄 Paper](https://arxiv.org/pdf/2502.04076) | - | [💾 Code](https://github.com/littlespray/CRAVE) |
 
 ### 5.5 <a name=' EfficientTrainingandFineTuning'></a> Efficient Training and Fine-Tuning
 | Title | Year | Paper | Website | Code |
