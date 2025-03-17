@@ -113,11 +113,21 @@ Welcome to contribute and discuss!
 | [EgoSchem](https://arxiv.org/pdf/2308.09126)         | Video understanding                         | Multiple Choice   | Synthetic/Human        | 5        | [Website](https://egoschema.github.io/) |
 | [HallusionBench](https://arxiv.org/pdf/2310.14566)   | Hallucination                               | Yes/No            | Human                  | 1.13     | [Github Repo](https://github.com/tianyi-lab/HallusionBench) |
 | [POPE](https://arxiv.org/pdf/2305.10355)             | Hallucination                               | Yes/No            | Human                  | 9        | [Github Repo](https://github.com/RUCAIBox/POPE) |
+| [CHAIR](https://arxiv.org/pdf/1809.02156)             | Hallucination                               | Yes/No            | Human                  | 124        | [Github Repo](https://github.com/LisaAnne/Hallucination/tree/master) |
+| [MHalDetect](https://arxiv.org/abs/2308.06394)| Hallucination | Answer Matching | Human | 4 |                           [Github Repo](https://github.com/LisaAnne/Hallucination/tree/master) |    
+| [Hallu-Pi](https://arxiv.org/abs/2408.01355)| Hallucination                 |  Answer Matching  |  Human | 1.260 |      [Github Repo](https://github.com/NJUNLP/Hallu-PI)  
+| [HallE-Control](https://arxiv.org/abs/2310.01779) | Hallucination                   |       Yes/No | Human | 108  | [Github Repo](https://github.com/bronyayang/HallE_Control)
+| [AutoHallusion](https://arxiv.org/pdf/2406.10900) | Hallucination         |         Answer Matching |  Synthetic |      3.129      | [Github Repo](https://github.com/wuxiyang1996/AutoHallusion) |       
+| [BEAF](https://arxiv.org/abs/2407.13442) | Hallucination         |         Yes/No |  Human |      26      | [Github Repo]([https://github.com/wuxiyang1996/AutoHallusion](https://beafbench.github.io/)) |   
+| [GAIVE](https://arxiv.org/abs/2306.14565) | Hallucination         |          Answer Matching |  Synthetic |      320      | [Github Repo](https://github.com/FuxiaoLiu/LRV-Instruction) | 
+| [HalEval](https://arxiv.org/abs/2402.15721) | Hallucination         | Yes/No |  CrowdSource/Synthetic |     2,000      | [Github Repo](https://github.com/WisdomShell/hal-eval) |    
+| [AMBER](https://arxiv.org/abs/2311.07397) | Hallucination         | Answer Matching |  Human |     15.22      | [Github Repo](https://github.com/junyangwang0410/AMBER) |       
 | [GenAI-Bench](https://arxiv.org/pdf/2406.13743)      | Text-to-Image generation                    | Human Ratings     | Human                  | 80.0     | [Huggingface](https://huggingface.co/datasets/BaiqiL/GenAI-Bench) |
 | [NaturalBench](https://arxiv.org/pdf/2410.14669)     | Multimodal general intelligence             | Yes/No, Multiple Choice | Human | 10.0 | [Huggingface](https://huggingface.co/datasets/BaiqiL/NaturalBench/blob/main/README.md) |
 | [R1-Onevision](https://arxiv.org/pdf/2503.10615)     |  Visual reasoning, understanding, recognition | Multiple Choice | Human  | 155 | [Github Repo](https://github.com/Fancy-MLLM/R1-Onevision) |
 | [VLM^2-Bench](https://arxiv.org/pdf/2502.12084)      | Visual reasoning, understanding, recognition, and question answering | Answer Matching, Multiple Choice | Human | 3 | [Website](https://vlm2-bench.github.io/) | 
 | [VisualWebInstruct](https://arxiv.org/pdf/2503.10582) | Visual reasoning, understanding, recognition, and question answering | LLM Eval |  Web | 900 | [Website](https://tiger-ai-lab.github.io/VisualWebInstruct/) | 
+
 
 ### 2.2. <a name='DatasetforEmbodiedVLM'></a> Benchmark Datasets, Simulators, and Generative Models for Embodied VLM 
 | Benchmark                                                                                                                                     |             Domain              |                Type                |                                                     		Project					                                                     |
@@ -156,6 +166,8 @@ Welcome to contribute and discuss!
 | Can We Generate Images with CoT? Let's Verify and Reinforce Image Generation Step by Step | 2025 | [Paper](https://arxiv.org/pdf/2501.13926) | DPO | [Code](https://github.com/ZiyuGuo99/Image-Generation-CoT) |
 
 ### 3.2. <a name='sft'></a>Finetuning for VLM
+| Title | Year | Paper | Website | Code |
+|----------------|------|--------|---------|------|
 | LLaVolta: Efficient Multi-modal Models via Stage-wise Visual Context Compression | 2024 | [Paper](https://arxiv.org/pdf/2406.20092) | [Website](https://beckschen.github.io/llavolta.html) | [Code](https://github.com/Beckschen/LLaVolta) |
 | ViTamin: Designing Scalable Vision Models in the Vision-Language Era | 2024 | [Paper](https://arxiv.org/pdf/2404.02132) | [Website](https://beckschen.github.io/vitamin.html) | [Code](https://github.com/Beckschen/ViTamin) |
 | Espresso: High Compression For Rich Extraction From Videos for Your Vision-Language Model | 2024 | [Paper](https://arxiv.org/pdf/2412.04729) | - | - |
