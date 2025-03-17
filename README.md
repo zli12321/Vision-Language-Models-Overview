@@ -142,6 +142,7 @@ Welcome to contribute and discuss!
 | MM-RLHF: The Next Step Forward in Multimodal LLM Alignment | 2025 | [Paper](https://arxiv.org/abs/2502.10391) | DPO | - |
 | LMM-R1: Empowering 3B LMMs with Strong Reasoning Abilities Through Two-Stage Rule-Based RL | 2025 | [Paper](https://arxiv.org/pdf/2503.07536) | PPO | - |
 | Vision-R1: Vision-R1: Incentivizing Reasoning Capability in Multimodal Large Language Models | 2025 | [Paper](https://arxiv.org/abs/2503.06749) | GRPO | - |
+| Unified Reward Model for Multimodal Understanding and Generation | 2025 | [Paper](https://arxiv.org/abs/2503.05236) | DPO | - |
 
 
 ### 3.2. <a name='sft'></a>Finetuning for VLM
