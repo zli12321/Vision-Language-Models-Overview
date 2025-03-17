@@ -46,7 +46,9 @@ Welcome to contribute and discuss!
 	* 5.1. [Hallucination](#Hallucination)
 	* 5.2. [Safety](#Safety)
 	* 5.3. [Fairness](#Fairness)
-	* 5.4. [Multi-modality Alignment](#MultimodalityAlignment)
+	* 5.4. [Alignment](#Alignment)
+  		* 5.4.1. [Multi-modality Alignment](#MultimodalityAlignment)
+    		* 5.4.2. [Commonsense and Physics Alignment](#CommonsenseAlignment)
  	* 5.5. [Efficient Training and Fine-Tuning](#EfficientTrainingandFineTuning)
  	* 5.6. [Scarce of High-quality Dataset](#ScarceofHighqualityDataset)
 
@@ -114,8 +116,10 @@ Welcome to contribute and discuss!
 | [GenAI-Bench](https://arxiv.org/pdf/2406.13743)      | Text-to-Image generation                    | Human Ratings     | Human                  | 80.0     | [Huggingface](https://huggingface.co/datasets/BaiqiL/GenAI-Bench) |
 | [NaturalBench](https://arxiv.org/pdf/2410.14669)     | Multimodal general intelligence             | Yes/No, Multiple Choice | Human | 10.0 | [Huggingface](https://huggingface.co/datasets/BaiqiL/NaturalBench/blob/main/README.md) |
 | [R1-Onevision](https://arxiv.org/pdf/2503.10615)     |  Visual reasoning, understanding, recognition | Multiple Choice | Human  | 155 | [Github Repo](https://github.com/Fancy-MLLM/R1-Onevision) |
+| [VLM^2-Bench](https://arxiv.org/pdf/2502.12084)      | Visual reasoning, understanding, recognition, and question answering | Answer Matching, Multiple Choice | Human | 3 | [Website](https://vlm2-bench.github.io/) | 
+| [VisualWebInstruct](https://arxiv.org/pdf/2503.10582) | Visual reasoning, understanding, recognition, and question answering | LLM Eval |  Web | 900 | [Website](https://tiger-ai-lab.github.io/VisualWebInstruct/) | 
 
-### 2.2. <a name='DatasetforEmbodiedVLM'></a> Benchmark Datasets, Simulators and Generative Models for Embodied VLM 
+### 2.2. <a name='DatasetforEmbodiedVLM'></a> Benchmark Datasets, Simulators, and Generative Models for Embodied VLM 
 | Benchmark                                                                                                                                     |             Domain              |                Type                |                                                     		Project					                                                     |
 |-----------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------:|:----------------------------------:|:----------------------------------------------------------------------------------------------------------------------:|
 | [Habitat](https://arxiv.org/pdf/1904.01201), [Habitat 2.0](https://arxiv.org/pdf/2106.14405), [Habitat 3.0](https://arxiv.org/pdf/2310.13724) |      Robotics (Navigation)      |        Simulator + Dataset         |                                           [Website](https://aihabitat.org/)                                            |
@@ -123,6 +127,10 @@ Welcome to contribute and discuss!
 | [iGibson1.0](https://arxiv.org/pdf/2012.02924), [iGibson2.0](https://arxiv.org/pdf/2108.03272)                                                |      Robotics (Navigation)      |        Simulator + Dataset         |            [Website](https://svl.stanford.edu/igibson/), [Document](https://stanfordvl.github.io/iGibson/)             |
 | [Isaac Gym](https://arxiv.org/pdf/2108.10470)                                                                                                 |      Robotics (Navigation)      |             Simulator              |      [Website](https://developer.nvidia.com/isaac-gym), [Github Repo](https://github.com/isaac-sim/IsaacGymEnvs)       |
 | [Isaac Lab](https://arxiv.org/pdf/2301.04195)                                                                                                 |      Robotics (Navigation)      |             Simulator              | [Website](https://isaac-sim.github.io/IsaacLab/main/index.html), [Github Repo](https://github.com/isaac-sim/IsaacLab)  |
+| [AI2THOR](https://arxiv.org/abs/1712.05474) |  Robotics (Navigation)      |             Simulator | [Website](https://ai2thor.allenai.org/), [Github Repo](https://github.com/allenai/ai2thor)  |
+| [ProcTHOR](https://arxiv.org/abs/2206.06994) |  Robotics (Navigation)      |              Simulator + Dataset | [Website](https://procthor.allenai.org/), [Github Repo](https://github.com/allenai/procthor)  |
+| [VirtualHome](https://arxiv.org/abs/1806.07011) |  Robotics (Navigation)      |              Simulator | [Website](http://virtual-home.org/), [Github Repo](https://github.com/xavierpuigf/virtualhome)  |
+| [ThreeDWorld](https://arxiv.org/abs/2007.04954) | Robotics (Navigation)      |              Simulator | [Website](https://www.threedworld.org/), [Github Repo](https://github.com/threedworld-mit/tdw)  |
 | [VIMA-Bench](https://arxiv.org/pdf/2210.03094)                                                                                                |     Robotics (Manipulation)     |             Simulator              |                [Website](https://vimalabs.github.io/), [Github Repo](https://github.com/vimalabs/VIMA)                 |
 | [VLMbench](https://arxiv.org/pdf/2206.08522)                                                                                                  |     Robotics (Manipulation)     |             Simulator              |                                 [Github Repo](https://github.com/eric-ai-lab/VLMbench)                                 |
 | [CALVIN](https://arxiv.org/pdf/2112.03227)                                                                                                    |     Robotics (Manipulation)     |             Simulator              |              [Website](http://calvin.cs.uni-freiburg.de/), [Github Repo](https://github.com/mees/calvin)               |
@@ -132,6 +140,8 @@ Welcome to contribute and discuss!
 | [GAIA-1](https://arxiv.org/pdf/2309.17080)                                                                                                    | Robotics (Automonous Driving)   |   Generative Model, World Model    |                                [Website](https://wayve.ai/thinking/introducing-gaia1/)                                 |                                                                                                   
 | [LWM](https://arxiv.org/pdf/2402.08268)                                                                                                       |           Embodied AI           |   Generative Model, World Model    |        [Website](https://largeworldmodel.github.io/lwm/), [Github Repo](https://github.com/LargeWorldModel/LWM)        |
 | [Genesis](https://github.com/Genesis-Embodied-AI/Genesis)                                                                                     |           Embodied AI           |   Generative Model, World Model    |                             [Github Repo](https://github.com/Genesis-Embodied-AI/Genesis)                              |
+| [EMMOE](https://arxiv.org/pdf/2503.08604) | Embodied AI | Generative Model, World Model | [Paper](https://arxiv.org/pdf/2503.08604)  |
+| [RoboGen](https://arxiv.org/pdf/2311.01455) | Embodied AI | Generative Model, World Model | [Website](https://robogen-ai.github.io/)  |
 
 
 ##  3. <a name='posttraining'></a>⚒️ Post-Training
@@ -141,11 +151,14 @@ Welcome to contribute and discuss!
 | MM-Eureka: Exploring Visual Aha Moment with Rule-based Large-scale Reinforcement Learning | 2025 | [Paper](https://arxiv.org/abs/2503.07365) | [REINFORCE Leave-One-Out (RLOO)](https://openreview.net/pdf?id=r1lgTGL5DE) | [Code](https://github.com/ModalMinds/MM-EUREKA) |
 | MM-RLHF: The Next Step Forward in Multimodal LLM Alignment | 2025 | [Paper](https://arxiv.org/abs/2502.10391) | DPO | [Code](https://github.com/Kwai-YuanQi/MM-RLHF) |
 | LMM-R1: Empowering 3B LMMs with Strong Reasoning Abilities Through Two-Stage Rule-Based RL | 2025 | [Paper](https://arxiv.org/pdf/2503.07536) | PPO | [Code](https://github.com/TideDra/lmm-r1) |
-| Vision-R1: Vision-R1: Incentivizing Reasoning Capability in Multimodal Large Language Models | 2025 | [Paper](https://arxiv.org/abs/2503.06749) | GRPO | [Code](https://github.com/Osilly/Vision-R1) |
+| Vision-R1: Incentivizing Reasoning Capability in Multimodal Large Language Models | 2025 | [Paper](https://arxiv.org/pdf/2503.06749) | GRPO | [Code](https://github.com/Osilly/Vision-R1) |
 | Unified Reward Model for Multimodal Understanding and Generation | 2025 | [Paper](https://arxiv.org/abs/2503.05236) | DPO | [Code](https://github.com/CodeGoat24/UnifiedReward) |
-
+| Can We Generate Images with CoT? Let's Verify and Reinforce Image Generation Step by Step | 2025 | [Paper](https://arxiv.org/pdf/2501.13926) | DPO | [Code](https://github.com/ZiyuGuo99/Image-Generation-CoT) |
 
 ### 3.2. <a name='sft'></a>Finetuning for VLM
+| LLaVolta: Efficient Multi-modal Models via Stage-wise Visual Context Compression | 2024 | [Paper](https://arxiv.org/pdf/2406.20092) | [Website](https://beckschen.github.io/llavolta.html) | [Code](https://github.com/Beckschen/LLaVolta) |
+| ViTamin: Designing Scalable Vision Models in the Vision-Language Era | 2024 | [Paper](https://arxiv.org/pdf/2404.02132) | [Website](https://beckschen.github.io/vitamin.html) | [Code](https://github.com/Beckschen/ViTamin) |
+| Espresso: High Compression For Rich Extraction From Videos for Your Vision-Language Model | 2024 | [Paper](https://arxiv.org/pdf/2412.04729) | - | - |
 
 ### 3.3. <a name='vlm_github'></a>VLM Alignment github
 | Project | Repository Link |
@@ -202,6 +215,8 @@ Welcome to contribute and discuss!
 | Magma: A Foundation Model for Multimodal AI Agents | 2025 | [📄 Paper](https://arxiv.org/pdf/2502.13130) | [🌍 Website](https://microsoft.github.io/Magma/) | [💾 Code](https://github.com/microsoft/Magma) |
 | DayDreamer: World Models for Physical Robot Learning | 2022 | [📄 Paper](https://arxiv.org/pdf/2206.14176)| [🌍 Website](https://danijar.com/project/daydreamer/) | [💾 Code](https://github.com/danijar/daydreamer) |
 | Hi Robot: Open-Ended Instruction Following with Hierarchical Vision-Language-Action Models | 2025 | [📄 Paper](https://arxiv.org/pdf/2206.14176)| - | - |
+| RL-VLM-F: Reinforcement Learning from Vision Language Foundation Model Feedback | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.03681)| [🌍 Website](https://rlvlmf2024.github.io/) | [💾 Code](https://github.com/yufeiwang63/RL-VLM-F) |
+| KALIE: Fine-Tuning Vision-Language Models for Open-World Manipulation without Robot Data | 2024 | [📄 Paper](https://arxiv.org/pdf/2409.14066)| [🌍 Website](https://kalie-vlm.github.io/) | [💾 Code](https://github.com/gractang/kalie) |
 
 #### 4.3.1. <a name='Manipulation'></a>Manipulation
 | Title | Year | Paper | Website | Code |
@@ -272,6 +287,7 @@ Welcome to contribute and discuss!
 | WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2401.13919) | - | [💾 Code](https://github.com/MinorJerry/WebVoyager) |
 | ShowUI: One Vision-Language-Action Model for GUI Visual Agent | 2024 | [📄 Paper](https://arxiv.org/pdf/2411.17465) | - | [💾 Code](https://github.com/showlab/ShowUI) |
 | ScreenAgent: A Vision Language Model-driven Computer Control Agent | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.07945) | - | [💾 Code](https://github.com/niuzaisheng/ScreenAgent) |
+| Web Agents with World Models: Learning and Leveraging Environment Dynamics in Web Navigation | 2024 | [📄 Paper](https://arxiv.org/pdf/2410.13232) | - | [💾 Code](https://huggingface.co/papers/2410.13232) |
 
 
 #### 4.4.2. <a name='Accessibility'></a>Accessibility
@@ -334,6 +350,7 @@ Welcome to contribute and discuss!
 | SHIELD: An Evaluation Benchmark for Face Spoofing and Forgery Detection with Multimodal Large Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.04178) | - | [💾 Code](https://github.com/laiyingxin2/SHIELD) |
 | Images are Achilles' Heel of Alignment: Exploiting Visual Vulnerabilities for Jailbreaking Multimodal Large Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2403.09792) | - | - |
 | Jailbreaking Attack against Multimodal Large Language Model | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.02309) | - | - |
+| Embodied Red Teaming for Auditing Robotic Foundation Models | 2025 | [📄 Paper](https://arxiv.org/pdf/2411.18676) | [🌍 Website](https://s-karnik.github.io/embodied-red-team-project-page/) | [💾 Code](https://github.com/Improbable-AI/embodied-red-teaming) |
 
 
 ### 5.3 <a name='Fairness'></a>Fairness
@@ -372,7 +389,10 @@ Welcome to contribute and discuss!
 | WISE: A World Knowledge-Informed Semantic Evaluation for Text-to-Image Generation | 2025 | [📄 Paper](https://arxiv.org/pdf/2503.07265) | - | [💾 Code](https://github.com/PKU-YuanGroup/WISE) |
 | Content-Rich AIGC Video Quality Assessment via Intricate Text Alignment and Motion-Aware Consistency | 2025 | [📄 Paper](https://arxiv.org/pdf/2502.04076) | - | [💾 Code](https://github.com/littlespray/CRAVE) |
 | Your Large Vision-Language Model Only Needs A Few Attention Heads For Visual Grounding | 2025 | [📄 Paper](https://arxiv.org/pdf/2503.06287) | - | - |
-
+| SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities | 2024 | [📄 Paper](https://arxiv.org/pdf/2401.12168) | [🌍 Website](https://spatial-vlm.github.io/) | [💾 Code](https://github.com/remyxai/VQASynth) |
+| Do generative video models understand physical principles? | 2025 | [📄 Paper](https://arxiv.org/pdf/2501.09038) | [🌍 Website](https://physics-iq.github.io/) | [💾 Code](https://github.com/google-deepmind/physics-IQ-benchmark) |
+| PhysGen: Rigid-Body Physics-Grounded Image-to-Video Generation | 2024 | [📄 Paper](https://arxiv.org/pdf/2409.18964) | [🌍 Website](https://stevenlsw.github.io/physgen/) | [💾 Code](https://github.com/stevenlsw/physgen) |
+| How Far is Video Generation from World Model: A Physical Law Perspective | 2024 | [📄 Paper](https://arxiv.org/pdf/2411.02385) | [🌍 Website](https://phyworld.github.io/) | [💾 Code](https://github.com/phyworld/phyworld) |
 
 
 ### 5.5 <a name=' EfficientTrainingandFineTuning'></a> Efficient Training and Fine-Tuning
