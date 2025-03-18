@@ -174,6 +174,7 @@ Welcome to contribute and discuss!
 | LLaVolta: Efficient Multi-modal Models via Stage-wise Visual Context Compression | 2024 | [Paper](https://arxiv.org/pdf/2406.20092) | [Website](https://beckschen.github.io/llavolta.html) | [Code](https://github.com/Beckschen/LLaVolta) |
 | ViTamin: Designing Scalable Vision Models in the Vision-Language Era | 2024 | [Paper](https://arxiv.org/pdf/2404.02132) | [Website](https://beckschen.github.io/vitamin.html) | [Code](https://github.com/Beckschen/ViTamin) |
 | Espresso: High Compression For Rich Extraction From Videos for Your Vision-Language Model | 2024 | [Paper](https://arxiv.org/pdf/2412.04729) | - | - |
+| Should VLMs be Pre-trained with Image Data? | 2025 | [Paper](https://arxiv.org/pdf/2503.07603) | - | - |
 
 ### 3.3. <a name='vlm_github'></a>VLM Alignment github
 | Project | Repository Link |
@@ -366,6 +367,7 @@ Welcome to contribute and discuss!
 | Images are Achilles' Heel of Alignment: Exploiting Visual Vulnerabilities for Jailbreaking Multimodal Large Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2403.09792) | - | - |
 | Jailbreaking Attack against Multimodal Large Language Model | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.02309) | - | - |
 | Embodied Red Teaming for Auditing Robotic Foundation Models | 2025 | [📄 Paper](https://arxiv.org/pdf/2411.18676) | [🌍 Website](https://s-karnik.github.io/embodied-red-team-project-page/) | [💾 Code](https://github.com/Improbable-AI/embodied-red-teaming) |
+| Safety Guardrails for LLM-Enabled Robots | 2025 | [📄 Paper](https://arxiv.org/pdf/2503.07885) | - | - |
 
 
 ### 5.3 <a name='Fairness'></a>Fairness
@@ -390,6 +392,7 @@ Welcome to contribute and discuss!
 | Extending Multi-modal Contrastive Representations | 2023 | [📄 Paper](https://arxiv.org/pdf/2310.08884) | - | [💾 Code](https://github.com/MCR-PEFT/Ex-MCR) |
 | OneLLM: One Framework to Align All Modalities with Language | 2023 | [📄 Paper](https://arxiv.org/pdf/2312.03700) | - | [💾 Code](https://github.com/csuhan/OneLLM) |
 | What You See is What You Read? Improving Text-Image Alignment Evaluation | 2023 | [📄 Paper](https://arxiv.org/pdf/2305.10400) | [🌍 Website](https://wysiwyr-itm.github.io/) | [💾 Code](https://github.com/yonatanbitton/wysiwyr) |
+| Critic-V: VLM Critics Help Catch VLM Errors in Multimodal Reasoning | 2024 | [📄 Paper](https://arxiv.org/pdf/2411.18203) | [🌍 Website](https://huggingface.co/papers/2411.18203) | [💾 Code](https://github.com/kyrieLei/Critic-V) |
 
 #### 5.4.2 <a name='CommonsenseAlignment'></a>Commonsense and Physics Alignment
 | Title | Year | Paper | Website | Code |
