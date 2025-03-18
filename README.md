@@ -439,8 +439,8 @@ Welcome to contribute and discuss!
 ## 6. <a name='Citations'></a>Citation
 
 ```
-@misc{li2025benchmarkevaluationsapplicationschallenges,
-      title={Benchmark Evaluations, Applications, and Challenges of Large Vision Language Models: A Survey}, 
+@misc{li2025surveystateartlarge,
+      title={A Survey of State of the Art Large Vision Language Models: Alignment, Benchmark, Evaluations and Challenges}, 
       author={Zongxia Li and Xiyang Wu and Hongyang Du and Huy Nghiem and Guangyao Shi},
       year={2025},
       eprint={2501.02189},
