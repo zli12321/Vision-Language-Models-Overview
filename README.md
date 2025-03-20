@@ -166,6 +166,9 @@ Welcome to contribute and discuss!
 | Vision-R1: Incentivizing Reasoning Capability in Multimodal Large Language Models | 2025 | [Paper](https://arxiv.org/pdf/2503.06749) | GRPO | [Code](https://github.com/Osilly/Vision-R1) |
 | Unified Reward Model for Multimodal Understanding and Generation | 2025 | [Paper](https://arxiv.org/abs/2503.05236) | DPO | [Code](https://github.com/CodeGoat24/UnifiedReward) |
 | Can We Generate Images with CoT? Let's Verify and Reinforce Image Generation Step by Step | 2025 | [Paper](https://arxiv.org/pdf/2501.13926) | DPO | [Code](https://github.com/ZiyuGuo99/Image-Generation-CoT) |
+| Training Powerful LLM Agents with End-to-End Reinforcement Learning | 2025 | - | PPO/REINFORCE++/GRPO | [Code](https://github.com/0russwest0/Agent-R1) |
+| All Roads Lead to Likelihood: The Value of Reinforcement Learning in Fine-Tuning | 2025 | [Paper](https://arxiv.org/pdf/2503.01067) | Online RL | - |
+
 
 ### 3.2. <a name='sft'></a>Finetuning for VLM
 | Title | Year | Paper | Website | Code |
@@ -198,12 +201,16 @@ Welcome to contribute and discuss!
 | Training a Vision Language Model as Smartphone Assistant | 2024 | [Paper](https://arxiv.org/pdf/2404.08755) |
 | ScreenAgent: A Vision-Language Model-Driven Computer Control Agent | 2024 | [Paper](https://arxiv.org/pdf/2402.07945) |
 | Embodied Vision-Language Programmer from Environmental Feedback | 2024 | [Paper](https://arxiv.org/pdf/2310.08588) |
+| VLMs Play StarCraft II: A Benchmark and Multimodal Decision Method | 2025 | [📄 Paper](https://arxiv.org/abs/2503.05383) | - | [💾 Code](https://github.com/camel-ai/VLM-Play-StarCraft2) |
 
 
 ### 4.2. <a name='GenerativeVisualMediaApplications'></a>Generative Visual Media Applications
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
 | GPT4Motion: Scripting Physical Motions in Text-to-Video Generation via Blender-Oriented GPT Planning | 2023 | [📄 Paper](https://arxiv.org/pdf/2311.12631) | [🌍 Website](https://gpt4motion.github.io/) | [💾 Code](https://github.com/jiaxilv/GPT4Motion) |
+| Spurious Correlation in Multimodal LLMs | 2025 | [📄 Paper](https://arxiv.org/abs/2503.08884) | - | - |
+| WeGen: A Unified Model for Interactive Multimodal Generation as We Chat | 2025 |  [📄 Paper](https://arxiv.org/pdf/2503.01115) | - | [💾 Code](https://github.com/hzphzp/WeGen) |
+| VideoMind: A Chain-of-LoRA Agent for Long Video Reasoning | 2025 | [📄 Paper](https://arxiv.org/pdf/2503.13444) | [🌍 Website](https://videomind.github.io/) | [💾 Code](https://github.com/yeliudev/VideoMind) |
 
 ### 4.3. <a name='RoboticsandEmbodiedAI'></a>Robotics and Embodied AI
 | Title | Year | Paper | Website | Code |
@@ -233,6 +240,8 @@ Welcome to contribute and discuss!
 | Hi Robot: Open-Ended Instruction Following with Hierarchical Vision-Language-Action Models | 2025 | [📄 Paper](https://arxiv.org/pdf/2206.14176)| - | - |
 | RL-VLM-F: Reinforcement Learning from Vision Language Foundation Model Feedback | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.03681)| [🌍 Website](https://rlvlmf2024.github.io/) | [💾 Code](https://github.com/yufeiwang63/RL-VLM-F) |
 | KALIE: Fine-Tuning Vision-Language Models for Open-World Manipulation without Robot Data | 2024 | [📄 Paper](https://arxiv.org/pdf/2409.14066)| [🌍 Website](https://kalie-vlm.github.io/) | [💾 Code](https://github.com/gractang/kalie) |
+| Unified Video Action Model | 2025 | [📄 Paper](https://arxiv.org/pdf/2503.00200)| [🌍 Website](https://unified-video-action-model.github.io/) | [💾 Code](https://github.com/ShuangLI59/unified_video_action) |
+| HybridVLA: Collaborative Diffusion and Autoregression in a Unified Vision-Language-Action Model | 2025 | [📄 Paper](https://arxiv.org/abs/2503.10631)| [🌍 Website](https://hybrid-vla.github.io/) | [💾 Code](https://github.com/PKU-HMI-Lab/Hybrid-VLA) |
 
 #### 4.3.1. <a name='Manipulation'></a>Manipulation
 | Title | Year | Paper | Website | Code |
@@ -269,7 +278,6 @@ Welcome to contribute and discuss!
 | MUTEX: Learning Unified Policies from Multimodal Task Specifications | 2023 | [📄 Paper](https://arxiv.org/pdf/2309.14320) | [🌍 Website](https://ut-austin-rpl.github.io/MUTEX/) | - |
 | LaMI: Large Language Models for Multi-Modal Human-Robot Interaction | 2024 | [📄 Paper](https://arxiv.org/pdf/2401.15174) | [🌍 Website](https://hri-eu.github.io/Lami/) | - |
 | VLM-Social-Nav: Socially Aware Robot Navigation through Scoring using Vision-Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2404.00210) | - | - |
-
 
 #### 4.3.4. <a name='AutonomousDriving'></a>Autonomous Driving
 | Title | Year | Paper | Website | Code |
@@ -411,7 +419,7 @@ Welcome to contribute and discuss!
 | Do generative video models understand physical principles? | 2025 | [📄 Paper](https://arxiv.org/pdf/2501.09038) | [🌍 Website](https://physics-iq.github.io/) | [💾 Code](https://github.com/google-deepmind/physics-IQ-benchmark) |
 | PhysGen: Rigid-Body Physics-Grounded Image-to-Video Generation | 2024 | [📄 Paper](https://arxiv.org/pdf/2409.18964) | [🌍 Website](https://stevenlsw.github.io/physgen/) | [💾 Code](https://github.com/stevenlsw/physgen) |
 | How Far is Video Generation from World Model: A Physical Law Perspective | 2024 | [📄 Paper](https://arxiv.org/pdf/2411.02385) | [🌍 Website](https://phyworld.github.io/) | [💾 Code](https://github.com/phyworld/phyworld) |
-
+| Imagine while Reasoning in Space: Multimodal Visualization-of-Thought | 2025 | [📄 Paper](https://arxiv.org/abs/2501.07542) | - | - |
 
 ### 5.5 <a name=' EfficientTrainingandFineTuning'></a> Efficient Training and Fine-Tuning
 | Title | Year | Paper | Website | Code |
