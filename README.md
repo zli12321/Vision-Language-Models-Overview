@@ -202,6 +202,7 @@ Welcome to contribute and discuss!
 | ScreenAgent: A Vision-Language Model-Driven Computer Control Agent | 2024 | [Paper](https://arxiv.org/pdf/2402.07945) |
 | Embodied Vision-Language Programmer from Environmental Feedback | 2024 | [Paper](https://arxiv.org/pdf/2310.08588) |
 | VLMs Play StarCraft II: A Benchmark and Multimodal Decision Method | 2025 | [📄 Paper](https://arxiv.org/abs/2503.05383) | - | [💾 Code](https://github.com/camel-ai/VLM-Play-StarCraft2) |
+| MP-GUI: Modality Perception with MLLMs for GUI Understanding | 2025 | [📄 Paper](https://arxiv.org/pdf/2503.14021) | - | [💾 Code](https://github.com/BigTaige/MP-GUI) | 
 
 
 ### 4.2. <a name='GenerativeVisualMediaApplications'></a>Generative Visual Media Applications
