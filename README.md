@@ -160,13 +160,14 @@ Welcome to contribute and discuss!
 ### 3.1.  <a name='alignment'></a>RL Alignment for VLM
 | Title | Year | Paper | RL | Code |
 |----------------|------|--------|---------|------|
+| Agent-R1: Training Powerful LLM Agents with End-to-End Reinforcement Learning | 2025 | - | PPO/REINFORCE++/GRPO | [Code](https://github.com/0russwest0/Agent-R1) |
+| R1-VL: Learning to Reason with Multimodal Large Language Models via Step-wise Group Relative Policy Optimization | 2025 | [Paper](https://arxiv.org/abs/2503.12937) | GRPO | [Code](https://github.com/jingyi0000/R1-VL) |
 | MM-Eureka: Exploring Visual Aha Moment with Rule-based Large-scale Reinforcement Learning | 2025 | [Paper](https://arxiv.org/abs/2503.07365) | [REINFORCE Leave-One-Out (RLOO)](https://openreview.net/pdf?id=r1lgTGL5DE) | [Code](https://github.com/ModalMinds/MM-EUREKA) |
 | MM-RLHF: The Next Step Forward in Multimodal LLM Alignment | 2025 | [Paper](https://arxiv.org/abs/2502.10391) | DPO | [Code](https://github.com/Kwai-YuanQi/MM-RLHF) |
 | LMM-R1: Empowering 3B LMMs with Strong Reasoning Abilities Through Two-Stage Rule-Based RL | 2025 | [Paper](https://arxiv.org/pdf/2503.07536) | PPO | [Code](https://github.com/TideDra/lmm-r1) |
 | Vision-R1: Incentivizing Reasoning Capability in Multimodal Large Language Models | 2025 | [Paper](https://arxiv.org/pdf/2503.06749) | GRPO | [Code](https://github.com/Osilly/Vision-R1) |
 | Unified Reward Model for Multimodal Understanding and Generation | 2025 | [Paper](https://arxiv.org/abs/2503.05236) | DPO | [Code](https://github.com/CodeGoat24/UnifiedReward) |
 | Can We Generate Images with CoT? Let's Verify and Reinforce Image Generation Step by Step | 2025 | [Paper](https://arxiv.org/pdf/2501.13926) | DPO | [Code](https://github.com/ZiyuGuo99/Image-Generation-CoT) |
-| Training Powerful LLM Agents with End-to-End Reinforcement Learning | 2025 | - | PPO/REINFORCE++/GRPO | [Code](https://github.com/0russwest0/Agent-R1) |
 | All Roads Lead to Likelihood: The Value of Reinforcement Learning in Fine-Tuning | 2025 | [Paper](https://arxiv.org/pdf/2503.01067) | Online RL | - |
 
 
