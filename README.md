@@ -24,7 +24,7 @@ Welcome to contribute and discuss!
 	* 2.1.  [Datasets and Evaluation for VLM](#DatasetforVLM)
 	* 2.2.  [Benchmark Datasets, Simulators and Generative Models for Embodied VLM](#DatasetforEmbodiedVLM)
 * 3. ### 🔥 [💑 Post-Training/Alignment](#posttraining) 🔥
-	* 3.1.  [RL Alignment for VLM (reproducing the aha moment!)](#alignment)
+	* 3.1.  [RL Alignment for VLM](#alignment)
 	* 3.2.  [Regular finetuning (SFT)](#sft) 
 	* 3.3.  [VLM Alignment Github](#vlm_github)
 
