@@ -161,6 +161,7 @@ Welcome to contribute and discuss!
 | Title | Year | Paper | RL | Code |
 |----------------|------|--------|---------|------|
 | OmniAlign-V: Towards Enhanced Alignment of MLLMs with Human Preference | 2025 | [Paper](https://arxiv.org/abs/2502.18411) | DPO | [Code](https://github.com/PhoenixZ810/OmniAlign-V) |
+| Multimodal Open R1/R1-Multimodal-Journey | 2025 | - | GRPO | [Code](https://github.com/EvolvingLMMs-Lab/open-r1-multimodal) |
 | R1-VL: Learning to Reason with Multimodal Large Language Models via Step-wise Group Relative Policy Optimization | 2025 | [Paper](https://arxiv.org/abs/2503.12937) | GRPO | [Code](https://github.com/jingyi0000/R1-VL) |
 | Agent-R1: Training Powerful LLM Agents with End-to-End Reinforcement Learning | 2025 | - | PPO/REINFORCE++/GRPO | [Code](https://github.com/0russwest0/Agent-R1) |
 | R1-VL: Learning to Reason with Multimodal Large Language Models via Step-wise Group Relative Policy Optimization | 2025 | [Paper](https://arxiv.org/abs/2503.12937) | GRPO | [Code](https://github.com/jingyi0000/R1-VL) |
