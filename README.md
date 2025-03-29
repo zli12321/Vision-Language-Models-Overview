@@ -131,6 +131,7 @@ Welcome to contribute and discuss!
 | [VisualWebInstruct](https://arxiv.org/pdf/2503.10582) | Visual reasoning, understanding, recognition, and question answering | LLM Eval |  Web | 900 | [Website](https://tiger-ai-lab.github.io/VisualWebInstruct/) | 
 
 
+
 ### 2.2. <a name='DatasetforEmbodiedVLM'></a> Benchmark Datasets, Simulators, and Generative Models for Embodied VLM 
 | Benchmark                                                                                                                                     |             Domain              |                Type                |                                                     		Project					                                                     |
 |-----------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------:|:----------------------------------:|:----------------------------------------------------------------------------------------------------------------------:|
@@ -182,6 +183,7 @@ Welcome to contribute and discuss!
 | ViTamin: Designing Scalable Vision Models in the Vision-Language Era | 2024 | [Paper](https://arxiv.org/pdf/2404.02132) | [Website](https://beckschen.github.io/vitamin.html) | [Code](https://github.com/Beckschen/ViTamin) |
 | Espresso: High Compression For Rich Extraction From Videos for Your Vision-Language Model | 2024 | [Paper](https://arxiv.org/pdf/2412.04729) | - | - |
 | Should VLMs be Pre-trained with Image Data? | 2025 | [Paper](https://arxiv.org/pdf/2503.07603) | - | - |
+| VisionArena: 230K Real World User-VLM Conversations with Preference Labels |  2024 | [Paper](https://arxiv.org/pdf/2412.08687) | - | [Code](https://huggingface.co/lmarena-ai) |
 
 ### 3.3. <a name='vlm_github'></a>VLM Alignment github
 | Project | Repository Link |
