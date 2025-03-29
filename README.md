@@ -172,7 +172,7 @@ Welcome to contribute and discuss!
 | Unified Reward Model for Multimodal Understanding and Generation | 2025 | [Paper](https://arxiv.org/abs/2503.05236) | DPO | [Code](https://github.com/CodeGoat24/UnifiedReward) |
 | Can We Generate Images with CoT? Let's Verify and Reinforce Image Generation Step by Step | 2025 | [Paper](https://arxiv.org/pdf/2501.13926) | DPO | [Code](https://github.com/ZiyuGuo99/Image-Generation-CoT) |
 | All Roads Lead to Likelihood: The Value of Reinforcement Learning in Fine-Tuning | 2025 | [Paper](https://arxiv.org/pdf/2503.01067) | Online RL | - |
-
+| Video-R1: Reinforcing Video Reasoning in MLLMs | 2025 | [Paper](https://arxiv.org/abs/2503.21776) | GRPO | [Code](https://github.com/tulerfeng/Video-R1) |
 
 ### 3.2. <a name='sft'></a>Finetuning for VLM
 | Title | Year | Paper | Website | Code |
@@ -425,6 +425,7 @@ Welcome to contribute and discuss!
 | PhysGen: Rigid-Body Physics-Grounded Image-to-Video Generation | 2024 | [📄 Paper](https://arxiv.org/pdf/2409.18964) | [🌍 Website](https://stevenlsw.github.io/physgen/) | [💾 Code](https://github.com/stevenlsw/physgen) |
 | How Far is Video Generation from World Model: A Physical Law Perspective | 2024 | [📄 Paper](https://arxiv.org/pdf/2411.02385) | [🌍 Website](https://phyworld.github.io/) | [💾 Code](https://github.com/phyworld/phyworld) |
 | Imagine while Reasoning in Space: Multimodal Visualization-of-Thought | 2025 | [📄 Paper](https://arxiv.org/abs/2501.07542) | - | - |
+| VBench-2.0: Advancing Video Generation Benchmark Suite for Intrinsic Faithfulness | 2025 | [📄 Paper](https://arxiv.org/pdf/2503.21755) | [🌍 Website](https://vchitect.github.io/VBench-2.0-project/) | [💾 Code](https://github.com/Vchitect/VBench) |
 
 ### 5.5 <a name=' EfficientTrainingandFineTuning'></a> Efficient Training and Fine-Tuning
 | Title | Year | Paper | Website | Code |
