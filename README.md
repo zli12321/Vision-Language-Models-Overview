@@ -94,6 +94,7 @@ Welcome to contribute and discuss!
 ### 2.1. <a name='DatasetforVLM'></a> Datasets and Evaluation for VLM
 | Benchmark Dataset                                        | Domain                                       | Metric Type        | Source                 | Size (K) | Project |
 |----------------------------------------------------------|----------------------------------------------|--------------------|------------------------|----------|---------|
+| [VisionArena](https://arxiv.org/abs/2412.08687) | Multimodal conversation | Pairwise Preference | Human | 23K | [Github Repo](https://huggingface.co/lmarena-ai) |
 | [Inst-IT-Bench](https://arxiv.org/abs/2412.03565) | Fine-grained Image and Video Understanding | Multiple Choice & LLM Eval | Human/Synthetic | 2K | [Github Repo](https://github.com/inst-it/inst-it) |
 | [MovieChat](https://arxiv.org/abs/2307.16449)           | Video understanding             | LLM Eval          | Human                  | 1K       | [Github Repo](https://rese1f.github.io/MovieChat/) |
 | [PHYSBENCH](https://arxiv.org/pdf/2501.16411)           | Visual math reasoning                       | Multiple Choice   | Graduate STEM Students | 100      | [Github Repo](https://github.com/USC-GVL/PhysBench) |
