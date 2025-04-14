@@ -58,7 +58,7 @@ Welcome to contribute and discuss!
 ```
 @misc{li2025surveystateartlarge,
       title={A Survey of State of the Art Large Vision Language Models: Alignment, Benchmark, Evaluations and Challenges}, 
-      author={Zongxia Li and Xiyang Wu and Hongyang Du and Huy Nghiem and Guangyao Shi},
+      author={Zongxia Li and Xiyang Wu and Hongyang Du and Fuxiao Liu and Huy Nghiem and Guangyao Shi},
       year={2025},
       eprint={2501.02189},
       archivePrefix={arXiv},
