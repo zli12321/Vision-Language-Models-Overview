@@ -182,7 +182,8 @@ Welcome to contribute and discuss!
 ### 3.2. <a name='sft'></a>Finetuning for VLM
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
-| Inst-IT: Boosting Multimodal Instance Understanding via Explicit Visual Prompt Instruction Tuning | 2024 | [Paper](https://arxiv.org/abs/2412.03565) | [Website](https://inst-it.github.io/) | [Code](https://github.com/inst-it/inst-it) |
+| OMNICAPTIONER: One Captioner to Rule Them All | 2025/04/09 | [Paper](https://arxiv.org/abs/2504.07089) | [Website](https://alpha-innovator.github.io/OmniCaptioner-project-page/) | [Code](https://github.com/Alpha-Innovator/OmniCaptioner) |
+| Inst-IT: Boosting Multimodal Instance Understanding via Explicit Visual Prompt Instruction Tuning | 2024 | [Paper](https://arxiv.org/abs/2412.03565) | [Website](https://github.com/Alpha-Innovator/OmniCaptioner) | [Code](https://github.com/inst-it/inst-it) |
 | LLaVolta: Efficient Multi-modal Models via Stage-wise Visual Context Compression | 2024 | [Paper](https://arxiv.org/pdf/2406.20092) | [Website](https://beckschen.github.io/llavolta.html) | [Code](https://github.com/Beckschen/LLaVolta) |
 | ViTamin: Designing Scalable Vision Models in the Vision-Language Era | 2024 | [Paper](https://arxiv.org/pdf/2404.02132) | [Website](https://beckschen.github.io/vitamin.html) | [Code](https://github.com/Beckschen/ViTamin) |
 | Espresso: High Compression For Rich Extraction From Videos for Your Vision-Language Model | 2024 | [Paper](https://arxiv.org/pdf/2412.04729) | - | - |
