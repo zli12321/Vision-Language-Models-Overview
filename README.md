@@ -53,6 +53,20 @@ Welcome to contribute and discuss!
  	* 5.6. [Scarce of High-quality Dataset](#ScarceofHighqualityDataset)
 
 
+## 0. <a name='Citations'></a>Citation
+
+```
+@misc{li2025surveystateartlarge,
+      title={A Survey of State of the Art Large Vision Language Models: Alignment, Benchmark, Evaluations and Challenges}, 
+      author={Zongxia Li and Xiyang Wu and Hongyang Du and Huy Nghiem and Guangyao Shi},
+      year={2025},
+      eprint={2501.02189},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2501.02189}, 
+}
+```
+
 ---
 
 ##  1. <a name='vlms'></a>📚 SoTA VLMs 
@@ -457,16 +471,4 @@ Welcome to contribute and discuss!
 
 
 
-## 6. <a name='Citations'></a>Citation
 
-```
-@misc{li2025surveystateartlarge,
-      title={A Survey of State of the Art Large Vision Language Models: Alignment, Benchmark, Evaluations and Challenges}, 
-      author={Zongxia Li and Xiyang Wu and Hongyang Du and Huy Nghiem and Guangyao Shi},
-      year={2025},
-      eprint={2501.02189},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2501.02189}, 
-}
-```
