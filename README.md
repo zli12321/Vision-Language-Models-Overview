@@ -180,6 +180,7 @@ Welcome to contribute and discuss!
 |----------------|------|--------|---------|------|
 | VideoChat-R1: Enhancing Spatio-Temporal Perception via Reinforcement Fine-Tuning | 2025/04/10 | [Paper](https://arxiv.org/abs/2504.06958) | GRPO | [Code](https://github.com/OpenGVLab/VideoChat-R1) |
 | OpenVLThinker: An Early Exploration to Complex Vision-Language Reasoning via Iterative Self-Improvement | 2025/03/21 | [Paper](https://arxiv.org/abs/2503.17352) | GRPO | [Code](https://github.com/yihedeng9/OpenVLThinker) |
+| Boosting the Generalization and Reasoning of Vision Language Models with Curriculum Reinforcement Learning | 2025/03/10 | [Paper](https://arxiv.org/abs/2503.07065) | GRPO | [Code](https://github.com/ding523/Curr_REFT) |
 | OmniAlign-V: Towards Enhanced Alignment of MLLMs with Human Preference | 2025 | [Paper](https://arxiv.org/abs/2502.18411) | DPO | [Code](https://github.com/PhoenixZ810/OmniAlign-V) |
 | Multimodal Open R1/R1-Multimodal-Journey | 2025 | - | GRPO | [Code](https://github.com/EvolvingLMMs-Lab/open-r1-multimodal) |
 | R1-VL: Learning to Reason with Multimodal Large Language Models via Step-wise Group Relative Policy Optimization | 2025 | [Paper](https://arxiv.org/abs/2503.12937) | GRPO | [Code](https://github.com/jingyi0000/R1-VL) |
