@@ -199,7 +199,7 @@ Welcome to contribute and discuss!
 ### 3.2. <a name='sft'></a>Finetuning for VLM
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
-| Eagle 2.5: Boosting Long-Context Post-Training for Frontier Vision-Language Models | 2025/04/21 | [Paper](https://arxiv.org/abs/2504.15271) | [Website](https://nvlabs.github.io/EAGLE/) | [Code]([https://github.com/Alpha-Innovator/OmniCaptioner](https://github.com/NVlabs/EAGLE) |
+| Eagle 2.5: Boosting Long-Context Post-Training for Frontier Vision-Language Models | 2025/04/21 | [Paper](https://arxiv.org/abs/2504.15271) | [Website](https://nvlabs.github.io/EAGLE/) | [Code](https://github.com/Alpha-Innovator/OmniCaptioner](https://github.com/NVlabs/EAGLE) |
 | OMNICAPTIONER: One Captioner to Rule Them All | 2025/04/09 | [Paper](https://arxiv.org/abs/2504.07089) | [Website](https://alpha-innovator.github.io/OmniCaptioner-project-page/) | [Code](https://github.com/Alpha-Innovator/OmniCaptioner) |
 | Inst-IT: Boosting Multimodal Instance Understanding via Explicit Visual Prompt Instruction Tuning | 2024 | [Paper](https://arxiv.org/abs/2412.03565) | [Website](https://github.com/Alpha-Innovator/OmniCaptioner) | [Code](https://github.com/inst-it/inst-it) |
 | LLaVolta: Efficient Multi-modal Models via Stage-wise Visual Context Compression | 2024 | [Paper](https://arxiv.org/pdf/2406.20092) | [Website](https://beckschen.github.io/llavolta.html) | [Code](https://github.com/Beckschen/LLaVolta) |
