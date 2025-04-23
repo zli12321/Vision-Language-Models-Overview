@@ -74,6 +74,7 @@ Welcome to contribute and discuss!
 |--------------------------------------------------------------|------|----------------|-----------------------------|----------------|-----------------------------------------------|---------------------------------------------------|
 | [InternVL-3](https://arxiv.org/abs/2504.10479)				   | 04/14/2025 | Decdoer-only	|200 Billion Tokens | 1/2/8/9/14/38/78B | ViT-300M/6B | [InterLM2.5/QWen2.5](https://huggingface.co/OpenGVLab/InternVL3-78B)
 | [LLaMA4-Scout/Maverick](https://ai.meta.com/blog/llama-4-multimodal-intelligence/)				   | 04/04/2025 | Decdoer-only	|40/20 Trillion Tokens | 17B |- | [LLaMA4](https://huggingface.co/collections/meta-llama/llama-4-67f0c30d9fe03840bc9d0164)
+| [Qwen2.5-Omni](https://arxiv.org/abs/2503.20215)				   | 03/26/2025 | Decdoer-only	|Video/Audio/Image/Text | 7B |Qwen2-Audio/Qwen2.5-VL ViT | [End-to-End Mini-Omni](https://arxiv.org/abs/2408.16725)
 | [QWen2.5-VL](https://arxiv.org/abs/2502.13923)				   | 01/28/2025 | Decdoer-only	|Image caption, VQA, grounding agent, long video | 3B/7B/72B |Redesigned ViT | [Qwen2.5](https://huggingface.co/Qwen)
 | [Ola](https://arxiv.org/pdf/2502.04328)					   | 2025 | Decoder-only	|Image/Video/Audio/Text		| 7B			|[OryxViT](https://huggingface.co/THUdyh/Oryx-ViT)| [Qwen-2.5-7B](https://qwenlm.github.io/blog/qwen2.5/), [SigLIP-400M](https://arxiv.org/pdf/2303.15343), [Whisper-V3-Large](https://arxiv.org/pdf/2212.04356), [BEATs-AS2M(cpt2)](https://arxiv.org/pdf/2212.09058)
 | [Ocean-OCR](https://arxiv.org/abs/2501.15558)				   | 2025 | Decdoer-only	| Pure Text, Caption, [Interleaved](https://github.com/OpenGVLab/MM-Interleaved), [OCR](https://github.com/X-PLUG/mPLUG-DocOwl/tree/main/DocOwl1.5) | 3B | [NaViT](https://arxiv.org/pdf/2307.06304) | Pretrained from scratch      
@@ -198,6 +199,7 @@ Welcome to contribute and discuss!
 ### 3.2. <a name='sft'></a>Finetuning for VLM
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| Eagle 2.5: Boosting Long-Context Post-Training for Frontier Vision-Language Models | 2025/04/21 | [Paper](https://arxiv.org/abs/2504.15271) | [Website](https://nvlabs.github.io/EAGLE/) | [Code]([https://github.com/Alpha-Innovator/OmniCaptioner](https://github.com/NVlabs/EAGLE)) |
 | OMNICAPTIONER: One Captioner to Rule Them All | 2025/04/09 | [Paper](https://arxiv.org/abs/2504.07089) | [Website](https://alpha-innovator.github.io/OmniCaptioner-project-page/) | [Code](https://github.com/Alpha-Innovator/OmniCaptioner) |
 | Inst-IT: Boosting Multimodal Instance Understanding via Explicit Visual Prompt Instruction Tuning | 2024 | [Paper](https://arxiv.org/abs/2412.03565) | [Website](https://github.com/Alpha-Innovator/OmniCaptioner) | [Code](https://github.com/inst-it/inst-it) |
 | LLaVolta: Efficient Multi-modal Models via Stage-wise Visual Context Compression | 2024 | [Paper](https://arxiv.org/pdf/2406.20092) | [Website](https://beckschen.github.io/llavolta.html) | [Code](https://github.com/Beckschen/LLaVolta) |
