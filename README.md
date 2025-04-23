@@ -18,7 +18,7 @@ Welcome to contribute and discuss!
 ---
 
 ## Table of Contents
-* 0. [📄 Paper Link](https://arxiv.org/abs/2501.02189)/[⛑️ Citation](#Citations)
+* [📄 Paper Link](https://arxiv.org/abs/2501.02189)/[⛑️ Citation](#Citations)
 * 1. [📚 SoTA VLMs](#vlms)
 * 2. [🗂️ Dataset and Evaluation](#Dataset)
 	* 2.1.  [Datasets and Evaluation for VLM](#DatasetforVLM)
