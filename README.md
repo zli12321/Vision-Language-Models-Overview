@@ -23,11 +23,11 @@ Welcome to contribute and discuss!
 * 2. [🗂️ Dataset and Evaluation](#Dataset)
 	* 2.1.  [Datasets and Evaluation for VLM](#DatasetforVLM)
 	* 2.2.  [Benchmark Datasets, Simulators and Generative Models for Embodied VLM](#DatasetforEmbodiedVLM)
-* 3. ### 🔥 [💑 Post-Training/Alignment](#posttraining) 🔥
+* 3. ### 🔥 [💑 Post-Training/Alignment/prompt engineering](#posttraining) 🔥
 	* 3.1.  [RL Alignment for VLM](#alignment)
 	* 3.2.  [Regular finetuning (SFT)](#sft) 
 	* 3.3.  [VLM Alignment Github](#vlm_github)
-
+	* 3.4.  [Prompt Engineering](#vlm_prompt_engineering)
 
 * 4. [⚒️ Applications](#Toolenhancement)
 	* 4.1. 	[Embodied VLM agents](#EmbodiedVLMagents)
@@ -216,6 +216,10 @@ Welcome to contribute and discuss!
 | MM-RLHF | [🔗 GitHub](https://github.com/Kwai-YuanQi/MM-RLHF) |
 | LMM-R1 | [🔗 GitHub](https://github.com/TideDra/lmm-r1) |
 
+### 3.4. <a name='vlm_prompt_engineering'></a>Prompt Optimization
+| Title | Year | Paper | Website | Code |
+|----------------|------|--------|---------|------|
+| In-ContextEdit:EnablingInstructionalImageEditingwithIn-Context GenerationinLargeScaleDiffusionTransformer | 2025/04/30 | [Paper](https://arxiv.org/abs/2504.20690) | [Website](https://river-zhang.github.io/ICEdit-gh-pages/) | [Code](https://github.com/River-Zhang/ICEdit) |
 
 ## 4. <a name='Toolenhancement'></a> ⚒️ Applications
 
