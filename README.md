@@ -111,6 +111,7 @@ Welcome to contribute and discuss!
 ### 2.1. <a name='DatasetforVLM'></a> Datasets and Evaluation for VLM
 | Benchmark Dataset                                        | Domain                                       | Metric Type        | Source                 | Size (K) | Project |
 |----------------------------------------------------------|----------------------------------------------|--------------------|------------------------|----------|---------|
+| [VideoHallu](https://arxiv.org/abs/2505.01481) | Video understanding | LM Eval | Human | 3.2K | [Github Repo](https://github.com/zli12321/VideoHallu/tree/main?tab=readme-ov-file) |
 | [Video SimpleQA](https://arxiv.org/abs/2503.18923) | Video understanding | LM Eval | Human | 2.03K | [Github Repo](https://videosimpleqa.github.io) |
 | [VisionArena](https://arxiv.org/abs/2412.08687) | Multimodal conversation | Pairwise Preference | Human | 23K | [Github Repo](https://huggingface.co/lmarena-ai) |
 | [Inst-IT-Bench](https://arxiv.org/abs/2412.03565) | Fine-grained Image and Video Understanding | Multiple Choice & LLM Eval | Human/Synthetic | 2K | [Github Repo](https://github.com/inst-it/inst-it) |
