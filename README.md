@@ -471,6 +471,7 @@ Welcome to contribute and discuss!
 ### 5.6 <a name='ScarceofHighqualityDataset'></a>Scarce of High-quality Dataset
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| A Survey on Bridging VLMs and Synthetic Data | 2025 | [📄 Paper](https://openreview.net/pdf?id=ThjDCZOljE) | - | [💾 Code](https://github.com/mghiasvand1/Awesome-VLM-Synthetic-Data/) |
 | Inst-IT: Boosting Multimodal Instance Understanding via Explicit Visual Prompt Instruction Tuning | 2024 | [📄 Paper](https://arxiv.org/abs/2412.03565) | [Website](https://inst-it.github.io/) | [💾 Code](https://github.com/inst-it/inst-it) |
 | SLIP: Self-supervision meets Language-Image Pre-training | 2021 | [📄 Paper](https://arxiv.org/pdf/2112.12750) | - | [💾 Code](https://github.com/facebookresearch/SLIP) |
 | Synthetic Vision: Training Vision-Language Models to Understand Physics | 2024 | [📄 Paper](https://arxiv.org/pdf/2412.08619) | - | - |
