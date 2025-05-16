@@ -72,6 +72,7 @@ Welcome to contribute and discuss!
 ##  1. <a name='vlms'></a>📚 SoTA VLMs 
 | Model                                                        | Year | Architecture   | Training Data               | Parameters     | Vision Encoder/Tokenizer                       | Pretrained Backbone Model                          |
 |--------------------------------------------------------------|------|----------------|-----------------------------|----------------|-----------------------------------------------|---------------------------------------------------|
+| [BLIP3-o](https://www.arxiv.org/abs/2505.09568)				   | 05/14/2025 | Decdoer-only	|(BLIP3-o 60K) GPT-4o Generated Image Generation Data | 4/8B | ViT | [QWen-2.5-VL](https://huggingface.co/collections/Qwen/qwen25-vl-6795ffac22b334a837c0f9a5)
 | [InternVL-3](https://arxiv.org/abs/2504.10479)				   | 04/14/2025 | Decdoer-only	|200 Billion Tokens | 1/2/8/9/14/38/78B | ViT-300M/6B | [InterLM2.5/QWen2.5](https://huggingface.co/OpenGVLab/InternVL3-78B)
 | [LLaMA4-Scout/Maverick](https://ai.meta.com/blog/llama-4-multimodal-intelligence/)				   | 04/04/2025 | Decdoer-only	|40/20 Trillion Tokens | 17B | [MetaClip](https://github.com/facebookresearch/MetaCLIP) | [LLaMA4](https://huggingface.co/collections/meta-llama/llama-4-67f0c30d9fe03840bc9d0164)
 | [Qwen2.5-Omni](https://arxiv.org/abs/2503.20215)				   | 03/26/2025 | Decdoer-only	|Video/Audio/Image/Text | 7B |Qwen2-Audio/Qwen2.5-VL ViT | [End-to-End Mini-Omni](https://arxiv.org/abs/2408.16725)
@@ -155,6 +156,7 @@ Welcome to contribute and discuss!
 ### 2.2. <a name='DatasetforEmbodiedVLM'></a> Benchmark Datasets, Simulators, and Generative Models for Embodied VLM 
 | Benchmark                                                                                                                                     |             Domain              |                Type                |                                                     		Project					                                                     |
 |-----------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------:|:----------------------------------:|:----------------------------------------------------------------------------------------------------------------------:|
+| [Drive-Bench](https://arxiv.org/abs/2501.04003) | Embodied AI | Autonomous Driving | [Website](https://drive-bench.github.io)  |
 | [Habitat](https://arxiv.org/pdf/1904.01201), [Habitat 2.0](https://arxiv.org/pdf/2106.14405), [Habitat 3.0](https://arxiv.org/pdf/2310.13724) |      Robotics (Navigation)      |        Simulator + Dataset         |                                           [Website](https://aihabitat.org/)                                            |
 | [Gibson](https://arxiv.org/pdf/1808.10654)                                                                                                    |      Robotics (Navigation)      |        Simulator + Dataset         |           [Website](http://gibsonenv.stanford.edu/), [Github Repo](https://github.com/StanfordVL/GibsonEnv)            |
 | [iGibson1.0](https://arxiv.org/pdf/2012.02924), [iGibson2.0](https://arxiv.org/pdf/2108.03272)                                                |      Robotics (Navigation)      |        Simulator + Dataset         |            [Website](https://svl.stanford.edu/igibson/), [Document](https://stanfordvl.github.io/iGibson/)             |
@@ -175,6 +177,7 @@ Welcome to contribute and discuss!
 | [Genesis](https://github.com/Genesis-Embodied-AI/Genesis)                                                                                     |           Embodied AI           |   Generative Model, World Model    |                             [Github Repo](https://github.com/Genesis-Embodied-AI/Genesis)                              |
 | [EMMOE](https://arxiv.org/pdf/2503.08604) | Embodied AI | Generative Model, World Model | [Paper](https://arxiv.org/pdf/2503.08604)  |
 | [RoboGen](https://arxiv.org/pdf/2311.01455) | Embodied AI | Generative Model, World Model | [Website](https://robogen-ai.github.io/)  |
+
 
 
 ##  3. <a name='posttraining'></a>⚒️ Post-Training
@@ -317,6 +320,7 @@ Welcome to contribute and discuss!
 #### 4.3.4. <a name='AutonomousDriving'></a>Autonomous Driving
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| Are VLMs Ready for Autonomous Driving? An Empirical Study from the Reliability, Data, and Metric Perspectives | 01/07/2025 | [📄 Paper](https://arxiv.org/abs/2501.04003) | [🌍 Website](drive-bench.github.io) | - |
 | DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models | 2024 | [📄 Paper](https://arxiv.org/abs/2402.12289) | [🌍 Website](https://tsinghua-mars-lab.github.io/DriveVLM/) | - |
 | GPT-Driver: Learning to Drive with GPT | 2023 | [📄 Paper](https://arxiv.org/abs/2310.01415) | - | - |
 | LanguageMPC: Large Language Models as Decision Makers for Autonomous Driving | 2023 | [📄 Paper](https://arxiv.org/abs/2310.03026) | [🌍 Website](https://sites.google.com/view/llm-mpc) | - |
