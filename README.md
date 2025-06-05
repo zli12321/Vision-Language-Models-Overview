@@ -113,7 +113,7 @@ Welcome to contribute and discuss!
 | Benchmark Dataset                                        | Domain                                       | Metric Type        | Source                 | Size (K) | Project |
 |----------------------------------------------------------|----------------------------------------------|--------------------|------------------------|----------|---------|
 | [MathVision](https://arxiv.org/abs/2402.14804) | Visual Math | Multiple choice/Answer matching | Human | 3.04K | [Github Repo](https://mathllm.github.io/mathvision/) |
-| [MathVista]([https://arxiv.org/abs/2402.14804](https://arxiv.org/abs/2310.02255)) | Visual Math | Multiple choice/Answer matching | Human | 6K | [Github Repo](https://mathvista.github.io) |
+| [MathVista](https://arxiv.org/abs/2310.02255) | Visual Math | Multiple choice/Answer matching | Human | 6K | [Github Repo](https://mathvista.github.io) |
 | [VideoHallu](https://arxiv.org/abs/2505.01481) | Video understanding | LM Eval | Human | 3.2K | [Github Repo](https://github.com/zli12321/VideoHallu/tree/main?tab=readme-ov-file) |
 | [Video SimpleQA](https://arxiv.org/abs/2503.18923) | Video understanding | LM Eval | Human | 2.03K | [Github Repo](https://videosimpleqa.github.io) |
 | [VisionArena](https://arxiv.org/abs/2412.08687) | Multimodal conversation | Pairwise Preference | Human | 23K | [Github Repo](https://huggingface.co/lmarena-ai) |
