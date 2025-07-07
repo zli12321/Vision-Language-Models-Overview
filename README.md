@@ -72,7 +72,9 @@ Welcome to contribute and discuss!
 ##  1. <a name='vlms'></a>📚 SoTA VLMs 
 | Model                                                        | Year | Architecture   | Training Data               | Parameters     | Vision Encoder/Tokenizer                       | Pretrained Backbone Model                          |
 |--------------------------------------------------------------|------|----------------|-----------------------------|----------------|-----------------------------------------------|---------------------------------------------------|
+| [Kwai Keye-VL (Kuaishou)](https://arxiv.org/abs/2507.01949)				   | 07/02/2025 | Decdoer-only	|image/video.. | 8B | ViT | [QWen-3-8B](https://huggingface.co/Qwen/Qwen3-8B)
 | [OmniGen2](https://arxiv.org/abs/2506.18871)				   | 06/23/2025 | Decdoer-only & VAE	|LLaVA-OneVision/ SAM-LLaVA.. | - | ViT | [QWen-2.5-VL](https://huggingface.co/collections/Qwen/qwen25-vl-6795ffac22b334a837c0f9a5)
+| [Mimo-VL (Xiaomi)](https://arxiv.org/abs/2506.03569)				   | 06/04/2025 | Decdoer-only	|24 Trillion MLLM tokens | 7B | Qwen2.5-ViT | [Mimo-7B-base](https://huggingface.co/XiaomiMiMo/MiMo-7B-Base)
 | [BLIP3-o](https://www.arxiv.org/abs/2505.09568)				   | 05/14/2025 | Decdoer-only	|(BLIP3-o 60K) GPT-4o Generated Image Generation Data | 4/8B | ViT | [QWen-2.5-VL](https://huggingface.co/collections/Qwen/qwen25-vl-6795ffac22b334a837c0f9a5)
 | [InternVL-3](https://arxiv.org/abs/2504.10479)				   | 04/14/2025 | Decdoer-only	|200 Billion Tokens | 1/2/8/9/14/38/78B | ViT-300M/6B | [InterLM2.5/QWen2.5](https://huggingface.co/OpenGVLab/InternVL3-78B)
 | [LLaMA4-Scout/Maverick](https://ai.meta.com/blog/llama-4-multimodal-intelligence/)				   | 04/04/2025 | Decdoer-only	|40/20 Trillion Tokens | 17B | [MetaClip](https://github.com/facebookresearch/MetaCLIP) | [LLaMA4](https://huggingface.co/collections/meta-llama/llama-4-67f0c30d9fe03840bc9d0164)
