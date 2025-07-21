@@ -75,6 +75,7 @@ Welcome to contribute and discuss!
 | [Grok 4](https://x.ai/news/grok-4)				   | 07/09/2025 | - |image/video.. | 1-2 Trillion | - | -
 | [Kwai Keye-VL (Kuaishou)](https://arxiv.org/abs/2507.01949)				   | 07/02/2025 | Decdoer-only	|image/video.. | 8B | ViT | [QWen-3-8B](https://huggingface.co/Qwen/Qwen3-8B)
 | [OmniGen2](https://arxiv.org/abs/2506.18871)				   | 06/23/2025 | Decdoer-only & VAE	|LLaVA-OneVision/ SAM-LLaVA.. | - | ViT | [QWen-2.5-VL](https://huggingface.co/collections/Qwen/qwen25-vl-6795ffac22b334a837c0f9a5)
+| [Gemini-2.5-Pro](https://deepmind.google/models/gemini/pro/)				   | 06/17/2025 | - |-| - | - | -
 | [Mimo-VL (Xiaomi)](https://arxiv.org/abs/2506.03569)				   | 06/04/2025 | Decdoer-only	|24 Trillion MLLM tokens | 7B | Qwen2.5-ViT | [Mimo-7B-base](https://huggingface.co/XiaomiMiMo/MiMo-7B-Base)
 | [BLIP3-o](https://www.arxiv.org/abs/2505.09568)				   | 05/14/2025 | Decdoer-only	|(BLIP3-o 60K) GPT-4o Generated Image Generation Data | 4/8B | ViT | [QWen-2.5-VL](https://huggingface.co/collections/Qwen/qwen25-vl-6795ffac22b334a837c0f9a5)
 | [InternVL-3](https://arxiv.org/abs/2504.10479)				   | 04/14/2025 | Decdoer-only	|200 Billion Tokens | 1/2/8/9/14/38/78B | ViT-300M/6B | [InterLM2.5/QWen2.5](https://huggingface.co/OpenGVLab/InternVL3-78B)
