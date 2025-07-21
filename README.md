@@ -113,49 +113,98 @@ Welcome to contribute and discuss!
 
 ##  2. <a name='Dataset'></a>🗂️ Benchmarks and Evaluation
 ### 2.1. <a name='DatasetforVLM'></a> Datasets and Evaluation for VLM
-| Benchmark Dataset                                        | Domain                                       | Metric Type        | Source                 | Size (K) | Project |
-|----------------------------------------------------------|----------------------------------------------|--------------------|------------------------|----------|---------|
-| [MathVision](https://arxiv.org/abs/2402.14804) | Visual Math | Multiple choice/Answer matching | Human | 3.04K | [Github Repo](https://mathllm.github.io/mathvision/) |
-| [MathVista](https://arxiv.org/abs/2310.02255) | Visual Math | Multiple choice/Answer matching | Human | 6K | [Github Repo](https://mathvista.github.io) |
-| [VideoHallu](https://arxiv.org/abs/2505.01481) | Video understanding | LM Eval | Human | 3.2K | [Github Repo](https://github.com/zli12321/VideoHallu/tree/main?tab=readme-ov-file) |
-| [Video SimpleQA](https://arxiv.org/abs/2503.18923) | Video understanding | LM Eval | Human | 2.03K | [Github Repo](https://videosimpleqa.github.io) |
-| [VisionArena](https://arxiv.org/abs/2412.08687) | Multimodal conversation | Pairwise Preference | Human | 23K | [Github Repo](https://huggingface.co/lmarena-ai) |
-| [Inst-IT-Bench](https://arxiv.org/abs/2412.03565) | Fine-grained Image and Video Understanding | Multiple Choice & LLM Eval | Human/Synthetic | 2K | [Github Repo](https://github.com/inst-it/inst-it) |
-| [MovieChat](https://arxiv.org/abs/2307.16449)           | Video understanding             | LLM Eval          | Human                  | 1K       | [Github Repo](https://rese1f.github.io/MovieChat/) |
-| [PHYSBENCH](https://arxiv.org/pdf/2501.16411)           | Visual math reasoning                       | Multiple Choice   | Graduate STEM Students | 100      | [Github Repo](https://github.com/USC-GVL/PhysBench) |
-| [MMTBench](https://arxiv.org/pdf/2404.16006)           | Visual reasoning, understanding, recognition, and question answering | Multiple Choice | AI Experts | 30.1 | [Github Repo](https://github.com/tylin/coco-caption) |
-| [MM-Vet](https://arxiv.org/pdf/2308.02490)             | Optical Character Recognition (OCR) / Visual reasoning | LLM Eval | Human | 0.2 | [Github Repo](https://github.com/yuweihao/MM-Vet) |
-| [MM-En/CN](https://arxiv.org/pdf/2307.06281)           | Multilingual multimodal understanding       | Multiple Choice   | Human                  | 3.2      | [Github Repo](https://github.com/open-compass/VLMEvalKit) |
-| [GQA](https://arxiv.org/abs/2305.13245)                | Visual reasoning, understanding, recognition, and question answering | Answer Matching | Seed with Synthetic | 22,000 | [Website](https://cs.stanford.edu/people/dorarad/gqa/index.html) |
-| [VCR](https://arxiv.org/abs/1811.10830)                | Visual reasoning, understanding, recognition, and question answering | Multiple Choice | MTurks | 290 | [Website](https://visualcommonsense.com/) |
-| [VQAv2](https://arxiv.org/pdf/1505.00468)              | Visual reasoning, understanding, recognition, and question answering | Yes/No, Answer Matching | MTurks | 1,100 | [Github Repo](https://github.com/salesforce/LAVIS/blob/main/dataset_card/vqav2.md) |
-| [MMMU](https://arxiv.org/pdf/2311.16502)               | Visual reasoning, understanding, recognition, and question answering | Answer Matching, Multiple Choice | College Students | 11.5 | [Website](https://mmmu-benchmark.github.io/) |
-| [TextVQA](https://arxiv.org/pdf/1904.08920)           | Visual text understanding                   | Answer Matching   | Expert Human           | 28.6     | [Github Repo](https://github.com/facebookresearch/mmf) |
-| [DocVQA](https://arxiv.org/pdf/2007.00398)            | Visual text understanding                   | Answer Matching   | CrowdSource            | 50       | [Website](https://www.docvqa.org/) |
-| [MSCOCO-30K](https://arxiv.org/pdf/1405.0312)         | Text-to-Image generation                    | BLEU, Rouge, Similarity | MTurks | 30 | [Website](https://cocodataset.org/#home) |
-| [ChartQA](https://arxiv.org/abs/2203.10244)           | Chart graphic understanding                 | Answer Matching   | CrowdSource/Synthetic  | 32.7     | [Github Repo](https://github.com/vis-nlp/ChartQA) |
-| [Perception-Test](https://arxiv.org/pdf/2305.13786)   | Video understanding                         | Multiple Choice   | CrowdSource            | 11.6     | [Github Repo](https://github.com/google-deepmind/perception_test) |
-| [MMLU](https://arxiv.org/pdf/2009.03300)             | Multimodal general intelligence             | Multiple Choice   | Human                  | 15.9     | [Github Repo](https://github.com/hendrycks/test) |
-| [MMStar](https://arxiv.org/pdf/2403.20330)           | Multimodal general intelligence             | Multiple Choice   | Human                  | 1.5      | [Website](https://mmstar-benchmark.github.io/) |
-| [VideoMME](https://arxiv.org/pdf/2405.21075)         | Video understanding                         | Multiple Choice   | Experts                | 2.7      | [Website](https://video-mme.github.io/) |
-| [EgoSchem](https://arxiv.org/pdf/2308.09126)         | Video understanding                         | Multiple Choice   | Synthetic/Human        | 5        | [Website](https://egoschema.github.io/) |
-| [HallusionBench](https://arxiv.org/pdf/2310.14566)   | Hallucination                               | Yes/No            | Human                  | 1.13     | [Github Repo](https://github.com/tianyi-lab/HallusionBench) |
-| [POPE](https://arxiv.org/pdf/2305.10355)             | Hallucination                               | Yes/No            | Human                  | 9        | [Github Repo](https://github.com/RUCAIBox/POPE) |
-| [CHAIR](https://arxiv.org/pdf/1809.02156)             | Hallucination                               | Yes/No            | Human                  | 124        | [Github Repo](https://github.com/LisaAnne/Hallucination/tree/master) |
-| [MHalDetect](https://arxiv.org/abs/2308.06394)| Hallucination | Answer Matching | Human | 4 |                           [Github Repo](https://github.com/LisaAnne/Hallucination/tree/master) |    
-| [Hallu-Pi](https://arxiv.org/abs/2408.01355)| Hallucination                 |  Answer Matching  |  Human | 1.260 |      [Github Repo](https://github.com/NJUNLP/Hallu-PI)  
-| [HallE-Control](https://arxiv.org/abs/2310.01779) | Hallucination                   |       Yes/No | Human | 108  | [Github Repo](https://github.com/bronyayang/HallE_Control)
-| [AutoHallusion](https://arxiv.org/pdf/2406.10900) | Hallucination         |         Answer Matching |  Synthetic |      3.129      | [Github Repo](https://github.com/wuxiyang1996/AutoHallusion) |       
-| [BEAF](https://arxiv.org/abs/2407.13442) | Hallucination         |         Yes/No |  Human |      26      | [Github Repo]([https://github.com/wuxiyang1996/AutoHallusion](https://beafbench.github.io/)) |   
-| [GAIVE](https://arxiv.org/abs/2306.14565) | Hallucination         |          Answer Matching |  Synthetic |      320      | [Github Repo](https://github.com/FuxiaoLiu/LRV-Instruction) | 
-| [HalEval](https://arxiv.org/abs/2402.15721) | Hallucination         | Yes/No |  CrowdSource/Synthetic |     2,000      | [Github Repo](https://github.com/WisdomShell/hal-eval) |    
-| [AMBER](https://arxiv.org/abs/2311.07397) | Hallucination         | Answer Matching |  Human |     15.22      | [Github Repo](https://github.com/junyangwang0410/AMBER) |       
-| [GenAI-Bench](https://arxiv.org/pdf/2406.13743)      | Text-to-Image generation                    | Human Ratings     | Human                  | 80.0     | [Huggingface](https://huggingface.co/datasets/BaiqiL/GenAI-Bench) |
-| [NaturalBench](https://arxiv.org/pdf/2410.14669)     | Multimodal general intelligence             | Yes/No, Multiple Choice | Human | 10.0 | [Huggingface](https://huggingface.co/datasets/BaiqiL/NaturalBench/blob/main/README.md) |
-| [R1-Onevision](https://arxiv.org/pdf/2503.10615)     |  Visual reasoning, understanding, recognition | Multiple Choice | Human  | 155 | [Github Repo](https://github.com/Fancy-MLLM/R1-Onevision) |
-| [VLM^2-Bench](https://arxiv.org/pdf/2502.12084)      | Visual reasoning, understanding, recognition, and question answering | Answer Matching, Multiple Choice | Human | 3 | [Website](https://vlm2-bench.github.io/) | 
-| [VisualWebInstruct](https://arxiv.org/pdf/2503.10582) | Visual reasoning, understanding, recognition, and question answering | LLM Eval |  Web | 900 | [Website](https://tiger-ai-lab.github.io/VisualWebInstruct/) | 
+### 🧮 Visual Math (+ Visual Math Reasoning)
 
+| Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
+|---------|------|---------------|------------|----------|-------------|
+| [MathVision](https://arxiv.org/abs/2402.14804) | Visual Math | MC / Answer Match | Human | 3.04 | [Repo](https://mathllm.github.io/mathvision/) |
+| [MathVista](https://arxiv.org/abs/2310.02255) | Visual Math | MC / Answer Match | Human | 6 | [Repo](https://mathvista.github.io) |
+| [MathVerse](https://arxiv.org/abs/2403.14624) | Visual Math | MC | Human | 4.6 | [Repo](https://mathverse-cuhk.github.io) |
+| [VisNumBench](https://arxiv.org/abs/2503.14939) | Visual Number Reasoning | MC | Python Program generated/Web Collection/Real life photos | 1.91 | [Repo](https://wwwtttjjj.github.io/VisNumBench/) |
+
+
+
+### 🎞️ Video Understanding
+
+| Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
+|---------|------|---------------|------------|----------|-------------|
+| [VideoHallu](https://arxiv.org/abs/2505.01481) | Video Understanding | LLM Eval | Human | 3.2 | [Repo](https://github.com/zli12321/VideoHallu) |
+| [Video SimpleQA](https://arxiv.org/abs/2503.18923) | Video Understanding | LLM Eval | Human | 2.03 | [Repo](https://videosimpleqa.github.io) |
+| [MovieChat](https://arxiv.org/abs/2307.16449) | Video Understanding | LLM Eval | Human | 1 | [Repo](https://rese1f.github.io/MovieChat/) |
+| [Perception‑Test](https://arxiv.org/pdf/2305.13786) | Video Understanding | MC | Crowd | 11.6 | [Repo](https://github.com/google-deepmind/perception_test) |
+| [VideoMME](https://arxiv.org/pdf/2405.21075) | Video Understanding | MC | Experts | 2.7 | [Site](https://video-mme.github.io/) |
+| [EgoSchem](https://arxiv.org/pdf/2308.09126) | Video Understanding | MC | Synth / Human | 5 | [Site](https://egoschema.github.io/) |
+| [Inst‑IT‑Bench](https://arxiv.org/abs/2412.03565) | Fine‑grained Image & Video | MC & LLM | Human / Synth | 2 | [Repo](https://github.com/inst-it/inst-it) |
+
+
+### 💬 Multimodal Conversation
+
+| Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
+|---------|------|---------------|------------|----------|-------------|
+| [VisionArena](https://arxiv.org/abs/2412.08687) | Multimodal Conversation | Pairwise Pref | Human | 23 | [Repo](https://huggingface.co/lmarena-ai) |
+
+
+
+### 🧠 Multimodal General Intelligence
+
+| Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
+|---------|------|---------------|------------|----------|-------------|
+| [MMLU](https://arxiv.org/pdf/2009.03300) | General MM | MC | Human | 15.9 | [Repo](https://github.com/hendrycks/test) |
+| [MMStar](https://arxiv.org/pdf/2403.20330) | General MM | MC | Human | 1.5 | [Site](https://mmstar-benchmark.github.io/) |
+| [NaturalBench](https://arxiv.org/pdf/2410.14669) | General MM | Yes/No, MC | Human | 10 | [HF](https://huggingface.co/datasets/BaiqiL/NaturalBench) |
+| [PHYSBENCH](https://arxiv.org/pdf/2501.16411) | Visual Math Reasoning | MC | Grad STEM | 0.10 | [Repo](https://github.com/USC-GVL/PhysBench) |
+
+
+### 🔎 Visual Reasoning / VQA (+ Multilingual & OCR)
+
+| Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
+|---------|------|---------------|------------|----------|-------------|
+| [EMMA](https://arxiv.org/abs/2501.05444) | Visual Reasoning | MC | Human + Synth | 2.8 | [Repo](emma-benchmark.github.io) |
+| [MMTBENCH](https://arxiv.org/pdf/2404.16006) | Visual Reasoning & QA | MC | AI Experts | 30.1 | [Repo](https://github.com/tylin/coco-caption) |
+| [MM‑Vet](https://arxiv.org/pdf/2308.02490) | OCR / Visual Reasoning | LLM Eval | Human | 0.2 | [Repo](https://github.com/yuweihao/MM-Vet) |
+| [MM‑En/CN](https://arxiv.org/pdf/2307.06281) | Multilingual MM Understanding | MC | Human | 3.2 | [Repo](https://github.com/open-compass/VLMEvalKit) |
+| [GQA](https://arxiv.org/abs/2305.13245) | Visual Reasoning & QA | Answer Match | Seed + Synth | 22 | [Site](https://cs.stanford.edu/people/dorarad/gqa) |
+| [VCR](https://arxiv.org/abs/1811.10830) | Visual Reasoning & QA | MC | MTurks | 290 | [Site](https://visualcommonsense.com/) |
+| [VQAv2](https://arxiv.org/pdf/1505.00468) | Visual Reasoning & QA | Yes/No, Ans Match | MTurks | 1100 | [Repo](https://github.com/salesforce/LAVIS/blob/main/dataset_card/vqav2.md) |
+| [MMMU](https://arxiv.org/pdf/2311.16502) | Visual Reasoning & QA | Ans Match, MC | College | 11.5 | [Site](https://mmmu-benchmark.github.io/) |
+| [MMMU-Pro](https://arxiv.org/abs/2409.02813) | Visual Reasoning & QA | Ans Match, MC | College | 5.19 | [Site](https://mmmu-benchmark.github.io/) |
+| [R1‑Onevision](https://arxiv.org/pdf/2503.10615) | Visual Reasoning & QA | MC | Human | 155 | [Repo](https://github.com/Fancy-MLLM/R1-Onevision) |
+| [VLM²‑Bench](https://arxiv.org/pdf/2502.12084) | Visual Reasoning & QA | Ans Match, MC | Human | 3 | [Site](https://vlm2-bench.github.io/) |
+| [VisualWebInstruct](https://arxiv.org/pdf/2503.10582) | Visual Reasoning & QA | LLM Eval | Web | 0.9 | [Site](https://tiger-ai-lab.github.io/VisualWebInstruct/) |
+
+
+### 📝 Visual Text / Document Understanding (+ Charts)
+
+| Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
+|---------|------|---------------|------------|----------|-------------|
+| [TextVQA](https://arxiv.org/pdf/1904.08920) | Visual Text Understanding | Ans Match | Expert | 28.6 | [Repo](https://github.com/facebookresearch/mmf) |
+| [DocVQA](https://arxiv.org/pdf/2007.00398) | Document VQA | Ans Match | Crowd | 50 | [Site](https://www.docvqa.org/) |
+| [ChartQA](https://arxiv.org/abs/2203.10244) | Chart Graphic Understanding | Ans Match | Crowd / Synth | 32.7 | [Repo](https://github.com/vis-nlp/ChartQA) |
+
+
+### 🌄 Text‑to‑Image Generation
+
+| Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
+|---------|------|---------------|------------|----------|-------------|
+| [MSCOCO‑30K](https://arxiv.org/pdf/1405.0312) | Text‑to‑Image | BLEU, ROUGE, Sim | MTurks | 30 | [Site](https://cocodataset.org/#home) |
+| [GenAI‑Bench](https://arxiv.org/pdf/2406.13743) | Text‑to‑Image | Human Rating | Human | 80 | [HF](https://huggingface.co/datasets/BaiqiL/GenAI-Bench) |
+
+
+### 🚨 Hallucination Detection / Control
+
+| Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
+|---------|------|---------------|------------|----------|-------------|
+| [HallusionBench](https://arxiv.org/pdf/2310.14566) | Hallucination | Yes/No | Human | 1.13 | [Repo](https://github.com/tianyi-lab/HallusionBench) |
+| [POPE](https://arxiv.org/pdf/2305.10355) | Hallucination | Yes/No | Human | 9 | [Repo](https://github.com/RUCAIBox/POPE) |
+| [CHAIR](https://arxiv.org/pdf/1809.02156) | Hallucination | Yes/No | Human | 124 | [Repo](https://github.com/LisaAnne/Hallucination) |
+| [MHalDetect](https://arxiv.org/abs/2308.06394) | Hallucination | Ans Match | Human | 4 | [Repo](https://github.com/LisaAnne/Hallucination) |
+| [Hallu‑Pi](https://arxiv.org/abs/2408.01355) | Hallucination | Ans Match | Human | 1.26 | [Repo](https://github.com/NJUNLP/Hallu-PI) |
+| [HallE‑Control](https://arxiv.org/abs/2310.01779) | Hallucination | Yes/No | Human | 108 | [Repo](https://github.com/bronyayang/HallE_Control) |
+| [AutoHallusion](https://arxiv.org/pdf/2406.10900) | Hallucination | Ans Match | Synth | 3.129 | [Repo](https://github.com/wuxiyang1996/AutoHallusion) |
+| [BEAF](https://arxiv.org/abs/2407.13442) | Hallucination | Yes/No | Human | 26 | [Site](https://beafbench.github.io/) |
+| [GAIVE](https://arxiv.org/abs/2306.14565) | Hallucination | Ans Match | Synth | 320 | [Repo](https://github.com/FuxiaoLiu/LRV-Instruction) |
+| [HalEval](https://arxiv.org/abs/2402.15721) | Hallucination | Yes/No | Crowd / Synth | 2 | [Repo](https://github.com/WisdomShell/hal-eval) |
+| [AMBER](https://arxiv.org/abs/2311.07397) | Hallucination | Ans Match | Human | 15.22 | [Repo](https://github.com/junyangwang0410/AMBER) |
 
 
 ### 2.2. <a name='DatasetforEmbodiedVLM'></a> Benchmark Datasets, Simulators, and Generative Models for Embodied VLM 
