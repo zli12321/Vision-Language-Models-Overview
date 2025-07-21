@@ -72,6 +72,7 @@ Welcome to contribute and discuss!
 ##  1. <a name='vlms'></a>📚 SoTA VLMs 
 | Model                                                        | Year | Architecture   | Training Data               | Parameters     | Vision Encoder/Tokenizer                       | Pretrained Backbone Model                          |
 |--------------------------------------------------------------|------|----------------|-----------------------------|----------------|-----------------------------------------------|---------------------------------------------------|
+| [Grok 4](https://x.ai/news/grok-4)				   | 07/09/2025 | - |image/video.. | 1-2 Trillion | - | -
 | [Kwai Keye-VL (Kuaishou)](https://arxiv.org/abs/2507.01949)				   | 07/02/2025 | Decdoer-only	|image/video.. | 8B | ViT | [QWen-3-8B](https://huggingface.co/Qwen/Qwen3-8B)
 | [OmniGen2](https://arxiv.org/abs/2506.18871)				   | 06/23/2025 | Decdoer-only & VAE	|LLaVA-OneVision/ SAM-LLaVA.. | - | ViT | [QWen-2.5-VL](https://huggingface.co/collections/Qwen/qwen25-vl-6795ffac22b334a837c0f9a5)
 | [Mimo-VL (Xiaomi)](https://arxiv.org/abs/2506.03569)				   | 06/04/2025 | Decdoer-only	|24 Trillion MLLM tokens | 7B | Qwen2.5-ViT | [Mimo-7B-base](https://huggingface.co/XiaomiMiMo/MiMo-7B-Base)
