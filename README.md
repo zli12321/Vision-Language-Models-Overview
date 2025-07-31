@@ -241,6 +241,7 @@ Welcome to contribute and discuss!
 ### 3.1.  <a name='alignment'></a>RL Alignment for VLM
 | Title | Year | Paper | RL | Code |
 |----------------|------|--------|---------|------|
+| Group Sequence Policy Optimization | 2025/06/24 | [Paper](https://www.arxiv.org/abs/2507.18071) | GSPO | - |
 | VideoChat-R1: Enhancing Spatio-Temporal Perception via Reinforcement Fine-Tuning | 2025/04/10 | [Paper](https://arxiv.org/abs/2504.06958) | GRPO | [Code](https://github.com/OpenGVLab/VideoChat-R1) |
 | OpenVLThinker: An Early Exploration to Complex Vision-Language Reasoning via Iterative Self-Improvement | 2025/03/21 | [Paper](https://arxiv.org/abs/2503.17352) | GRPO | [Code](https://github.com/yihedeng9/OpenVLThinker) |
 | Boosting the Generalization and Reasoning of Vision Language Models with Curriculum Reinforcement Learning | 2025/03/10 | [Paper](https://arxiv.org/abs/2503.07065) | GRPO | [Code](https://github.com/ding523/Curr_REFT) |
@@ -272,6 +273,9 @@ Welcome to contribute and discuss!
 ### 3.3. <a name='vlm_github'></a>VLM Alignment github
 | Project | Repository Link |
 |----------------|----------------|
+|Verl|[🔗 GitHub](https://github.com/volcengine/verl) |
+|EasyR1|[🔗 GitHub](https://github.com/hiyouga/EasyR1) |
+|OpenR1|[🔗 GitHub](https://github.com/EvolvingLMMs-Lab/open-r1-multimodal) |
 | LLaMAFactory | [🔗 GitHub](https://github.com/hiyouga/LLaMA-Factory) |
 | MM-Eureka-Zero | [🔗 GitHub](https://github.com/ModalMinds/MM-EUREKA/tree/main) |
 | MM-RLHF | [🔗 GitHub](https://github.com/Kwai-YuanQi/MM-RLHF) |
