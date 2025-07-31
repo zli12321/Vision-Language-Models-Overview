@@ -72,6 +72,7 @@ Welcome to contribute and discuss!
 ##  1. <a name='vlms'></a>📚 SoTA VLMs 
 | Model                                                        | Year | Architecture   | Training Data               | Parameters     | Vision Encoder/Tokenizer                       | Pretrained Backbone Model                          |
 |--------------------------------------------------------------|------|----------------|-----------------------------|----------------|-----------------------------------------------|---------------------------------------------------|
+| [SkyWork-Unipic-1.5B](https://huggingface.co/Skywork/Skywork-UniPic-1.5B)| 07/29/2025 | - |image/video.. | - | - | -
 | [Grok 4](https://x.ai/news/grok-4)				   | 07/09/2025 | - |image/video.. | 1-2 Trillion | - | -
 | [Kwai Keye-VL (Kuaishou)](https://arxiv.org/abs/2507.01949)				   | 07/02/2025 | Decdoer-only	|image/video.. | 8B | ViT | [QWen-3-8B](https://huggingface.co/Qwen/Qwen3-8B)
 | [OmniGen2](https://arxiv.org/abs/2506.18871)				   | 06/23/2025 | Decdoer-only & VAE	|LLaVA-OneVision/ SAM-LLaVA.. | - | ViT | [QWen-2.5-VL](https://huggingface.co/collections/Qwen/qwen25-vl-6795ffac22b334a837c0f9a5)
@@ -109,7 +110,7 @@ Welcome to contribute and discuss!
 | [Flamingo](https://arxiv.org/pdf/2204.14198)                 | 2022 | Decoder-only   | [M3W](https://arxiv.org/pdf/2204.14198), [ALIGN](https://huggingface.co/docs/transformers/en/model_doc/align) | 80B            | Custom                                       | [Chinchilla](https://arxiv.org/pdf/2203.15556)                                        |
 | [BLIP](https://arxiv.org/pdf/2201.12086)                     | 2022 | Encoder-decoder| [COCO](https://cocodataset.org/#home), [Visual Genome](https://huggingface.co/datasets/ranjaykrishna/visual_genome/) | 223M-400M      | ViT-B/L/g                                    | Pretrained from scratch                           |
 | [CLIP](https://arxiv.org/pdf/2103.00020)                     | 2021 | Encoder-decoder| 400M image-text pairs       | 63M-355M       | ViT/ResNet                                   | Pretrained from scratch                           |
-| [VisualBERT](https://arxiv.org/pdf/1908.03557)               | 2019 | Encoder-only   | [COCO](https://cocodataset.org/#home)                        | 110M           | Faster R-CNN                                  | Pretrained from scratch                           |
+                     |
 
 
 
