@@ -72,7 +72,7 @@ Welcome to contribute and discuss!
 ##  1. <a name='vlms'></a>📚 SoTA VLMs 
 | Model                                                        | Year | Architecture   | Training Data               | Parameters     | Vision Encoder/Tokenizer                       | Pretrained Backbone Model                          |
 |--------------------------------------------------------------|------|----------------|-----------------------------|----------------|-----------------------------------------------|---------------------------------------------------|
-| [InternVL3.5](https://arxiv.org/abs/2508.18265)| 08/25/2025 | Decoder-Only |image/video.. | 30B/38B/241B | InternViT-300M/6B | [Qwen3](https://huggingface.co/collections/Qwen/qwen3-67dd247413f0e2e4f653967f) / [GPT-OSS](https://huggingface.co/collections/openai/gpt-oss-68911959590a1634ba11c7a4)
+| [InternVL3.5](https://arxiv.org/abs/2508.18265)| 08/25/2025 | Decoder-Only |multimodal & text-only | 30B/38B/241B | InternViT-300M/6B | [Qwen3](https://huggingface.co/collections/Qwen/qwen3-67dd247413f0e2e4f653967f) / [GPT-OSS](https://huggingface.co/collections/openai/gpt-oss-68911959590a1634ba11c7a4)
 | [SkyWork-Unipic-1.5B](https://huggingface.co/Skywork/Skywork-UniPic-1.5B)| 07/29/2025 | - |image/video.. | - | - | -
 | [Grok 4](https://x.ai/news/grok-4)				   | 07/09/2025 | - |image/video.. | 1-2 Trillion | - | -
 | [Kwai Keye-VL (Kuaishou)](https://arxiv.org/abs/2507.01949)				   | 07/02/2025 | Decdoer-only	|image/video.. | 8B | ViT | [QWen-3-8B](https://huggingface.co/Qwen/Qwen3-8B)
