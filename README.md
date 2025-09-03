@@ -236,7 +236,7 @@ Welcome to contribute and discuss!
 | [Genesis](https://github.com/Genesis-Embodied-AI/Genesis)                                                                                     |           Embodied AI           |   Generative Model, World Model    |                             [Github Repo](https://github.com/Genesis-Embodied-AI/Genesis)                              |
 | [EMMOE](https://arxiv.org/pdf/2503.08604) | Embodied AI | Generative Model, World Model | [Paper](https://arxiv.org/pdf/2503.08604)  |
 | [RoboGen](https://arxiv.org/pdf/2311.01455) | Embodied AI | Generative Model, World Model | [Website](https://robogen-ai.github.io/)  |
-
+| [UnrealZoo](https://arxiv.org/abs/2412.20977) | Embodied AI (Tracking, Navigation, Multi Agent)| Simulator | [Website](http://unrealzoo.site/) | 
 
 
 ##  3. <a name='posttraining'></a>⚒️ Post-Training
