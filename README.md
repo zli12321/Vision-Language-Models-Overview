@@ -113,7 +113,6 @@ Welcome to contribute and discuss!
 | [Flamingo](https://arxiv.org/pdf/2204.14198)                 | 2022 | Decoder-only   | [M3W](https://arxiv.org/pdf/2204.14198), [ALIGN](https://huggingface.co/docs/transformers/en/model_doc/align) | 80B            | Custom                                       | [Chinchilla](https://arxiv.org/pdf/2203.15556)                                        |
 | [BLIP](https://arxiv.org/pdf/2201.12086)                     | 2022 | Encoder-decoder| [COCO](https://cocodataset.org/#home), [Visual Genome](https://huggingface.co/datasets/ranjaykrishna/visual_genome/) | 223M-400M      | ViT-B/L/g                                    | Pretrained from scratch                           |
 | [CLIP](https://arxiv.org/pdf/2103.00020)                     | 2021 | Encoder-decoder| 400M image-text pairs       | 63M-355M       | ViT/ResNet                                   | Pretrained from scratch                           |
-                     |
 
 
 
