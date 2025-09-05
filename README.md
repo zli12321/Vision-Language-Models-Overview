@@ -21,8 +21,10 @@ Welcome to contribute and discuss!
 * [📄 Paper Link](https://arxiv.org/abs/2501.02189)/[⛑️ Citation](#Citations)
 * 1. [📚 SoTA VLMs](#vlms)
 * 2. [🗂️ Dataset and Evaluation](#Dataset)
-	* 2.1.  [Datasets and Evaluation for VLM](#DatasetforVLM)
-	* 2.2.  [Benchmark Datasets, Simulators and Generative Models for Embodied VLM](#DatasetforEmbodiedVLM)
+	* 2.1.  [Large Scale Pre-Training & Post-Training Dataset](#TrainingDatasetforVLM)
+	* 2.2.  [Datasets and Evaluation for VLM](#DatasetforVLM)
+	* 2.3.  [Benchmark Datasets, Simulators and Generative Models for Embodied VLM](#DatasetforEmbodiedVLM)
+
 * 3. ##### 🔥 [ Post-Training/Alignment/prompt engineering](#posttraining) 🔥
 	* 3.1.  [RL Alignment for VLM](#alignment)
 	* 3.2.  [Regular finetuning (SFT)](#sft) 
@@ -117,7 +119,14 @@ Welcome to contribute and discuss!
 
 
 ##  2. <a name='Dataset'></a>🗂️ Benchmarks and Evaluation
-### 2.1. <a name='DatasetforVLM'></a> Datasets and Evaluation for VLM
+### 2.1. <a name='TrainingDatasetforVLM'></a> Datasets for Training VLMs
+| Dataset | Task |  Size |
+|---------|------|---------------|
+| [FineVision](https://huggingface.co/datasets/HuggingFaceM4/FineVision) | Mixed Domain | 24.3 M/4.48TB |
+
+
+
+### 2.2. <a name='DatasetforVLM'></a> Datasets and Evaluation for VLM
 ### 🧮 Visual Math (+ Visual Math Reasoning)
 
 | Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
@@ -212,7 +221,7 @@ Welcome to contribute and discuss!
 | [AMBER](https://arxiv.org/abs/2311.07397) | Hallucination | Ans Match | Human | 15.22 | [Repo](https://github.com/junyangwang0410/AMBER) |
 
 
-### 2.2. <a name='DatasetforEmbodiedVLM'></a> Benchmark Datasets, Simulators, and Generative Models for Embodied VLM 
+### 2.3. <a name='DatasetforEmbodiedVLM'></a> Benchmark Datasets, Simulators, and Generative Models for Embodied VLM 
 | Benchmark                                                                                                                                     |             Domain              |                Type                |                                                     		Project					                                                     |
 |-----------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------:|:----------------------------------:|:----------------------------------------------------------------------------------------------------------------------:|
 | [Drive-Bench](https://arxiv.org/abs/2501.04003) | Embodied AI | Autonomous Driving | [Website](https://drive-bench.github.io)  |
