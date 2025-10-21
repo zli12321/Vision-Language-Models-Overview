@@ -58,14 +58,13 @@ Welcome to contribute and discuss!
 ## 0. <a name='Citations'></a>Citation
 
 ```
-@misc{li2025surveystateartlarge,
-      title={A Survey of State of the Art Large Vision Language Models: Alignment, Benchmark, Evaluations and Challenges}, 
-      author={Zongxia Li and Xiyang Wu and Hongyang Du and Fuxiao Liu and Huy Nghiem and Guangyao Shi},
-      year={2025},
-      eprint={2501.02189},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2501.02189}, 
+@InProceedings{Li_2025_CVPR,
+    author    = {Li, Zongxia and Wu, Xiyang and Du, Hongyang and Liu, Fuxiao and Nghiem, Huy and Shi, Guangyao},
+    title     = {A Survey of State of the Art Large Vision Language Models: Benchmark Evaluations and Challenges},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+    month     = {June},
+    year      = {2025},
+    pages     = {1587-1606}
 }
 ```
 
