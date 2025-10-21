@@ -74,7 +74,9 @@ Welcome to contribute and discuss!
 ##  1. <a name='vlms'></a>📚 SoTA VLMs 
 | Model                                                        | Year | Architecture   | Training Data               | Parameters     | Vision Encoder/Tokenizer                       | Pretrained Backbone Model                          |
 |--------------------------------------------------------------|------|----------------|-----------------------------|----------------|-----------------------------------------------|---------------------------------------------------|
-| [Qwen3-VL](https://github.com/QwenLM/Qwen3-VL) | 09/25/2025 | Decoder-Only |- | [235B-A22B](https://huggingface.co/collections/Qwen/qwen3-vl-68d2a7c1b8a8afce4ebd2dbe) | ViT | [Qwen3](https://huggingface.co/collections/Qwen/qwen3-67dd247413f0e2e4f653967f)
+| [DeepSeek-OCR](https://github.com/deepseek-ai/DeepSeek-OCR/blob/main/DeepSeek_OCR_paper.pdf) | 10/20/2025 | Encoder-Deconder |70% OCR, 20% general vision, 10% text-only | [3B](https://huggingface.co/deepseek-ai/DeepSeek-OCR) | DeepEncoder | DeepSeek-3B
+| [Qwen3-VL](https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct) | 10/11/2025 | Decoder-Only |- | [8B/4B](https://huggingface.co/collections/Qwen/qwen3-vl-68d2a7c1b8a8afce4ebd2dbe) | ViT | [Qwen3](https://huggingface.co/collections/Qwen/qwen3-67dd247413f0e2e4f653967f)
+| [Qwen3-VL-MoE](https://github.com/QwenLM/Qwen3-VL) | 09/25/2025 | Decoder-Only |- | [235B-A22B](https://huggingface.co/collections/Qwen/qwen3-vl-68d2a7c1b8a8afce4ebd2dbe) | ViT | [Qwen3](https://huggingface.co/collections/Qwen/qwen3-67dd247413f0e2e4f653967f)
 | [Qwen3-Omni](https://github.com/QwenLM/Qwen3-Omni/blob/main/assets/Qwen3_Omni.pdf) (Visual/Audio/Text)| 09/21/2025 | - |Video/Audio/Image | 30B | ViT | Qwen3-Omni-MoE-Thinker
 | [LLaVA-Onevision-1.5](https://github.com/EvolvingLMMs-Lab/LLaVA-OneVision-1.5)| 09/15/2025 | - |[Mid-Training-85M](https://huggingface.co/datasets/lmms-lab/LLaVA-One-Vision-1.5-Mid-Training-85M) & [SFT](https://huggingface.co/datasets/lmms-lab/LLaVA-OneVision-1.5-Insturct-Data) | 8B | Qwen2VLImageProcessor | [Qwen3](https://huggingface.co/collections/Qwen/qwen3-67dd247413f0e2e4f653967f)
 | [InternVL3.5](https://arxiv.org/abs/2508.18265)| 08/25/2025 | Decoder-Only |multimodal & text-only | 30B/38B/241B | InternViT-300M/6B | [Qwen3](https://huggingface.co/collections/Qwen/qwen3-67dd247413f0e2e4f653967f) / [GPT-OSS](https://huggingface.co/collections/openai/gpt-oss-68911959590a1634ba11c7a4)
@@ -254,7 +256,11 @@ Welcome to contribute and discuss!
 ### 3.1.  <a name='alignment'></a>RL Alignment for VLM
 | Title | Year | Paper | RL | Code |
 |----------------|------|--------|---------|------|
-| Group Sequence Policy Optimization | 2025/06/24 | [Paper](https://www.arxiv.org/abs/2507.18071) | GSPO | - |
+| Game-RL: Synthesizing Multimodal Verifiable Game Data to Boost VLMs' General Reasoning | 10/12/2025 | [Paper](https://arxiv.org/abs/2505.13886) | GRPO | - |
+| Vision-Zero: Scalable VLM Self-Improvement via Strategic Gamified Self-Play | 09/29/2025 | [Paper](https://www.arxiv.org/abs/2509.25541) | GRPO | - |
+| Vision-SR1: Self-rewarding vision-language model via reasoning decomposition | 08/26/2025 | [Paper](https://arxiv.org/abs/2508.19652) | GRPO | - |
+| Group Sequence Policy Optimization | 06/24/2025 | [Paper](https://www.arxiv.org/abs/2507.18071) | GSPO | - |
+| Visionary-R1: Mitigating Shortcuts in Visual Reasoning with Reinforcement Learning | 05/20/2025 | [Paper](https://arxiv.org/abs/2505.14677) | GRPO | - |
 | VideoChat-R1: Enhancing Spatio-Temporal Perception via Reinforcement Fine-Tuning | 2025/04/10 | [Paper](https://arxiv.org/abs/2504.06958) | GRPO | [Code](https://github.com/OpenGVLab/VideoChat-R1) |
 | OpenVLThinker: An Early Exploration to Complex Vision-Language Reasoning via Iterative Self-Improvement | 2025/03/21 | [Paper](https://arxiv.org/abs/2503.17352) | GRPO | [Code](https://github.com/yihedeng9/OpenVLThinker) |
 | Boosting the Generalization and Reasoning of Vision Language Models with Curriculum Reinforcement Learning | 2025/03/10 | [Paper](https://arxiv.org/abs/2503.07065) | GRPO | [Code](https://github.com/ding523/Curr_REFT) |
