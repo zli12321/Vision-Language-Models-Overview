@@ -73,6 +73,7 @@ Welcome to contribute and discuss!
 ##  1. <a name='vlms'></a>📚 SoTA VLMs 
 | Model                                                        | Year | Architecture   | Training Data               | Parameters     | Vision Encoder/Tokenizer                       | Pretrained Backbone Model                          |
 |--------------------------------------------------------------|------|----------------|-----------------------------|----------------|-----------------------------------------------|---------------------------------------------------|
+| [Emu3.5](https://arxiv.org/pdf/2510.26583) | 10/30/2025 | Deconder-only |Unified Modality Dataset | - | SigLIP | [Qwen3](https://huggingface.co/collections/Qwen/qwen3-67dd247413f0e2e4f653967f)
 | [DeepSeek-OCR](https://github.com/deepseek-ai/DeepSeek-OCR/blob/main/DeepSeek_OCR_paper.pdf) | 10/20/2025 | Encoder-Deconder |70% OCR, 20% general vision, 10% text-only | [3B](https://huggingface.co/deepseek-ai/DeepSeek-OCR) | DeepEncoder | DeepSeek-3B
 | [Qwen3-VL](https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct) | 10/11/2025 | Decoder-Only |- | [8B/4B](https://huggingface.co/collections/Qwen/qwen3-vl-68d2a7c1b8a8afce4ebd2dbe) | ViT | [Qwen3](https://huggingface.co/collections/Qwen/qwen3-67dd247413f0e2e4f653967f)
 | [Qwen3-VL-MoE](https://github.com/QwenLM/Qwen3-VL) | 09/25/2025 | Decoder-Only |- | [235B-A22B](https://huggingface.co/collections/Qwen/qwen3-vl-68d2a7c1b8a8afce4ebd2dbe) | ViT | [Qwen3](https://huggingface.co/collections/Qwen/qwen3-67dd247413f0e2e4f653967f)
