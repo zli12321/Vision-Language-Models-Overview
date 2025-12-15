@@ -73,6 +73,7 @@ Welcome to contribute and discuss!
 ##  1. <a name='vlms'></a>📚 SoTA VLMs 
 | Model                                                        | Year | Architecture   | Training Data               | Parameters     | Vision Encoder/Tokenizer                       | Pretrained Backbone Model                          |
 |--------------------------------------------------------------|------|----------------|-----------------------------|----------------|-----------------------------------------------|---------------------------------------------------|
+| [Gemini 3](https://aistudio.google.com/models/gemini-3) | 11/18/2025 | Unified Model |Undisclosed| - | - | -
 | [Emu3.5](https://arxiv.org/pdf/2510.26583) | 10/30/2025 | Deconder-only |Unified Modality Dataset | - | SigLIP | [Qwen3](https://huggingface.co/collections/Qwen/qwen3-67dd247413f0e2e4f653967f)
 | [DeepSeek-OCR](https://github.com/deepseek-ai/DeepSeek-OCR/blob/main/DeepSeek_OCR_paper.pdf) | 10/20/2025 | Encoder-Deconder |70% OCR, 20% general vision, 10% text-only | [3B](https://huggingface.co/deepseek-ai/DeepSeek-OCR) | DeepEncoder | DeepSeek-3B
 | [Qwen3-VL](https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct) | 10/11/2025 | Decoder-Only |- | [8B/4B](https://huggingface.co/collections/Qwen/qwen3-vl-68d2a7c1b8a8afce4ebd2dbe) | ViT | [Qwen3](https://huggingface.co/collections/Qwen/qwen3-67dd247413f0e2e4f653967f)
@@ -86,7 +87,8 @@ Welcome to contribute and discuss!
 | [OmniGen2](https://arxiv.org/abs/2506.18871)				   | 06/23/2025 | Decdoer-only & VAE	|LLaVA-OneVision/ SAM-LLaVA.. | - | ViT | [QWen-2.5-VL](https://huggingface.co/collections/Qwen/qwen25-vl-6795ffac22b334a837c0f9a5)
 | [Gemini-2.5-Pro](https://deepmind.google/models/gemini/pro/)				   | 06/17/2025 | - |-| - | - | -
 | [GPT-o3/o4-mini](https://openai.com/index/introducing-o3-and-o4-mini/)                   | 06/10/2025 | Decoder-only   | Undisclosed                 | Undisclosed    | Undisclosed                                  | Undisclosed                                       |
-| [Mimo-VL (Xiaomi)](https://arxiv.org/abs/2506.03569)				   | 06/04/2025 | Decdoer-only	|24 Trillion MLLM tokens | 7B | Qwen2.5-ViT | [Mimo-7B-base](https://huggingface.co/XiaomiMiMo/MiMo-7B-Base)
+| [Mimo-VL (Xiaomi)](https://arxiv.org/abs/2506.03569)				   | 06/04/2025 | Decdoer-only	|24 Trillion MLLM tokens | 7B | [Qwen2.5-ViT | [Mimo-7B-base](https://huggingface.co/XiaomiMiMo/MiMo-7B-Base)
+| [BAGEL (Bytedance)](https://arxiv.org/abs/2505.14683)				   | 05/20/2025 | Unified Model	| Video/Image/Text | 7B | SigLIP2-so400m/14](https://arxiv.org/abs/2502.14786) | [Qwen2.5](https://arxiv.org/abs/2412.15115)
 | [BLIP3-o](https://www.arxiv.org/abs/2505.09568)				   | 05/14/2025 | Decdoer-only	|(BLIP3-o 60K) GPT-4o Generated Image Generation Data | 4/8B | ViT | [QWen-2.5-VL](https://huggingface.co/collections/Qwen/qwen25-vl-6795ffac22b334a837c0f9a5)
 | [InternVL-3](https://arxiv.org/abs/2504.10479)				   | 04/14/2025 | Decdoer-only	|200 Billion Tokens | 1/2/8/9/14/38/78B | ViT-300M/6B | [InterLM2.5/QWen2.5](https://huggingface.co/OpenGVLab/InternVL3-78B)
 | [LLaMA4-Scout/Maverick](https://ai.meta.com/blog/llama-4-multimodal-intelligence/)				   | 04/04/2025 | Decdoer-only	|40/20 Trillion Tokens | 17B | [MetaClip](https://github.com/facebookresearch/MetaCLIP) | [LLaMA4](https://huggingface.co/collections/meta-llama/llama-4-67f0c30d9fe03840bc9d0164)
