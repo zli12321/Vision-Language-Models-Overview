@@ -175,10 +175,12 @@ Welcome to contribute and discuss!
 | [PHYSBENCH](https://arxiv.org/pdf/2501.16411) | Visual Math Reasoning | MC | Grad STEM | 0.10 | [Repo](https://github.com/USC-GVL/PhysBench) |
 
 
+
 ### 🔎 Visual Reasoning / VQA (+ Multilingual & OCR)
 
 | Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
 |---------|------|---------------|------------|----------|-------------|
+| [ColonVQA & ColonReason](https://arxiv.org/abs/2512.03667) | Medical/Healthcare Reasoning & VQA | LLM Eval | AI & Human Experts | 1100+ | [Repo](https://github.com/ai4colonoscopy/Colon-X) |
 | [EMMA](https://arxiv.org/abs/2501.05444) | Visual Reasoning | MC | Human + Synth | 2.8 | [Repo](emma-benchmark.github.io) |
 | [MMTBENCH](https://arxiv.org/pdf/2404.16006) | Visual Reasoning & QA | MC | AI Experts | 30.1 | [Repo](https://github.com/tylin/coco-caption) |
 | [MM‑Vet](https://arxiv.org/pdf/2308.02490) | OCR / Visual Reasoning | LLM Eval | Human | 0.2 | [Repo](https://github.com/yuweihao/MM-Vet) |
@@ -191,7 +193,6 @@ Welcome to contribute and discuss!
 | [R1‑Onevision](https://arxiv.org/pdf/2503.10615) | Visual Reasoning & QA | MC | Human | 155 | [Repo](https://github.com/Fancy-MLLM/R1-Onevision) |
 | [VLM²‑Bench](https://arxiv.org/pdf/2502.12084) | Visual Reasoning & QA | Ans Match, MC | Human | 3 | [Site](https://vlm2-bench.github.io/) |
 | [VisualWebInstruct](https://arxiv.org/pdf/2503.10582) | Visual Reasoning & QA | LLM Eval | Web | 0.9 | [Site](https://tiger-ai-lab.github.io/VisualWebInstruct/) |
-
 
 ### 📝 Visual Text / Document Understanding (+ Charts)
 
@@ -282,6 +283,7 @@ Welcome to contribute and discuss!
 ### 3.2. <a name='sft'></a>Finetuning for VLM
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| Frontiers in Intelligent Colonoscopy (ColonINST & ColonGPT) | 2025 | [Paper](https://arxiv.org/abs/2410.17241) | - | [Code](https://github.com/ai4colonoscopy/IntelliScope)| 
 | Eagle 2.5: Boosting Long-Context Post-Training for Frontier Vision-Language Models | 2025/04/21 | [Paper](https://arxiv.org/abs/2504.15271) | [Website](https://nvlabs.github.io/EAGLE/) | [Code](https://github.com/NVlabs/EAGLE) |
 | OMNICAPTIONER: One Captioner to Rule Them All | 2025/04/09 | [Paper](https://arxiv.org/abs/2504.07089) | [Website](https://alpha-innovator.github.io/OmniCaptioner-project-page/) | [Code](https://github.com/Alpha-Innovator/OmniCaptioner) |
 | Inst-IT: Boosting Multimodal Instance Understanding via Explicit Visual Prompt Instruction Tuning | 2024 | [Paper](https://arxiv.org/abs/2412.03565) | [Website](https://github.com/Alpha-Innovator/OmniCaptioner) | [Code](https://github.com/inst-it/inst-it) |
@@ -446,6 +448,7 @@ Welcome to contribute and discuss!
 #### 4.4.3. <a name='Healthcare'></a>Healthcare
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| Colon-X: Advancing Intelligent Colonoscopy from Multimodal Understanding to Clinical Reasoning | 2025 | [Paper](https://arxiv.org/abs/2512.03667) | - | [💾 Code](https://github.com/ai4colonoscopy/Colon-X) |
 | VisionUnite: A Vision-Language Foundation Model for Ophthalmology Enhanced with Clinical Knowledge | 2024 | [📄 Paper](https://arxiv.org/pdf/2408.02865) | - | [💾 Code](https://github.com/HUANGLIZI/VisionUnite) |
 | Multimodal Healthcare AI: Identifying and Designing Clinically Relevant Vision-Language Applications for Radiology | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.14252) | - | - |
 | M-FLAG: Medical Vision-Language Pre-training with Frozen Language Models and Latent Space Geometry Optimization | 2023 | [📄 Paper](https://arxiv.org/pdf/2307.08347) | - | - |
