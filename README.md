@@ -143,6 +143,12 @@ Welcome to contribute and discuss!
 | [VisNumBench](https://arxiv.org/abs/2503.14939) | Visual Number Reasoning | MC | Python Program generated/Web Collection/Real life photos | 1.91 | [Repo](https://wwwtttjjj.github.io/VisNumBench/) |
 
 
+### 💬 Benchmark for Unified Models
+| Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
+|---------|------|---------------|------------|----------|-------------|
+| [RealUnify](https://arxiv.org/pdf/2509.24897) | Math, World knowledge, Image Gen | Direct & StepWise Eval (Sec 3.3) | Script & Humanverification | 1.0 | [Repo](https://github.com/FrankYang-17/RealUnify) |
+| [Uni-MMMU](https://arxiv.org/abs/2510.13759) | Science, Code, Image Gen | DreamSim (Image Gen Eval) & String Matching (Understanding Eval) | - | 1.0 | [Repo](https://vchitect.github.io/Uni-MMMU-Project) |
+
 
 ### 🎞️ Video Understanding
 
