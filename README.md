@@ -42,7 +42,7 @@ Welcome to contribute and discuss!
 	* 4.4. [Human-Centered AI](#Human-CenteredAI)
 		* 4.4.1. [Web Agent](#WebAgent)
 		* 4.4.2. [Accessibility](#Accessibility)
-		* 4.4.3. [Healthcare](#Healthcare)
+		* 4.4.3. [Medical and Healthcare](#Healthcare)
 		* 4.4.4. [Social Goodness](#SocialGoodness)
 * 5. [⛑️ Challenges](#Challenges)
 	* 5.1. [Hallucination](#Hallucination)
@@ -449,9 +449,10 @@ Welcome to contribute and discuss!
 | Improving VR Accessibility Through Automatic 360 Scene Description Using Multimodal Large Language Models | 2024 | [📄 Paper](https://dl.acm.org/doi/10.1145/3691573.3691619) | - | -
 
 
-#### 4.4.3. <a name='Healthcare'></a>Healthcare
+#### 4.4.3. <a name='Medical and Healthcare'></a>Healthcare
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| Colon-X: Advancing Intelligent Colonoscopy from Multimodal Understanding to Clinical Reasoning | 12/2025 | [📄 Paper](https://arxiv.org/abs/2512.03667) | - | [💾 Code](https://github.com/ai4colonoscopy/Colon-X) |
 | VisionUnite: A Vision-Language Foundation Model for Ophthalmology Enhanced with Clinical Knowledge | 2024 | [📄 Paper](https://arxiv.org/pdf/2408.02865) | - | [💾 Code](https://github.com/HUANGLIZI/VisionUnite) |
 | Multimodal Healthcare AI: Identifying and Designing Clinically Relevant Vision-Language Applications for Radiology | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.14252) | - | - |
 | M-FLAG: Medical Vision-Language Pre-training with Frozen Language Models and Latent Space Geometry Optimization | 2023 | [📄 Paper](https://arxiv.org/pdf/2307.08347) | - | - |
