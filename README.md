@@ -453,6 +453,7 @@ Welcome to contribute and discuss!
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
 | Colon-X: Advancing Intelligent Colonoscopy from Multimodal Understanding to Clinical Reasoning | 12/2025 | [📄 Paper](https://arxiv.org/abs/2512.03667) | - | [💾 Code](https://github.com/ai4colonoscopy/Colon-X) |
+| Frontiers in Intelligent Colonoscopy | 02/2025 | [📄 Paper](https://arxiv.org/pdf/2410.17241) | - | [💾 Code](https://github.com/ai4colonoscopy/IntelliScope) |
 | VisionUnite: A Vision-Language Foundation Model for Ophthalmology Enhanced with Clinical Knowledge | 2024 | [📄 Paper](https://arxiv.org/pdf/2408.02865) | - | [💾 Code](https://github.com/HUANGLIZI/VisionUnite) |
 | Multimodal Healthcare AI: Identifying and Designing Clinically Relevant Vision-Language Applications for Radiology | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.14252) | - | - |
 | M-FLAG: Medical Vision-Language Pre-training with Frozen Language Models and Latent Space Geometry Optimization | 2023 | [📄 Paper](https://arxiv.org/pdf/2307.08347) | - | - |
