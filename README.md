@@ -128,7 +128,8 @@ Welcome to contribute and discuss!
 ### 2.1. <a name='TrainingDatasetforVLM'></a> Datasets for Training VLMs
 | Dataset | Task |  Size |
 |---------|------|---------------|
-| [FineVision](https://huggingface.co/datasets/HuggingFaceM4/FineVision) | Mixed Domain | 24.3 M/4.48TB |
+| [MMFineReason](https://huggingface.co/datasets/OpenDataArena/MMFineReason-1.8M-Qwen3-VL-235B-Thinking)(/1/30/2026) | REasoning | 1.8M |
+| [FineVision](https://huggingface.co/datasets/HuggingFaceM4/FineVision)(09/04/2025) | Mixed Domain | 24.3 M/4.48TB |
 
 
 
