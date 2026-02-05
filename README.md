@@ -73,6 +73,7 @@ Welcome to contribute and discuss!
 ##  1. <a name='vlms'></a>📚 SoTA VLMs 
 | Model                                                        | Year | Architecture   | Training Data               | Parameters     | Vision Encoder/Tokenizer                       | Pretrained Backbone Model                          |
 |--------------------------------------------------------------|------|----------------|-----------------------------|----------------|-----------------------------------------------|---------------------------------------------------|
+| [Erin 5.0 (Baidu)](https://arxiv.org/pdf/2602.04705) | 02/05/2026 | Unified Model (Visual, Text, Audio) |Unified Modality Dataset | - |  CNN–ViT (Understanding)/Next-Frame-and-Scale Prediction (Generation) | Unified Autoregressive Transformer
 | [Gemini 3](https://aistudio.google.com/models/gemini-3) | 11/18/2025 | Unified Model |Undisclosed| - | - | -
 | [Emu3.5](https://arxiv.org/pdf/2510.26583) | 10/30/2025 | Deconder-only |Unified Modality Dataset | - | SigLIP | [Qwen3](https://huggingface.co/collections/Qwen/qwen3-67dd247413f0e2e4f653967f)
 | [DeepSeek-OCR](https://github.com/deepseek-ai/DeepSeek-OCR/blob/main/DeepSeek_OCR_paper.pdf) | 10/20/2025 | Encoder-Deconder |70% OCR, 20% general vision, 10% text-only | [3B](https://huggingface.co/deepseek-ai/DeepSeek-OCR) | DeepEncoder | DeepSeek-3B
