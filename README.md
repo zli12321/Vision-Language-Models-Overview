@@ -73,7 +73,13 @@ Welcome to contribute and discuss!
 ##  1. <a name='vlms'></a>📚 SoTA VLMs 
 | Model                                                        | Year | Architecture   | Training Data               | Parameters     | Vision Encoder/Tokenizer                       | Pretrained Backbone Model                          |
 |--------------------------------------------------------------|------|----------------|-----------------------------|----------------|-----------------------------------------------|---------------------------------------------------|
+| [GPT-5.4 / GPT-5.4 Thinking (OpenAI)](https://openai.com/index/introducing-gpt-5-4/) | 03/06/2026 | Decoder-only | Undisclosed | Undisclosed | Undisclosed | Undisclosed |
+| [Phi-4-Reasoning-Vision-15B (Microsoft)](https://arxiv.org/abs/2603.03975) | 03/04/2026 | Decoder-only | Curated synthetic + filtered data | 15B | High-res dynamic-resolution ViT | Phi-4 |
+| [Gemini 3.0 (Google)](https://deepmind.google/models/gemini/) | 03/2026 | Unified Model | Undisclosed | Undisclosed | Undisclosed | Undisclosed |
+| [Qwen3.5 (Alibaba)](https://github.com/QwenLM/Qwen3.5) | 02/16/2026 | Unified VL (early fusion) | Trillions of multimodal tokens | 0.8B–397B (MoE, 17B active) | ViT (native) | Qwen3.5 |
+| [Claude Opus 4.6 (Anthropic)](https://docs.anthropic.com/en/docs/about-claude/models) | 02/2026 | Decoder-only | Undisclosed | Undisclosed | Undisclosed | Undisclosed |
 | [Erin 5.0 (Baidu)](https://arxiv.org/pdf/2602.04705) | 02/05/2026 | Unified Model (Visual, Text, Audio) |Unified Modality Dataset | - |  CNN–ViT (Understanding)/Next-Frame-and-Scale Prediction (Generation) | Unified Autoregressive Transformer
+| [Molmo2 (Allen AI)](https://arxiv.org/abs/2601.10611) | 01/15/2026 | Decoder-only | 7 new video + 2 multi-image datasets (9.19M videos) | 4B / 7B / 8B | Bi-directional attention ViT | [Qwen 3](https://huggingface.co/collections/Qwen/qwen3-67dd247413f0e2e4f653967f) / [OLMo](https://huggingface.co/allenai)
 | [Gemini 3](https://aistudio.google.com/models/gemini-3) | 11/18/2025 | Unified Model |Undisclosed| - | - | -
 | [Emu3.5](https://arxiv.org/pdf/2510.26583) | 10/30/2025 | Deconder-only |Unified Modality Dataset | - | SigLIP | [Qwen3](https://huggingface.co/collections/Qwen/qwen3-67dd247413f0e2e4f653967f)
 | [DeepSeek-OCR](https://github.com/deepseek-ai/DeepSeek-OCR/blob/main/DeepSeek_OCR_paper.pdf) | 10/20/2025 | Encoder-Deconder |70% OCR, 20% general vision, 10% text-only | [3B](https://huggingface.co/deepseek-ai/DeepSeek-OCR) | DeepEncoder | DeepSeek-3B
@@ -129,6 +135,10 @@ Welcome to contribute and discuss!
 ### 2.1. <a name='TrainingDatasetforVLM'></a> Datasets for Training VLMs
 | Dataset | Task |  Size |
 |---------|------|---------------|
+| [OmniScience](https://arxiv.org/abs/2602.13758)(02/2026) | Scientific Image Understanding | 1.5M figure-caption-context triplets |
+| [MaD-Mix](https://arxiv.org/abs/2602.07790)(02/2026) | Multi-modal Data Mixture Optimization | Framework (0.5B–7B scale) |
+| [OVID](https://openreview.net/pdf/54b83db2dc00f01b015b8356db617fdd6e38240f.pdf)(2026) | Open Video Pre-training | 10M hours, 300M frame-caption pairs |
+| [Molmo2 Video Datasets](https://arxiv.org/abs/2601.10611)(01/2026) | Video Captions, QA, Tracking, Pointing | 9.19M videos (7 video + 2 multi-image datasets) |
 | [MMFineReason](https://huggingface.co/datasets/OpenDataArena/MMFineReason-1.8M-Qwen3-VL-235B-Thinking)(/1/30/2026) | REasoning | 1.8M |
 | [FineVision](https://huggingface.co/datasets/HuggingFaceM4/FineVision)(09/04/2025) | Mixed Domain | 24.3 M/4.48TB |
 
@@ -148,7 +158,8 @@ Welcome to contribute and discuss!
 ### 💬 Benchmark for Unified Models
 | Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
 |---------|------|---------------|------------|----------|-------------|
-| [RealUnify](https://arxiv.org/pdf/2509.24897) | Math, World knowledge, Image Gen | Direct & StepWise Eval (Sec 3.3) | Script & Humanverification | 1.0 | [Repo](https://github.com/FrankYang-17/RealUnify) |
+| [ROVER](https://openreview.net/pdf?id=gu3DRaDWiI) | Reciprocal Cross-Modal Reasoning | Visual Gen + Verbal Gen Eval | Human | 1.3 (1,876 images) | [Paper](https://openreview.net/pdf?id=gu3DRaDWiI) |
+|| [RealUnify](https://arxiv.org/pdf/2509.24897) | Math, World knowledge, Image Gen | Direct & StepWise Eval (Sec 3.3) | Script & Humanverification | 1.0 | [Repo](https://github.com/FrankYang-17/RealUnify) |
 | [Uni-MMMU](https://arxiv.org/abs/2510.13759) | Science, Code, Image Gen | DreamSim (Image Gen Eval) & String Matching (Understanding Eval) | - | 1.0 | [Repo](https://vchitect.github.io/Uni-MMMU-Project) |
 
 
@@ -156,7 +167,10 @@ Welcome to contribute and discuss!
 
 | Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
 |---------|------|---------------|------------|----------|-------------|
-| [VideoHallu](https://arxiv.org/abs/2505.01481) | Video Understanding | LLM Eval | Human | 3.2 | [Repo](https://github.com/zli12321/VideoHallu) |
+| [MMOU](https://arxiv.org/abs/2603.14145) | Omni-modal Long Video Understanding | MC | Human | 15 (9,038 videos) | [Paper](https://arxiv.org/abs/2603.14145) |
+| [Video-MMMU](https://arxiv.org/abs/2501.13826) | Knowledge Acquisition from Professional Videos | MC + Knowledge Gain | Expert | 0.9 (300 videos) | [Paper](https://arxiv.org/abs/2501.13826) |
+| [MMVU](https://arxiv.org/abs/2501.12380) | Expert-Level Multi-Discipline Video Understanding | MC | Expert | 3 (27 subjects) | [Paper](https://arxiv.org/abs/2501.12380) |
+|| [VideoHallu](https://arxiv.org/abs/2505.01481) | Video Understanding | LLM Eval | Human | 3.2 | [Repo](https://github.com/zli12321/VideoHallu) |
 | [Video SimpleQA](https://arxiv.org/abs/2503.18923) | Video Understanding | LLM Eval | Human | 2.03 | [Repo](https://videosimpleqa.github.io) |
 | [MovieChat](https://arxiv.org/abs/2307.16449) | Video Understanding | LLM Eval | Human | 1 | [Repo](https://rese1f.github.io/MovieChat/) |
 | [Perception‑Test](https://arxiv.org/pdf/2305.13786) | Video Understanding | MC | Crowd | 11.6 | [Repo](https://github.com/google-deepmind/perception_test) |
@@ -177,7 +191,10 @@ Welcome to contribute and discuss!
 
 | Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
 |---------|------|---------------|------------|----------|-------------|
-| [MMLU](https://arxiv.org/pdf/2009.03300) | General MM | MC | Human | 15.9 | [Repo](https://github.com/hendrycks/test) |
+| [OmniEarth](https://arxiv.org/abs/2603.09471) | Geospatial / Remote Sensing VLM Eval | MC + Open VQA | Human (verified) | 44.2 (9,275 images, 28 tasks) | [Paper](https://arxiv.org/abs/2603.09471) |
+|| [MultiHaystack](https://arxiv.org/abs/2603.05697) | Multimodal Retrieval & Reasoning | Retrieval + QA | Human | 0.75 (46K+ candidates) | [Paper](https://arxiv.org/abs/2603.05697) |
+|| [DatBench](https://arxiv.org/abs/2601.02316) | Discriminative, Faithful VLM Eval | MC (format-aware) | Synth | - | [Paper](https://arxiv.org/abs/2601.02316) |
+|| [MMLU](https://arxiv.org/pdf/2009.03300) | General MM | MC | Human | 15.9 | [Repo](https://github.com/hendrycks/test) |
 | [MMStar](https://arxiv.org/pdf/2403.20330) | General MM | MC | Human | 1.5 | [Site](https://mmstar-benchmark.github.io/) |
 | [NaturalBench](https://arxiv.org/pdf/2410.14669) | General MM | Yes/No, MC | Human | 10 | [HF](https://huggingface.co/datasets/BaiqiL/NaturalBench) |
 | [PHYSBENCH](https://arxiv.org/pdf/2501.16411) | Visual Math Reasoning | MC | Grad STEM | 0.10 | [Repo](https://github.com/USC-GVL/PhysBench) |
@@ -266,7 +283,13 @@ Welcome to contribute and discuss!
 ### 3.1.  <a name='alignment'></a>RL Alignment for VLM
 | Title | Year | Paper | RL | Code |
 |----------------|------|--------|---------|------|
-| Game-RL: Synthesizing Multimodal Verifiable Game Data to Boost VLMs' General Reasoning | 10/12/2025 | [Paper](https://arxiv.org/abs/2505.13886) | GRPO | - |
+| wDPO: Winsorized Direct Preference Optimization for Robust Alignment | 03/2026 | [Paper](https://arxiv.org/abs/2603.07211) | wDPO | - |
+|| f-GRPO and Beyond: Divergence-Based RL for General LLM Alignment | 02/2026 | [Paper](https://arxiv.org/abs/2602.05946) | f-GRPO / f-HAL | - |
+|| From Sight to Insight: Improving Visual Reasoning of MLLMs via Reinforcement Learning | 01/2026 | [Paper](https://arxiv.org/abs/2601.00215) | GRPO (6 reward functions) | - |
+|| SaFeR-VLM: Safety-Aware Reinforcement Learning for Multimodal Reasoning | 2026 (ICLR) | [Paper](https://openreview.net/pdf/4f379d45027946b58a820908fd3a1711d66daa85.pdf) | GRPO + safety reward | - |
+|| SAIL-RL: Guiding MLLMs in When and How to Think via Dual-Reward RL Tuning | 11/2025 | [Paper](https://arxiv.org/abs/2511.02280) | Dual-Reward (Thinking + Judging) | - |
+|| GIFT: Group-relative Implicit Fine Tuning Integrates GRPO with DPO and UNA | 10/2025 | [Paper](https://arxiv.org/abs/2510.23868) | GIFT (convex MSE loss) | - |
+|| Game-RL: Synthesizing Multimodal Verifiable Game Data to Boost VLMs' General Reasoning | 10/12/2025 | [Paper](https://arxiv.org/abs/2505.13886) | GRPO | - |
 | Vision-Zero: Scalable VLM Self-Improvement via Strategic Gamified Self-Play | 09/29/2025 | [Paper](https://www.arxiv.org/abs/2509.25541) | GRPO | - |
 | Vision-SR1: Self-rewarding vision-language model via reasoning decomposition | 08/26/2025 | [Paper](https://arxiv.org/abs/2508.19652) | GRPO | - |
 | Group Sequence Policy Optimization | 06/24/2025 | [Paper](https://www.arxiv.org/abs/2507.18071) | GSPO | - |
@@ -290,7 +313,11 @@ Welcome to contribute and discuss!
 ### 3.2. <a name='sft'></a>Finetuning for VLM
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
-| Eagle 2.5: Boosting Long-Context Post-Training for Frontier Vision-Language Models | 2025/04/21 | [Paper](https://arxiv.org/abs/2504.15271) | [Website](https://nvlabs.github.io/EAGLE/) | [Code](https://github.com/NVlabs/EAGLE) |
+| MERGETUNE: Continued Fine-Tuning of Vision-Language Models | 2026/01 (ICLR 2026) | [Paper](https://arxiv.org/abs/2601.10497) | - | - |
+|| Mask Fine-Tuning (MFT): Unlocking Hidden Capabilities in Vision-Language Models | 2025/12 | [Paper](https://arxiv.org/abs/2512.23073) | - | - |
+|| Image-LoRA: Towards Minimal Fine-Tuning of VLMs | 2025/12 | [Paper](https://arxiv.org/abs/2512.19219) | - | - |
+|| Reassessing the Role of Supervised Fine-Tuning: An Empirical Study in VLM Reasoning | 2025/12 | [Paper](https://arxiv.org/abs/2512.12690) | - | - |
+|| Eagle 2.5: Boosting Long-Context Post-Training for Frontier Vision-Language Models | 2025/04/21 | [Paper](https://arxiv.org/abs/2504.15271) | [Website](https://nvlabs.github.io/EAGLE/) | [Code](https://github.com/NVlabs/EAGLE) |
 | OMNICAPTIONER: One Captioner to Rule Them All | 2025/04/09 | [Paper](https://arxiv.org/abs/2504.07089) | [Website](https://alpha-innovator.github.io/OmniCaptioner-project-page/) | [Code](https://github.com/Alpha-Innovator/OmniCaptioner) |
 | Inst-IT: Boosting Multimodal Instance Understanding via Explicit Visual Prompt Instruction Tuning | 2024 | [Paper](https://arxiv.org/abs/2412.03565) | [Website](https://github.com/Alpha-Innovator/OmniCaptioner) | [Code](https://github.com/inst-it/inst-it) |
 | LLaVolta: Efficient Multi-modal Models via Stage-wise Visual Context Compression | 2024 | [Paper](https://arxiv.org/pdf/2406.20092) | [Website](https://beckschen.github.io/llavolta.html) | [Code](https://github.com/Beckschen/LLaVolta) |
@@ -313,7 +340,11 @@ Welcome to contribute and discuss!
 ### 3.4. <a name='vlm_prompt_engineering'></a>Prompt Optimization
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
-| In-ContextEdit:EnablingInstructionalImageEditingwithIn-Context GenerationinLargeScaleDiffusionTransformer | 2025/04/30 | [Paper](https://arxiv.org/abs/2504.20690) | [Website](https://river-zhang.github.io/ICEdit-gh-pages/) | [Code](https://github.com/River-Zhang/ICEdit) |
+| EvoPrompt: Evolving Prompt Adaptation for Vision-Language Models | 2026/03 | [Paper](https://arxiv.org/abs/2603.09493) | - | - |
+|| MMLoP: Multi-Modal Low-Rank Prompting for Efficient Vision-Language Adaptation | 2026/02 | [Paper](https://arxiv.org/abs/2602.21397) | - | - |
+|| Multimodal Prompt Optimizer (MPO): Joint Optimization of Multimodal Prompts | 2025/10 | [Paper](https://arxiv.org/abs/2510.09201) | - | - |
+|| Evolutionary Prompt Optimization Discovers Emergent Multimodal Reasoning Strategies | 2025/03 | [Paper](https://arxiv.org/abs/2503.23503) | - | - |
+|| In-ContextEdit:EnablingInstructionalImageEditingwithIn-Context GenerationinLargeScaleDiffusionTransformer | 2025/04/30 | [Paper](https://arxiv.org/abs/2504.20690) | [Website](https://river-zhang.github.io/ICEdit-gh-pages/) | [Code](https://github.com/River-Zhang/ICEdit) |
 
 ## 4. <a name='Toolenhancement'></a> ⚒️ Applications
 
@@ -370,6 +401,10 @@ Welcome to contribute and discuss!
 | KALIE: Fine-Tuning Vision-Language Models for Open-World Manipulation without Robot Data | 2024 | [📄 Paper](https://arxiv.org/pdf/2409.14066)| [🌍 Website](https://kalie-vlm.github.io/) | [💾 Code](https://github.com/gractang/kalie) |
 | Unified Video Action Model | 2025 | [📄 Paper](https://arxiv.org/pdf/2503.00200)| [🌍 Website](https://unified-video-action-model.github.io/) | [💾 Code](https://github.com/ShuangLI59/unified_video_action) |
 | HybridVLA: Collaborative Diffusion and Autoregression in a Unified Vision-Language-Action Model | 2025 | [📄 Paper](https://arxiv.org/abs/2503.10631)| [🌍 Website](https://hybrid-vla.github.io/) | [💾 Code](https://github.com/PKU-HMI-Lab/Hybrid-VLA) |
+|| DAM-VLA: A Dynamic Action Model-Based Vision-Language-Action Framework for Robot Manipulation | 03/2026 | [📄 Paper](https://arxiv.org/abs/2603.00926) | - | - |
+|| NS-VLA: Towards Neuro-Symbolic Vision-Language-Action Models | 03/2026 | [📄 Paper](https://arxiv.org/abs/2603.09542) | - | - |
+|| Steerable Vision-Language-Action Policies for Embodied Reasoning and Hierarchical Control | 02/2026 | [📄 Paper](https://arxiv.org/abs/2602.13193) | - | - |
+|| ST4VLA: Spatial Guided Training for Vision-Language-Action Models | 02/2026 | [📄 Paper](https://arxiv.org/abs/2602.10109) | - | - |
 
 #### 4.3.1. <a name='Manipulation'></a>Manipulation
 | Title | Year | Paper | Website | Code |
@@ -410,7 +445,11 @@ Welcome to contribute and discuss!
 #### 4.3.4. <a name='AutonomousDriving'></a>Autonomous Driving
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
-| Are VLMs Ready for Autonomous Driving? An Empirical Study from the Reliability, Data, and Metric Perspectives | 01/07/2025 | [📄 Paper](https://arxiv.org/abs/2501.04003) | [🌍 Website](drive-bench.github.io) | - |
+| AutoMoT: A Unified Vision-Language-Action Model with Asynchronous Mixture-of-Transformers for End-to-End Autonomous Driving | 03/2026 | [📄 Paper](https://arxiv.org/abs/2603.14851) | - | - |
+|| DriveVLM-RL: Neuroscience-Inspired Reinforcement Learning with Vision-Language Models for Safe Autonomous Driving | 03/2026 | [📄 Paper](https://arxiv.org/abs/2603.18315) | - | - |
+|| HiST-VLA: A Hierarchical Spatio-Temporal Vision-Language-Action Model for End-to-End Autonomous Driving | 02/2026 | [📄 Paper](https://arxiv.org/abs/2602.13329) | - | - |
+|| OpenDriveVLA: Towards End-to-end Autonomous Driving with Large Vision Language Action Model | 03/2025 | [📄 Paper](https://arxiv.org/abs/2503.23463) | - | - |
+|| Are VLMs Ready for Autonomous Driving? An Empirical Study from the Reliability, Data, and Metric Perspectives | 01/07/2025 | [📄 Paper](https://arxiv.org/abs/2501.04003) | [🌍 Website](drive-bench.github.io) | - |
 | DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models | 2024 | [📄 Paper](https://arxiv.org/abs/2402.12289) | [🌍 Website](https://tsinghua-mars-lab.github.io/DriveVLM/) | - |
 | GPT-Driver: Learning to Drive with GPT | 2023 | [📄 Paper](https://arxiv.org/abs/2310.01415) | - | - |
 | LanguageMPC: Large Language Models as Decision Makers for Autonomous Driving | 2023 | [📄 Paper](https://arxiv.org/abs/2310.03026) | [🌍 Website](https://sites.google.com/view/llm-mpc) | - |
@@ -441,6 +480,7 @@ Welcome to contribute and discuss!
 | ShowUI: One Vision-Language-Action Model for GUI Visual Agent | 2024 | [📄 Paper](https://arxiv.org/pdf/2411.17465) | - | [💾 Code](https://github.com/showlab/ShowUI) |
 | ScreenAgent: A Vision Language Model-driven Computer Control Agent | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.07945) | - | [💾 Code](https://github.com/niuzaisheng/ScreenAgent) |
 | Web Agents with World Models: Learning and Leveraging Environment Dynamics in Web Navigation | 2024 | [📄 Paper](https://arxiv.org/pdf/2410.13232) | - | [💾 Code](https://huggingface.co/papers/2410.13232) |
+|| MolmoWeb: An Open Agent for Automating Web Tasks | 03/2026 | [📄 Blog](https://allenai.org/blog/molmoweb) | [🌍 Website](https://allenai.org/blog/molmoweb) | - |
 
 
 #### 4.4.2. <a name='Accessibility'></a>Accessibility
@@ -454,7 +494,9 @@ Welcome to contribute and discuss!
 #### 4.4.3. <a name='Medical and Healthcare'></a>Healthcare
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
-| Colon-X: Advancing Intelligent Colonoscopy from Multimodal Understanding to Clinical Reasoning | 12/2025 | [📄 Paper](https://arxiv.org/abs/2512.03667) | - | [💾 Code](https://github.com/ai4colonoscopy/Colon-X) |
+| CARE: Towards Clinical Accountability in Multi-Modal Medical Reasoning with an Evidence-Grounded Agentic Framework | 03/2026 | [📄 Paper](https://arxiv.org/abs/2603.01607) | - | - |
+|| MedMO: Grounding and Understanding Multimodal Large Language Model for Medical Images | 02/2026 | [📄 Paper](https://arxiv.org/abs/2602.06965) | - | - |
+|| Colon-X: Advancing Intelligent Colonoscopy from Multimodal Understanding to Clinical Reasoning | 12/2025 | [📄 Paper](https://arxiv.org/abs/2512.03667) | - | [💾 Code](https://github.com/ai4colonoscopy/Colon-X) |
 | Frontiers in Intelligent Colonoscopy | 02/2025 | [📄 Paper](https://arxiv.org/pdf/2410.17241) | - | [💾 Code](https://github.com/ai4colonoscopy/IntelliScope) |
 | VisionUnite: A Vision-Language Foundation Model for Ophthalmology Enhanced with Clinical Knowledge | 2024 | [📄 Paper](https://arxiv.org/pdf/2408.02865) | - | [💾 Code](https://github.com/HUANGLIZI/VisionUnite) |
 | Multimodal Healthcare AI: Identifying and Designing Clinically Relevant Vision-Language Applications for Radiology | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.14252) | - | - |
@@ -482,7 +524,9 @@ Welcome to contribute and discuss!
 ### 5.1 <a name='Hallucination'></a>Hallucination
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
-| Object Hallucination in Image Captioning | 2018 | [📄 Paper](https://arxiv.org/pdf/1809.02156) | - | - |
+| HALP: Detecting Hallucinations in Vision-Language Models without Generating a Single Token | 03/2026 | [📄 Paper](https://arxiv.org/abs/2603.05465) | [🌍 ACL](https://aclanthology.org/2026.eacl-long.287/) | - |
+|| Tone Matters: The Impact of Linguistic Tone on Hallucination in VLMs | 01/2026 | [📄 Paper](https://arxiv.org/abs/2601.06460) | - | - |
+|| Object Hallucination in Image Captioning | 2018 | [📄 Paper](https://arxiv.org/pdf/1809.02156) | - | - |
 | Evaluating Object Hallucination in Large Vision-Language Models | 2023 | [📄 Paper](https://arxiv.org/pdf/2305.10355) | - | [💾 Code](https://github.com/RUCAIBox/POPE) |
 | Detecting and Preventing Hallucinations in Large Vision Language Models | 2023 | [📄 Paper](https://arxiv.org/pdf/2308.06394) | - | - |
 | HallE-Control: Controlling Object Hallucination in Large Multimodal Models | 2023 | [📄 Paper](https://arxiv.org/pdf/2310.01779) | - | [💾 Code](https://github.com/bronyayang/HallE_Control) |
@@ -498,14 +542,16 @@ Welcome to contribute and discuss!
 ### 5.2 <a name='Safety'></a>Safety
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
-| JailbreakZoo: Survey, Landscapes, and Horizons in Jailbreaking Large Language and Vision-Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2407.01599) | [🌍 Website](https://chonghan-chen.com/llm-jailbreak-zoo-survey/) | - |
+| SaFeR-VLM: Safety into Multimodal Reasoning via Reinforcement Learning | 2026 (ICLR) | [📄 Paper](https://openreview.net/pdf/4f379d45027946b58a820908fd3a1711d66daa85.pdf) | - | - |
+|| HoliSafe: Holistic Safety Evaluation for Vision-Language Models | 2026 (ICLR) | [📄 Paper](https://openreview.net/pdf/c0a7991cefe100852616861d5046c3b90cfed936.pdf) | - | - |
+|| JailbreakZoo: Survey, Landscapes, and Horizons in Jailbreaking Large Language and Vision-Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2407.01599) | [🌍 Website](https://chonghan-chen.com/llm-jailbreak-zoo-survey/) | - |
 | Safe-VLN: Collision Avoidance for Vision-and-Language Navigation of Autonomous Robots Operating in Continuous Environments | 2023 | [📄 Paper](https://arxiv.org/pdf/2311.02817) | - | - |
 | SafeBench: A Safety Evaluation Framework for Multimodal Large Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2410.18927) | - | - |
 | JailBreakV: A Benchmark for Assessing the Robustness of MultiModal Large Language Models against Jailbreak Attacks | 2024 | [📄 Paper](https://arxiv.org/pdf/2404.03027) | - | - |
 | SHIELD: An Evaluation Benchmark for Face Spoofing and Forgery Detection with Multimodal Large Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.04178) | - | [💾 Code](https://github.com/laiyingxin2/SHIELD) |
 | Images are Achilles' Heel of Alignment: Exploiting Visual Vulnerabilities for Jailbreaking Multimodal Large Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2403.09792) | - | - |
 | Jailbreaking Attack against Multimodal Large Language Model | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.02309) | - | - |
-| Embodied Red Teaming for Auditing Robotic Foundation Models | 2025 | [📄 Paper](https://arxiv.org/pdf/2411.18676) | [🌍 Website](https://s-karnik.github.io/embodied-red-team-project-page/) | [💾 Code](https://github.com/Improbable-AI/embodied-red-teaming) |
+|| Embodied Red Teaming for Auditing Robotic Foundation Models | 2025 | [📄 Paper](https://arxiv.org/pdf/2411.18676) | [🌍 Website](https://s-karnik.github.io/embodied-red-team-project-page/) | [💾 Code](https://github.com/Improbable-AI/embodied-red-teaming) |
 | Safety Guardrails for LLM-Enabled Robots | 2025 | [📄 Paper](https://arxiv.org/pdf/2503.07885) | - | - |
 
 
@@ -556,7 +602,10 @@ Welcome to contribute and discuss!
 ### 5.5 <a name=' EfficientTrainingandFineTuning'></a> Efficient Training and Fine-Tuning
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
-| VILA: On Pre-training for Visual Language Models | 2023 | [📄 Paper](https://arxiv.org/pdf/2312.07533) | - | - |
+| LoRA-Squeeze: Simple and Effective Post-Tuning and In-Tuning Compression of LoRA Modules | 02/2026 | [📄 Paper](https://arxiv.org/abs/2602.10993) | - | - |
+|| GRACE: Gated Relational Alignment via Confidence-based Distillation for Efficient VLMs | 01/2026 | [📄 Paper](https://arxiv.org/abs/2601.22709) | - | - |
+|| VLMQ: Post-Training Quantization for Large Vision-Language Models | 2026 (ICLR) | [📄 Paper](https://openreview.net/pdf?id=CXVf8Vx2E2) | - | - |
+|| VILA: On Pre-training for Visual Language Models | 2023 | [📄 Paper](https://arxiv.org/pdf/2312.07533) | - | - |
 | SimVLM: Simple Visual Language Model Pretraining with Weak Supervision | 2021 | [📄 Paper](https://arxiv.org/pdf/2108.10904) | - | - |
 | LoRA: Low-Rank Adaptation of Large Language Models | 2021 | [📄 Paper](https://arxiv.org/pdf/2106.09685) | - | [💾 Code](https://github.com/microsoft/LoRA) |
 | QLoRA: Efficient Finetuning of Quantized LLMs | 2023 | [📄 Paper](https://arxiv.org/pdf/2305.14314) | - | - |
