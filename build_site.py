@@ -314,8 +314,11 @@ a:hover{color:#a5b4fc}
 .stat-card:hover{border-color:rgba(129,140,248,.3);transform:translateY(-2px)}
 .stat-num{font-size:1.6rem;font-weight:800;color:var(--accent);display:block}
 .stat-label{font-size:.68rem;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-top:.1rem}
-.cite-link{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.8rem;padding:.6rem 1.4rem;background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.25);border-radius:99px;color:var(--accent);font-size:.85rem;font-weight:600;transition:var(--transition)}
+.hero-links{display:flex;gap:.8rem;margin-top:1.8rem;justify-content:center;flex-wrap:wrap}
+.cite-link{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.4rem;background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.25);border-radius:99px;color:var(--accent);font-size:.85rem;font-weight:600;transition:var(--transition)}
 .cite-link:hover{background:rgba(99,102,241,.2);text-decoration:none;transform:translateY(-1px)}
+.cite-link.github-link{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.15);color:var(--text)}
+.cite-link.github-link:hover{background:rgba(255,255,255,.12)}
 
 /* ─── SEARCH BAR ─── */
 .search-wrap{position:sticky;top:0;z-index:50;background:rgba(11,17,32,.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:.6rem 1.5rem}
@@ -426,7 +429,10 @@ tbody tr.hidden{display:none}
       <div class="stat-card"><span class="stat-num" id="stat-training">--</span><span class="stat-label">RL &amp; SFT</span></div>
       <div class="stat-card"><span class="stat-num" id="stat-apps">--</span><span class="stat-label">Applications</span></div>
     </div>
-    <a class="cite-link" href="https://arxiv.org/abs/2501.02189" target="_blank"><i class="fas fa-file-alt"></i>Read the Paper</a>
+    <div class="hero-links">
+      <a class="cite-link" href="https://arxiv.org/abs/2501.02189" target="_blank"><i class="fas fa-file-alt"></i>Read the Paper</a>
+      <a class="cite-link github-link" href="https://github.com/zli12321/Vision-Language-Models-Overview" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+    </div>
   </div>
 </div>
 
