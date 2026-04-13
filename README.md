@@ -76,6 +76,11 @@ Welcome to contribute and discuss!
 ##  1. <a name='vlms'></a>📚 SoTA VLMs 
 | Model                                                        | Year | Architecture   | Training Data               | Parameters     | Vision Encoder/Tokenizer                       | Pretrained Backbone Model                          |
 |--------------------------------------------------------------|------|----------------|-----------------------------|----------------|-----------------------------------------------|---------------------------------------------------|
+| [LFM2.5-VL-450M (Liquid AI)](https://www.marktechpost.com/2026/04/11/liquid-ai-releases-lfm2-5-vl-450m-a-450m-parameter-vision-language-model-with-bounding-box-prediction-multilingual-support-and-sub-250ms-edge-inference/) | 04/11/2026 | Liquid Foundation Model | Undisclosed | 450M | Non-overlapping tile ViT | LFM2.5 |
+| [EXAONE 4.5 (LG AI Research)](https://en.sedaily.com/finance/2026/04/09/lg-unveils-exaone-45-multimodal-ai-claims-victory-over) | 04/09/2026 | Unified VL | Undisclosed | 33B | Proprietary vision encoder | EXAONE 4.5 |
+| [Gemma 4 (Google)](https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/) | 04/02/2026 | Decoder-only / MoE | Undisclosed (140+ languages) | E2B / E4B / 26B MoE / 31B Dense | Native multimodal | [Gemini 3](https://deepmind.google/models/gemini/) |
+| [Granite 4.0 3B Vision (IBM)](https://www.marktechpost.com/2026/04/01/ibm-releases-granite-4-0-3b-vision-a-new-vision-language-model-for-enterprise-grade-document-data-extraction/) | 04/01/2026 | Decoder-only | Enterprise document corpora | 3B | Undisclosed | Granite 4.0 |
+| [InternVL-U (Shanghai AI Lab)](https://arxiv.org/abs/2603.09877) | 03/10/2026 | Unified (MLLM + MMDiT) | Multimodal understanding + generation | 4B | InternViT | InternVL |
 | [GPT-5.4 / GPT-5.4 Thinking (OpenAI)](https://openai.com/index/introducing-gpt-5-4/) | 03/06/2026 | Decoder-only | Undisclosed | Undisclosed | Undisclosed | Undisclosed |
 | [Phi-4-Reasoning-Vision-15B (Microsoft)](https://arxiv.org/abs/2603.03975) | 03/04/2026 | Decoder-only | Curated synthetic + filtered data | 15B | High-res dynamic-resolution ViT | Phi-4 |
 | [Gemini 3.0 (Google)](https://deepmind.google/models/gemini/) | 03/2026 | Unified Model | Undisclosed | Undisclosed | Undisclosed | Undisclosed |
@@ -104,6 +109,7 @@ Welcome to contribute and discuss!
 | [LLaMA4-Scout/Maverick](https://ai.meta.com/blog/llama-4-multimodal-intelligence/)				   | 04/04/2025 | Decdoer-only	|40/20 Trillion Tokens | 17B | [MetaClip](https://github.com/facebookresearch/MetaCLIP) | [LLaMA4](https://huggingface.co/collections/meta-llama/llama-4-67f0c30d9fe03840bc9d0164)
 | [Qwen2.5-Omni](https://arxiv.org/abs/2503.20215)				   | 03/26/2025 | Decdoer-only	|Video/Audio/Image/Text | 7B |Qwen2-Audio/Qwen2.5-VL ViT | [End-to-End Mini-Omni](https://arxiv.org/abs/2408.16725)
 | [QWen2.5-VL](https://arxiv.org/abs/2502.13923)				   | 01/28/2025 | Decdoer-only	|Image caption, VQA, grounding agent, long video | 3B/7B/72B |Redesigned ViT | [Qwen2.5](https://huggingface.co/Qwen)
+| [GLM-4.6V (Zhipu / Z.AI)](https://z.ai/blog/glm-4.6v) | 12/2025 | Decoder-only | Undisclosed | 106B / 9B (Flash) | Undisclosed | GLM-4.6 |
 | [Ola](https://arxiv.org/pdf/2502.04328)					   | 2025 | Decoder-only	|Image/Video/Audio/Text		| 7B			|[OryxViT](https://huggingface.co/THUdyh/Oryx-ViT)| [Qwen-2.5-7B](https://qwenlm.github.io/blog/qwen2.5/), [SigLIP-400M](https://arxiv.org/pdf/2303.15343), [Whisper-V3-Large](https://arxiv.org/pdf/2212.04356), [BEATs-AS2M(cpt2)](https://arxiv.org/pdf/2212.09058)
 | [Ocean-OCR](https://arxiv.org/abs/2501.15558)				   | 2025 | Decdoer-only	| Pure Text, Caption, [Interleaved](https://github.com/OpenGVLab/MM-Interleaved), [OCR](https://github.com/X-PLUG/mPLUG-DocOwl/tree/main/DocOwl1.5) | 3B | [NaViT](https://arxiv.org/pdf/2307.06304) | Pretrained from scratch      
 | [SmolVLM](https://huggingface.co/blog/smolervlm)             | 2025 | Decoder-only   | [SmolVLM-Instruct](https://huggingface.co/HuggingFaceTB/SmolVLM-Instruct/blob/main/smolvlm-data.pdf) | 250M & 500M     | SigLIP                                | [SmolLM](https://huggingface.co/blog/smollm)   
@@ -138,6 +144,9 @@ Welcome to contribute and discuss!
 ### 2.1. <a name='TrainingDatasetforVLM'></a> Datasets for Training VLMs
 | Dataset | Task |  Size |
 |---------|------|---------------|
+| [MolmoWebMix (Allen AI)](https://huggingface.tw/papers/2604.08516)(04/2026) | Web Agent Training Trajectories | 100K+ synthetic + 30K human demos |
+| [Vero-600K](https://arxiv.org/html/2604.04917v1)(04/2026) | Broad Visual Reasoning RL Training | 600K samples from 59 datasets, 6 task categories |
+| [BigEarthNet.txt](https://arxiv.org/abs/2603.29630)(03/2026) | Multi-sensor Earth Observation Image-Text | 464K images, 9.6M text annotations |
 | [OmniScience](https://arxiv.org/abs/2602.13758)(02/2026) | Scientific Image Understanding | 1.5M figure-caption-context triplets |
 | [MaD-Mix](https://arxiv.org/abs/2602.07790)(02/2026) | Multi-modal Data Mixture Optimization | Framework (0.5B–7B scale) |
 | [OVID](https://openreview.net/pdf/54b83db2dc00f01b015b8356db617fdd6e38240f.pdf)(2026) | Open Video Pre-training | 10M hours, 300M frame-caption pairs |
@@ -225,6 +234,7 @@ Welcome to contribute and discuss!
 
 | Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
 |---------|------|---------------|------------|----------|-------------|
+| [TableVision](https://arxiv.org/abs/2604.03660) | Spatially Grounded Table Reasoning | 3-level Cognitive Eval | Human | 6.8 (13 sub-categories) | [Paper](https://arxiv.org/abs/2604.03660) |
 | [TextVQA](https://arxiv.org/pdf/1904.08920) | Visual Text Understanding | Ans Match | Expert | 28.6 | [Repo](https://github.com/facebookresearch/mmf) |
 | [DocVQA](https://arxiv.org/pdf/2007.00398) | Document VQA | Ans Match | Crowd | 50 | [Site](https://www.docvqa.org/) |
 | [ChartQA](https://arxiv.org/abs/2203.10244) | Chart Graphic Understanding | Ans Match | Crowd / Synth | 32.7 | [Repo](https://github.com/vis-nlp/ChartQA) |
@@ -286,6 +296,7 @@ Welcome to contribute and discuss!
 ### 3.1.  <a name='alignment'></a>RL Alignment for VLM
 | Title | Year | Paper | RL | Code |
 |----------------|------|--------|---------|------|
+| Vero: An Open RL Recipe for General Visual Reasoning | 04/2026 | [Paper](https://arxiv.org/html/2604.04917v1) | Task-routed rewards; GRPO-based | [Code](https://github.com/TIGER-AI-Lab/Vero) |
 | wDPO: Winsorized Direct Preference Optimization for Robust Alignment | 03/2026 | [Paper](https://arxiv.org/abs/2603.07211) | wDPO | - |
 || f-GRPO and Beyond: Divergence-Based RL for General LLM Alignment | 02/2026 | [Paper](https://arxiv.org/abs/2602.05946) | f-GRPO / f-HAL | - |
 || From Sight to Insight: Improving Visual Reasoning of MLLMs via Reinforcement Learning | 01/2026 | [Paper](https://arxiv.org/abs/2601.00215) | GRPO (6 reward functions) | - |
@@ -316,7 +327,9 @@ Welcome to contribute and discuss!
 ### 3.2. <a name='sft'></a>Finetuning for VLM
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
-| MERGETUNE: Continued Fine-Tuning of Vision-Language Models | 2026/01 (ICLR 2026) | [Paper](https://arxiv.org/abs/2601.10497) | - | - |
+| AGFT: Alignment-Guided Fine-Tuning for Zero-Shot Adversarial Robustness of VLMs | 2026/03 | [Paper](https://arxiv.org/abs/2603.29410) | - | - |
+|| CoVFT: Context-aware Visual Fine-tuning for Multimodal Large Language Models | 2026/03 | [Paper](https://arxiv.org/abs/2603.21077) | - | - |
+|| MERGETUNE: Continued Fine-Tuning of Vision-Language Models | 2026/01 (ICLR 2026) | [Paper](https://arxiv.org/abs/2601.10497) | - | - |
 || Mask Fine-Tuning (MFT): Unlocking Hidden Capabilities in Vision-Language Models | 2025/12 | [Paper](https://arxiv.org/abs/2512.23073) | - | - |
 || Image-LoRA: Towards Minimal Fine-Tuning of VLMs | 2025/12 | [Paper](https://arxiv.org/abs/2512.19219) | - | - |
 || Reassessing the Role of Supervised Fine-Tuning: An Empirical Study in VLM Reasoning | 2025/12 | [Paper](https://arxiv.org/abs/2512.12690) | - | - |
@@ -448,7 +461,8 @@ Welcome to contribute and discuss!
 #### 4.3.4. <a name='AutonomousDriving'></a>Autonomous Driving
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
-| AutoMoT: A Unified Vision-Language-Action Model with Asynchronous Mixture-of-Transformers for End-to-End Autonomous Driving | 03/2026 | [📄 Paper](https://arxiv.org/abs/2603.14851) | - | - |
+| UniDriveVLA: Unifying Understanding, Perception, and Action Planning for Autonomous Driving | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.02190) | - | - |
+|| AutoMoT: A Unified Vision-Language-Action Model with Asynchronous Mixture-of-Transformers for End-to-End Autonomous Driving | 03/2026 | [📄 Paper](https://arxiv.org/abs/2603.14851) | - | - |
 || DriveVLM-RL: Neuroscience-Inspired Reinforcement Learning with Vision-Language Models for Safe Autonomous Driving | 03/2026 | [📄 Paper](https://arxiv.org/abs/2603.18315) | - | - |
 || HiST-VLA: A Hierarchical Spatio-Temporal Vision-Language-Action Model for End-to-End Autonomous Driving | 02/2026 | [📄 Paper](https://arxiv.org/abs/2602.13329) | - | - |
 || OpenDriveVLA: Towards End-to-end Autonomous Driving with Large Vision Language Action Model | 03/2025 | [📄 Paper](https://arxiv.org/abs/2503.23463) | - | - |
@@ -483,7 +497,7 @@ Welcome to contribute and discuss!
 | ShowUI: One Vision-Language-Action Model for GUI Visual Agent | 2024 | [📄 Paper](https://arxiv.org/pdf/2411.17465) | - | [💾 Code](https://github.com/showlab/ShowUI) |
 | ScreenAgent: A Vision Language Model-driven Computer Control Agent | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.07945) | - | [💾 Code](https://github.com/niuzaisheng/ScreenAgent) |
 | Web Agents with World Models: Learning and Leveraging Environment Dynamics in Web Navigation | 2024 | [📄 Paper](https://arxiv.org/pdf/2410.13232) | - | [💾 Code](https://huggingface.co/papers/2410.13232) |
-|| MolmoWeb: An Open Agent for Automating Web Tasks | 03/2026 | [📄 Blog](https://allenai.org/blog/molmoweb) | [🌍 Website](https://allenai.org/blog/molmoweb) | - |
+|| MolmoWeb: Open Visual Web Agent and Open Data for the Open Web | 04/2026 | [📄 Paper](https://huggingface.tw/papers/2604.08516) | [🌍 Website](https://allenai.org/blog/molmoweb) | [💾 Code](https://github.com/allenai/molmoweb) |
 
 
 #### 4.4.2. <a name='Accessibility'></a>Accessibility
@@ -527,7 +541,9 @@ Welcome to contribute and discuss!
 ### 5.1 <a name='Hallucination'></a>Hallucination
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
-| HALP: Detecting Hallucinations in Vision-Language Models without Generating a Single Token | 03/2026 | [📄 Paper](https://arxiv.org/abs/2603.05465) | [🌍 ACL](https://aclanthology.org/2026.eacl-long.287/) | - |
+| Focus Matters: Phase-Aware Suppression for Hallucination in Vision-Language Models | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.03556) | - | - |
+|| VLMs Need Words: Vision Language Models Ignore Visual Detail in Favor of Semantic Anchors | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.02486) | - | - |
+|| HALP: Detecting Hallucinations in Vision-Language Models without Generating a Single Token | 03/2026 | [📄 Paper](https://arxiv.org/abs/2603.05465) | [🌍 ACL](https://aclanthology.org/2026.eacl-long.287/) | - |
 || Tone Matters: The Impact of Linguistic Tone on Hallucination in VLMs | 01/2026 | [📄 Paper](https://arxiv.org/abs/2601.06460) | - | - |
 || Object Hallucination in Image Captioning | 2018 | [📄 Paper](https://arxiv.org/pdf/1809.02156) | - | - |
 | Evaluating Object Hallucination in Large Vision-Language Models | 2023 | [📄 Paper](https://arxiv.org/pdf/2305.10355) | - | [💾 Code](https://github.com/RUCAIBox/POPE) |
@@ -605,7 +621,10 @@ Welcome to contribute and discuss!
 ### 5.5 <a name=' EfficientTrainingandFineTuning'></a> Efficient Training and Fine-Tuning
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
-| LoRA-Squeeze: Simple and Effective Post-Tuning and In-Tuning Compression of LoRA Modules | 02/2026 | [📄 Paper](https://arxiv.org/abs/2602.10993) | - | - |
+| QAPruner: Quantization-Aware Vision Token Pruning for MLLMs | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.02816) | - | - |
+|| Firebolt-VL: Efficient Vision-Language Understanding with Cross-Modality Modulation | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.04579) | - | - |
+|| CoME-VL: Scaling Complementary Multi-Encoder Vision-Language Learning | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.03231) | - | - |
+|| LoRA-Squeeze: Simple and Effective Post-Tuning and In-Tuning Compression of LoRA Modules | 02/2026 | [📄 Paper](https://arxiv.org/abs/2602.10993) | - | - |
 || GRACE: Gated Relational Alignment via Confidence-based Distillation for Efficient VLMs | 01/2026 | [📄 Paper](https://arxiv.org/abs/2601.22709) | - | - |
 || VLMQ: Post-Training Quantization for Large Vision-Language Models | 2026 (ICLR) | [📄 Paper](https://openreview.net/pdf?id=CXVf8Vx2E2) | - | - |
 || VILA: On Pre-training for Visual Language Models | 2023 | [📄 Paper](https://arxiv.org/pdf/2312.07533) | - | - |

@@ -418,7 +418,7 @@ tbody tr.hidden{display:none}
   <div class="hero-content">
     <div class="pills">
       <span class="pill"><i class="fas fa-circle"></i>CVPR 2025 Workshop</span>
-      <span class="pill"><i class="fas fa-circle"></i>Updated Mar 2026</span>
+      <span class="pill"><i class="fas fa-circle"></i>Updated Apr 2026</span>
       <span class="pill"><i class="fas fa-circle"></i>Open Source</span>
     </div>
     <h1>Vision-Language Models<br/>Survey &amp; Overview</h1>
@@ -461,7 +461,7 @@ tbody tr.hidden{display:none}
 
 <!-- FOOTER -->
 <div class="footer">
-  <p>Built from the <a href="https://arxiv.org/abs/2501.02189" target="_blank">VLM Survey</a> &mdash; Li et al., CVPR 2025 Workshop &mdash; Last updated March 2026</p>
+  <p>Built from the <a href="https://arxiv.org/abs/2501.02189" target="_blank">VLM Survey</a> &mdash; Li et al., CVPR 2025 Workshop &mdash; Last updated April 2026</p>
 </div>
 
 <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
