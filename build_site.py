@@ -191,8 +191,13 @@ def count_entries(sec):
 
 
 def build_html(sections):
-    skip = {'table of contents', 'citation'}
-    filtered = [s for s in sections if s['title'].lower().strip('📄🗂️⚒️⛑️📚🔥 ') not in skip
+    skip = {
+        'table of contents',
+        'citation',
+        'the evolution of vlm architectures',
+        "what's in this repo",
+    }
+    filtered = [s for s in sections if s['title'].lower().strip('📄🗂️⚒️⛑️📚🔥🧭🆕 ') not in skip
                 and not s['title'].lower().startswith('citation')]
     filtered = [s for s in filtered if s['title'].strip()]
 

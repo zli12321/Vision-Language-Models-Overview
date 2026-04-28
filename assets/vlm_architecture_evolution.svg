@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 820" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#fbfbfd"/>
+      <stop offset="100%" stop-color="#f3f4f8"/>
+    </linearGradient>
+
+    <linearGradient id="era1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="era2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="era3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#f472b6"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+    <linearGradient id="era4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+
+    <linearGradient id="bigArrow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#1d4ed8"/>
+      <stop offset="33%"  stop-color="#6d28d9"/>
+      <stop offset="66%"  stop-color="#db2777"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+
+    <marker id="arrHead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="820" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="800" y="48" text-anchor="middle" font-size="28" font-weight="700" fill="#0f172a">
+    The Evolution of Vision-Language Model Architectures
+  </text>
+  <text x="800" y="76" text-anchor="middle" font-size="14" fill="#64748b" font-weight="500">
+    Bridged encoder-decoders &#8594; LLM backbones &#8594; natively-fused inputs &#8594; omni-modal I/O
+  </text>
+
+  <!-- Big progression arrow with 4 stops -->
+  <line x1="60" y1="146" x2="1540" y2="146" stroke="url(#bigArrow)" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="210"  cy="146" r="6" fill="#1d4ed8"/>
+  <circle cx="610"  cy="146" r="6" fill="#6d28d9"/>
+  <circle cx="1010" cy="146" r="6" fill="#db2777"/>
+  <circle cx="1410" cy="146" r="6" fill="#c2410c"/>
+
+  <!-- =============== ERA 1: Bridged Encoder-Decoder =============== -->
+  <g transform="translate(20,170)">
+    <rect width="380" height="600" rx="16" ry="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" filter="url(#cardShadow)"/>
+
+    <rect x="20" y="20" width="160" height="26" rx="13" ry="13" fill="url(#era1)"/>
+    <text x="100" y="38" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="700" letter-spacing="0.6">ERA 1 &#8226; 2020-2023</text>
+
+    <text x="20" y="78"  font-size="22" font-weight="700" fill="#0f172a">Bridged Encoder-Decoder</text>
+    <text x="20" y="100" font-size="13" fill="#64748b">Frozen vision encoder + frozen language model</text>
+    <text x="20" y="118" font-size="13" fill="#64748b">connected via a learned cross-modal bridge.</text>
+
+    <g transform="translate(20,140)">
+      <rect x="0"   y="0" width="160" height="38" rx="8" fill="#eff6ff" stroke="#bfdbfe"/>
+      <text x="80"  y="24" text-anchor="middle" font-size="13" fill="#1e3a8a" font-weight="600">Image</text>
+      <rect x="180" y="0" width="160" height="38" rx="8" fill="#eff6ff" stroke="#bfdbfe"/>
+      <text x="260" y="24" text-anchor="middle" font-size="13" fill="#1e3a8a" font-weight="600">Text</text>
+
+      <line x1="80"  y1="42" x2="80"  y2="68" stroke="#475569" stroke-width="1.6" marker-end="url(#arrHead)"/>
+      <line x1="260" y1="42" x2="260" y2="68" stroke="#475569" stroke-width="1.6" marker-end="url(#arrHead)"/>
+
+      <rect x="0" y="72" width="160" height="44" rx="8" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.4"/>
+      <text x="80" y="92"  text-anchor="middle" font-size="13" fill="#1d4ed8" font-weight="700">ViT / ResNet</text>
+      <text x="80" y="108" text-anchor="middle" font-size="11" fill="#64748b">CLIP-style encoder</text>
+
+      <rect x="180" y="72" width="160" height="44" rx="8" fill="#ffffff" stroke="#475569" stroke-width="1.4"/>
+      <text x="260" y="92"  text-anchor="middle" font-size="13" fill="#0f172a" font-weight="700">Text Tokenizer</text>
+      <text x="260" y="108" text-anchor="middle" font-size="11" fill="#64748b">subword</text>
+
+      <line x1="80"  y1="120" x2="80"  y2="148" stroke="#475569" stroke-width="1.6"/>
+      <line x1="260" y1="120" x2="260" y2="148" stroke="#475569" stroke-width="1.6"/>
+      <line x1="80"  y1="148" x2="260" y2="148" stroke="#475569" stroke-width="1.6"/>
+      <line x1="170" y1="148" x2="170" y2="172" stroke="#475569" stroke-width="1.6" marker-end="url(#arrHead)"/>
+
+      <rect x="60" y="176" width="220" height="44" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.4"/>
+      <text x="170" y="196" text-anchor="middle" font-size="13" fill="#1d4ed8" font-weight="700">Q-Former / Cross-Attn Bridge</text>
+      <text x="170" y="212" text-anchor="middle" font-size="11" fill="#475569">learnable connector</text>
+
+      <line x1="170" y1="224" x2="170" y2="248" stroke="#475569" stroke-width="1.6" marker-end="url(#arrHead)"/>
+
+      <rect x="40" y="252" width="260" height="44" rx="8" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.4" stroke-dasharray="4 3"/>
+      <text x="170" y="272" text-anchor="middle" font-size="13" fill="#1d4ed8" font-weight="700">Frozen Language Model</text>
+      <text x="170" y="288" text-anchor="middle" font-size="11" fill="#64748b">T5 / OPT / Chinchilla</text>
+
+      <line x1="170" y1="300" x2="170" y2="324" stroke="#475569" stroke-width="1.6" marker-end="url(#arrHead)"/>
+
+      <rect x="100" y="328" width="140" height="32" rx="8" fill="#0f172a"/>
+      <text x="170" y="348" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="600">Text only</text>
+    </g>
+
+    <text x="20" y="540" font-size="11" fill="#94a3b8" font-weight="700" letter-spacing="0.5">REPRESENTATIVE MODELS</text>
+    <text x="20" y="558" font-size="12" fill="#0f172a">CLIP &#8226; BLIP &#8226; BLIP-2 &#8226; Flamingo</text>
+    <text x="20" y="575" font-size="12" fill="#0f172a">InstructBLIP &#8226; CogVLM &#8226; NVLM</text>
+  </g>
+
+  <!-- =============== ERA 2: LLM Backbone =============== -->
+  <g transform="translate(420,170)">
+    <rect width="380" height="600" rx="16" ry="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" filter="url(#cardShadow)"/>
+
+    <rect x="20" y="20" width="160" height="26" rx="13" ry="13" fill="url(#era2)"/>
+    <text x="100" y="38" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="700" letter-spacing="0.6">ERA 2 &#8226; 2023-2025</text>
+
+    <text x="20" y="78"  font-size="22" font-weight="700" fill="#0f172a">LLM Backbone (Adapter-ed)</text>
+    <text x="20" y="100" font-size="13" fill="#64748b">A pretrained LLM is the trunk; vision is added</text>
+    <text x="20" y="118" font-size="13" fill="#64748b">via a projector that maps image tokens into it.</text>
+
+    <g transform="translate(20,140)">
+      <rect x="0"   y="0" width="160" height="38" rx="8" fill="#f5f3ff" stroke="#ddd6fe"/>
+      <text x="80"  y="24" text-anchor="middle" font-size="13" fill="#5b21b6" font-weight="600">Image</text>
+      <rect x="180" y="0" width="160" height="38" rx="8" fill="#f5f3ff" stroke="#ddd6fe"/>
+      <text x="260" y="24" text-anchor="middle" font-size="13" fill="#5b21b6" font-weight="600">Text</text>
+
+      <line x1="80"  y1="42" x2="80"  y2="68" stroke="#475569" stroke-width="1.6" marker-end="url(#arrHead)"/>
+      <line x1="260" y1="42" x2="260" y2="68" stroke="#475569" stroke-width="1.6" marker-end="url(#arrHead)"/>
+
+      <rect x="0" y="72" width="160" height="44" rx="8" fill="#ffffff" stroke="#6d28d9" stroke-width="1.4"/>
+      <text x="80" y="92"  text-anchor="middle" font-size="13" fill="#6d28d9" font-weight="700">ViT (e.g., SigLIP)</text>
+      <text x="80" y="108" text-anchor="middle" font-size="11" fill="#64748b">trained / fine-tuned</text>
+
+      <rect x="180" y="72" width="160" height="44" rx="8" fill="#ffffff" stroke="#475569" stroke-width="1.4"/>
+      <text x="260" y="92"  text-anchor="middle" font-size="13" fill="#0f172a" font-weight="700">LLM Tokenizer</text>
+      <text x="260" y="108" text-anchor="middle" font-size="11" fill="#64748b">shared vocabulary</text>
+
+      <line x1="80" y1="120" x2="80" y2="148" stroke="#475569" stroke-width="1.6" marker-end="url(#arrHead)"/>
+      <rect x="0" y="152" width="160" height="44" rx="8" fill="#ede9fe" stroke="#6d28d9" stroke-width="1.4"/>
+      <text x="80" y="172" text-anchor="middle" font-size="13" fill="#6d28d9" font-weight="700">MLP / Resampler</text>
+      <text x="80" y="188" text-anchor="middle" font-size="11" fill="#475569">image -&gt; LLM tokens</text>
+
+      <line x1="80" y1="200" x2="80" y2="224" stroke="#475569" stroke-width="1.6"/>
+      <line x1="260" y1="120" x2="260" y2="224" stroke="#475569" stroke-width="1.6"/>
+      <line x1="80"  y1="224" x2="260" y2="224" stroke="#475569" stroke-width="1.6"/>
+      <line x1="170" y1="224" x2="170" y2="248" stroke="#475569" stroke-width="1.6" marker-end="url(#arrHead)"/>
+
+      <rect x="40" y="252" width="260" height="58" rx="8" fill="#ede9fe" stroke="#6d28d9" stroke-width="1.6"/>
+      <text x="170" y="276" text-anchor="middle" font-size="14" fill="#5b21b6" font-weight="700">Pretrained LLM Backbone</text>
+      <text x="170" y="295" text-anchor="middle" font-size="11" fill="#64748b">Vicuna &#8226; LLaMA &#8226; Qwen &#8226; Phi &#8226; InternLM</text>
+
+      <line x1="170" y1="314" x2="170" y2="338" stroke="#475569" stroke-width="1.6" marker-end="url(#arrHead)"/>
+      <rect x="100" y="342" width="140" height="32" rx="8" fill="#0f172a"/>
+      <text x="170" y="362" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="600">Text only</text>
+    </g>
+
+    <text x="20" y="540" font-size="11" fill="#94a3b8" font-weight="700" letter-spacing="0.5">REPRESENTATIVE MODELS</text>
+    <text x="20" y="558" font-size="12" fill="#0f172a">LLaVA &#8226; Qwen2.5-VL &#8226; InternVL3 &#8226; GPT-4V</text>
+    <text x="20" y="575" font-size="12" fill="#0f172a">Phi-4-V &#8226; LLaMA-3.2-Vision &#8226; Pixtral</text>
+  </g>
+
+  <!-- =============== ERA 3a: Native Multimodal Input (text out) =============== -->
+  <g transform="translate(820,170)">
+    <rect width="380" height="600" rx="16" ry="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" filter="url(#cardShadow)"/>
+
+    <rect x="20" y="20" width="200" height="26" rx="13" ry="13" fill="url(#era3)"/>
+    <text x="120" y="38" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="700" letter-spacing="0.6">ERA 3a &#8226; 2025-2026</text>
+
+    <text x="20" y="78"  font-size="22" font-weight="700" fill="#0f172a">Native Multimodal Input</text>
+    <text x="20" y="100" font-size="13" fill="#64748b">One transformer, early fusion of all modalities</text>
+    <text x="20" y="118" font-size="13" fill="#64748b">on input. Output remains autoregressive text.</text>
+
+    <g transform="translate(20,140)">
+      <!-- Inputs (3-wide, 100w + 20gap) -->
+      <rect x="0"   y="0" width="100" height="38" rx="8" fill="#fdf2f8" stroke="#fbcfe8"/>
+      <text x="50"  y="24" text-anchor="middle" font-size="12" fill="#9d174d" font-weight="600">Image</text>
+      <rect x="120" y="0" width="100" height="38" rx="8" fill="#fdf2f8" stroke="#fbcfe8"/>
+      <text x="170" y="24" text-anchor="middle" font-size="12" fill="#9d174d" font-weight="600">Video</text>
+      <rect x="240" y="0" width="100" height="38" rx="8" fill="#fdf2f8" stroke="#fbcfe8"/>
+      <text x="290" y="24" text-anchor="middle" font-size="12" fill="#9d174d" font-weight="600">Text</text>
+
+      <line x1="50"  y1="42" x2="170" y2="78" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
+      <line x1="170" y1="42" x2="170" y2="78" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
+      <line x1="290" y1="42" x2="170" y2="78" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
+
+      <!-- Unified token stream -->
+      <rect x="40" y="84" width="260" height="44" rx="8" fill="#fce7f3" stroke="#db2777" stroke-width="1.4"/>
+      <text x="170" y="104" text-anchor="middle" font-size="13" fill="#9d174d" font-weight="700">Unified Token Stream</text>
+      <text x="170" y="120" text-anchor="middle" font-size="11" fill="#64748b">early fusion &#8226; shared vocabulary</text>
+
+      <line x1="170" y1="132" x2="170" y2="156" stroke="#475569" stroke-width="1.6" marker-end="url(#arrHead)"/>
+
+      <!-- Single backbone -->
+      <rect x="20" y="160" width="300" height="80" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="1.8"/>
+      <text x="170" y="186" text-anchor="middle" font-size="15" fill="#9d174d" font-weight="700">Single Multimodal Transformer</text>
+      <text x="170" y="206" text-anchor="middle" font-size="11" fill="#64748b">trained from scratch on text + vision (+ audio)</text>
+      <text x="170" y="222" text-anchor="middle" font-size="11" fill="#64748b">often MoE &#8226; 128K-10M context</text>
+
+      <!-- Single output (text only) -->
+      <line x1="170" y1="244" x2="170" y2="280" stroke="#475569" stroke-width="1.6" marker-end="url(#arrHead)"/>
+
+      <rect x="60"  y="252" width="220" height="32" rx="8" fill="#ffffff" stroke="#db2777" stroke-width="1.2" opacity="0"/>
+
+      <rect x="100" y="284" width="140" height="32" rx="8" fill="#0f172a"/>
+      <text x="170" y="304" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="600">Text only</text>
+
+      <text x="170" y="334" text-anchor="middle" font-size="10" fill="#9d174d" font-style="italic">image / audio / video in &#8594; text out</text>
+    </g>
+
+    <text x="20" y="540" font-size="11" fill="#94a3b8" font-weight="700" letter-spacing="0.5">REPRESENTATIVE MODELS</text>
+    <text x="20" y="558" font-size="12" fill="#0f172a">Qwen3.5 / Qwen3.6 &#8226; Gemma 4 &#8226; Gemini 3</text>
+    <text x="20" y="575" font-size="12" fill="#0f172a">GPT-5.4 &#8226; Phi-4-Reasoning-V &#8226; Claude 4.6</text>
+  </g>
+
+  <!-- =============== ERA 3b: Omni-Modal Unified I/O =============== -->
+  <g transform="translate(1220,170)">
+    <rect width="380" height="600" rx="16" ry="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" filter="url(#cardShadow)"/>
+
+    <rect x="20" y="20" width="200" height="26" rx="13" ry="13" fill="url(#era4)"/>
+    <text x="120" y="38" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="700" letter-spacing="0.6">ERA 3b &#8226; 2025-2026+</text>
+
+    <text x="20" y="78"  font-size="22" font-weight="700" fill="#0f172a">Omni-Modal Unified I/O</text>
+    <text x="20" y="100" font-size="13" fill="#64748b">Multimodal input AND output in one model via</text>
+    <text x="20" y="118" font-size="13" fill="#64748b">decoder heads (image VAE / MMDiT / audio codec).</text>
+
+    <g transform="translate(20,140)">
+      <!-- Inputs (4-wide, 80w + 7gap) -->
+      <rect x="0"   y="0" width="80" height="38" rx="8" fill="#fff7ed" stroke="#fed7aa"/>
+      <text x="40"  y="24" text-anchor="middle" font-size="12" fill="#9a3412" font-weight="600">Image</text>
+      <rect x="87"  y="0" width="80" height="38" rx="8" fill="#fff7ed" stroke="#fed7aa"/>
+      <text x="127" y="24" text-anchor="middle" font-size="12" fill="#9a3412" font-weight="600">Video</text>
+      <rect x="174" y="0" width="80" height="38" rx="8" fill="#fff7ed" stroke="#fed7aa"/>
+      <text x="214" y="24" text-anchor="middle" font-size="12" fill="#9a3412" font-weight="600">Audio</text>
+      <rect x="261" y="0" width="79" height="38" rx="8" fill="#fff7ed" stroke="#fed7aa"/>
+      <text x="300" y="24" text-anchor="middle" font-size="12" fill="#9a3412" font-weight="600">Text</text>
+
+      <line x1="40"  y1="42" x2="170" y2="78" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
+      <line x1="127" y1="42" x2="170" y2="78" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
+      <line x1="214" y1="42" x2="170" y2="78" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
+      <line x1="300" y1="42" x2="170" y2="78" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
+
+      <!-- Unified token stream -->
+      <rect x="40" y="84" width="260" height="44" rx="8" fill="#ffedd5" stroke="#c2410c" stroke-width="1.4"/>
+      <text x="170" y="104" text-anchor="middle" font-size="13" fill="#9a3412" font-weight="700">Unified Token Stream</text>
+      <text x="170" y="120" text-anchor="middle" font-size="11" fill="#64748b">discrete image / audio codes + text</text>
+
+      <line x1="170" y1="132" x2="170" y2="156" stroke="#475569" stroke-width="1.6" marker-end="url(#arrHead)"/>
+
+      <!-- Single backbone -->
+      <rect x="20" y="160" width="300" height="74" rx="10" fill="#ffedd5" stroke="#c2410c" stroke-width="1.8"/>
+      <text x="170" y="184" text-anchor="middle" font-size="15" fill="#9a3412" font-weight="700">Single Multimodal Transformer</text>
+      <text x="170" y="202" text-anchor="middle" font-size="11" fill="#64748b">autoregressive over interleaved tokens</text>
+      <text x="170" y="218" text-anchor="middle" font-size="11" fill="#64748b">+ optional diffusion / flow head</text>
+
+      <!-- Three branching arrows from transformer to decoder heads -->
+      <line x1="50"  y1="237" x2="50"  y2="259" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
+      <line x1="170" y1="237" x2="170" y2="259" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
+      <line x1="290" y1="237" x2="290" y2="259" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
+
+      <!-- Decoder heads (3 boxes, 100w + 20gap) -->
+      <rect x="0"   y="263" width="100" height="32" rx="8" fill="#ffffff" stroke="#c2410c" stroke-width="1.2"/>
+      <text x="50"  y="283" text-anchor="middle" font-size="11" fill="#c2410c" font-weight="600">LM head</text>
+      <rect x="120" y="263" width="100" height="32" rx="8" fill="#ffffff" stroke="#c2410c" stroke-width="1.2"/>
+      <text x="170" y="283" text-anchor="middle" font-size="11" fill="#c2410c" font-weight="600">Image decoder</text>
+      <rect x="240" y="263" width="100" height="32" rx="8" fill="#ffffff" stroke="#c2410c" stroke-width="1.2"/>
+      <text x="290" y="283" text-anchor="middle" font-size="11" fill="#c2410c" font-weight="600">Audio codec</text>
+
+      <!-- Arrows from heads to outputs -->
+      <line x1="50"  y1="298" x2="50"  y2="320" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
+      <line x1="170" y1="298" x2="170" y2="320" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
+      <line x1="290" y1="298" x2="290" y2="320" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
+
+      <!-- Output boxes (3 boxes, 100w + 20gap) -->
+      <rect x="0"   y="324" width="100" height="32" rx="8" fill="#0f172a"/>
+      <text x="50"  y="344" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="600">Text</text>
+      <rect x="120" y="324" width="100" height="32" rx="8" fill="#0f172a"/>
+      <text x="170" y="344" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="600">Image</text>
+      <rect x="240" y="324" width="100" height="32" rx="8" fill="#0f172a"/>
+      <text x="290" y="344" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="600">Speech</text>
+    </g>
+
+    <text x="20" y="540" font-size="11" fill="#94a3b8" font-weight="700" letter-spacing="0.5">REPRESENTATIVE MODELS</text>
+    <text x="20" y="558" font-size="12" fill="#0f172a">BAGEL &#8226; Qwen3.5-Omni &#8226; InternVL-U</text>
+    <text x="20" y="575" font-size="12" fill="#0f172a">Emu3 / 3.5 &#8226; Erin 5.0 &#8226; DeepSeek-Janus-Pro</text>
+  </g>
+
+  <!-- Bottom shift labels -->
+  <g transform="translate(0,790)">
+    <text x="210"  y="22" text-anchor="middle" font-size="12" fill="#475569" font-weight="600">two-tower &#8226; post-hoc alignment</text>
+    <text x="610"  y="22" text-anchor="middle" font-size="12" fill="#475569" font-weight="600">vision-as-adapter &#8226; LLM does the reasoning</text>
+    <text x="1010" y="22" text-anchor="middle" font-size="12" fill="#475569" font-weight="600">early-fused input &#8226; text output</text>
+    <text x="1410" y="22" text-anchor="middle" font-size="12" fill="#475569" font-weight="600">any modality in &#8226; any modality out</text>
+  </g>
+</svg>

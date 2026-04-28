@@ -4,6 +4,25 @@
 
 A most Frontend Collection and survey of vision-language model papers, and models GitHub repository
 
+---
+
+## 🧭 The Evolution of VLM Architectures
+
+VLM design has gone through **three distinct architectural eras** in just five years — and Era 3 has split into two parallel branches. Early models bridged a frozen vision encoder to a frozen language model with a learnable connector (CLIP, BLIP, Flamingo). The 2023–2025 generation made a pretrained **LLM the trunk** and treated vision as a bolt-on adapter (LLaVA, Qwen2.5-VL, GPT-4V). The latest 2025–2026 generation drops the bridge entirely and trains **a single transformer from scratch** on mixed-modality data — but it forks along the *output* axis:
+
+- **Era 3a — Native Multimodal Input → Text Out.** Image, video, and (sometimes) audio enter a single early-fused token stream, but generation is still autoregressive text. This is the design used by today's general-purpose flagships: **Qwen3.5 / Qwen3.6, Gemma 4, Gemini 3, GPT-5.4, Phi-4-Reasoning-Vision, Claude Opus 4.6**.
+- **Era 3b — Omni-Modal Unified I/O.** The same fused trunk plus dedicated **image decoder** (VAE / MMDiT / flow-matching) and/or **audio codec** decoder heads, so the model can also *generate* images and speech. This is the design used by unified models: **BAGEL, Qwen3.5-Omni, InternVL-U, Emu3 / Emu3.5, Erin 5.0, DeepSeek-Janus-Pro**.
+
+<p align="center">
+  <img src="assets/vlm_architecture_evolution.svg" alt="The Evolution of Vision-Language Model Architectures: bridged encoder-decoders, LLM-backbone adapter models, natively-fused-input text-output models, and omni-modal unified-I/O models" width="100%"/>
+</p>
+
+> **Reading the diagram (left → right).** *Era 1* uses a **two-tower** design with a learnable cross-modal bridge (e.g. Q-Former) into a frozen LM — text-only output. *Era 2* puts a **pretrained LLM** at the center; an MLP/Resampler projects visual tokens into the LLM's vocabulary, and the LLM does all the reasoning — still text-only output. *Era 3a* drops the bridge: image, video, audio, and text share a **single tokenizer/embedding space** and flow through **one transformer** trained from scratch — but the output is still autoregressive **text**. *Era 3b* keeps that fused trunk and adds **decoder heads** (image VAE/MMDiT, audio codec) so the model can natively output *text, image, and/or speech*. Era 3a and Era 3b coexist; the choice is essentially "how much do you want non-text generation?"
+
+---
+
+## 🆕 What's in this repo
+
 Below we compile *awesome* papers and model and github repositories that 
 - **State-of-the-Art VLMs** Collection of newest to oldest VLMs (we'll keep updating new models and benchmarks).
 - **Evaluate** VLM benchmarks and corresponding link to the works
@@ -11,6 +30,13 @@ Below we compile *awesome* papers and model and github repositories that
 - **Applications** applications of VLMs in embodied AI, robotics, etc.
 - Contribute **surveys**, **perspectives**, and **datasets** on the above topics.
 
+### Progressive research reports
+
+We track new VLMs, benchmarks, and post-training methods that haven't yet been folded into the main tables in dated mini-surveys:
+
+- 📰 [`2026-04-28`](progressive%20reports/2026-04-28.md) — **latest**: Qwen3.6-27B & Qwen3.6-35B-A3B, Claude Mythos (gated), S1-VL, GLM-5V-Turbo, FreshPER / GMPO / ARPO / GRPO-VPS, QUOTA, Fast-dVLM, VLA-World, SpanVLA, VLA-Forget, R-VLM, UILoop, WebForge, WorldMark, Video-MME-v2, CrossMath, BabyVision, SlowBA — **30 new entries** since April 13.
+- 📰 [`2026-04-13`](progressive%20reports/2026-04-13.md) — LFM2.5-VL-450M, EXAONE 4.5, Gemma 4, Granite 4.0 3B Vision, InternVL-U, GLM-4.6V, Vero, MolmoWeb, UniDriveVLA, QAPruner, Firebolt-VL, CoME-VL, and more.
+- 📰 [`2026-03-25`](progressive%20reports/2026-03-25.md) — GPT-5.4, Phi-4-Reasoning-Vision-15B, Gemini 3.0, Qwen3.5, Claude Opus 4.6, Molmo2, and more.
 
 Welcome to contribute and discuss!
 
