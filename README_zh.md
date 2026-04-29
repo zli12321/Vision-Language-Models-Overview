@@ -1,92 +1,94 @@
-# Benchmark and Evaluations, RL Alignment, Applications, and Challenges of Large Vision Language Models
+# 大型视觉-语言模型综述：基准评测、强化对齐、应用与挑战
 
-> **🌐 Language**: **English** · [简体中文](README_zh.md)
+> **🌐 Language**: [English](README.md) · **简体中文**
 
 [![Website](https://img.shields.io/badge/🌐_Website-VLM_Survey-6366f1?style=for-the-badge)](https://zli12321.github.io/VLM_Survey/) [![Paper](https://img.shields.io/badge/📄_Paper-arXiv-b31b1b?style=for-the-badge)](https://arxiv.org/abs/2501.02189) [![Stars](https://img.shields.io/github/stars/zli12321/Vision-Language-Models-Overview?style=for-the-badge&color=f59e0b)](https://github.com/zli12321/Vision-Language-Models-Overview)
 
-A most Frontend Collection and survey of vision-language model papers, and models GitHub repository
+一个最前沿的视觉-语言模型论文、模型与代码仓库的综合整理与综述。
+
+> **关于翻译范围**：为了便于维护并保留技术术语的精确性，下方各表格中的论文标题、模型名称、数据集名称与链接均保持英文原文；前言、章节标题、表格列名、以及小节描述均译为中文。
 
 ---
 
-## 🧭 The Evolution of VLM Architectures
+## 🧭 视觉-语言模型架构演进
 
-VLM design has gone through **three distinct architectural eras** in just five years — and Era 3 has split into two parallel branches. Early models bridged a frozen vision encoder to a frozen language model with a learnable connector (CLIP, BLIP, Flamingo). The 2023–2025 generation made a pretrained **LLM the trunk** and treated vision as a bolt-on adapter (LLaVA, Qwen2.5-VL, GPT-4V). The latest 2025–2026 generation drops the bridge entirely and trains **a single transformer from scratch** on mixed-modality data — but it forks along the *output* axis:
+视觉-语言模型（VLM）的设计在短短五年间经历了**三个截然不同的架构时代** —— 而第三代又分化为两个并行的分支。早期模型用一个可学习的连接器将冻结的视觉编码器桥接到冻结的语言模型（CLIP、BLIP、Flamingo）。2023–2025 年的一代将**预训练 LLM 作为主干**，把视觉作为外挂适配器接入（LLaVA、Qwen2.5-VL、GPT-4V）。最新的 2025–2026 年这一代则完全抛弃了桥接器，**从零开始训练一个统一的 Transformer**来处理混合模态数据 —— 但它沿*输出*维度分叉为两支：
 
-- **Era 3a — Native Multimodal Input → Text Out.** Image, video, and (sometimes) audio enter a single early-fused token stream, but generation is still autoregressive text. This is the design used by today's general-purpose flagships: **Qwen3.5 / Qwen3.6, Gemma 4, Gemini 3, GPT-5.4, Phi-4-Reasoning-Vision, Claude Opus 4.6**.
-- **Era 3b — Omni-Modal Unified I/O.** The same fused trunk plus dedicated **image decoder** (VAE / MMDiT / flow-matching) and/or **audio codec** decoder heads, so the model can also *generate* images and speech. This is the design used by unified models: **BAGEL, Qwen3.5-Omni, InternVL-U, Emu3 / Emu3.5, Erin 5.0, DeepSeek-Janus-Pro**.
+- **第三代 a — 原生多模态输入 → 文本输出。** 图像、视频、（有时）音频统一进入早期融合的 token 流，但生成仍然是自回归文本。这是当今通用旗舰模型采用的设计：**Qwen3.5 / Qwen3.6、Gemma 4、Gemini 3、GPT-5.4、Phi-4-Reasoning-Vision、Claude Opus 4.6**。
+- **第三代 b — 全模态统一 I/O。** 同样的融合主干，再加上专用的**图像解码器**（VAE / MMDiT / Flow-Matching）和/或**音频编解码器**解码头，使得模型也能*生成*图像与语音。这是统一模型采用的设计：**BAGEL、Qwen3.5-Omni、InternVL-U、Emu3 / Emu3.5、Erin 5.0、DeepSeek-Janus-Pro**。
 
 <p align="center">
-  <img src="assets/vlm_architecture_evolution.svg" alt="The Evolution of Vision-Language Model Architectures: bridged encoder-decoders, LLM-backbone adapter models, natively-fused-input text-output models, and omni-modal unified-I/O models" width="100%"/>
+  <img src="assets/vlm_architecture_evolution.svg" alt="视觉-语言模型架构演进图：从桥接式编码器-解码器，到 LLM 主干适配器模型，再到原生融合输入文本输出的模型，以及全模态统一 I/O 模型" width="100%"/>
 </p>
 
-> **Reading the diagram (left → right).** *Era 1* uses a **two-tower** design with a learnable cross-modal bridge (e.g. Q-Former) into a frozen LM — text-only output. *Era 2* puts a **pretrained LLM** at the center; an MLP/Resampler projects visual tokens into the LLM's vocabulary, and the LLM does all the reasoning — still text-only output. *Era 3a* drops the bridge: image, video, audio, and text share a **single tokenizer/embedding space** and flow through **one transformer** trained from scratch — but the output is still autoregressive **text**. *Era 3b* keeps that fused trunk and adds **decoder heads** (image VAE/MMDiT, audio codec) so the model can natively output *text, image, and/or speech*. Era 3a and Era 3b coexist; the choice is essentially "how much do you want non-text generation?"
+> **图示阅读（从左至右）。** *第一代*采用**双塔**设计，通过一个可学习的跨模态桥（如 Q-Former）连接到冻结的 LM —— 仅文本输出。*第二代*以**预训练 LLM** 为中心；MLP/Resampler 将视觉 token 投影到 LLM 的词表空间，由 LLM 完成全部推理 —— 仍是文本输出。*第三代 a* 抛弃桥接器：图像、视频、音频与文本共享**单一分词器/嵌入空间**，并经过**一个从零训练的 Transformer** —— 但输出依然是自回归**文本**。*第三代 b* 保留这一融合主干，并加入**解码头**（图像 VAE/MMDiT、音频编解码），使模型能原生输出*文本、图像和/或语音*。第三代 a 与第三代 b 并存；选择基本上取决于"你需要多少非文本生成？"。
 
 ---
 
-## 🆕 What's in this repo
+## 🆕 本仓库内容
 
-Below we compile *awesome* papers and model and github repositories that 
-- **State-of-the-Art VLMs** Collection of newest to oldest VLMs (we'll keep updating new models and benchmarks).
-- **Evaluate** VLM benchmarks and corresponding link to the works
-- **Post-training/Alignment** Newest related work for VLM alignment including RL, sft.
-- **Applications** applications of VLMs in embodied AI, robotics, etc.
-- Contribute **surveys**, **perspectives**, and **datasets** on the above topics.
+下面我们汇编了**精选**的论文、模型和 GitHub 仓库，涵盖：
+- **前沿视觉-语言模型** 从最新到最早的 VLM 收录（持续更新新模型与基准）。
+- **评估** VLM 评测基准及其对应工作的链接。
+- **后训练 / 对齐** 包括 RL、SFT 等 VLM 对齐方面的最新工作。
+- **应用** VLM 在具身智能、机器人等领域的应用。
+- 欢迎贡献相关的**综述**、**观点**与**数据集**。
 
-### Progressive research reports
+### 渐进研究报告
 
-We track new VLMs, benchmarks, and post-training methods that haven't yet been folded into the main tables in dated mini-surveys:
+我们用带日期的小型综述追踪那些尚未折叠到主表中的新 VLM、基准与后训练方法：
 
-- 📰 [`2026-04-28`](progressive%20reports/2026-04-28.md) — **latest**: Qwen3.6-27B & Qwen3.6-35B-A3B, Claude Mythos (gated), S1-VL, GLM-5V-Turbo, FreshPER / GMPO / ARPO / GRPO-VPS, QUOTA, Fast-dVLM, VLA-World, SpanVLA, VLA-Forget, R-VLM, UILoop, WebForge, WorldMark, Video-MME-v2, CrossMath, BabyVision, SlowBA — **30 new entries** since April 13.
-- 📰 [`2026-04-13`](progressive%20reports/2026-04-13.md) — LFM2.5-VL-450M, EXAONE 4.5, Gemma 4, Granite 4.0 3B Vision, InternVL-U, GLM-4.6V, Vero, MolmoWeb, UniDriveVLA, QAPruner, Firebolt-VL, CoME-VL, and more.
-- 📰 [`2026-03-25`](progressive%20reports/2026-03-25.md) — GPT-5.4, Phi-4-Reasoning-Vision-15B, Gemini 3.0, Qwen3.5, Claude Opus 4.6, Molmo2, and more.
+- 📰 [`2026-04-28`](progressive%20reports/2026-04-28.md) — **最新**：Qwen3.6-27B & Qwen3.6-35B-A3B、Claude Mythos（受限预览）、S1-VL、GLM-5V-Turbo、FreshPER / GMPO / ARPO / GRPO-VPS、QUOTA、Fast-dVLM、VLA-World、SpanVLA、VLA-Forget、R-VLM、UILoop、WebForge、WorldMark、Video-MME-v2、CrossMath、BabyVision、SlowBA —— 4 月 13 日以来 **30 条新条目**。
+- 📰 [`2026-04-13`](progressive%20reports/2026-04-13.md) — LFM2.5-VL-450M、EXAONE 4.5、Gemma 4、Granite 4.0 3B Vision、InternVL-U、GLM-4.6V、Vero、MolmoWeb、UniDriveVLA、QAPruner、Firebolt-VL、CoME-VL 等。
+- 📰 [`2026-03-25`](progressive%20reports/2026-03-25.md) — GPT-5.4、Phi-4-Reasoning-Vision-15B、Gemini 3.0、Qwen3.5、Claude Opus 4.6、Molmo2 等。
 
-Welcome to contribute and discuss!
-
----
-
-🤩 Papers marked with a ⭐️ are contributed by the maintainers of this repository. If you find them useful, we would greatly appreciate it if you could give the repository a star or cite our paper.
+欢迎贡献与讨论！
 
 ---
 
-## Table of Contents
-* [📄 Paper Link](https://arxiv.org/abs/2501.02189)/[⛑️ Citation](#Citations)
-* 1. [📚 SoTA VLMs](#vlms)
-* 2. [🗂️ Dataset and Evaluation](#Dataset)
-	* 2.1.  [Large Scale Pre-Training & Post-Training Dataset](#TrainingDatasetforVLM)
-	* 2.2.  [Datasets and Evaluation for VLM](#DatasetforVLM)
-	* 2.3.  [Benchmark Datasets, Simulators and Generative Models for Embodied VLM](#DatasetforEmbodiedVLM)
+🤩 标有 ⭐️ 的论文由本仓库的维护者贡献。如果您觉得有用，欢迎给本仓库 Star 或引用我们的论文。
 
-* 3. ##### 🔥 [ Post-Training/Alignment/prompt engineering](#posttraining) 🔥
-	* 3.1.  [RL Alignment for VLM](#alignment)
-	* 3.2.  [Regular finetuning (SFT)](#sft) 
-	* 3.3.  [VLM Alignment Github](#vlm_github)
-	* 3.4.  [Prompt Engineering](#vlm_prompt_engineering)
+---
 
-* 4. [⚒️ Applications](#Toolenhancement)
-	* 4.1. 	[Embodied VLM agents](#EmbodiedVLMagents)
-	* 4.2.	[Generative Visual Media Applications](#GenerativeVisualMediaApplications)
-	* 4.3.	[Robotics and Embodied AI](#RoboticsandEmbodiedAI)
-		* 4.3.1.  [Manipulation](#Manipulation)
-		* 4.3.2.  [Navigation](#Navigation)
-		* 4.3.3.  [Human-robot Interaction](#HumanRobotInteraction)
-  		* 4.3.4.  [Autonomous Driving](#AutonomousDriving)
-	* 4.4. [Human-Centered AI](#Human-CenteredAI)
-		* 4.4.1. [Web Agent](#WebAgent)
-		* 4.4.2. [Accessibility](#Accessibility)
-		* 4.4.3. [Medical and Healthcare](#Healthcare)
-		* 4.4.4. [Social Goodness](#SocialGoodness)
-* 5. [⛑️ Challenges](#Challenges)
-	* 5.1. [Hallucination](#Hallucination)
-	* 5.2. [Safety](#Safety)
-	* 5.3. [Fairness](#Fairness)
-	* 5.4. [Alignment](#Alignment)
-  		* 5.4.1. [Multi-modality Alignment](#MultimodalityAlignment)
-    		* 5.4.2. [Commonsense and Physics Alignment](#CommonsenseAlignment)
- 	* 5.5. [Efficient Training and Fine-Tuning](#EfficientTrainingandFineTuning)
- 	* 5.6. [Scarce of High-quality Dataset](#ScarceofHighqualityDataset)
+## 目录
+* [📄 论文链接](https://arxiv.org/abs/2501.02189) / [⛑️ 引用](#Citations)
+* 1. [📚 前沿视觉-语言模型](#vlms)
+* 2. [🗂️ 数据集与评估](#Dataset)
+	* 2.1.  [大规模预训练与后训练数据集](#TrainingDatasetforVLM)
+	* 2.2.  [VLM 数据集与评估](#DatasetforVLM)
+	* 2.3.  [具身 VLM 的基准、仿真器与生成模型](#DatasetforEmbodiedVLM)
+
+* 3. ##### 🔥 [后训练 / 对齐 / 提示工程](#posttraining) 🔥
+	* 3.1.  [VLM 强化学习对齐](#alignment)
+	* 3.2.  [常规微调 (SFT)](#sft) 
+	* 3.3.  [VLM 对齐相关 GitHub 仓库](#vlm_github)
+	* 3.4.  [提示工程](#vlm_prompt_engineering)
+
+* 4. [⚒️ 应用](#Toolenhancement)
+	* 4.1. 	[具身 VLM 智能体](#EmbodiedVLMagents)
+	* 4.2.	[生成式视觉媒体应用](#GenerativeVisualMediaApplications)
+	* 4.3.	[机器人与具身智能](#RoboticsandEmbodiedAI)
+		* 4.3.1.  [机械臂操作](#Manipulation)
+		* 4.3.2.  [导航](#Navigation)
+		* 4.3.3.  [人机交互](#HumanRobotInteraction)
+  		* 4.3.4.  [自动驾驶](#AutonomousDriving)
+	* 4.4. [以人为中心的 AI](#Human-CenteredAI)
+		* 4.4.1. [网页 / GUI 智能体](#WebAgent)
+		* 4.4.2. [无障碍](#Accessibility)
+		* 4.4.3. [医疗与健康](#Healthcare)
+		* 4.4.4. [社会公益](#SocialGoodness)
+* 5. [⛑️ 挑战与局限](#Challenges)
+	* 5.1. [幻觉](#Hallucination)
+	* 5.2. [安全](#Safety)
+	* 5.3. [公平性](#Fairness)
+	* 5.4. [对齐](#Alignment)
+  		* 5.4.1. [多模态对齐](#MultimodalityAlignment)
+    		* 5.4.2. [常识与物理对齐](#CommonsenseAlignment)
+ 	* 5.5. [高效训练与微调](#EfficientTrainingandFineTuning)
+ 	* 5.6. [高质量数据稀缺](#ScarceofHighqualityDataset)
 
 
-## 0. <a name='Citations'></a>Citation
+## 0. <a name='Citations'></a>引用
 
 ```
 @InProceedings{Li_2025_CVPR,
@@ -101,8 +103,11 @@ Welcome to contribute and discuss!
 
 ---
 
-##  1. <a name='vlms'></a>📚 SoTA VLMs 
-| Model                                                        | Year | Architecture   | Training Data               | Parameters     | Vision Encoder/Tokenizer                       | Pretrained Backbone Model                          |
+##  1. <a name='vlms'></a>📚 前沿视觉-语言模型 
+
+> 表格按发布时间从新到旧排序。各列依次为：模型 · 年份 · 架构 · 训练数据 · 参数量 · 视觉编码器/分词器 · 预训练主干。
+
+| 模型 | 年份 | 架构 | 训练数据 | 参数量 | 视觉编码器/分词器 | 预训练主干 |
 |--------------------------------------------------------------|------|----------------|-----------------------------|----------------|-----------------------------------------------|---------------------------------------------------|
 | [Qwen3.6-27B (Alibaba)](https://qwen.ai/blog?id=qwen3.6-27b) | 04/22/2026 | Decoder-only / natively multimodal input (thinking + non-thinking) | Multimodal pretraining + agentic mid-training | 27B dense | Native multimodal ViT | Qwen3.6 |
 | [Qwen3.6-35B-A3B (Alibaba)](https://qwen.ai/blog?id=qwen3.6-35b-a3b) | 04/15/2026 | MoE / natively multimodal input | Multimodal pretraining + agentic SFT/RL | 35B total · 3B active | Native multimodal ViT | Qwen3.6 |
@@ -147,7 +152,7 @@ Welcome to contribute and discuss!
 | [SmolVLM](https://huggingface.co/blog/smolervlm)             | 2025 | Decoder-only   | [SmolVLM-Instruct](https://huggingface.co/HuggingFaceTB/SmolVLM-Instruct/blob/main/smolvlm-data.pdf) | 250M & 500M     | SigLIP                                | [SmolLM](https://huggingface.co/blog/smollm)   
 | [DeepSeek-Janus-Pro](https://janusai.pro/wp-content/uploads/2025/01/janus_pro_tech_report.pdf)             | 2025 | Decoder-only   | Undisclosed | 7B     | SigLIP                                | [DeepSeek-Janus-Pro](https://huggingface.co/deepseek-ai/Janus-Pro-7B)                                      |
 | [Inst-IT](https://arxiv.org/abs/2412.03565) | 2024 | Decoder-only | [Inst-IT Dataset](https://huggingface.co/datasets/Inst-IT/Inst-It-Dataset), [LLaVA-NeXT-Data](https://huggingface.co/datasets/lmms-lab/LLaVA-NeXT-Data) | 7B | CLIP/Vicuna, SigLIP/Qwen2 | [LLaVA-NeXT](https://huggingface.co/liuhaotian/llava-v1.6-vicuna-7b) |
- [DeepSeek-VL2](https://arxiv.org/pdf/2412.10302)             | 2024 | Decoder-only   | [WiT](https://huggingface.co/datasets/google/wit), [WikiHow](https://huggingface.co/datasets/ajibawa-2023/WikiHow) | 4.5B x 74      | SigLIP/SAMB                                  | [DeepSeekMoE](https://arxiv.org/pdf/2412.10302)                                      |
+| [DeepSeek-VL2](https://arxiv.org/pdf/2412.10302)             | 2024 | Decoder-only   | [WiT](https://huggingface.co/datasets/google/wit), [WikiHow](https://huggingface.co/datasets/ajibawa-2023/WikiHow) | 4.5B x 74      | SigLIP/SAMB                                  | [DeepSeekMoE](https://arxiv.org/pdf/2412.10302)                                      |
 | [xGen-MM (BLIP-3)](https://arxiv.org/pdf/2408.08872) | 2024 | Decoder-only | [MINT-1T](https://arxiv.org/pdf/2406.11271), [OBELICS](https://arxiv.org/pdf/2306.16527), [Caption](https://github.com/salesforce/LAVIS/tree/xgen-mm?tab=readme-ov-file#data-preparation) | 4B | ViT + [Perceiver Resampler](https://arxiv.org/pdf/2204.14198) | [Phi-3-mini](https://arxiv.org/pdf/2404.14219) |
 | [TransFusion](https://arxiv.org/pdf/2408.11039)              | 2024 | Encoder-decoder| Undisclosed                 | 7B             | VAE Encoder                                  | Pretrained from scratch on transformer architecture |
 | [Baichuan Ocean Mini](https://arxiv.org/pdf/2410.08565)      | 2024 | Decoder-only   | Image/Video/Audio/Text      | 7B             | CLIP ViT-L/14                                | [Baichuan](https://arxiv.org/pdf/2309.10305)                                         |
@@ -172,9 +177,12 @@ Welcome to contribute and discuss!
 
 
 
-##  2. <a name='Dataset'></a>🗂️ Benchmarks and Evaluation
-### 2.1. <a name='TrainingDatasetforVLM'></a> Datasets for Training VLMs
-| Dataset | Task |  Size |
+##  2. <a name='Dataset'></a>🗂️ 基准与评估
+### 2.1. <a name='TrainingDatasetforVLM'></a> VLM 训练数据集
+
+> 用于 VLM 预训练 / 后训练的大规模多模态语料。
+
+| 数据集 | 任务 |  规模 |
 |---------|------|---------------|
 | [MolmoWebMix (Allen AI)](https://huggingface.tw/papers/2604.08516)(04/2026) | Web Agent Training Trajectories | 100K+ synthetic + 30K human demos |
 | [Vero-600K](https://arxiv.org/html/2604.04917v1)(04/2026) | Broad Visual Reasoning RL Training | 600K samples from 59 datasets, 6 task categories |
@@ -188,117 +196,121 @@ Welcome to contribute and discuss!
 
 
 
-### 2.2. <a name='DatasetforVLM'></a> Datasets and Evaluation for VLM
-### 🧮 Visual Math (+ Visual Math Reasoning)
+### 2.2. <a name='DatasetforVLM'></a> VLM 数据集与评估
+### 🧮 视觉数学（含视觉数学推理）
 
-| Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
+| 数据集 | 任务 | 评估协议 | 标注者 | 规模 (K) | 代码 / 站点 |
 |---------|------|---------------|------------|----------|-------------|
-| [MathVision](https://arxiv.org/abs/2402.14804) | Visual Math | MC / Answer Match | Human | 3.04 | [Repo](https://mathllm.github.io/mathvision/) |
-| [MathVista](https://arxiv.org/abs/2310.02255) | Visual Math | MC / Answer Match | Human | 6 | [Repo](https://mathvista.github.io) |
-| [MathVerse](https://arxiv.org/abs/2403.14624) | Visual Math | MC | Human | 4.6 | [Repo](https://mathverse-cuhk.github.io) |
-| [VisNumBench](https://arxiv.org/abs/2503.14939) | Visual Number Reasoning | MC | Python Program generated/Web Collection/Real life photos | 1.91 | [Repo](https://wwwtttjjj.github.io/VisNumBench/) |
+| [MathVision](https://arxiv.org/abs/2402.14804) | Visual Math | MC / Answer Match | Human | 3.04 | [Repo](https://mathllm.github.io/mathvision/) |
+| [MathVista](https://arxiv.org/abs/2310.02255) | Visual Math | MC / Answer Match | Human | 6 | [Repo](https://mathvista.github.io) |
+| [MathVerse](https://arxiv.org/abs/2403.14624) | Visual Math | MC | Human | 4.6 | [Repo](https://mathverse-cuhk.github.io) |
+| [VisNumBench](https://arxiv.org/abs/2503.14939) | Visual Number Reasoning | MC | Python Program generated/Web Collection/Real life photos | 1.91 | [Repo](https://wwwtttjjj.github.io/VisNumBench/) |
 
 
-### 💬 Benchmark for Unified Models
-| Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
+### 💬 统一模型基准
+
+| 数据集 | 任务 | 评估协议 | 标注者 | 规模 (K) | 代码 / 站点 |
 |---------|------|---------------|------------|----------|-------------|
 | [ROVER](https://openreview.net/pdf?id=gu3DRaDWiI) | Reciprocal Cross-Modal Reasoning | Visual Gen + Verbal Gen Eval | Human | 1.3 (1,876 images) | [Paper](https://openreview.net/pdf?id=gu3DRaDWiI) |
-|| [RealUnify](https://arxiv.org/pdf/2509.24897) | Math, World knowledge, Image Gen | Direct & StepWise Eval (Sec 3.3) | Script & Humanverification | 1.0 | [Repo](https://github.com/FrankYang-17/RealUnify) |
-| [Uni-MMMU](https://arxiv.org/abs/2510.13759) | Science, Code, Image Gen | DreamSim (Image Gen Eval) & String Matching (Understanding Eval) | - | 1.0 | [Repo](https://vchitect.github.io/Uni-MMMU-Project) |
+|| [RealUnify](https://arxiv.org/pdf/2509.24897) | Math, World knowledge, Image Gen | Direct & StepWise Eval (Sec 3.3) | Script & Humanverification | 1.0 | [Repo](https://github.com/FrankYang-17/RealUnify) |
+| [Uni-MMMU](https://arxiv.org/abs/2510.13759) | Science, Code, Image Gen | DreamSim (Image Gen Eval) & String Matching (Understanding Eval) | - | 1.0 | [Repo](https://vchitect.github.io/Uni-MMMU-Project) |
 
 
-### 🎞️ Video Understanding
+### 🎞️ 视频理解
 
-| Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
+| 数据集 | 任务 | 评估协议 | 标注者 | 规模 (K) | 代码 / 站点 |
 |---------|------|---------------|------------|----------|-------------|
 | [MMOU](https://arxiv.org/abs/2603.14145) | Omni-modal Long Video Understanding | MC | Human | 15 (9,038 videos) | [Paper](https://arxiv.org/abs/2603.14145) |
 | [Video-MMMU](https://arxiv.org/abs/2501.13826) | Knowledge Acquisition from Professional Videos | MC + Knowledge Gain | Expert | 0.9 (300 videos) | [Paper](https://arxiv.org/abs/2501.13826) |
 | [MMVU](https://arxiv.org/abs/2501.12380) | Expert-Level Multi-Discipline Video Understanding | MC | Expert | 3 (27 subjects) | [Paper](https://arxiv.org/abs/2501.12380) |
-|| [VideoHallu](https://arxiv.org/abs/2505.01481) | Video Understanding | LLM Eval | Human | 3.2 | [Repo](https://github.com/zli12321/VideoHallu) |
-| [Video SimpleQA](https://arxiv.org/abs/2503.18923) | Video Understanding | LLM Eval | Human | 2.03 | [Repo](https://videosimpleqa.github.io) |
-| [MovieChat](https://arxiv.org/abs/2307.16449) | Video Understanding | LLM Eval | Human | 1 | [Repo](https://rese1f.github.io/MovieChat/) |
-| [Perception‑Test](https://arxiv.org/pdf/2305.13786) | Video Understanding | MC | Crowd | 11.6 | [Repo](https://github.com/google-deepmind/perception_test) |
-| [VideoMME](https://arxiv.org/pdf/2405.21075) | Video Understanding | MC | Experts | 2.7 | [Site](https://video-mme.github.io/) |
-| [EgoSchem](https://arxiv.org/pdf/2308.09126) | Video Understanding | MC | Synth / Human | 5 | [Site](https://egoschema.github.io/) |
-| [Inst‑IT‑Bench](https://arxiv.org/abs/2412.03565) | Fine‑grained Image & Video | MC & LLM | Human / Synth | 2 | [Repo](https://github.com/inst-it/inst-it) |
+|| [VideoHallu](https://arxiv.org/abs/2505.01481) | Video Understanding | LLM Eval | Human | 3.2 | [Repo](https://github.com/zli12321/VideoHallu) |
+| [Video SimpleQA](https://arxiv.org/abs/2503.18923) | Video Understanding | LLM Eval | Human | 2.03 | [Repo](https://videosimpleqa.github.io) |
+| [MovieChat](https://arxiv.org/abs/2307.16449) | Video Understanding | LLM Eval | Human | 1 | [Repo](https://rese1f.github.io/MovieChat/) |
+| [Perception‑Test](https://arxiv.org/pdf/2305.13786) | Video Understanding | MC | Crowd | 11.6 | [Repo](https://github.com/google-deepmind/perception_test) |
+| [VideoMME](https://arxiv.org/pdf/2405.21075) | Video Understanding | MC | Experts | 2.7 | [Site](https://video-mme.github.io/) |
+| [EgoSchem](https://arxiv.org/pdf/2308.09126) | Video Understanding | MC | Synth / Human | 5 | [Site](https://egoschema.github.io/) |
+| [Inst‑IT‑Bench](https://arxiv.org/abs/2412.03565) | Fine‑grained Image & Video | MC & LLM | Human / Synth | 2 | [Repo](https://github.com/inst-it/inst-it) |
 
 
-### 💬 Multimodal Conversation
+### 💬 多模态对话
 
-| Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
+| 数据集 | 任务 | 评估协议 | 标注者 | 规模 (K) | 代码 / 站点 |
 |---------|------|---------------|------------|----------|-------------|
-| [VisionArena](https://arxiv.org/abs/2412.08687) | Multimodal Conversation | Pairwise Pref | Human | 23 | [Repo](https://huggingface.co/lmarena-ai) |
+| [VisionArena](https://arxiv.org/abs/2412.08687) | Multimodal Conversation | Pairwise Pref | Human | 23 | [Repo](https://huggingface.co/lmarena-ai) |
 
 
 
-### 🧠 Multimodal General Intelligence
+### 🧠 多模态通用智能
 
-| Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
+| 数据集 | 任务 | 评估协议 | 标注者 | 规模 (K) | 代码 / 站点 |
 |---------|------|---------------|------------|----------|-------------|
 | [OmniEarth](https://arxiv.org/abs/2603.09471) | Geospatial / Remote Sensing VLM Eval | MC + Open VQA | Human (verified) | 44.2 (9,275 images, 28 tasks) | [Paper](https://arxiv.org/abs/2603.09471) |
 || [MultiHaystack](https://arxiv.org/abs/2603.05697) | Multimodal Retrieval & Reasoning | Retrieval + QA | Human | 0.75 (46K+ candidates) | [Paper](https://arxiv.org/abs/2603.05697) |
 || [DatBench](https://arxiv.org/abs/2601.02316) | Discriminative, Faithful VLM Eval | MC (format-aware) | Synth | - | [Paper](https://arxiv.org/abs/2601.02316) |
-|| [MMLU](https://arxiv.org/pdf/2009.03300) | General MM | MC | Human | 15.9 | [Repo](https://github.com/hendrycks/test) |
-| [MMStar](https://arxiv.org/pdf/2403.20330) | General MM | MC | Human | 1.5 | [Site](https://mmstar-benchmark.github.io/) |
-| [NaturalBench](https://arxiv.org/pdf/2410.14669) | General MM | Yes/No, MC | Human | 10 | [HF](https://huggingface.co/datasets/BaiqiL/NaturalBench) |
-| [PHYSBENCH](https://arxiv.org/pdf/2501.16411) | Visual Math Reasoning | MC | Grad STEM | 0.10 | [Repo](https://github.com/USC-GVL/PhysBench) |
+|| [MMLU](https://arxiv.org/pdf/2009.03300) | General MM | MC | Human | 15.9 | [Repo](https://github.com/hendrycks/test) |
+| [MMStar](https://arxiv.org/pdf/2403.20330) | General MM | MC | Human | 1.5 | [Site](https://mmstar-benchmark.github.io/) |
+| [NaturalBench](https://arxiv.org/pdf/2410.14669) | General MM | Yes/No, MC | Human | 10 | [HF](https://huggingface.co/datasets/BaiqiL/NaturalBench) |
+| [PHYSBENCH](https://arxiv.org/pdf/2501.16411) | Visual Math Reasoning | MC | Grad STEM | 0.10 | [Repo](https://github.com/USC-GVL/PhysBench) |
 
 
-### 🔎 Visual Reasoning / VQA (+ Multilingual & OCR)
+### 🔎 视觉推理 / VQA（含多语言与 OCR）
 
-| Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
+| 数据集 | 任务 | 评估协议 | 标注者 | 规模 (K) | 代码 / 站点 |
 |---------|------|---------------|------------|----------|-------------|
-| [EMMA](https://arxiv.org/abs/2501.05444) | Visual Reasoning | MC | Human + Synth | 2.8 | [Repo](emma-benchmark.github.io) |
-| [MMTBENCH](https://arxiv.org/pdf/2404.16006) | Visual Reasoning & QA | MC | AI Experts | 30.1 | [Repo](https://github.com/tylin/coco-caption) |
-| [MM‑Vet](https://arxiv.org/pdf/2308.02490) | OCR / Visual Reasoning | LLM Eval | Human | 0.2 | [Repo](https://github.com/yuweihao/MM-Vet) |
-| [MM‑En/CN](https://arxiv.org/pdf/2307.06281) | Multilingual MM Understanding | MC | Human | 3.2 | [Repo](https://github.com/open-compass/VLMEvalKit) |
-| [GQA](https://arxiv.org/abs/2305.13245) | Visual Reasoning & QA | Answer Match | Seed + Synth | 22 | [Site](https://cs.stanford.edu/people/dorarad/gqa) |
-| [VCR](https://arxiv.org/abs/1811.10830) | Visual Reasoning & QA | MC | MTurks | 290 | [Site](https://visualcommonsense.com/) |
-| [VQAv2](https://arxiv.org/pdf/1505.00468) | Visual Reasoning & QA | Yes/No, Ans Match | MTurks | 1100 | [Repo](https://github.com/salesforce/LAVIS/blob/main/dataset_card/vqav2.md) |
-| [MMMU](https://arxiv.org/pdf/2311.16502) | Visual Reasoning & QA | Ans Match, MC | College | 11.5 | [Site](https://mmmu-benchmark.github.io/) |
-| [MMMU-Pro](https://arxiv.org/abs/2409.02813) | Visual Reasoning & QA | Ans Match, MC | College | 5.19 | [Site](https://mmmu-benchmark.github.io/) |
-| [R1‑Onevision](https://arxiv.org/pdf/2503.10615) | Visual Reasoning & QA | MC | Human | 155 | [Repo](https://github.com/Fancy-MLLM/R1-Onevision) |
-| [VLM²‑Bench](https://arxiv.org/pdf/2502.12084) | Visual Reasoning & QA | Ans Match, MC | Human | 3 | [Site](https://vlm2-bench.github.io/) |
-| [VisualWebInstruct](https://arxiv.org/pdf/2503.10582) | Visual Reasoning & QA | LLM Eval | Web | 0.9 | [Site](https://tiger-ai-lab.github.io/VisualWebInstruct/) |
+| [EMMA](https://arxiv.org/abs/2501.05444) | Visual Reasoning | MC | Human + Synth | 2.8 | [Repo](emma-benchmark.github.io) |
+| [MMTBENCH](https://arxiv.org/pdf/2404.16006) | Visual Reasoning & QA | MC | AI Experts | 30.1 | [Repo](https://github.com/tylin/coco-caption) |
+| [MM‑Vet](https://arxiv.org/pdf/2308.02490) | OCR / Visual Reasoning | LLM Eval | Human | 0.2 | [Repo](https://github.com/yuweihao/MM-Vet) |
+| [MM‑En/CN](https://arxiv.org/pdf/2307.06281) | Multilingual MM Understanding | MC | Human | 3.2 | [Repo](https://github.com/open-compass/VLMEvalKit) |
+| [GQA](https://arxiv.org/abs/2305.13245) | Visual Reasoning & QA | Answer Match | Seed + Synth | 22 | [Site](https://cs.stanford.edu/people/dorarad/gqa) |
+| [VCR](https://arxiv.org/abs/1811.10830) | Visual Reasoning & QA | MC | MTurks | 290 | [Site](https://visualcommonsense.com/) |
+| [VQAv2](https://arxiv.org/pdf/1505.00468) | Visual Reasoning & QA | Yes/No, Ans Match | MTurks | 1100 | [Repo](https://github.com/salesforce/LAVIS/blob/main/dataset_card/vqav2.md) |
+| [MMMU](https://arxiv.org/pdf/2311.16502) | Visual Reasoning & QA | Ans Match, MC | College | 11.5 | [Site](https://mmmu-benchmark.github.io/) |
+| [MMMU-Pro](https://arxiv.org/abs/2409.02813) | Visual Reasoning & QA | Ans Match, MC | College | 5.19 | [Site](https://mmmu-benchmark.github.io/) |
+| [R1‑Onevision](https://arxiv.org/pdf/2503.10615) | Visual Reasoning & QA | MC | Human | 155 | [Repo](https://github.com/Fancy-MLLM/R1-Onevision) |
+| [VLM²‑Bench](https://arxiv.org/pdf/2502.12084) | Visual Reasoning & QA | Ans Match, MC | Human | 3 | [Site](https://vlm2-bench.github.io/) |
+| [VisualWebInstruct](https://arxiv.org/pdf/2503.10582) | Visual Reasoning & QA | LLM Eval | Web | 0.9 | [Site](https://tiger-ai-lab.github.io/VisualWebInstruct/) |
 
 
-### 📝 Visual Text / Document Understanding (+ Charts)
+### 📝 视觉文本 / 文档理解（含图表）
 
-| Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
+| 数据集 | 任务 | 评估协议 | 标注者 | 规模 (K) | 代码 / 站点 |
 |---------|------|---------------|------------|----------|-------------|
 | [TableVision](https://arxiv.org/abs/2604.03660) | Spatially Grounded Table Reasoning | 3-level Cognitive Eval | Human | 6.8 (13 sub-categories) | [Paper](https://arxiv.org/abs/2604.03660) |
-| [TextVQA](https://arxiv.org/pdf/1904.08920) | Visual Text Understanding | Ans Match | Expert | 28.6 | [Repo](https://github.com/facebookresearch/mmf) |
-| [DocVQA](https://arxiv.org/pdf/2007.00398) | Document VQA | Ans Match | Crowd | 50 | [Site](https://www.docvqa.org/) |
-| [ChartQA](https://arxiv.org/abs/2203.10244) | Chart Graphic Understanding | Ans Match | Crowd / Synth | 32.7 | [Repo](https://github.com/vis-nlp/ChartQA) |
+| [TextVQA](https://arxiv.org/pdf/1904.08920) | Visual Text Understanding | Ans Match | Expert | 28.6 | [Repo](https://github.com/facebookresearch/mmf) |
+| [DocVQA](https://arxiv.org/pdf/2007.00398) | Document VQA | Ans Match | Crowd | 50 | [Site](https://www.docvqa.org/) |
+| [ChartQA](https://arxiv.org/abs/2203.10244) | Chart Graphic Understanding | Ans Match | Crowd / Synth | 32.7 | [Repo](https://github.com/vis-nlp/ChartQA) |
 
 
-### 🌄 Text‑to‑Image Generation
+### 🌄 文本到图像生成
 
-| Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
+| 数据集 | 任务 | 评估协议 | 标注者 | 规模 (K) | 代码 / 站点 |
 |---------|------|---------------|------------|----------|-------------|
-| [MSCOCO‑30K](https://arxiv.org/pdf/1405.0312) | Text‑to‑Image | BLEU, ROUGE, Sim | MTurks | 30 | [Site](https://cocodataset.org/#home) |
-| [GenAI‑Bench](https://arxiv.org/pdf/2406.13743) | Text‑to‑Image | Human Rating | Human | 80 | [HF](https://huggingface.co/datasets/BaiqiL/GenAI-Bench) |
+| [MSCOCO‑30K](https://arxiv.org/pdf/1405.0312) | Text‑to‑Image | BLEU, ROUGE, Sim | MTurks | 30 | [Site](https://cocodataset.org/#home) |
+| [GenAI‑Bench](https://arxiv.org/pdf/2406.13743) | Text‑to‑Image | Human Rating | Human | 80 | [HF](https://huggingface.co/datasets/BaiqiL/GenAI-Bench) |
 
 
-### 🚨 Hallucination Detection / Control
+### 🚨 幻觉检测 / 控制
 
-| Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
+| 数据集 | 任务 | 评估协议 | 标注者 | 规模 (K) | 代码 / 站点 |
 |---------|------|---------------|------------|----------|-------------|
-| [HallusionBench](https://arxiv.org/pdf/2310.14566) | Hallucination | Yes/No | Human | 1.13 | [Repo](https://github.com/tianyi-lab/HallusionBench) |
-| [POPE](https://arxiv.org/pdf/2305.10355) | Hallucination | Yes/No | Human | 9 | [Repo](https://github.com/RUCAIBox/POPE) |
-| [CHAIR](https://arxiv.org/pdf/1809.02156) | Hallucination | Yes/No | Human | 124 | [Repo](https://github.com/LisaAnne/Hallucination) |
-| [MHalDetect](https://arxiv.org/abs/2308.06394) | Hallucination | Ans Match | Human | 4 | [Repo](https://github.com/LisaAnne/Hallucination) |
-| [Hallu‑Pi](https://arxiv.org/abs/2408.01355) | Hallucination | Ans Match | Human | 1.26 | [Repo](https://github.com/NJUNLP/Hallu-PI) |
-| [HallE‑Control](https://arxiv.org/abs/2310.01779) | Hallucination | Yes/No | Human | 108 | [Repo](https://github.com/bronyayang/HallE_Control) |
-| [AutoHallusion](https://arxiv.org/pdf/2406.10900) | Hallucination | Ans Match | Synth | 3.129 | [Repo](https://github.com/wuxiyang1996/AutoHallusion) |
-| [BEAF](https://arxiv.org/abs/2407.13442) | Hallucination | Yes/No | Human | 26 | [Site](https://beafbench.github.io/) |
-| [GAIVE](https://arxiv.org/abs/2306.14565) | Hallucination | Ans Match | Synth | 320 | [Repo](https://github.com/FuxiaoLiu/LRV-Instruction) |
-| [HalEval](https://arxiv.org/abs/2402.15721) | Hallucination | Yes/No | Crowd / Synth | 2 | [Repo](https://github.com/WisdomShell/hal-eval) |
-| [AMBER](https://arxiv.org/abs/2311.07397) | Hallucination | Ans Match | Human | 15.22 | [Repo](https://github.com/junyangwang0410/AMBER) |
+| [HallusionBench](https://arxiv.org/pdf/2310.14566) | Hallucination | Yes/No | Human | 1.13 | [Repo](https://github.com/tianyi-lab/HallusionBench) |
+| [POPE](https://arxiv.org/pdf/2305.10355) | Hallucination | Yes/No | Human | 9 | [Repo](https://github.com/RUCAIBox/POPE) |
+| [CHAIR](https://arxiv.org/pdf/1809.02156) | Hallucination | Yes/No | Human | 124 | [Repo](https://github.com/LisaAnne/Hallucination) |
+| [MHalDetect](https://arxiv.org/abs/2308.06394) | Hallucination | Ans Match | Human | 4 | [Repo](https://github.com/LisaAnne/Hallucination) |
+| [Hallu‑Pi](https://arxiv.org/abs/2408.01355) | Hallucination | Ans Match | Human | 1.26 | [Repo](https://github.com/NJUNLP/Hallu-PI) |
+| [HallE‑Control](https://arxiv.org/abs/2310.01779) | Hallucination | Yes/No | Human | 108 | [Repo](https://github.com/bronyayang/HallE_Control) |
+| [AutoHallusion](https://arxiv.org/pdf/2406.10900) | Hallucination | Ans Match | Synth | 3.129 | [Repo](https://github.com/wuxiyang1996/AutoHallusion) |
+| [BEAF](https://arxiv.org/abs/2407.13442) | Hallucination | Yes/No | Human | 26 | [Site](https://beafbench.github.io/) |
+| [GAIVE](https://arxiv.org/abs/2306.14565) | Hallucination | Ans Match | Synth | 320 | [Repo](https://github.com/FuxiaoLiu/LRV-Instruction) |
+| [HalEval](https://arxiv.org/abs/2402.15721) | Hallucination | Yes/No | Crowd / Synth | 2 | [Repo](https://github.com/WisdomShell/hal-eval) |
+| [AMBER](https://arxiv.org/abs/2311.07397) | Hallucination | Ans Match | Human | 15.22 | [Repo](https://github.com/junyangwang0410/AMBER) |
 
 
-### 2.3. <a name='DatasetforEmbodiedVLM'></a> Benchmark Datasets, Simulators, and Generative Models for Embodied VLM 
-| Benchmark                                                                                                                                     |             Domain              |                Type                |                                                     		Project					                                                     |
+### 2.3. <a name='DatasetforEmbodiedVLM'></a> 具身 VLM 的基准、仿真器与生成模型
+
+> 涵盖机器人导航 / 操作仿真器、自动驾驶、世界模型等。
+
+| 基准                                                                                                                                     |             领域              |                类型                |                                                     		项目					                                                     |
 |-----------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------:|:----------------------------------:|:----------------------------------------------------------------------------------------------------------------------:|
 | [Drive-Bench](https://arxiv.org/abs/2501.04003) | Embodied AI | Autonomous Driving | [Website](https://drive-bench.github.io)  |
 | [Habitat](https://arxiv.org/pdf/1904.01201), [Habitat 2.0](https://arxiv.org/pdf/2106.14405), [Habitat 3.0](https://arxiv.org/pdf/2310.13724) |      Robotics (Navigation)      |        Simulator + Dataset         |                                           [Website](https://aihabitat.org/)                                            |
@@ -324,9 +336,13 @@ Welcome to contribute and discuss!
 | [UnrealZoo](https://arxiv.org/abs/2412.20977) | Embodied AI (Tracking, Navigation, Multi Agent)| Simulator | [Website](http://unrealzoo.site/) | 
 
 
-##  3. <a name='posttraining'></a>⚒️ Post-Training
-### 3.1.  <a name='alignment'></a>RL Alignment for VLM
-| Title | Year | Paper | RL | Code |
+##  3. <a name='posttraining'></a>⚒️ 后训练 / 对齐
+
+> 涵盖 RL 对齐、监督微调、相关开源仓库与提示工程。
+
+### 3.1.  <a name='alignment'></a>VLM 强化学习对齐
+
+| 标题 | 年份 | 论文 | RL 方法 | 代码 |
 |----------------|------|--------|---------|------|
 | Vero: An Open RL Recipe for General Visual Reasoning | 04/2026 | [Paper](https://arxiv.org/html/2604.04917v1) | Task-routed rewards; GRPO-based | [Code](https://github.com/TIGER-AI-Lab/Vero) |
 | wDPO: Winsorized Direct Preference Optimization for Robust Alignment | 03/2026 | [Paper](https://arxiv.org/abs/2603.07211) | wDPO | - |
@@ -356,8 +372,8 @@ Welcome to contribute and discuss!
 | All Roads Lead to Likelihood: The Value of Reinforcement Learning in Fine-Tuning | 2025 | [Paper](https://arxiv.org/pdf/2503.01067) | Online RL | - |
 | Video-R1: Reinforcing Video Reasoning in MLLMs | 2025 | [Paper](https://arxiv.org/abs/2503.21776) | GRPO | [Code](https://github.com/tulerfeng/Video-R1) |
 
-### 3.2. <a name='sft'></a>Finetuning for VLM
-| Title | Year | Paper | Website | Code |
+### 3.2. <a name='sft'></a>VLM 监督微调 (SFT)
+| 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
 | AGFT: Alignment-Guided Fine-Tuning for Zero-Shot Adversarial Robustness of VLMs | 2026/03 | [Paper](https://arxiv.org/abs/2603.29410) | - | - |
 || CoVFT: Context-aware Visual Fine-tuning for Multimodal Large Language Models | 2026/03 | [Paper](https://arxiv.org/abs/2603.21077) | - | - |
@@ -374,8 +390,8 @@ Welcome to contribute and discuss!
 | Should VLMs be Pre-trained with Image Data? | 2025 | [Paper](https://arxiv.org/pdf/2503.07603) | - | - |
 | VisionArena: 230K Real World User-VLM Conversations with Preference Labels |  2024 | [Paper](https://arxiv.org/pdf/2412.08687) | - | [Code](https://huggingface.co/lmarena-ai) |
 
-### 3.3. <a name='vlm_github'></a>VLM Alignment github
-| Project | Repository Link |
+### 3.3. <a name='vlm_github'></a>VLM 对齐相关开源仓库
+| 项目 | 仓库链接 |
 |----------------|----------------|
 |Verl|[🔗 GitHub](https://github.com/volcengine/verl) |
 |EasyR1|[🔗 GitHub](https://github.com/hiyouga/EasyR1) |
@@ -385,8 +401,8 @@ Welcome to contribute and discuss!
 | MM-RLHF | [🔗 GitHub](https://github.com/Kwai-YuanQi/MM-RLHF) |
 | LMM-R1 | [🔗 GitHub](https://github.com/TideDra/lmm-r1) |
 
-### 3.4. <a name='vlm_prompt_engineering'></a>Prompt Optimization
-| Title | Year | Paper | Website | Code |
+### 3.4. <a name='vlm_prompt_engineering'></a>提示工程 / 提示优化
+| 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
 | EvoPrompt: Evolving Prompt Adaptation for Vision-Language Models | 2026/03 | [Paper](https://arxiv.org/abs/2603.09493) | - | - |
 || MMLoP: Multi-Modal Low-Rank Prompting for Efficient Vision-Language Adaptation | 2026/02 | [Paper](https://arxiv.org/abs/2602.21397) | - | - |
@@ -394,11 +410,11 @@ Welcome to contribute and discuss!
 || Evolutionary Prompt Optimization Discovers Emergent Multimodal Reasoning Strategies | 2025/03 | [Paper](https://arxiv.org/abs/2503.23503) | - | - |
 || In-ContextEdit:EnablingInstructionalImageEditingwithIn-Context GenerationinLargeScaleDiffusionTransformer | 2025/04/30 | [Paper](https://arxiv.org/abs/2504.20690) | [Website](https://river-zhang.github.io/ICEdit-gh-pages/) | [Code](https://github.com/River-Zhang/ICEdit) |
 
-## 4. <a name='Toolenhancement'></a> ⚒️ Applications
+## 4. <a name='Toolenhancement'></a> ⚒️ 应用
 
-### 4.1 Embodied VLM Agents
+### 4.1 具身 VLM 智能体
 
-| Title | Year | Paper Link |
+| 标题 | 年份 | 论文链接 |
 |----------------|------|------------|
 | Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI | 2024 | [Paper](https://arxiv.org/pdf/2407.06886v1) |
 | ScreenAI: A Vision-Language Model for UI and Infographics Understanding | 2024 | [Paper](https://arxiv.org/pdf/2402.04615) |
@@ -411,16 +427,16 @@ Welcome to contribute and discuss!
 | MP-GUI: Modality Perception with MLLMs for GUI Understanding | 2025 | [📄 Paper](https://arxiv.org/pdf/2503.14021) | - | [💾 Code](https://github.com/BigTaige/MP-GUI) | 
 
 
-### 4.2. <a name='GenerativeVisualMediaApplications'></a>Generative Visual Media Applications
-| Title | Year | Paper | Website | Code |
+### 4.2. <a name='GenerativeVisualMediaApplications'></a>生成式视觉媒体应用
+| 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
 | GPT4Motion: Scripting Physical Motions in Text-to-Video Generation via Blender-Oriented GPT Planning | 2023 | [📄 Paper](https://arxiv.org/pdf/2311.12631) | [🌍 Website](https://gpt4motion.github.io/) | [💾 Code](https://github.com/jiaxilv/GPT4Motion) |
 | Spurious Correlation in Multimodal LLMs | 2025 | [📄 Paper](https://arxiv.org/abs/2503.08884) | - | - |
 | WeGen: A Unified Model for Interactive Multimodal Generation as We Chat | 2025 |  [📄 Paper](https://arxiv.org/pdf/2503.01115) | - | [💾 Code](https://github.com/hzphzp/WeGen) |
 | VideoMind: A Chain-of-LoRA Agent for Long Video Reasoning | 2025 | [📄 Paper](https://arxiv.org/pdf/2503.13444) | [🌍 Website](https://videomind.github.io/) | [💾 Code](https://github.com/yeliudev/VideoMind) |
 
-### 4.3. <a name='RoboticsandEmbodiedAI'></a>Robotics and Embodied AI
-| Title | Year | Paper | Website | Code |
+### 4.3. <a name='RoboticsandEmbodiedAI'></a>机器人与具身智能
+| 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
 | AHA: A Vision-Language-Model for Detecting and Reasoning Over Failures in Robotic Manipulation | 2024 | [📄 Paper](https://arxiv.org/pdf/2410.00371) | [🌍 Website](https://aha-vlm.github.io/) | - |
 | SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities | 2024 | [📄 Paper](https://arxiv.org/pdf/2401.12168) | [🌍 Website](https://spatial-vlm.github.io/) | - |
@@ -454,8 +470,8 @@ Welcome to contribute and discuss!
 || Steerable Vision-Language-Action Policies for Embodied Reasoning and Hierarchical Control | 02/2026 | [📄 Paper](https://arxiv.org/abs/2602.13193) | - | - |
 || ST4VLA: Spatial Guided Training for Vision-Language-Action Models | 02/2026 | [📄 Paper](https://arxiv.org/abs/2602.10109) | - | - |
 
-#### 4.3.1. <a name='Manipulation'></a>Manipulation
-| Title | Year | Paper | Website | Code |
+#### 4.3.1. <a name='Manipulation'></a>机械臂操作 (Manipulation)
+| 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
 | VIMA: General Robot Manipulation with Multimodal Prompts | 2022 | [📄 Paper](https://arxiv.org/pdf/2210.03094) | [🌍 Website](https://vimalabs.github.io/) |
 | Instruct2Act: Mapping Multi-Modality Instructions to Robotic Actions with Large Language Model | 2023 | [📄 Paper](https://arxiv.org/pdf/2305.11176) | - | - |
@@ -470,8 +486,8 @@ Welcome to contribute and discuss!
 | Multi-View Masked World Models for Visual Robotic Manipulation | 2023 | [📄 Paper](https://arxiv.org/pdf/2302.02408)| [🌍 Website](https://sites.google.com/view/mv-mwm) | [💾 Code](https://github.com/younggyoseo/MV-MWM) |
 
 
-#### 4.3.2. <a name='Navigation'></a>Navigation
-| Title | Year | Paper | Website | Code |
+#### 4.3.2. <a name='Navigation'></a>导航 (Navigation)
+| 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
 | ZSON: Zero-Shot Object-Goal Navigation using Multimodal Goal Embeddings | 2022 | [📄 Paper](https://arxiv.org/pdf/2206.12403) | - | - |
 | LOC-ZSON: Language-driven Object-Centric Zero-Shot Object Retrieval and Navigation | 2024 | [📄 Paper](https://arxiv.org/pdf/2405.05363) | - | - |
@@ -483,15 +499,15 @@ Welcome to contribute and discuss!
 | Navigation World Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2412.03572) | [🌍 Website](https://www.amirbar.net/nwm/) | - |
 
 
-#### 4.3.3. <a name='HumanRobotInteraction'></a>Human-robot Interaction
-| Title | Year | Paper | Website | Code |
+#### 4.3.3. <a name='HumanRobotInteraction'></a>人机交互 (Human-Robot Interaction)
+| 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
 | MUTEX: Learning Unified Policies from Multimodal Task Specifications | 2023 | [📄 Paper](https://arxiv.org/pdf/2309.14320) | [🌍 Website](https://ut-austin-rpl.github.io/MUTEX/) | - |
 | LaMI: Large Language Models for Multi-Modal Human-Robot Interaction | 2024 | [📄 Paper](https://arxiv.org/pdf/2401.15174) | [🌍 Website](https://hri-eu.github.io/Lami/) | - |
 | VLM-Social-Nav: Socially Aware Robot Navigation through Scoring using Vision-Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2404.00210) | - | - |
 
-#### 4.3.4. <a name='AutonomousDriving'></a>Autonomous Driving
-| Title | Year | Paper | Website | Code |
+#### 4.3.4. <a name='AutonomousDriving'></a>自动驾驶 (Autonomous Driving)
+| 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
 | UniDriveVLA: Unifying Understanding, Perception, and Action Planning for Autonomous Driving | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.02190) | - | - |
 || AutoMoT: A Unified Vision-Language-Action Model with Asynchronous Mixture-of-Transformers for End-to-End Autonomous Driving | 03/2026 | [📄 Paper](https://arxiv.org/abs/2603.14851) | - | - |
@@ -511,8 +527,8 @@ Welcome to contribute and discuss!
 | DriveGPT4: Interpretable End-to-end Autonomous Driving via Large Language Model | 2023 | [📄 Paper](https://arxiv.org/abs/2310.01412) | - | - |
 
 
-### 4.4. <a name='Human-CenteredAI'></a>Human-Centered AI
-| Title | Year | Paper | Website | Code |
+### 4.4. <a name='Human-CenteredAI'></a>以人为中心的 AI
+| 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
 | DLF: Disentangled-Language-Focused Multimodal Sentiment Analysis | 2024 | [📄 Paper](https://arxiv.org/pdf/2412.12225) | - | [💾 Code](https://github.com/pwang322/DLF) |
 | LIT: Large Language Model Driven Intention Tracking for Proactive Human-Robot Collaboration – A Robot Sous-Chef Application | 2024 | [📄 Paper](https://arxiv.org/abs/2406.13787) | - | - |
@@ -520,8 +536,8 @@ Welcome to contribute and discuss!
 | Promoting AI Equity in Science: Generalized Domain Prompt Learning for Accessible VLM Research | 2024 | [📄 Paper](https://arxiv.org/pdf/2405.08668) | - | - |
 | Image and Data Mining in Reticular Chemistry Using GPT-4V | 2023 | [📄 Paper](https://arxiv.org/pdf/2312.05468) | - | - |
 
-#### 4.4.1. <a name='WebAgent'></a>Web Agent
-| Title | Year | Paper | Website | Code |
+#### 4.4.1. <a name='WebAgent'></a>网页 / GUI 智能体
+| 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
 | A Real-World WebAgent with Planning, Long Context Understanding, and Program Synthesis | 2023 | [📄 Paper](https://arxiv.org/pdf/2307.12856) | - | - |
 | CogAgent: A Visual Language Model for GUI Agents | 2023 | [📄 Paper](https://arxiv.org/pdf/2312.08914) | - | [💾 Code](https://github.com/THUDM/CogAgent) |
@@ -532,16 +548,16 @@ Welcome to contribute and discuss!
 || MolmoWeb: Open Visual Web Agent and Open Data for the Open Web | 04/2026 | [📄 Paper](https://huggingface.tw/papers/2604.08516) | [🌍 Website](https://allenai.org/blog/molmoweb) | [💾 Code](https://github.com/allenai/molmoweb) |
 
 
-#### 4.4.2. <a name='Accessibility'></a>Accessibility
-| Title | Year | Paper | Website | Code |
+#### 4.4.2. <a name='Accessibility'></a>无障碍 (Accessibility)
+| 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
 | X-World: Accessibility, Vision, and Autonomy Meet | 2021 | [📄 Paper](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhang_X-World_Accessibility_Vision_and_Autonomy_Meet_ICCV_2021_paper.pdf) | - | - |
 | Context-Aware Image Descriptions for Web Accessibility | 2024 | [📄 Paper](https://arxiv.org/pdf/2409.03054) | - | - |
 | Improving VR Accessibility Through Automatic 360 Scene Description Using Multimodal Large Language Models | 2024 | [📄 Paper](https://dl.acm.org/doi/10.1145/3691573.3691619) | - | -
 
 
-#### 4.4.3. <a name='Medical and Healthcare'></a>Healthcare
-| Title | Year | Paper | Website | Code |
+#### 4.4.3. <a name='Medical and Healthcare'></a>医疗与健康 (Healthcare)
+| 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
 | CARE: Towards Clinical Accountability in Multi-Modal Medical Reasoning with an Evidence-Grounded Agentic Framework | 03/2026 | [📄 Paper](https://arxiv.org/abs/2603.01607) | - | - |
 || MedMO: Grounding and Understanding Multimodal Large Language Model for Medical Images | 02/2026 | [📄 Paper](https://arxiv.org/abs/2602.06965) | - | - |
@@ -554,24 +570,24 @@ Welcome to contribute and discuss!
 | Med-Flamingo: A Multimodal Medical Few-Shot Learner | 2023 | [📄 Paper](https://arxiv.org/pdf/2307.15189) | - | [💾 Code](https://github.com/snap-stanford/med-flamingo) |
 
 
-#### 4.4.4. <a name='SocialGoodness'></a>Social Goodness
-| Title | Year | Paper | Website | Code |
+#### 4.4.4. <a name='SocialGoodness'></a>社会公益 (Social Good)
+| 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
 | Analyzing K-12 AI Education: A Large Language Model Study of Classroom Instruction on Learning Theories, Pedagogy, Tools, and AI Literacy | 2024 | [📄 Paper](https://www.sciencedirect.com/science/article/pii/S2666920X24000985) | - | - |
 | Students Rather Than Experts: A New AI for Education Pipeline to Model More Human-Like and Personalized Early Adolescence | 2024 | [📄 Paper](https://arxiv.org/pdf/2410.15701) | - | - |
 | Harnessing Large Vision and Language Models in Agriculture: A Review | 2024 | [📄 Paper](https://arxiv.org/pdf/2407.19679) | - | - |
 | A Vision-Language Model for Predicting Potential Distribution Land of Soybean Double Cropping | 2024 | [📄 Paper](https://www.frontiersin.org/journals/environmental-science/articles/10.3389/fenvs.2024.1515752/abstract) | - | - |
 | Vision-Language Model is NOT All You Need: Augmentation Strategies for Molecule Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2407.09043) | - | [💾 Code](https://github.com/Namkyeong/AMOLE) |
-| DrawEduMath: Evaluating Vision Language Models with Expert-Annotated Students’ Hand-Drawn Math Images | 2024 | [📄 Paper](https://openreview.net/pdf?id=0vQYvcinij) | - | - |
+| DrawEduMath: Evaluating Vision Language Models with Expert-Annotated Students' Hand-Drawn Math Images | 2024 | [📄 Paper](https://openreview.net/pdf?id=0vQYvcinij) | - | - |
 | MultiMath: Bridging Visual and Mathematical Reasoning for Large Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2409.00147) | - | [💾 Code](https://github.com/pengshuai-rin/MultiMath) |
 | Vision-Language Models Meet Meteorology: Developing Models for Extreme Weather Events Detection with Heatmaps | 2024 | [📄 Paper](https://arxiv.org/pdf/2406.09838) | - | [💾 Code](https://github.com/AlexJJJChen/Climate-Zoo) |
 | He is Very Intelligent, She is Very Beautiful? On Mitigating Social Biases in Language Modeling and Generation | 2021 | [📄 Paper](https://aclanthology.org/2021.findings-acl.397.pdf) | - | - |
 | UrbanVLP: Multi-Granularity Vision-Language Pretraining for Urban Region Profiling | 2024 | [📄 Paper](https://arxiv.org/pdf/2403.168318) | - | - |
 
 
-## 5. <a name='Challenges'></a>Challenges
-### 5.1 <a name='Hallucination'></a>Hallucination
-| Title | Year | Paper | Website | Code |
+## 5. <a name='Challenges'></a>挑战与局限
+### 5.1 <a name='Hallucination'></a>幻觉 (Hallucination)
+| 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
 | Focus Matters: Phase-Aware Suppression for Hallucination in Vision-Language Models | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.03556) | - | - |
 || VLMs Need Words: Vision Language Models Ignore Visual Detail in Favor of Semantic Anchors | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.02486) | - | - |
@@ -590,8 +606,8 @@ Welcome to contribute and discuss!
 | AMBER: An LLM-free Multi-dimensional Benchmark for MLLMs Hallucination Evaluation | 2023 | [📄 Paper](https://arxiv.org/pdf/2311.07397) | - | [💾 Code](https://github.com/junyangwang0410/AMBER) |
 
 
-### 5.2 <a name='Safety'></a>Safety
-| Title | Year | Paper | Website | Code |
+### 5.2 <a name='Safety'></a>安全 (Safety)
+| 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
 | SaFeR-VLM: Safety into Multimodal Reasoning via Reinforcement Learning | 2026 (ICLR) | [📄 Paper](https://openreview.net/pdf/4f379d45027946b58a820908fd3a1711d66daa85.pdf) | - | - |
 || HoliSafe: Holistic Safety Evaluation for Vision-Language Models | 2026 (ICLR) | [📄 Paper](https://openreview.net/pdf/c0a7991cefe100852616861d5046c3b90cfed936.pdf) | - | - |
@@ -606,8 +622,8 @@ Welcome to contribute and discuss!
 | Safety Guardrails for LLM-Enabled Robots | 2025 | [📄 Paper](https://arxiv.org/pdf/2503.07885) | - | - |
 
 
-### 5.3 <a name='Fairness'></a>Fairness
-| Title | Year | Paper | Website | Code |
+### 5.3 <a name='Fairness'></a>公平性 (Fairness)
+| 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
 | Hallucination of Multimodal Large Language Models: A Survey | 2024 | [📄 Paper](https://arxiv.org/pdf/2404.18930) | - | - |
 | Bias and Fairness in Large Language Models: A Survey | 2023 | [📄 Paper](https://arxiv.org/pdf/2309.00770) | - | - |
@@ -618,9 +634,9 @@ Welcome to contribute and discuss!
 | FairMedFM: Fairness Benchmarking for Medical Imaging Foundation Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2407.00983) | - | - |
 | Benchmarking Vision Language Models for Cultural Understanding | 2024 | [📄 Paper](https://arxiv.org/pdf/2407.10920) | - | - |
 
-#### 5.4 <a name='Alignment'></a>Alignment
-#### 5.4.1 <a name='MultimodalityAlignment'></a>Multi-modality Alignment
-| Title | Year | Paper | Website | Code |
+#### 5.4 <a name='Alignment'></a>对齐 (Alignment)
+#### 5.4.1 <a name='MultimodalityAlignment'></a>多模态对齐
+| 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
 | Mitigating Hallucinations in Large Vision-Language Models with Instruction Contrastive Decoding | 2024 | [📄 Paper](https://arxiv.org/pdf/2403.18715) | - | - |
 | Enhancing Visual-Language Modality Alignment in Large Vision Language Models via Self-Improvement | 2024 | [📄 Paper](https://arxiv.org/pdf/2405.15973) | - | - |
@@ -630,8 +646,8 @@ Welcome to contribute and discuss!
 | What You See is What You Read? Improving Text-Image Alignment Evaluation | 2023 | [📄 Paper](https://arxiv.org/pdf/2305.10400) | [🌍 Website](https://wysiwyr-itm.github.io/) | [💾 Code](https://github.com/yonatanbitton/wysiwyr) |
 | Critic-V: VLM Critics Help Catch VLM Errors in Multimodal Reasoning | 2024 | [📄 Paper](https://arxiv.org/pdf/2411.18203) | [🌍 Website](https://huggingface.co/papers/2411.18203) | [💾 Code](https://github.com/kyrieLei/Critic-V) |
 
-#### 5.4.2 <a name='CommonsenseAlignment'></a>Commonsense and Physics Alignment
-| Title | Year | Paper | Website | Code |
+#### 5.4.2 <a name='CommonsenseAlignment'></a>常识与物理对齐
+| 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
 | VBench: Comprehensive BenchmarkSuite for Video Generative Models | 2023 | [📄 Paper](https://arxiv.org/pdf/2311.17982) | [🌍 Website](https://vchitect.github.io/VBench-project/) | [💾 Code](https://github.com/Vchitect/VBench) |
 | VBench++: Comprehensive and Versatile Benchmark Suite for Video Generative Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2411.13503) | [🌍 Website](https://vchitect.github.io/VBench-project/) | [💾 Code](https://github.com/Vchitect/VBench) |
@@ -650,8 +666,8 @@ Welcome to contribute and discuss!
 | Imagine while Reasoning in Space: Multimodal Visualization-of-Thought | 2025 | [📄 Paper](https://arxiv.org/abs/2501.07542) | - | - |
 | VBench-2.0: Advancing Video Generation Benchmark Suite for Intrinsic Faithfulness | 2025 | [📄 Paper](https://arxiv.org/pdf/2503.21755) | [🌍 Website](https://vchitect.github.io/VBench-2.0-project/) | [💾 Code](https://github.com/Vchitect/VBench) |
 
-### 5.5 <a name=' EfficientTrainingandFineTuning'></a> Efficient Training and Fine-Tuning
-| Title | Year | Paper | Website | Code |
+### 5.5 <a name=' EfficientTrainingandFineTuning'></a> 高效训练与微调
+| 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
 | QAPruner: Quantization-Aware Vision Token Pruning for MLLMs | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.02816) | - | - |
 || Firebolt-VL: Efficient Vision-Language Understanding with Cross-Modality Modulation | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.04579) | - | - |
@@ -667,8 +683,8 @@ Welcome to contribute and discuss!
 | RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback | 2023 | [📄 Paper](https://arxiv.org/pdf/2309.00267) | - | - |
 
 
-### 5.6 <a name='ScarceofHighqualityDataset'></a>Scarce of High-quality Dataset
-| Title | Year | Paper | Website | Code |
+### 5.6 <a name='ScarceofHighqualityDataset'></a>高质量数据稀缺
+| 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
 | A Survey on Bridging VLMs and Synthetic Data | 2025 | [📄 Paper](https://openreview.net/pdf?id=ThjDCZOljE) | - | [💾 Code](https://github.com/mghiasvand1/Awesome-VLM-Synthetic-Data/) |
 | Inst-IT: Boosting Multimodal Instance Understanding via Explicit Visual Prompt Instruction Tuning | 2024 | [📄 Paper](https://arxiv.org/abs/2412.03565) | [Website](https://inst-it.github.io/) | [💾 Code](https://github.com/inst-it/inst-it) |
@@ -677,7 +693,3 @@ Welcome to contribute and discuss!
 | Synth2: Boosting Visual-Language Models with Synthetic Captions and Image Embeddings | 2024 | [📄 Paper](https://arxiv.org/pdf/2403.07750) | - | - |
 | KALIE: Fine-Tuning Vision-Language Models for Open-World Manipulation without Robot Data | 2024 | [📄 Paper](https://arxiv.org/pdf/2409.14066) | - | - |
 | Web Agents with World Models: Learning and Leveraging Environment Dynamics in Web Navigation | 2024 | [📄 Paper](https://arxiv.org/pdf/2410.13232) | - | - |
-
-
-
-
