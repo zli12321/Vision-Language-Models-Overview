@@ -105,6 +105,10 @@ Welcome to contribute and discuss!
 ##  1. <a name='vlms'></a>📚 SoTA VLMs 
 | Model                                                        | Year | Architecture   | Training Data               | Parameters     | Vision Encoder/Tokenizer                       | Pretrained Backbone Model                          |
 |--------------------------------------------------------------|------|----------------|-----------------------------|----------------|-----------------------------------------------|---------------------------------------------------|
+| [LensVLM (Apple / Duke)](https://arxiv.org/abs/2605.07019) | 05/07/2026 | Decoder-only | Rendered text-as-image + selective context expansion | 9B | Rendered-image ViT | Qwen3.5-9B-Base |
+| [Nemotron 3 Nano Omni (NVIDIA)](https://arxiv.org/abs/2604.24954) | 04/28/2026 | Hybrid MoE (omni-modal: vision + audio + text) | Vision + audio + text joint training | 30B total · 3B active | Dynamic-res ViT + Conv3D temporal | Nemotron 3 |
+| [LLaDA2.0-Uni (Huawei / InclusionAI)](https://arxiv.org/abs/2604.20796) | 04/28/2026 | Discrete diffusion LLM (dLLM) + MoE | Multimodal understanding + generation | MoE-based | SigLIP-VQ semantic tokenizer | LLaDA2.0 |
+| [PLaMo 2.1-VL (Preferred Networks)](https://arxiv.org/abs/2604.19324) | 04/21/2026 | Decoder-only | Japanese-focused multimodal | 2B / 8B | ViT | PLaMo 2.1 |
 | [Qwen3.6-27B (Alibaba)](https://qwen.ai/blog?id=qwen3.6-27b) | 04/22/2026 | Decoder-only / natively multimodal input (thinking + non-thinking) | Multimodal pretraining + agentic mid-training | 27B dense | Native multimodal ViT | Qwen3.6 |
 | [Qwen3.6-35B-A3B (Alibaba)](https://qwen.ai/blog?id=qwen3.6-35b-a3b) | 04/15/2026 | MoE / natively multimodal input | Multimodal pretraining + agentic SFT/RL | 35B total · 3B active | Native multimodal ViT | Qwen3.6 |
 | [LFM2.5-VL-450M (Liquid AI)](https://www.marktechpost.com/2026/04/11/liquid-ai-releases-lfm2-5-vl-450m-a-450m-parameter-vision-language-model-with-bounding-box-prediction-multilingual-support-and-sub-250ms-edge-inference/) | 04/11/2026 | Liquid Foundation Model | Undisclosed | 450M | Non-overlapping tile ViT | LFM2.5 |
