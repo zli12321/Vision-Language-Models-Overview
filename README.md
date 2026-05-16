@@ -181,6 +181,7 @@ Welcome to contribute and discuss!
 ### 2.1. <a name='TrainingDatasetforVLM'></a> Datasets for Training VLMs
 | Dataset | Task |  Size |
 |---------|------|---------------|
+| [20/20 Vision — Data Curation (DatologyAI)](https://arxiv.org/abs/2605.11405)(05/2026) | Data Curation for VLM Training | +11.7pp avg improvement; 17–87× less compute |
 | [MolmoWebMix (Allen AI)](https://huggingface.tw/papers/2604.08516)(04/2026) | Web Agent Training Trajectories | 100K+ synthetic + 30K human demos |
 | [Vero-600K](https://arxiv.org/html/2604.04917v1)(04/2026) | Broad Visual Reasoning RL Training | 600K samples from 59 datasets, 6 task categories |
 | [BigEarthNet.txt](https://arxiv.org/abs/2603.29630)(03/2026) | Multi-sensor Earth Observation Image-Text | 464K images, 9.6M text annotations |
@@ -216,6 +217,9 @@ Welcome to contribute and discuss!
 
 | Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
 |---------|------|---------------|------------|----------|-------------|
+| [VideoZeroBench](https://arxiv.org/abs/2604.01569) | Spatio-temporal Evidence Verification for Long-Video QA | 5-level progressive evidence tightening | Human | 0.5 (500 questions, 13 domains) | [Paper](https://arxiv.org/abs/2604.01569) |
+| [Video-Oasis](https://arxiv.org/abs/2603.29616) | Diagnostic Meta-benchmark for Video Understanding | Measures % solvable without visual/temporal context | Meta-analysis | — | [Paper](https://arxiv.org/abs/2603.29616) |
+| [LoVR](https://arxiv.org/abs/2505.13928) | Long Video Retrieval in Multimodal Contexts | Retrieval accuracy | — | — | [Paper](https://arxiv.org/abs/2505.13928) |
 | [MMOU](https://arxiv.org/abs/2603.14145) | Omni-modal Long Video Understanding | MC | Human | 15 (9,038 videos) | [Paper](https://arxiv.org/abs/2603.14145) |
 | [Video-MMMU](https://arxiv.org/abs/2501.13826) | Knowledge Acquisition from Professional Videos | MC + Knowledge Gain | Expert | 0.9 (300 videos) | [Paper](https://arxiv.org/abs/2501.13826) |
 | [MMVU](https://arxiv.org/abs/2501.12380) | Expert-Level Multi-Discipline Video Understanding | MC | Expert | 3 (27 subjects) | [Paper](https://arxiv.org/abs/2501.12380) |
@@ -333,6 +337,10 @@ Welcome to contribute and discuss!
 ### 3.1.  <a name='alignment'></a>RL Alignment for VLM
 | Title | Year | Paper | RL | Code |
 |----------------|------|--------|---------|------|
+| OpenSearch-VL: Multi-Turn Fatal-Aware GRPO for Multimodal Search Agents | 05/07/2026 | [Paper](https://arxiv.org/abs/2605.05185) | Fatal-aware GRPO; handles tool-call failures in agentic multi-turn RL | - |
+| GRPO-TTA: Test-Time Visual Tuning via GRPO-Driven RL | 05/05/2026 | [Paper](https://arxiv.org/abs/2605.03403) | GRPO for test-time visual encoder tuning; no ground-truth labels needed | - |
+| S-GRPO: Unified Post-Training for Large VLMs | 04/2026 | [Paper](https://arxiv.org/abs/2604.16557) | Supervised GRPO; injects ground-truth trajectories to solve cold-start | - |
+| Faithful GRPO (FGRPO): Constrained Policy Optimization for Visual Spatial Reasoning | 04/2026 | [Paper](https://arxiv.org/abs/2604.08476) | Lagrangian-constrained GRPO; inconsistency 24.5% → 1.7% | - |
 | Vero: An Open RL Recipe for General Visual Reasoning | 04/2026 | [Paper](https://arxiv.org/html/2604.04917v1) | Task-routed rewards; GRPO-based | [Code](https://github.com/TIGER-AI-Lab/Vero) |
 | wDPO: Winsorized Direct Preference Optimization for Robust Alignment | 03/2026 | [Paper](https://arxiv.org/abs/2603.07211) | wDPO | - |
 || f-GRPO and Beyond: Divergence-Based RL for General LLM Alignment | 02/2026 | [Paper](https://arxiv.org/abs/2602.05946) | f-GRPO / f-HAL | - |
@@ -364,7 +372,10 @@ Welcome to contribute and discuss!
 ### 3.2. <a name='sft'></a>Finetuning for VLM
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
-| AGFT: Alignment-Guided Fine-Tuning for Zero-Shot Adversarial Robustness of VLMs | 2026/03 | [Paper](https://arxiv.org/abs/2603.29410) | - | - |
+| Why Does RL Generalize Better Than SFT? A Data-Centric Perspective (DC-SFT) | 02/2026 | [Paper](https://arxiv.org/abs/2602.10815) | - | - |
+|| The Synergy Dilemma of Long-CoT SFT and RL | 2026 (TMLR) | [Paper](https://mlanthology.org/tmlr/2026/chen2026tmlr-synergy/) | - | - |
+|| Layer-wise Analysis of Supervised Fine-Tuning | 04/2026 | [Paper](https://arxiv.org/abs/2604.11838) | - | - |
+|| AGFT: Alignment-Guided Fine-Tuning for Zero-Shot Adversarial Robustness of VLMs | 2026/03 | [Paper](https://arxiv.org/abs/2603.29410) | - | - |
 || CoVFT: Context-aware Visual Fine-tuning for Multimodal Large Language Models | 2026/03 | [Paper](https://arxiv.org/abs/2603.21077) | - | - |
 || MERGETUNE: Continued Fine-Tuning of Vision-Language Models | 2026/01 (ICLR 2026) | [Paper](https://arxiv.org/abs/2601.10497) | - | - |
 || Mask Fine-Tuning (MFT): Unlocking Hidden Capabilities in Vision-Language Models | 2025/12 | [Paper](https://arxiv.org/abs/2512.23073) | - | - |
@@ -454,6 +465,10 @@ Welcome to contribute and discuss!
 | KALIE: Fine-Tuning Vision-Language Models for Open-World Manipulation without Robot Data | 2024 | [📄 Paper](https://arxiv.org/pdf/2409.14066)| [🌍 Website](https://kalie-vlm.github.io/) | [💾 Code](https://github.com/gractang/kalie) |
 | Unified Video Action Model | 2025 | [📄 Paper](https://arxiv.org/pdf/2503.00200)| [🌍 Website](https://unified-video-action-model.github.io/) | [💾 Code](https://github.com/ShuangLI59/unified_video_action) |
 | HybridVLA: Collaborative Diffusion and Autoregression in a Unified Vision-Language-Action Model | 2025 | [📄 Paper](https://arxiv.org/abs/2503.10631)| [🌍 Website](https://hybrid-vla.github.io/) | [💾 Code](https://github.com/PKU-HMI-Lab/Hybrid-VLA) |
+|| Anticipation-VLA: Long-Horizon Embodied Tasks via Anticipation-Based Subgoal Generation | 05/02/2026 | [📄 Paper](https://arxiv.org/abs/2605.01772) | - | - |
+|| Green-VLA: Staged VLA for Generalist Robots | 05/2026 | [📄 Paper](https://greenvla.github.io/) | [🌍 Website](https://greenvla.github.io/) | - |
+|| VLA Foundry: Unified Framework for Training VLAs | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.19728) | - | - |
+|| OmniVLA-RL: Spatial Understanding + Online RL for VLA | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.17706) | - | - |
 || DAM-VLA: A Dynamic Action Model-Based Vision-Language-Action Framework for Robot Manipulation | 03/2026 | [📄 Paper](https://arxiv.org/abs/2603.00926) | - | - |
 || NS-VLA: Towards Neuro-Symbolic Vision-Language-Action Models | 03/2026 | [📄 Paper](https://arxiv.org/abs/2603.09542) | - | - |
 || Steerable Vision-Language-Action Policies for Embodied Reasoning and Hierarchical Control | 02/2026 | [📄 Paper](https://arxiv.org/abs/2602.13193) | - | - |
@@ -498,7 +513,10 @@ Welcome to contribute and discuss!
 #### 4.3.4. <a name='AutonomousDriving'></a>Autonomous Driving
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
-| UniDriveVLA: Unifying Understanding, Perception, and Action Planning for Autonomous Driving | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.02190) | - | - |
+| MindVLA-U1: Unified Streaming VLA for Autonomous Driving (surpasses human-level driving) | 05/12/2026 | [📄 Paper](https://arxiv.org/abs/2605.12624) | - | - |
+|| VLADriver-RAG: Retrieval-Augmented VLA for Autonomous Driving | 05/08/2026 | [📄 Paper](https://arxiv.org/abs/2605.08133) | - | - |
+|| OneDrive: Unified Heterogeneous Decoding for Driving VLMs | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.17915) | - | - |
+|| UniDriveVLA: Unifying Understanding, Perception, and Action Planning for Autonomous Driving | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.02190) | - | - |
 || AutoMoT: A Unified Vision-Language-Action Model with Asynchronous Mixture-of-Transformers for End-to-End Autonomous Driving | 03/2026 | [📄 Paper](https://arxiv.org/abs/2603.14851) | - | - |
 || DriveVLM-RL: Neuroscience-Inspired Reinforcement Learning with Vision-Language Models for Safe Autonomous Driving | 03/2026 | [📄 Paper](https://arxiv.org/abs/2603.18315) | - | - |
 || HiST-VLA: A Hierarchical Spatio-Temporal Vision-Language-Action Model for End-to-End Autonomous Driving | 02/2026 | [📄 Paper](https://arxiv.org/abs/2602.13329) | - | - |
@@ -534,6 +552,9 @@ Welcome to contribute and discuss!
 | ShowUI: One Vision-Language-Action Model for GUI Visual Agent | 2024 | [📄 Paper](https://arxiv.org/pdf/2411.17465) | - | [💾 Code](https://github.com/showlab/ShowUI) |
 | ScreenAgent: A Vision Language Model-driven Computer Control Agent | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.07945) | - | [💾 Code](https://github.com/niuzaisheng/ScreenAgent) |
 | Web Agents with World Models: Learning and Leveraging Environment Dynamics in Web Navigation | 2024 | [📄 Paper](https://arxiv.org/pdf/2410.13232) | - | [💾 Code](https://huggingface.co/papers/2410.13232) |
+|| LAMO: Scalable Lightweight GUI Agents via Multi-Role Orchestration | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.13488) | - | - |
+|| ScreenExplorer: Autonomous GUI Exploration via Curiosity-Driven VLM Agents | 2026 (ICLR) | [📄 Paper](https://openreview.net/pdf/96d6d36654d2d8699963f2f0a67575c7caaec318.pdf) | - | - |
+|| InfiGUIAgent: Generalist GUI Agent with Native Reasoning and Reflection | 2026 (EACL) | [📄 Paper](https://aclanthology.org/2026.eacl-long.45/) | - | - |
 || MolmoWeb: Open Visual Web Agent and Open Data for the Open Web | 04/2026 | [📄 Paper](https://huggingface.tw/papers/2604.08516) | [🌍 Website](https://allenai.org/blog/molmoweb) | [💾 Code](https://github.com/allenai/molmoweb) |
 
 
@@ -548,7 +569,10 @@ Welcome to contribute and discuss!
 #### 4.4.3. <a name='Medical and Healthcare'></a>Healthcare
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
-| CARE: Towards Clinical Accountability in Multi-Modal Medical Reasoning with an Evidence-Grounded Agentic Framework | 03/2026 | [📄 Paper](https://arxiv.org/abs/2603.01607) | - | - |
+| Medical Thinking with Multiple Images (MedThinkVQA) | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.16506) | - | - |
+|| MedVRAG: Iterative Multimodal RAG for Medical QA | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.27724) | - | - |
+|| GMAI-VL: General Medical AI Vision-Language Model | 2026 (AAAI) | [📄 Paper](https://ojs.aaai.org/index.php/AAAI/article/view/39485) | - | - |
+|| CARE: Towards Clinical Accountability in Multi-Modal Medical Reasoning with an Evidence-Grounded Agentic Framework | 03/2026 | [📄 Paper](https://arxiv.org/abs/2603.01607) | - | - |
 || MedMO: Grounding and Understanding Multimodal Large Language Model for Medical Images | 02/2026 | [📄 Paper](https://arxiv.org/abs/2602.06965) | - | - |
 || Colon-X: Advancing Intelligent Colonoscopy from Multimodal Understanding to Clinical Reasoning | 12/2025 | [📄 Paper](https://arxiv.org/abs/2512.03667) | - | [💾 Code](https://github.com/ai4colonoscopy/Colon-X) |
 | Frontiers in Intelligent Colonoscopy | 02/2025 | [📄 Paper](https://arxiv.org/pdf/2410.17241) | - | [💾 Code](https://github.com/ai4colonoscopy/IntelliScope) |
@@ -578,7 +602,8 @@ Welcome to contribute and discuss!
 ### 5.1 <a name='Hallucination'></a>Hallucination
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
-| Focus Matters: Phase-Aware Suppression for Hallucination in Vision-Language Models | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.03556) | - | - |
+| VL-Calibration: Decoupled Confidence Calibration for VLM Reasoning | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.09529) | - | - |
+|| Focus Matters: Phase-Aware Suppression for Hallucination in Vision-Language Models | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.03556) | - | - |
 || VLMs Need Words: Vision Language Models Ignore Visual Detail in Favor of Semantic Anchors | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.02486) | - | - |
 || HALP: Detecting Hallucinations in Vision-Language Models without Generating a Single Token | 03/2026 | [📄 Paper](https://arxiv.org/abs/2603.05465) | [🌍 ACL](https://aclanthology.org/2026.eacl-long.287/) | - |
 || Tone Matters: The Impact of Linguistic Tone on Hallucination in VLMs | 01/2026 | [📄 Paper](https://arxiv.org/abs/2601.06460) | - | - |
@@ -658,7 +683,8 @@ Welcome to contribute and discuss!
 ### 5.5 <a name=' EfficientTrainingandFineTuning'></a> Efficient Training and Fine-Tuning
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
-| QAPruner: Quantization-Aware Vision Token Pruning for MLLMs | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.02816) | - | - |
+| MODIX: Training-Free Multimodal Information-Driven Positional Index Scaling | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.12537) | - | - |
+|| QAPruner: Quantization-Aware Vision Token Pruning for MLLMs | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.02816) | - | - |
 || Firebolt-VL: Efficient Vision-Language Understanding with Cross-Modality Modulation | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.04579) | - | - |
 || CoME-VL: Scaling Complementary Multi-Encoder Vision-Language Learning | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.03231) | - | - |
 || LoRA-Squeeze: Simple and Effective Post-Tuning and In-Tuning Compression of LoRA Modules | 02/2026 | [📄 Paper](https://arxiv.org/abs/2602.10993) | - | - |
@@ -675,7 +701,8 @@ Welcome to contribute and discuss!
 ### 5.6 <a name='ScarceofHighqualityDataset'></a>Scarce of High-quality Dataset
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
-| A Survey on Bridging VLMs and Synthetic Data | 2025 | [📄 Paper](https://openreview.net/pdf?id=ThjDCZOljE) | - | [💾 Code](https://github.com/mghiasvand1/Awesome-VLM-Synthetic-Data/) |
+| A Prescription for Better VLMs through Data Curation Alone (20/20 Vision) | 05/2026 | [📄 Paper](https://arxiv.org/abs/2605.11405) | - | - |
+|| A Survey on Bridging VLMs and Synthetic Data | 2025 | [📄 Paper](https://openreview.net/pdf?id=ThjDCZOljE) | - | [💾 Code](https://github.com/mghiasvand1/Awesome-VLM-Synthetic-Data/) |
 | Inst-IT: Boosting Multimodal Instance Understanding via Explicit Visual Prompt Instruction Tuning | 2024 | [📄 Paper](https://arxiv.org/abs/2412.03565) | [Website](https://inst-it.github.io/) | [💾 Code](https://github.com/inst-it/inst-it) |
 | SLIP: Self-supervision meets Language-Image Pre-training | 2021 | [📄 Paper](https://arxiv.org/pdf/2112.12750) | - | [💾 Code](https://github.com/facebookresearch/SLIP) |
 | Synthetic Vision: Training Vision-Language Models to Understand Physics | 2024 | [📄 Paper](https://arxiv.org/pdf/2412.08619) | - | - |
