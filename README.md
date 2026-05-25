@@ -304,7 +304,7 @@ Welcome to contribute and discuss!
 | [GAIVE](https://arxiv.org/abs/2306.14565) | Hallucination | Ans Match | Synth | 320 | [Repo](https://github.com/FuxiaoLiu/LRV-Instruction) |
 | [HalEval](https://arxiv.org/abs/2402.15721) | Hallucination | Yes/No | Crowd / Synth | 2 | [Repo](https://github.com/WisdomShell/hal-eval) |
 | [AMBER](https://arxiv.org/abs/2311.07397) | Hallucination | Ans Match | Human | 15.22 | [Repo](https://github.com/junyangwang0410/AMBER) |
-
+| [MVI-Bench](https://arxiv.org/abs/2511.14159) | Misleading Visual Inputs | Ans Match | Human | 1.25 | [Repo](https://github.com/chenyil6/MVI-Bench) |
 
 ### 2.3. <a name='DatasetforEmbodiedVLM'></a> Benchmark Datasets, Simulators, and Generative Models for Embodied VLM 
 | Benchmark                                                                                                                                     |             Domain              |                Type                |                                                     		Project					                                                     |
@@ -602,6 +602,7 @@ Welcome to contribute and discuss!
 ### 5.1 <a name='Hallucination'></a>Hallucination
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+|  MVI-Bench: A Comprehensive Benchmark for Evaluating Robustness to Misleading Visual Inputs in LVLMs | 11/2025 | [📄 Paper](https://arxiv.org/abs/2511.14159) | [🌍 ICML 2026](https://icml.cc/) | [💾 Code](https://github.com/chenyil6/MVI-Bench) |
 | VL-Calibration: Decoupled Confidence Calibration for VLM Reasoning | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.09529) | - | - |
 |  Focus Matters: Phase-Aware Suppression for Hallucination in Vision-Language Models | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.03556) | - | - |
 |  VLMs Need Words: Vision Language Models Ignore Visual Detail in Favor of Semantic Anchors | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.02486) | - | - |
