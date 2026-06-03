@@ -38,7 +38,9 @@
 
 我们用带日期的小型综述追踪那些尚未折叠到主表中的新 VLM、基准与后训练方法：
 
-- 📰 [`2026-04-28`](progressive%20reports/2026-04-28.md) — **最新**：Qwen3.6-27B & Qwen3.6-35B-A3B、Claude Mythos（受限预览）、S1-VL、GLM-5V-Turbo、FreshPER / GMPO / ARPO / GRPO-VPS、QUOTA、Fast-dVLM、VLA-World、SpanVLA、VLA-Forget、R-VLM、UILoop、WebForge、WorldMark、Video-MME-v2、CrossMath、BabyVision、SlowBA —— 4 月 13 日以来 **30 条新条目**。
+- 📰 [`2026-06-02`](progressive%20reports/2026-06-02.md) — **最新**：Mamoda2.5（AR-扩散 DiT-MoE，编辑加速 95.9×）、VLM3（原生 3D 学习者）、AlphaGRPO（面向统一模型生成的 RL）、阶段式偏好优化、FastOCR / WindowQuant（KV 缓存高效化）、Fast-dDrive / CLOVER / CoWorld-VLA（驾驶 VLA）、Lost in Fog（推理一致性作为安全信号）、LiteGUI（免 SFT 的 GUI 智能体）、Health-Conditioned VLA、POLAR、TOC-Bench / VGenST-Bench（视频）、HalluCXR（医学）—— 5 月 16 日以来 **16 条新条目**。
+- 📰 [`2026-05-16`](progressive%20reports/2026-05-16.md) — LensVLM（Apple）、Nemotron 3 Nano Omni（NVIDIA）、LLaDA2.0-Uni、PLaMo 2.1-VL、S-GRPO / Faithful GRPO / GRPO-TTA / OpenSearch-VL、MindVLA-U1（超越人类驾驶）、VLADriver-RAG、Green-VLA、Anticipation-VLA、VLA Foundry、LAMO、ScreenExplorer、VideoZeroBench、Video-Oasis、MedThinkVQA、数据筛选实现 87× 更低算力 —— 4 月 28 日以来 **34 条新条目**。
+- 📰 [`2026-04-28`](progressive%20reports/2026-04-28.md) — Qwen3.6-27B & Qwen3.6-35B-A3B、Claude Mythos（受限预览）、S1-VL、GLM-5V-Turbo、FreshPER / GMPO / ARPO / GRPO-VPS、QUOTA、Fast-dVLM、VLA-World、SpanVLA、VLA-Forget、R-VLM、UILoop、WebForge、WorldMark、Video-MME-v2、CrossMath、BabyVision、SlowBA —— 4 月 13 日以来 **30 条新条目**。
 - 📰 [`2026-04-13`](progressive%20reports/2026-04-13.md) — LFM2.5-VL-450M、EXAONE 4.5、Gemma 4、Granite 4.0 3B Vision、InternVL-U、GLM-4.6V、Vero、MolmoWeb、UniDriveVLA、QAPruner、Firebolt-VL、CoME-VL 等。
 - 📰 [`2026-03-25`](progressive%20reports/2026-03-25.md) — GPT-5.4、Phi-4-Reasoning-Vision-15B、Gemini 3.0、Qwen3.5、Claude Opus 4.6、Molmo2 等。
 
