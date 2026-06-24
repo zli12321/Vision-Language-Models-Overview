@@ -38,7 +38,8 @@
 
 我们用带日期的小型综述追踪那些尚未折叠到主表中的新 VLM、基准与后训练方法：
 
-- 📰 [`2026-06-02`](progressive%20reports/2026-06-02.md) — **最新**：Mamoda2.5（AR-扩散 DiT-MoE，编辑加速 95.9×）、VLM3（原生 3D 学习者）、AlphaGRPO（面向统一模型生成的 RL）、阶段式偏好优化、FastOCR / WindowQuant（KV 缓存高效化）、Fast-dDrive / CLOVER / CoWorld-VLA（驾驶 VLA）、Lost in Fog（推理一致性作为安全信号）、LiteGUI（免 SFT 的 GUI 智能体）、Health-Conditioned VLA、POLAR、TOC-Bench / VGenST-Bench（视频）、HalluCXR（医学）—— 5 月 16 日以来 **16 条新条目**。
+- 📰 [`2026-06-23`](progressive%20reports/2026-06-23.md) — **最新**：聚焦**世界模型** —— NVIDIA OmniDreams（实时闭环驾驶世界模型）、Mirage（隐空间空间记忆）、Reward-as-Agent（面向世界模型的 GRPO）、WorldOlympiad 与 LongSpace-Bench（世界模型基准）；以及 PP-OCRv6（34.5M 参数在 OCR 上超越 235B VLM）、Occ-VLM（3D 接地）、离散扩散 RL 推理、VLA 层剪枝、Hy-Embodied-0.5-VLA、RT-VLA（驾驶推理加速 44.8×）、VLA 语言引导 —— 6 月 2 日以来 **12 条新条目**。
+- 📰 [`2026-06-02`](progressive%20reports/2026-06-02.md) — Mamoda2.5（AR-扩散 DiT-MoE，编辑加速 95.9×）、VLM3（原生 3D 学习者）、AlphaGRPO（面向统一模型生成的 RL）、阶段式偏好优化、FastOCR / WindowQuant（KV 缓存高效化）、Fast-dDrive / CLOVER / CoWorld-VLA（驾驶 VLA）、Lost in Fog（推理一致性作为安全信号）、LiteGUI（免 SFT 的 GUI 智能体）、Health-Conditioned VLA、POLAR、TOC-Bench / VGenST-Bench（视频）、HalluCXR（医学）—— 5 月 16 日以来 **16 条新条目**。
 - 📰 [`2026-05-16`](progressive%20reports/2026-05-16.md) — LensVLM（Apple）、Nemotron 3 Nano Omni（NVIDIA）、LLaDA2.0-Uni、PLaMo 2.1-VL、S-GRPO / Faithful GRPO / GRPO-TTA / OpenSearch-VL、MindVLA-U1（超越人类驾驶）、VLADriver-RAG、Green-VLA、Anticipation-VLA、VLA Foundry、LAMO、ScreenExplorer、VideoZeroBench、Video-Oasis、MedThinkVQA、数据筛选实现 87× 更低算力 —— 4 月 28 日以来 **34 条新条目**。
 - 📰 [`2026-04-28`](progressive%20reports/2026-04-28.md) — Qwen3.6-27B & Qwen3.6-35B-A3B、Claude Mythos（受限预览）、S1-VL、GLM-5V-Turbo、FreshPER / GMPO / ARPO / GRPO-VPS、QUOTA、Fast-dVLM、VLA-World、SpanVLA、VLA-Forget、R-VLM、UILoop、WebForge、WorldMark、Video-MME-v2、CrossMath、BabyVision、SlowBA —— 4 月 13 日以来 **30 条新条目**。
 - 📰 [`2026-04-13`](progressive%20reports/2026-04-13.md) — LFM2.5-VL-450M、EXAONE 4.5、Gemma 4、Granite 4.0 3B Vision、InternVL-U、GLM-4.6V、Vero、MolmoWeb、UniDriveVLA、QAPruner、Firebolt-VL、CoME-VL 等。
