@@ -55,6 +55,7 @@ Welcome to contribute and discuss!
 ## Table of Contents
 * [📄 Paper Link](https://arxiv.org/abs/2501.02189)/[⛑️ Citation](#Citations)
 * 1. [📚 SoTA VLMs](#vlms)
+	* 1.1.  [🌍 World Models](#worldmodels)
 * 2. [🗂️ Dataset and Evaluation](#Dataset)
 	* 2.1.  [Large Scale Pre-Training & Post-Training Dataset](#TrainingDatasetforVLM)
 	* 2.2.  [Datasets and Evaluation for VLM](#DatasetforVLM)
@@ -108,6 +109,8 @@ Welcome to contribute and discuss!
 ##  1. <a name='vlms'></a>📚 SoTA VLMs 
 | Model                                                        | Year | Architecture   | Training Data               | Parameters     | Vision Encoder/Tokenizer                       | Pretrained Backbone Model                          |
 |--------------------------------------------------------------|------|----------------|-----------------------------|----------------|-----------------------------------------------|---------------------------------------------------|
+| [PP-OCRv6 (Baidu)](https://arxiv.org/abs/2606.13108) | 06/11/2026 | MetaFormer-style, structural reparameterization (OCR specialist; beats Qwen3-VL-235B / GPT-5.5 / Gemini-3.1-Pro on OCR) | OCR-focused corpora | 1.5M–34.5M | Decoupled spatial/channel token mixing | Pretrained from scratch |
+| [Mamoda2.5 (InclusionAI)](https://arxiv.org/abs/2605.02641) | 05/04/2026 | AR-Diffusion + DiT-MoE (unified understanding + generation; 128 experts, Top-8) | Multimodal und. + image/video generation & editing | 25B total · 3B active | Semantic tokenizer + DiT decoder head | Mamoda2 |
 | [LensVLM (Apple / Duke)](https://arxiv.org/abs/2605.07019) | 05/07/2026 | Decoder-only | Rendered text-as-image + selective context expansion | 9B | Rendered-image ViT | Qwen3.5-9B-Base |
 | [Nemotron 3 Nano Omni (NVIDIA)](https://arxiv.org/abs/2604.24954) | 04/28/2026 | Hybrid MoE (omni-modal: vision + audio + text) | Vision + audio + text joint training | 30B total · 3B active | Dynamic-res ViT + Conv3D temporal | Nemotron 3 |
 | [LLaDA2.0-Uni (Huawei / InclusionAI)](https://arxiv.org/abs/2604.20796) | 04/28/2026 | Discrete diffusion LLM (dLLM) + MoE | Multimodal understanding + generation | MoE-based | SigLIP-VQ semantic tokenizer | LLaDA2.0 |
@@ -178,6 +181,29 @@ Welcome to contribute and discuss!
 | [CLIP](https://arxiv.org/pdf/2103.00020)                     | 2021 | Encoder-decoder| 400M image-text pairs       | 63M-355M       | ViT/ResNet                                   | Pretrained from scratch                           |
 
 
+###  1.1. <a name='worldmodels'></a>🌍 World Models
+
+World models moved from research demos to release-grade artifacts in mid-2026: unified trunks that serve as **generator, perceiver, and policy** at once. Foundation releases first, then memory/state analyses and benchmarks.
+
+| Model | Date | Type | Scale / License | Key Result | Links |
+|-------|------|------|-----------------|------------|-------|
+| [Cosmos 3 (NVIDIA)](https://arxiv.org/abs/2606.02800) | 06/01/2026 | Omnimodal world-model family (language, image, video, audio, **action**) — mixture-of-transformers | Family; open code/checkpoints/data (OpenMDW-1.1) | SoTA across VL, video generation, robot policy; best open T2I/I2V + best RoboArena policy | [Paper](https://arxiv.org/abs/2606.02800) |
+| [Kairos](https://arxiv.org/abs/2606.16533) | 06/15/2026 | Native world-model stack (understanding + generation + prediction) | 4B unified; Hybrid Linear Temporal Attention | Cross-embodiment data curriculum; real-time rollout on edge hardware; beats 14B on embodied benchmarks | [Paper](https://arxiv.org/abs/2606.16533) |
+| [DreamX-World 1.0 (Alibaba AMAP)](https://arxiv.org/abs/2606.16993) | 06/15/2026 | General-purpose **interactive** T/I-to-video world model | 5B (Wan2.2-T2V-5B base); MIT open weights | Camera navigation, revisit consistency, promptable events; E-PRoPE encoding; few-step AR via causal forcing + DMD distillation | [HF](https://huggingface.co/GD-ML/DreamX-World-5B) · [Code](https://github.com/AMAP-ML/DreamX-World) |
+| [NVIDIA OmniDreams](https://arxiv.org/abs/2606.03159) | 06/02/2026 | Real-time generative world model for closed-loop AV simulation | Mid/post-trained from Cosmos on 21k h driving | Action-conditioned sensor video; derived world-action model beats VLA-based Alpamayo 1.5 at 1/5 params | [Paper](https://arxiv.org/abs/2606.03159) |
+| [Mirage](https://arxiv.org/abs/2606.09828) | 06/08/2026 | Latent spatial memory for video world models | — | 3D scene memory in diffusion latent space via depth-guided back-projection; faster + lighter than explicit-3D baselines | [Paper](https://arxiv.org/abs/2606.09828) |
+| [Reward as An Agent](https://arxiv.org/abs/2606.19990) | 06/18/2026 | RL post-training for embodied world models | — | DynDiff-GRPO diversifies action-space exploration; agentic reward verification curbs reward hacking | [Paper](https://arxiv.org/abs/2606.19990) |
+
+**Benchmarks & analyses**
+
+| Title | Date | What It Shows | Link |
+|-------|------|---------------|------|
+| WorldOlympiad | 06/09/2026 | Physics / geometry / interaction "triathlon": SoTA world models show substantial gaps in physical reasoning, 3D consistency, long-horizon control | [Paper](https://arxiv.org/abs/2606.11129) |
+| Current World Models Lack a Persistent State Core | 06/18/2026 | World models treat the world as a "tracking shot" — off-screen entities freeze instead of evolving; persists across architectures and scales | [Paper](https://arxiv.org/abs/2606.20545) |
+| Echo-Memory | 06/08/2026 | Controlled memory study: raw context beats compressed memory for capacity; state-space recurrence best for revisit consistency | [Paper](https://arxiv.org/abs/2606.09803) |
+| LongSpace / LongSpace-Bench | 06/04/2026 | Video MLLMs fail long-horizon spatial recall without explicit spatial memory (3D cues + layer-aware retrieval) | [Paper](https://arxiv.org/abs/2606.05677) |
+
+> See also the earlier world-model entries in [§2.3](#DatasetforEmbodiedVLM) (UniSim, GAIA-1, LWM, Genesis, RoboGen) and the [`2026-06-23`](progressive%20reports/2026-06-23.md) / [`2026-06-27`](progressive%20reports/2026-06-27.md) progressive reports.
 
 
 ##  2. <a name='Dataset'></a>🗂️ Benchmarks and Evaluation
@@ -220,6 +246,8 @@ Welcome to contribute and discuss!
 
 | Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
 |---------|------|---------------|------------|----------|-------------|
+| [VGenST-Bench](https://arxiv.org/abs/2605.22570) | Spatio-temporal Reasoning via Active Video Synthesis | 3×2×2 taxonomy; synthesized controlled scenes decouple perception from reasoning | Multi-agent + Human QC | — | [Paper](https://arxiv.org/abs/2605.22570) |
+| [TOC-Bench](https://arxiv.org/abs/2605.09904) | Temporal Object Consistency for Video-LLMs | 3-layer temporal-necessity filtering; identity/continuity through occlusion & state change | Human-verified | 2.3 (2,323 QA / 1,951 videos) | [Paper](https://arxiv.org/abs/2605.09904) |
 | [VideoZeroBench](https://arxiv.org/abs/2604.01569) | Spatio-temporal Evidence Verification for Long-Video QA | 5-level progressive evidence tightening | Human | 0.5 (500 questions, 13 domains) | [Paper](https://arxiv.org/abs/2604.01569) |
 | [Video-Oasis](https://arxiv.org/abs/2603.29616) | Diagnostic Meta-benchmark for Video Understanding | Measures % solvable without visual/temporal context | Meta-analysis | — | [Paper](https://arxiv.org/abs/2603.29616) |
 | [LoVR](https://arxiv.org/abs/2505.13928) | Long Video Retrieval in Multimodal Contexts | Retrieval accuracy | — | — | [Paper](https://arxiv.org/abs/2505.13928) |
@@ -340,6 +368,9 @@ Welcome to contribute and discuss!
 ### 3.1.  <a name='alignment'></a>RL Alignment for VLM
 | Title | Year | Paper | RL | Code |
 |----------------|------|--------|---------|------|
+| ZPPO: Zone of Proximal Policy Optimization — Teacher in Prompts, Not Gradients | 06/16/2026 | [Paper](https://arxiv.org/abs/2606.18216) | Teacher guidance via reformulated prompts; beats distillation & GRPO on Qwen3.5 VLMs (0.8B–9B, 31-benchmark suite) | - |
+| Efficient Reinforcement for Visual-Textual Thinking with Discrete Diffusion | 06/11/2026 | [Paper](https://arxiv.org/abs/2606.14792) | GRPO over multimodal discrete diffusion; localized visual editing cuts rollout compute 26.9% vs AR | - |
+| AlphaGRPO: Self-Reflective Multimodal Generation in UMMs | 05/12/2026 | [Paper](https://arxiv.org/abs/2605.12495) | GRPO for unified-model *generation*; LLM-decomposed verifiable reward (GenEval, TIIF, DPG, WISE) | - |
 | OpenSearch-VL: Multi-Turn Fatal-Aware GRPO for Multimodal Search Agents | 05/07/2026 | [Paper](https://arxiv.org/abs/2605.05185) | Fatal-aware GRPO; handles tool-call failures in agentic multi-turn RL | - |
 | GRPO-TTA: Test-Time Visual Tuning via GRPO-Driven RL | 05/05/2026 | [Paper](https://arxiv.org/abs/2605.03403) | GRPO for test-time visual encoder tuning; no ground-truth labels needed | - |
 | S-GRPO: Unified Post-Training for Large VLMs | 04/2026 | [Paper](https://arxiv.org/abs/2604.16557) | Supervised GRPO; injects ground-truth trajectories to solve cold-start | - |
@@ -480,6 +511,12 @@ Welcome to contribute and discuss!
 #### 4.3.1. <a name='Manipulation'></a>Manipulation
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| Supervise What Survives: Geometry-Guided VLA Adaptation from Synthetic Robot Videos | 06/23/2026 | [📄 Paper](https://arxiv.org/abs/2606.24448) | - | - |
+| Qwen-RobotManip: Alignment Unlocks Scale for Robotic Manipulation Foundation Models (38,100-hour corpus) | 06/16/2026 | [📄 Paper](https://arxiv.org/abs/2606.17846) | - | - |
+| Hy-Embodied-0.5-VLA: From VLA Models to a Real-World Robot Learning Stack (10,000-hour UMI corpus) | 06/12/2026 | [📄 Paper](https://arxiv.org/abs/2606.14409) | - | - |
+| Learning What to Say to Your VLA: Mostly Harmless VLA Steering | 06/10/2026 | [📄 Paper](https://arxiv.org/abs/2606.12299) | - | - |
+| Finetuning VLA Models Requires Fewer Layers Than You Think (50% depth pruning) | 06/18/2026 | [📄 Paper](https://arxiv.org/abs/2606.20246) | - | - |
+| Health-Conditioned VLA for Malfunction-Aware Robot Control | 05/15/2026 | [📄 Paper](https://arxiv.org/abs/2605.16056) | - | - |
 | VIMA: General Robot Manipulation with Multimodal Prompts | 2022 | [📄 Paper](https://arxiv.org/pdf/2210.03094) | [🌍 Website](https://vimalabs.github.io/) |
 | Instruct2Act: Mapping Multi-Modality Instructions to Robotic Actions with Large Language Model | 2023 | [📄 Paper](https://arxiv.org/pdf/2305.11176) | - | - |
 | Creative Robot Tool Use with Large Language Models | 2023 | [📄 Paper](https://arxiv.org/pdf/2310.13065) | [🌍 Website](https://creative-robotool.github.io/) | - |
@@ -516,6 +553,10 @@ Welcome to contribute and discuss!
 #### 4.3.4. <a name='AutonomousDriving'></a>Autonomous Driving
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| RT-VLA: Real-Time VLA via Knowledge Distillation (44.8× faster inference) | 06/12/2026 | [📄 Paper](https://arxiv.org/abs/2606.14010) | - | - |
+| Fast-dDrive: Efficient Block-Diffusion VLM for Autonomous Driving (12× throughput, 0.32m L2 nuScenes) | 05/22/2026 | [📄 Paper](https://arxiv.org/abs/2605.23163) | - | - |
+| CLOVER: Closed-Loop Value Estimation & Ranking for E2E Driving Planning (94.5 PDMS NAVSIM SoTA) | 05/14/2026 | [📄 Paper](https://arxiv.org/abs/2605.15120) | - | - |
+| CoWorld-VLA: Thinking in a Multi-Expert World Model for Autonomous Driving | 05/11/2026 | [📄 Paper](https://arxiv.org/abs/2605.10426) | - | - |
 | MindVLA-U1: Unified Streaming VLA for Autonomous Driving (surpasses human-level driving) | 05/12/2026 | [📄 Paper](https://arxiv.org/abs/2605.12624) | - | - |
 |  VLADriver-RAG: Retrieval-Augmented VLA for Autonomous Driving | 05/08/2026 | [📄 Paper](https://arxiv.org/abs/2605.08133) | - | - |
 |  OneDrive: Unified Heterogeneous Decoding for Driving VLMs | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.17915) | - | - |
@@ -555,6 +596,8 @@ Welcome to contribute and discuss!
 | ShowUI: One Vision-Language-Action Model for GUI Visual Agent | 2024 | [📄 Paper](https://arxiv.org/pdf/2411.17465) | - | [💾 Code](https://github.com/showlab/ShowUI) |
 | ScreenAgent: A Vision Language Model-driven Computer Control Agent | 2024 | [📄 Paper](https://arxiv.org/pdf/2402.07945) | - | [💾 Code](https://github.com/niuzaisheng/ScreenAgent) |
 | Web Agents with World Models: Learning and Leveraging Environment Dynamics in Web Navigation | 2024 | [📄 Paper](https://arxiv.org/pdf/2410.13232) | - | [💾 Code](https://huggingface.co/papers/2410.13232) |
+|  VisCritic: Visual State Comparison as Process Reward for GUI Agents | 06/23/2026 | [📄 Paper](https://arxiv.org/abs/2606.24525) | - | - |
+|  LiteGUI: Distilling Compact GUI Agents with Reinforcement Learning (SFT-free, 2B/3B) | 05/08/2026 | [📄 Paper](https://arxiv.org/abs/2605.07505) | - | - |
 |  LAMO: Scalable Lightweight GUI Agents via Multi-Role Orchestration | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.13488) | - | - |
 |  ScreenExplorer: Autonomous GUI Exploration via Curiosity-Driven VLM Agents | 2026 (ICLR) | [📄 Paper](https://openreview.net/pdf/96d6d36654d2d8699963f2f0a67575c7caaec318.pdf) | - | - |
 |  InfiGUIAgent: Generalist GUI Agent with Native Reasoning and Reflection | 2026 (EACL) | [📄 Paper](https://aclanthology.org/2026.eacl-long.45/) | - | - |
@@ -572,6 +615,8 @@ Welcome to contribute and discuss!
 #### 4.4.3. <a name='Medical and Healthcare'></a>Healthcare
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| IMCBench: Multimodal LLMs in Image-grounded Medical Conversations (safety drops on malignant/rare conditions) | 06/26/2026 | [📄 Paper](https://arxiv.org/abs/2606.28556) | - | - |
+| HalluCXR: Benchmarking & Mitigating Hallucinations in Medical VLMs for Chest Radiographs (61.9–82.3% outputs hallucinate) | 05/19/2026 | [📄 Paper](https://arxiv.org/abs/2605.20469) | - | - |
 | Medical Thinking with Multiple Images (MedThinkVQA) | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.16506) | - | - |
 |  MedVRAG: Iterative Multimodal RAG for Medical QA | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.27724) | - | - |
 |  GMAI-VL: General Medical AI Vision-Language Model | 2026 (AAAI) | [📄 Paper](https://ojs.aaai.org/index.php/AAAI/article/view/39485) | - | - |
@@ -687,6 +732,8 @@ Welcome to contribute and discuss!
 ### 5.5 <a name=' EfficientTrainingandFineTuning'></a> Efficient Training and Fine-Tuning
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| FastOCR: Dynamic Visual Fixation via KV Cache Pruning (98% accuracy at 5% visual tokens, 3.0× faster) | 05/17/2026 | [📄 Paper](https://arxiv.org/abs/2605.17447) | - | - |
+| WindowQuant: Mixed-Precision KV Cache Quantization via Window-Level Similarity | 05/04/2026 | [📄 Paper](https://arxiv.org/abs/2605.02262) | - | - |
 | MODIX: Training-Free Multimodal Information-Driven Positional Index Scaling | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.12537) | - | - |
 |  QAPruner: Quantization-Aware Vision Token Pruning for MLLMs | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.02816) | - | - |
 |  Firebolt-VL: Efficient Vision-Language Understanding with Cross-Modality Modulation | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.04579) | - | - |
