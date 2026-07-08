@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2020 830" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 1520" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif">
   <defs>
     <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%"  stop-color="#fbfbfd"/>
@@ -27,11 +27,13 @@
       <stop offset="100%" stop-color="#0f766e"/>
     </linearGradient>
 
-    <linearGradient id="bigArrow" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="rowArrow1" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%"   stop-color="#1d4ed8"/>
-      <stop offset="25%"  stop-color="#6d28d9"/>
-      <stop offset="50%"  stop-color="#db2777"/>
-      <stop offset="75%"  stop-color="#c2410c"/>
+      <stop offset="50%"  stop-color="#6d28d9"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+    <linearGradient id="rowArrow2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#c2410c"/>
       <stop offset="100%" stop-color="#0f766e"/>
     </linearGradient>
 
@@ -45,28 +47,37 @@
     <marker id="arrHeadTeal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f766e"/>
     </marker>
+    <marker id="arrHeadGray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
+    </marker>
   </defs>
 
-  <rect width="2020" height="830" fill="url(#bgGrad)"/>
+  <rect width="1240" height="1520" fill="url(#bgGrad)"/>
 
   <!-- Title -->
-  <text x="1010" y="48" text-anchor="middle" font-size="30" font-weight="700" fill="#0f172a">
+  <text x="620" y="48" text-anchor="middle" font-size="30" font-weight="700" fill="#0f172a">
     The Evolution of Vision-Language Model Architectures
   </text>
-  <text x="1010" y="78" text-anchor="middle" font-size="14" fill="#64748b" font-weight="500">
+  <text x="620" y="78" text-anchor="middle" font-size="14" fill="#64748b" font-weight="500">
     contrastive / bridged two-towers &#8594; LLM backbones &#8594; natively-fused inputs &#8594; omni-modal I/O &#8594; world-action models
   </text>
 
-  <!-- Big progression arrow with 5 stops -->
-  <line x1="60" y1="146" x2="1950" y2="146" stroke="url(#bigArrow)" stroke-width="3" stroke-linecap="round" marker-end="url(#arrHeadTeal)"/>
-  <circle cx="210"  cy="146" r="6" fill="#1d4ed8"/>
-  <circle cx="610"  cy="146" r="6" fill="#6d28d9"/>
-  <circle cx="1010" cy="146" r="6" fill="#db2777"/>
-  <circle cx="1410" cy="146" r="6" fill="#c2410c"/>
-  <circle cx="1810" cy="146" r="6" fill="#0f766e"/>
+  <!-- Row 1 progression arrow (Eras 1, 2, 3a) -->
+  <line x1="60" y1="118" x2="1150" y2="118" stroke="url(#rowArrow1)" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="210"  cy="118" r="6" fill="#1d4ed8"/>
+  <circle cx="610"  cy="118" r="6" fill="#6d28d9"/>
+  <circle cx="1010" cy="118" r="6" fill="#db2777"/>
 
-  <!-- =============== ERA 1: Contrastive / Bridged Two-Tower =============== -->
-  <g transform="translate(20,170)">
+  <!-- Wrap-around connector to row 2 -->
+  <path d="M 1150 118 C 1218 118 1222 160 1222 240 L 1222 730 C 1222 800 1160 800 1090 800 L 360 800 C 296 800 274 812 271 830"
+        fill="none" stroke="#94a3b8" stroke-width="1.8" stroke-dasharray="7 5" marker-end="url(#arrHeadGray)"/>
+
+  <!-- Row 2 progression arrow (Eras 3b, 4) -->
+  <line x1="270" y1="838" x2="960" y2="838" stroke="url(#rowArrow2)" stroke-width="3" stroke-linecap="round" marker-end="url(#arrHeadTeal)"/>
+  <circle cx="420" cy="838" r="6" fill="#c2410c"/>
+  <circle cx="820" cy="838" r="6" fill="#0f766e"/>
+
+  <g transform="translate(20,140)">
     <rect width="380" height="600" rx="16" ry="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" filter="url(#cardShadow)"/>
 
     <rect x="20" y="20" width="160" height="26" rx="13" ry="13" fill="url(#era1)"/>
@@ -121,8 +132,7 @@
     <text x="20" y="575" font-size="12" fill="#0f172a">Flamingo &#8226; InstructBLIP</text>
   </g>
 
-  <!-- =============== ERA 2: LLM Backbone =============== -->
-  <g transform="translate(420,170)">
+  <g transform="translate(420,140)">
     <rect width="380" height="600" rx="16" ry="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" filter="url(#cardShadow)"/>
 
     <rect x="20" y="20" width="160" height="26" rx="13" ry="13" fill="url(#era2)"/>
@@ -173,8 +183,7 @@
     <text x="20" y="575" font-size="12" fill="#0f172a">Phi-4-V &#8226; LLaMA-3.2-Vision &#8226; Pixtral &#8226; CogVLM</text>
   </g>
 
-  <!-- =============== ERA 3a: Native Multimodal Input (text out) =============== -->
-  <g transform="translate(820,170)">
+  <g transform="translate(820,140)">
     <rect width="380" height="600" rx="16" ry="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" filter="url(#cardShadow)"/>
 
     <rect x="20" y="20" width="200" height="26" rx="13" ry="13" fill="url(#era3)"/>
@@ -228,8 +237,19 @@
     <text x="20" y="592" font-size="12" fill="#0f172a">Nemotron 3 Nano Omni</text>
   </g>
 
-  <!-- =============== ERA 3b: Omni-Modal Unified I/O =============== -->
-  <g transform="translate(1220,170)">
+  <!-- Row 1 shift labels (tinted pill chips) -->
+  <g transform="translate(0,754)" font-size="12" font-weight="600">
+    <rect x="55"   y="0" width="310" height="26" rx="13" fill="#dbeafe"/>
+    <text x="210"  y="17" text-anchor="middle" fill="#1e40af">two-tower &#8226; post-hoc alignment</text>
+
+    <rect x="455"  y="0" width="310" height="26" rx="13" fill="#ede9fe"/>
+    <text x="610"  y="17" text-anchor="middle" fill="#5b21b6">vision-as-adapter &#8226; LLM does the reasoning</text>
+
+    <rect x="855"  y="0" width="310" height="26" rx="13" fill="#fce7f3"/>
+    <text x="1010" y="17" text-anchor="middle" fill="#9d174d">early-fused input &#8226; text output</text>
+  </g>
+
+  <g transform="translate(230,858)">
     <rect width="380" height="600" rx="16" ry="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" filter="url(#cardShadow)"/>
 
     <rect x="20" y="20" width="200" height="26" rx="13" ry="13" fill="url(#era4)"/>
@@ -300,8 +320,7 @@
     <text x="20" y="575" font-size="12" fill="#0f172a">Erin 5.0 &#8226; Janus-Pro &#8226; LLaDA2.0-Uni &#8226; Mamoda2.5</text>
   </g>
 
-  <!-- =============== ERA 4: World-Action Models =============== -->
-  <g transform="translate(1620,170)">
+  <g transform="translate(630,858)">
     <rect width="380" height="600" rx="16" ry="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" filter="url(#cardShadow)"/>
 
     <rect x="20" y="20" width="160" height="26" rx="13" ry="13" fill="url(#era5)"/>
@@ -373,21 +392,12 @@
     <text x="20" y="575" font-size="12" fill="#0f172a">OmniDreams &#8226; UniSim / GAIA-1 (precursors)</text>
   </g>
 
-  <!-- Bottom shift labels (tinted pill chips) -->
-  <g transform="translate(0,782)" font-size="12" font-weight="600">
-    <rect x="55"   y="0" width="310" height="26" rx="13" fill="#dbeafe"/>
-    <text x="210"  y="17" text-anchor="middle" fill="#1e40af">two-tower &#8226; post-hoc alignment</text>
+  <!-- Row 2 shift labels (tinted pill chips) -->
+  <g transform="translate(0,1472)" font-size="12" font-weight="600">
+    <rect x="265" y="0" width="310" height="26" rx="13" fill="#ffedd5"/>
+    <text x="420" y="17" text-anchor="middle" fill="#9a3412">any modality in &#8226; any modality out</text>
 
-    <rect x="455"  y="0" width="310" height="26" rx="13" fill="#ede9fe"/>
-    <text x="610"  y="17" text-anchor="middle" fill="#5b21b6">vision-as-adapter &#8226; LLM does the reasoning</text>
-
-    <rect x="855"  y="0" width="310" height="26" rx="13" fill="#fce7f3"/>
-    <text x="1010" y="17" text-anchor="middle" fill="#9d174d">early-fused input &#8226; text output</text>
-
-    <rect x="1255" y="0" width="310" height="26" rx="13" fill="#ffedd5"/>
-    <text x="1410" y="17" text-anchor="middle" fill="#9a3412">any modality in &#8226; any modality out</text>
-
-    <rect x="1655" y="0" width="310" height="26" rx="13" fill="#ccfbf1"/>
-    <text x="1810" y="17" text-anchor="middle" fill="#134e4a">one trunk: generator &#8226; perceiver &#8226; policy</text>
+    <rect x="665" y="0" width="310" height="26" rx="13" fill="#ccfbf1"/>
+    <text x="820" y="17" text-anchor="middle" fill="#134e4a">one trunk: generator &#8226; perceiver &#8226; policy</text>
   </g>
 </svg>
