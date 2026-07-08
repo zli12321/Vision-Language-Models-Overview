@@ -257,7 +257,7 @@
 
     <text x="20" y="78"  font-size="22" font-weight="700" fill="#0f172a">Omni-Modal Unified I/O</text>
     <text x="20" y="100" font-size="13" fill="#64748b">Multimodal input AND output in one model via</text>
-    <text x="20" y="118" font-size="13" fill="#64748b">decoder heads (image VAE / MMDiT / audio codec).</text>
+    <text x="20" y="118" font-size="13" fill="#64748b">decoder heads (image / video DiT &#8226; VAE &#8226; audio codec).</text>
 
     <g transform="translate(20,140)">
       <!-- Inputs (4-wide, 80w + 7gap) -->
@@ -288,31 +288,39 @@
       <text x="170" y="202" text-anchor="middle" font-size="11" fill="#64748b">AR or discrete-diffusion over interleaved tokens</text>
       <text x="170" y="218" text-anchor="middle" font-size="11" fill="#64748b">+ diffusion / flow decoder heads</text>
 
-      <!-- Three branching arrows from transformer to decoder heads -->
-      <line x1="50"  y1="237" x2="50"  y2="259" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
-      <line x1="170" y1="237" x2="170" y2="259" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
-      <line x1="290" y1="237" x2="290" y2="259" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
+      <!-- Four branching arrows from transformer to decoder heads -->
+      <line x1="40"  y1="237" x2="40"  y2="259" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
+      <line x1="127" y1="237" x2="127" y2="259" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
+      <line x1="214" y1="237" x2="214" y2="259" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
+      <line x1="300" y1="237" x2="300" y2="259" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
 
-      <!-- Decoder heads (3 boxes, 100w + 20gap) -->
-      <rect x="0"   y="263" width="100" height="32" rx="8" fill="#ffffff" stroke="#c2410c" stroke-width="1.2"/>
-      <text x="50"  y="283" text-anchor="middle" font-size="11" fill="#c2410c" font-weight="600">LM head</text>
-      <rect x="120" y="263" width="100" height="32" rx="8" fill="#ffffff" stroke="#c2410c" stroke-width="1.2"/>
-      <text x="170" y="283" text-anchor="middle" font-size="11" fill="#c2410c" font-weight="600">Image decoder</text>
-      <rect x="240" y="263" width="100" height="32" rx="8" fill="#ffffff" stroke="#c2410c" stroke-width="1.2"/>
-      <text x="290" y="283" text-anchor="middle" font-size="11" fill="#c2410c" font-weight="600">Audio codec</text>
+      <!-- Decoder heads (4 boxes, 80w + 7gap) -->
+      <rect x="0"   y="263" width="80" height="32" rx="8" fill="#ffffff" stroke="#c2410c" stroke-width="1.2"/>
+      <text x="40"  y="283" text-anchor="middle" font-size="10" fill="#c2410c" font-weight="600">LM head</text>
+      <rect x="87"  y="263" width="80" height="32" rx="8" fill="#ffffff" stroke="#c2410c" stroke-width="1.2"/>
+      <text x="127" y="283" text-anchor="middle" font-size="10" fill="#c2410c" font-weight="600">Image decoder</text>
+      <rect x="174" y="263" width="80" height="32" rx="8" fill="#ffffff" stroke="#c2410c" stroke-width="1.2"/>
+      <text x="214" y="283" text-anchor="middle" font-size="10" fill="#c2410c" font-weight="600">Video DiT</text>
+      <rect x="261" y="263" width="79" height="32" rx="8" fill="#ffffff" stroke="#c2410c" stroke-width="1.2"/>
+      <text x="300" y="283" text-anchor="middle" font-size="10" fill="#c2410c" font-weight="600">Audio codec</text>
 
       <!-- Arrows from heads to outputs -->
-      <line x1="50"  y1="298" x2="50"  y2="320" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
-      <line x1="170" y1="298" x2="170" y2="320" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
-      <line x1="290" y1="298" x2="290" y2="320" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
+      <line x1="40"  y1="298" x2="40"  y2="320" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
+      <line x1="127" y1="298" x2="127" y2="320" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
+      <line x1="214" y1="298" x2="214" y2="320" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
+      <line x1="300" y1="298" x2="300" y2="320" stroke="#475569" stroke-width="1.4" marker-end="url(#arrHead)"/>
 
-      <!-- Output boxes (3 boxes, 100w + 20gap) -->
-      <rect x="0"   y="324" width="100" height="32" rx="8" fill="#0f172a"/>
-      <text x="50"  y="344" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="600">Text</text>
-      <rect x="120" y="324" width="100" height="32" rx="8" fill="#0f172a"/>
-      <text x="170" y="344" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="600">Image</text>
-      <rect x="240" y="324" width="100" height="32" rx="8" fill="#0f172a"/>
-      <text x="290" y="344" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="600">Speech</text>
+      <!-- Output boxes (4 boxes, 80w + 7gap) -->
+      <rect x="0"   y="324" width="80" height="32" rx="8" fill="#0f172a"/>
+      <text x="40"  y="344" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="600">Text</text>
+      <rect x="87"  y="324" width="80" height="32" rx="8" fill="#0f172a"/>
+      <text x="127" y="344" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="600">Image</text>
+      <rect x="174" y="324" width="80" height="32" rx="8" fill="#0f172a"/>
+      <text x="214" y="344" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="600">Video</text>
+      <rect x="261" y="324" width="79" height="32" rx="8" fill="#0f172a"/>
+      <text x="300" y="344" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="600">Speech</text>
+
+      <text x="170" y="382" text-anchor="middle" font-size="10" fill="#c2410c" font-style="italic">generation-only cousins: Sora 2 &#8226; Veo 3 &#8226; Kling &#8212; video + synced audio</text>
     </g>
 
     <text x="20" y="540" font-size="11" fill="#94a3b8" font-weight="700" letter-spacing="0.5">REPRESENTATIVE MODELS</text>
