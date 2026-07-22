@@ -37,14 +37,54 @@ Below we compile *awesome* papers and model and github repositories that
 
 We track new VLMs, benchmarks, and post-training methods that haven't yet been folded into the main tables in dated mini-surveys:
 
-- 📰 [`2026-07-22`](progressive%20reports/2026-07-22.md) — **latest**: World models become the **evaluators** — GigaWorld-1 + WMBench, RoboWorld (r = 0.989 vs real-world), World-Action-Model tutorial; Gemma 4 tech report (**encoder-free 12B**), PRA-GRPO (93.2% V-Star at 4B), VRRL (trained self-reflection), LingBot-VLA 2.0 (**60,000-hour** corpus), ROSA (robot-factory serving), ISPA (50% KV-cache cut), OmniFocus, MoHallBench / LongVQUBench / SciVis-literacy benchmarks; plus the **July frontier wave**: Gemini 3.6 Flash, Kimi K3 (2.8T open MoE), GPT-5.5 / GPT-5.6 Sol, Grok 4.5, Qwen3.7-Plus — **19 new entries** since June 27.
-- 📰 [`2026-06-27`](progressive%20reports/2026-06-27.md) — World-model foundation releases — **Cosmos 3** (NVIDIA omnimodal family: best open T2I/I2V + best RoboArena policy), **Kairos** (4B edge-real-time world-model stack, beats 14B), **DreamX-World 1.0** (5B MIT-licensed interactive world model); "Persistent State Core" critique + Echo-Memory; ZPPO (teacher-in-prompts beats GRPO), Qwen-RobotManip (38,100-hour corpus), Supervise What Survives, VisCritic (visual process rewards for GUI), HPP (long video), IMCBench (medical dialogue safety) — **11 new entries** since June 23.
-- 📰 [`2026-06-23`](progressive%20reports/2026-06-23.md) — **World Models** focus — NVIDIA OmniDreams (real-time closed-loop driving world model), Mirage (latent spatial memory), Reward-as-Agent (GRPO for world models), WorldOlympiad & LongSpace-Bench (world-model benchmarks); plus PP-OCRv6 (34.5M beats 235B VLMs on OCR), Occ-VLM (3D-grounded), discrete-diffusion RL reasoning, VLA layer pruning, Hy-Embodied-0.5-VLA, RT-VLA (44.8× faster driving), VLA language steering — **12 new entries** since June 2.
-- 📰 [`2026-06-02`](progressive%20reports/2026-06-02.md) — Mamoda2.5 (AR-Diffusion DiT-MoE, 95.9× faster editing), VLM3 (native 3D learners), AlphaGRPO (RL for unified-model generation), Stage-wise Preference Optimization, FastOCR / WindowQuant (KV-cache efficiency), Fast-dDrive / CLOVER / CoWorld-VLA (driving VLA), Lost in Fog (reasoning-as-safety-signal), LiteGUI (SFT-free GUI agents), Health-Conditioned VLA, POLAR, TOC-Bench / VGenST-Bench (video), HalluCXR (medical) — **16 new entries** since May 16.
-- 📰 [`2026-05-16`](progressive%20reports/2026-05-16.md) — LensVLM (Apple), Nemotron 3 Nano Omni (NVIDIA), LLaDA2.0-Uni, PLaMo 2.1-VL, S-GRPO / Faithful GRPO / GRPO-TTA / OpenSearch-VL, MindVLA-U1 (surpasses human driving), VLADriver-RAG, Green-VLA, Anticipation-VLA, VLA Foundry, LAMO, ScreenExplorer, VideoZeroBench, Video-Oasis, MedThinkVQA, data curation at 87× less compute — **34 new entries** since April 28.
-- 📰 [`2026-04-28`](progressive%20reports/2026-04-28.md) — Qwen3.6-27B & Qwen3.6-35B-A3B, Claude Mythos (gated), S1-VL, GLM-5V-Turbo, FreshPER / GMPO / ARPO / GRPO-VPS, QUOTA, Fast-dVLM, VLA-World, SpanVLA, VLA-Forget, R-VLM, UILoop, WebForge, WorldMark, Video-MME-v2, CrossMath, BabyVision, SlowBA — **30 new entries** since April 13.
-- 📰 [`2026-04-13`](progressive%20reports/2026-04-13.md) — LFM2.5-VL-450M, EXAONE 4.5, Gemma 4, Granite 4.0 3B Vision, InternVL-U, GLM-4.6V, Vero, MolmoWeb, UniDriveVLA, QAPruner, Firebolt-VL, CoME-VL, and more.
-- 📰 [`2026-03-25`](progressive%20reports/2026-03-25.md) — GPT-5.4, Phi-4-Reasoning-Vision-15B, Gemini 3.0, Qwen3.5, Claude Opus 4.6, Molmo2, and more.
+<details open>
+<summary>📰 <a href="progressive%20reports/2026-07-22.md"><code>2026-07-22</code></a> — <b>latest</b>: world models become the evaluators + July frontier wave — <b>19 new entries</b></summary>
+
+> World models become the **evaluators** — GigaWorld-1 + WMBench, RoboWorld (r = 0.989 vs real-world), World-Action-Model tutorial; Gemma 4 tech report (**encoder-free 12B**), PRA-GRPO (93.2% V-Star at 4B), VRRL (trained self-reflection), LingBot-VLA 2.0 (**60,000-hour** corpus), ROSA (robot-factory serving), ISPA (50% KV-cache cut), OmniFocus, MoHallBench / LongVQUBench / SciVis-literacy benchmarks; plus the **July frontier wave**: Gemini 3.6 Flash, Kimi K3 (2.8T open MoE), GPT-5.5 / GPT-5.6 Sol, Grok 4.5, Qwen3.7-Plus — **19 new entries** since June 27.
+
+</details>
+<details>
+<summary>📰 <a href="progressive%20reports/2026-06-27.md"><code>2026-06-27</code></a> — world-model foundation releases (Cosmos 3, Kairos, DreamX-World) — <b>11 new entries</b></summary>
+
+> World-model foundation releases — **Cosmos 3** (NVIDIA omnimodal family: best open T2I/I2V + best RoboArena policy), **Kairos** (4B edge-real-time world-model stack, beats 14B), **DreamX-World 1.0** (5B MIT-licensed interactive world model); "Persistent State Core" critique + Echo-Memory; ZPPO (teacher-in-prompts beats GRPO), Qwen-RobotManip (38,100-hour corpus), Supervise What Survives, VisCritic (visual process rewards for GUI), HPP (long video), IMCBench (medical dialogue safety) — **11 new entries** since June 23.
+
+</details>
+<details>
+<summary>📰 <a href="progressive%20reports/2026-06-23.md"><code>2026-06-23</code></a> — <b>World Models</b> focus (OmniDreams, Mirage, WorldOlympiad) — <b>12 new entries</b></summary>
+
+> **World Models** focus — NVIDIA OmniDreams (real-time closed-loop driving world model), Mirage (latent spatial memory), Reward-as-Agent (GRPO for world models), WorldOlympiad & LongSpace-Bench (world-model benchmarks); plus PP-OCRv6 (34.5M beats 235B VLMs on OCR), Occ-VLM (3D-grounded), discrete-diffusion RL reasoning, VLA layer pruning, Hy-Embodied-0.5-VLA, RT-VLA (44.8× faster driving), VLA language steering — **12 new entries** since June 2.
+
+</details>
+<details>
+<summary>📰 <a href="progressive%20reports/2026-06-02.md"><code>2026-06-02</code></a> — Mamoda2.5, VLM3, AlphaGRPO, driving VLAs — <b>16 new entries</b></summary>
+
+> Mamoda2.5 (AR-Diffusion DiT-MoE, 95.9× faster editing), VLM3 (native 3D learners), AlphaGRPO (RL for unified-model generation), Stage-wise Preference Optimization, FastOCR / WindowQuant (KV-cache efficiency), Fast-dDrive / CLOVER / CoWorld-VLA (driving VLA), Lost in Fog (reasoning-as-safety-signal), LiteGUI (SFT-free GUI agents), Health-Conditioned VLA, POLAR, TOC-Bench / VGenST-Bench (video), HalluCXR (medical) — **16 new entries** since May 16.
+
+</details>
+<details>
+<summary>📰 <a href="progressive%20reports/2026-05-16.md"><code>2026-05-16</code></a> — LensVLM, Nemotron 3 Nano Omni, LLaDA2.0-Uni, MindVLA-U1 — <b>34 new entries</b></summary>
+
+> LensVLM (Apple), Nemotron 3 Nano Omni (NVIDIA), LLaDA2.0-Uni, PLaMo 2.1-VL, S-GRPO / Faithful GRPO / GRPO-TTA / OpenSearch-VL, MindVLA-U1 (surpasses human driving), VLADriver-RAG, Green-VLA, Anticipation-VLA, VLA Foundry, LAMO, ScreenExplorer, VideoZeroBench, Video-Oasis, MedThinkVQA, data curation at 87× less compute — **34 new entries** since April 28.
+
+</details>
+<details>
+<summary>📰 <a href="progressive%20reports/2026-04-28.md"><code>2026-04-28</code></a> — Qwen3.6, Claude Mythos, GLM-5V-Turbo — <b>30 new entries</b></summary>
+
+> Qwen3.6-27B & Qwen3.6-35B-A3B, Claude Mythos (gated), S1-VL, GLM-5V-Turbo, FreshPER / GMPO / ARPO / GRPO-VPS, QUOTA, Fast-dVLM, VLA-World, SpanVLA, VLA-Forget, R-VLM, UILoop, WebForge, WorldMark, Video-MME-v2, CrossMath, BabyVision, SlowBA — **30 new entries** since April 13.
+
+</details>
+<details>
+<summary>📰 <a href="progressive%20reports/2026-04-13.md"><code>2026-04-13</code></a> — LFM2.5-VL, EXAONE 4.5, Gemma 4, InternVL-U, and more</summary>
+
+> LFM2.5-VL-450M, EXAONE 4.5, Gemma 4, Granite 4.0 3B Vision, InternVL-U, GLM-4.6V, Vero, MolmoWeb, UniDriveVLA, QAPruner, Firebolt-VL, CoME-VL, and more.
+
+</details>
+<details>
+<summary>📰 <a href="progressive%20reports/2026-03-25.md"><code>2026-03-25</code></a> — GPT-5.4, Gemini 3.0, Qwen3.5, Claude Opus 4.6, and more</summary>
+
+> GPT-5.4, Phi-4-Reasoning-Vision-15B, Gemini 3.0, Qwen3.5, Claude Opus 4.6, Molmo2, and more.
+
+</details>
 
 Welcome to contribute and discuss!
 
