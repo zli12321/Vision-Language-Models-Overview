@@ -39,52 +39,17 @@
 
 我们用带日期的小型综述追踪那些尚未折叠到主表中的新 VLM、基准与后训练方法：
 
-<details open>
-<summary>📰 <a href="progressive%20reports/2026-07-22.md"><code>2026-07-22</code></a> — <b>最新</b>：世界模型成为评估器 + 7 月前沿浪潮 —— <b>19 条新条目</b></summary>
-
-> 世界模型成为**评估器** —— GigaWorld-1 + WMBench、RoboWorld（与真实世界相关性 r = 0.989）、世界-行动模型教程；Gemma 4 技术报告（**免编码器 12B**）、PRA-GRPO（4B 模型 V-Star 93.2%）、VRRL（可训练的自我反思）、LingBot-VLA 2.0（**60,000 小时**语料）、ROSA（机器人工厂推理服务）、ISPA（KV 缓存削减 50%）、OmniFocus、MoHallBench / LongVQUBench / 科学可视化素养基准；以及 **7 月前沿浪潮**：Gemini 3.6 Flash、Kimi K3（2.8T 开源 MoE）、GPT-5.5 / GPT-5.6 Sol、Grok 4.5、Qwen3.7-Plus —— 6 月 27 日以来 **19 条新条目**。
-
-</details>
 <details>
-<summary>📰 <a href="progressive%20reports/2026-06-27.md"><code>2026-06-27</code></a> — 世界模型基础模型发布（Cosmos 3、Kairos、DreamX-World）—— <b>11 条新条目</b></summary>
+<summary><b>📂 展开全部 8 期报告</b> — 最新：<code>2026-07-22</code>，世界模型成为评估器 + 7 月前沿浪潮（<b>19 条新条目</b>）</summary>
 
-> 世界模型基础模型密集发布 —— **Cosmos 3**（NVIDIA 全模态家族：最佳开源 T2I/I2V + RoboArena 最佳策略）、**Kairos**（4B 边缘实时世界模型栈，胜过 14B）、**DreamX-World 1.0**（5B MIT 开源交互式世界模型）；"持久状态核心"批判 + Echo-Memory；ZPPO（提示内教师胜过 GRPO）、Qwen-RobotManip（38,100 小时语料）、Supervise What Survives、VisCritic（GUI 视觉过程奖励）、HPP（长视频）、IMCBench（医疗对话安全）—— 6 月 23 日以来 **11 条新条目**。
-
-</details>
-<details>
-<summary>📰 <a href="progressive%20reports/2026-06-23.md"><code>2026-06-23</code></a> — 聚焦<b>世界模型</b>（OmniDreams、Mirage、WorldOlympiad）—— <b>12 条新条目</b></summary>
-
-> 聚焦**世界模型** —— NVIDIA OmniDreams（实时闭环驾驶世界模型）、Mirage（隐空间空间记忆）、Reward-as-Agent（面向世界模型的 GRPO）、WorldOlympiad 与 LongSpace-Bench（世界模型基准）；以及 PP-OCRv6（34.5M 参数在 OCR 上超越 235B VLM）、Occ-VLM（3D 接地）、离散扩散 RL 推理、VLA 层剪枝、Hy-Embodied-0.5-VLA、RT-VLA（驾驶推理加速 44.8×）、VLA 语言引导 —— 6 月 2 日以来 **12 条新条目**。
-
-</details>
-<details>
-<summary>📰 <a href="progressive%20reports/2026-06-02.md"><code>2026-06-02</code></a> — Mamoda2.5、VLM3、AlphaGRPO、驾驶 VLA —— <b>16 条新条目</b></summary>
-
-> Mamoda2.5（AR-扩散 DiT-MoE，编辑加速 95.9×）、VLM3（原生 3D 学习者）、AlphaGRPO（面向统一模型生成的 RL）、阶段式偏好优化、FastOCR / WindowQuant（KV 缓存高效化）、Fast-dDrive / CLOVER / CoWorld-VLA（驾驶 VLA）、Lost in Fog（推理一致性作为安全信号）、LiteGUI（免 SFT 的 GUI 智能体）、Health-Conditioned VLA、POLAR、TOC-Bench / VGenST-Bench（视频）、HalluCXR（医学）—— 5 月 16 日以来 **16 条新条目**。
-
-</details>
-<details>
-<summary>📰 <a href="progressive%20reports/2026-05-16.md"><code>2026-05-16</code></a> — LensVLM、Nemotron 3 Nano Omni、LLaDA2.0-Uni、MindVLA-U1 —— <b>34 条新条目</b></summary>
-
-> LensVLM（Apple）、Nemotron 3 Nano Omni（NVIDIA）、LLaDA2.0-Uni、PLaMo 2.1-VL、S-GRPO / Faithful GRPO / GRPO-TTA / OpenSearch-VL、MindVLA-U1（超越人类驾驶）、VLADriver-RAG、Green-VLA、Anticipation-VLA、VLA Foundry、LAMO、ScreenExplorer、VideoZeroBench、Video-Oasis、MedThinkVQA、数据筛选实现 87× 更低算力 —— 4 月 28 日以来 **34 条新条目**。
-
-</details>
-<details>
-<summary>📰 <a href="progressive%20reports/2026-04-28.md"><code>2026-04-28</code></a> — Qwen3.6、Claude Mythos、GLM-5V-Turbo —— <b>30 条新条目</b></summary>
-
-> Qwen3.6-27B & Qwen3.6-35B-A3B、Claude Mythos（受限预览）、S1-VL、GLM-5V-Turbo、FreshPER / GMPO / ARPO / GRPO-VPS、QUOTA、Fast-dVLM、VLA-World、SpanVLA、VLA-Forget、R-VLM、UILoop、WebForge、WorldMark、Video-MME-v2、CrossMath、BabyVision、SlowBA —— 4 月 13 日以来 **30 条新条目**。
-
-</details>
-<details>
-<summary>📰 <a href="progressive%20reports/2026-04-13.md"><code>2026-04-13</code></a> — LFM2.5-VL、EXAONE 4.5、Gemma 4、InternVL-U 等</summary>
-
-> LFM2.5-VL-450M、EXAONE 4.5、Gemma 4、Granite 4.0 3B Vision、InternVL-U、GLM-4.6V、Vero、MolmoWeb、UniDriveVLA、QAPruner、Firebolt-VL、CoME-VL 等。
-
-</details>
-<details>
-<summary>📰 <a href="progressive%20reports/2026-03-25.md"><code>2026-03-25</code></a> — GPT-5.4、Gemini 3.0、Qwen3.5、Claude Opus 4.6 等</summary>
-
-> GPT-5.4、Phi-4-Reasoning-Vision-15B、Gemini 3.0、Qwen3.5、Claude Opus 4.6、Molmo2 等。
+- 📰 [`2026-07-22`](progressive%20reports/2026-07-22.md) — **最新**：世界模型成为**评估器** —— GigaWorld-1 + WMBench、RoboWorld（与真实世界相关性 r = 0.989）、世界-行动模型教程；Gemma 4 技术报告（**免编码器 12B**）、PRA-GRPO（4B 模型 V-Star 93.2%）、VRRL（可训练的自我反思）、LingBot-VLA 2.0（**60,000 小时**语料）、ROSA（机器人工厂推理服务）、ISPA（KV 缓存削减 50%）、OmniFocus、MoHallBench / LongVQUBench / 科学可视化素养基准；以及 **7 月前沿浪潮**：Gemini 3.6 Flash、Kimi K3（2.8T 开源 MoE）、GPT-5.5 / GPT-5.6 Sol、Grok 4.5、Qwen3.7-Plus —— 6 月 27 日以来 **19 条新条目**。
+- 📰 [`2026-06-27`](progressive%20reports/2026-06-27.md) — 世界模型基础模型密集发布 —— **Cosmos 3**（NVIDIA 全模态家族：最佳开源 T2I/I2V + RoboArena 最佳策略）、**Kairos**（4B 边缘实时世界模型栈，胜过 14B）、**DreamX-World 1.0**（5B MIT 开源交互式世界模型）；"持久状态核心"批判 + Echo-Memory；ZPPO（提示内教师胜过 GRPO）、Qwen-RobotManip（38,100 小时语料）、Supervise What Survives、VisCritic（GUI 视觉过程奖励）、HPP（长视频）、IMCBench（医疗对话安全）—— 6 月 23 日以来 **11 条新条目**。
+- 📰 [`2026-06-23`](progressive%20reports/2026-06-23.md) — 聚焦**世界模型** —— NVIDIA OmniDreams（实时闭环驾驶世界模型）、Mirage（隐空间空间记忆）、Reward-as-Agent（面向世界模型的 GRPO）、WorldOlympiad 与 LongSpace-Bench（世界模型基准）；以及 PP-OCRv6（34.5M 参数在 OCR 上超越 235B VLM）、Occ-VLM（3D 接地）、离散扩散 RL 推理、VLA 层剪枝、Hy-Embodied-0.5-VLA、RT-VLA（驾驶推理加速 44.8×）、VLA 语言引导 —— 6 月 2 日以来 **12 条新条目**。
+- 📰 [`2026-06-02`](progressive%20reports/2026-06-02.md) — Mamoda2.5（AR-扩散 DiT-MoE，编辑加速 95.9×）、VLM3（原生 3D 学习者）、AlphaGRPO（面向统一模型生成的 RL）、阶段式偏好优化、FastOCR / WindowQuant（KV 缓存高效化）、Fast-dDrive / CLOVER / CoWorld-VLA（驾驶 VLA）、Lost in Fog（推理一致性作为安全信号）、LiteGUI（免 SFT 的 GUI 智能体）、Health-Conditioned VLA、POLAR、TOC-Bench / VGenST-Bench（视频）、HalluCXR（医学）—— 5 月 16 日以来 **16 条新条目**。
+- 📰 [`2026-05-16`](progressive%20reports/2026-05-16.md) — LensVLM（Apple）、Nemotron 3 Nano Omni（NVIDIA）、LLaDA2.0-Uni、PLaMo 2.1-VL、S-GRPO / Faithful GRPO / GRPO-TTA / OpenSearch-VL、MindVLA-U1（超越人类驾驶）、VLADriver-RAG、Green-VLA、Anticipation-VLA、VLA Foundry、LAMO、ScreenExplorer、VideoZeroBench、Video-Oasis、MedThinkVQA、数据筛选实现 87× 更低算力 —— 4 月 28 日以来 **34 条新条目**。
+- 📰 [`2026-04-28`](progressive%20reports/2026-04-28.md) — Qwen3.6-27B & Qwen3.6-35B-A3B、Claude Mythos（受限预览）、S1-VL、GLM-5V-Turbo、FreshPER / GMPO / ARPO / GRPO-VPS、QUOTA、Fast-dVLM、VLA-World、SpanVLA、VLA-Forget、R-VLM、UILoop、WebForge、WorldMark、Video-MME-v2、CrossMath、BabyVision、SlowBA —— 4 月 13 日以来 **30 条新条目**。
+- 📰 [`2026-04-13`](progressive%20reports/2026-04-13.md) — LFM2.5-VL-450M、EXAONE 4.5、Gemma 4、Granite 4.0 3B Vision、InternVL-U、GLM-4.6V、Vero、MolmoWeb、UniDriveVLA、QAPruner、Firebolt-VL、CoME-VL 等。
+- 📰 [`2026-03-25`](progressive%20reports/2026-03-25.md) — GPT-5.4、Phi-4-Reasoning-Vision-15B、Gemini 3.0、Qwen3.5、Claude Opus 4.6、Molmo2 等。
 
 </details>
 
@@ -150,6 +115,10 @@
 ---
 
 ##  1. <a name='vlms'></a>📚 前沿视觉-语言模型 
+
+<p align="center">
+  <img src="assets/vlm_model_sizes.svg" alt="视觉-语言模型规模随时间的演变：按发布日期展示总参数量（对数刻度），从 CLIP（0.36B，2021）到 Kimi K3（2.8T MoE，2026），前沿模型迈向万亿级而边缘模型缩至 1B 以下" width="100%"/>
+</p>
 
 > 表格按发布时间从新到旧排序。各列依次为：模型 · 年份 · 架构 · 训练数据 · 参数量 · 视觉编码器/分词器 · 预训练主干。
 

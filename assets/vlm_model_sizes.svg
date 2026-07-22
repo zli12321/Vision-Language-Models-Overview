@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#fbfbfd"/>
+      <stop offset="100%" stop-color="#f3f4f8"/>
+    </linearGradient>
+    <marker id="guideArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect width="1240" height="700" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="620" y="38" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">VLM Model Sizes Over Time</text>
+  <text x="620" y="62" text-anchor="middle" font-size="13" fill="#64748b" font-weight="500">Total parameters by release date &#8226; log scale &#8226; hollow ring = MoE (total, not active, parameters)</text>
+
+  <!-- Gridlines + y ticks -->
+  <g stroke="#e2e8f0" stroke-width="1">
+    <line x1="100" y1="584.6" x2="1180" y2="584.6"/>
+    <line x1="100" y1="477"   x2="1180" y2="477"/>
+    <line x1="100" y1="369.6" x2="1180" y2="369.6"/>
+    <line x1="100" y1="262"   x2="1180" y2="262"/>
+    <line x1="100" y1="154.5" x2="1180" y2="154.5"/>
+  </g>
+  <g font-size="12" fill="#64748b" text-anchor="end">
+    <text x="92" y="588">100M</text>
+    <text x="92" y="481">1B</text>
+    <text x="92" y="373">10B</text>
+    <text x="92" y="266">100B</text>
+    <text x="92" y="158">1T</text>
+  </g>
+  <text x="34" y="345" font-size="13" fill="#475569" font-weight="600" transform="rotate(-90 34 345)" text-anchor="middle">Total Parameters (log scale)</text>
+
+  <!-- X axis -->
+  <line x1="100" y1="590" x2="1180" y2="590" stroke="#475569" stroke-width="1.5"/>
+  <g font-size="12" fill="#64748b" text-anchor="middle">
+    <text x="100"    y="614">2021</text>
+    <text x="287.8"  y="614">2022</text>
+    <text x="475.7"  y="614">2023</text>
+    <text x="663.5"  y="614">2024</text>
+    <text x="851.3"  y="614">2025</text>
+    <text x="1039.1" y="614">2026</text>
+  </g>
+  <g stroke="#cbd5e1" stroke-width="1">
+    <line x1="287.8"  y1="586" x2="287.8"  y2="594"/>
+    <line x1="475.7"  y1="586" x2="475.7"  y2="594"/>
+    <line x1="663.5"  y1="586" x2="663.5"  y2="594"/>
+    <line x1="851.3"  y1="586" x2="851.3"  y2="594"/>
+    <line x1="1039.1" y1="586" x2="1039.1" y2="594"/>
+  </g>
+
+  <!-- Guide curves -->
+  <path d="M 137 525 C 350 300 460 205 513 181 S 1000 165 1138 110" fill="none" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="6 5" marker-end="url(#guideArrow)" opacity="0.7"/>
+  <text x="812" y="140" font-size="11" fill="#64748b" font-style="italic">frontier &#8594; trillions</text>
+  <path d="M 616 362 C 800 380 950 398 1001 426 S 1080 495 1090 510" fill="none" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="6 5" marker-end="url(#guideArrow)" opacity="0.7"/>
+  <text x="820" y="440" font-size="11" fill="#64748b" font-style="italic">edge &#8594; sub-1B</text>
+
+  <!-- Legend -->
+  <g transform="translate(130,92)" font-size="12">
+    <circle cx="8" cy="6" r="6" fill="#1d4ed8"/>
+    <text x="22" y="10" fill="#334155">Era 1 &#8226; contrastive / bridged</text>
+    <circle cx="8" cy="30" r="6" fill="#6d28d9"/>
+    <text x="22" y="34" fill="#334155">Era 2 &#8226; LLM backbone</text>
+    <circle cx="8" cy="54" r="6" fill="#db2777"/>
+    <text x="22" y="58" fill="#334155">Era 3+ &#8226; natively multimodal</text>
+    <circle cx="8" cy="78" r="6" fill="none" stroke="#db2777" stroke-width="2.4"/>
+    <text x="22" y="82" fill="#334155">hollow = MoE (total params)</text>
+  </g>
+
+  <!-- ===================== Data points ===================== -->
+  <!-- Era 1 (blue) -->
+  <g>
+    <circle cx="137.6" cy="524.8" r="6" fill="#1d4ed8"/>
+    <text x="137.6" y="507" text-anchor="middle" font-size="11" font-weight="600" fill="#1e3a8a">CLIP</text>
+    <text x="137.6" y="544" text-anchor="middle" font-size="10" fill="#64748b">0.36B</text>
+
+    <circle cx="344" cy="272.4" r="6" fill="#1d4ed8"/>
+    <text x="344" y="255" text-anchor="middle" font-size="11" font-weight="600" fill="#1e3a8a">Flamingo</text>
+    <text x="344" y="292" text-anchor="middle" font-size="10" fill="#64748b">80B</text>
+
+    <circle cx="490.6" cy="357.3" r="6" fill="#1d4ed8"/>
+    <text x="490.6" y="340" text-anchor="middle" font-size="11" font-weight="600" fill="#1e3a8a">BLIP-2</text>
+    <text x="490.6" y="377" text-anchor="middle" font-size="10" fill="#64748b">13B</text>
+  </g>
+
+  <!-- Era 2 (purple) -->
+  <g>
+    <circle cx="513" cy="181.4" r="6" fill="#6d28d9"/>
+    <text x="513" y="164" text-anchor="middle" font-size="11" font-weight="600" fill="#5b21b6">PaLM-E</text>
+    <text x="513" y="201" text-anchor="middle" font-size="10" fill="#64748b">562B</text>
+
+    <circle cx="616" cy="357.3" r="6" fill="#6d28d9"/>
+    <text x="616" y="379" text-anchor="middle" font-size="11" font-weight="600" fill="#5b21b6">LLaVA-1.5</text>
+    <text x="616" y="394" text-anchor="middle" font-size="10" fill="#64748b">13B</text>
+
+    <circle cx="635" cy="342.2" r="6" fill="#6d28d9"/>
+    <text x="642" y="327" text-anchor="middle" font-size="11" font-weight="600" fill="#5b21b6">CogVLM</text>
+    <text x="666" y="345" text-anchor="start" font-size="10" fill="#64748b">18B</text>
+
+    <circle cx="986" cy="318.3" r="6" fill="#6d28d9"/>
+    <text x="974" y="311" text-anchor="end" font-size="11" font-weight="600" fill="#5b21b6">Qwen3-Omni</text>
+    <text x="974" y="325" text-anchor="end" font-size="10" fill="#64748b">30B</text>
+
+    <circle cx="988" cy="222.1" r="6" fill="none" stroke="#6d28d9" stroke-width="2.6"/>
+    <text x="976" y="215" text-anchor="end" font-size="11" font-weight="600" fill="#5b21b6">Qwen3-VL-MoE</text>
+    <text x="976" y="229" text-anchor="end" font-size="10" fill="#64748b">235B (A22B)</text>
+
+    <circle cx="997.5" cy="380" r="6" fill="#6d28d9"/>
+    <text x="986" y="384" text-anchor="end" font-size="11" font-weight="600" fill="#5b21b6">Qwen3-VL <tspan font-size="10" fill="#64748b" font-weight="400">8B</tspan></text>
+
+    <circle cx="1001" cy="425.8" r="6" fill="#6d28d9"/>
+    <text x="1001" y="447" text-anchor="middle" font-size="11" font-weight="600" fill="#5b21b6">DeepSeek-OCR <tspan font-size="10" fill="#64748b" font-weight="400">3B</tspan></text>
+
+    <circle cx="1046" cy="380" r="6" fill="#6d28d9"/>
+    <text x="1057" y="384" text-anchor="start" font-size="11" font-weight="600" fill="#5b21b6">Molmo2 <tspan font-size="10" fill="#64748b" font-weight="400">8B</tspan></text>
+  </g>
+
+  <!-- Era 3+ (pink) -->
+  <g>
+    <circle cx="1063" cy="197.5" r="6" fill="none" stroke="#db2777" stroke-width="2.6"/>
+    <text x="1063" y="180" text-anchor="middle" font-size="11" font-weight="600" fill="#9d174d">Qwen3.5</text>
+    <text x="1063" y="217" text-anchor="middle" font-size="10" fill="#64748b">397B (A17B)</text>
+
+    <circle cx="1071" cy="350.6" r="6" fill="#db2777"/>
+    <text x="1059" y="354" text-anchor="end" font-size="11" font-weight="600" fill="#9d174d">Phi-4-R-Vision <tspan font-size="10" fill="#64748b" font-weight="400">15B</tspan></text>
+
+    <circle cx="1086" cy="316.8" r="6" fill="#db2777"/>
+    <text x="1074" y="305" text-anchor="end" font-size="11" font-weight="600" fill="#9d174d">Gemma 4 <tspan font-size="10" fill="#64748b" font-weight="400">31B</tspan></text>
+
+    <circle cx="1093" cy="311.1" r="6" fill="none" stroke="#db2777" stroke-width="2.6"/>
+    <text x="1105" y="303" text-anchor="start" font-size="11" font-weight="600" fill="#9d174d">Qwen3.6 <tspan font-size="10" fill="#64748b" font-weight="400">35B (A3B)</tspan></text>
+
+    <circle cx="1101" cy="318.3" r="6" fill="none" stroke="#db2777" stroke-width="2.6"/>
+    <text x="1110" y="333" text-anchor="start" font-size="11" font-weight="600" fill="#9d174d">Nemotron 3 <tspan font-size="10" fill="#64748b" font-weight="400">30B (A3B)</tspan></text>
+
+    <circle cx="1091.6" cy="514.4" r="6" fill="#db2777"/>
+    <text x="1091.6" y="536" text-anchor="middle" font-size="11" font-weight="600" fill="#9d174d">LFM2.5-VL <tspan font-size="10" fill="#64748b" font-weight="400">0.45B</tspan></text>
+
+    <circle cx="1136.7" cy="135.6" r="6" fill="#db2777"/>
+    <text x="1124" y="139" text-anchor="end" font-size="11" font-weight="600" fill="#9d174d">Grok 4.5 <tspan font-size="10" fill="#64748b" font-weight="400">~1.5T*</tspan></text>
+
+    <circle cx="1140.5" cy="106.5" r="6" fill="none" stroke="#db2777" stroke-width="2.6"/>
+    <text x="1140.5" y="89" text-anchor="middle" font-size="11" font-weight="600" fill="#9d174d">Kimi K3 <tspan font-size="10" fill="#64748b" font-weight="400">2.8T</tspan></text>
+  </g>
+
+  <!-- Footnotes -->
+  <text x="1180" y="648" text-anchor="end" font-size="11" fill="#94a3b8">*third-party reported; undisclosed frontier models (GPT-5.x, Gemini, Claude) omitted</text>
+  <text x="100" y="648" font-size="11" fill="#94a3b8">Sizes from the SoTA table in this repo &#8226; MoE plotted at total parameters</text>
+</svg>
