@@ -2,7 +2,7 @@
 
 > **🌐 Language**: [English](README.md) · **简体中文**
 
-[![Website](https://img.shields.io/badge/🌐_Website-VLM_Survey-6366f1?style=for-the-badge)](https://zli12321.github.io/VLM_Survey/) [![Paper](https://img.shields.io/badge/📄_Paper-arXiv-b31b1b?style=for-the-badge)](https://arxiv.org/abs/2501.02189) [![Stars](https://img.shields.io/github/stars/zli12321/Vision-Language-Models-Overview?style=for-the-badge&color=f59e0b)](https://github.com/zli12321/Vision-Language-Models-Overview)
+[![Paper](https://img.shields.io/badge/📄_Paper-arXiv-b31b1b?style=for-the-badge)](https://arxiv.org/abs/2501.02189) [![Stars](https://img.shields.io/github/stars/zli12321/Vision-Language-Models-Overview?style=for-the-badge&color=f59e0b)](https://github.com/zli12321/Vision-Language-Models-Overview)
 
 一个最前沿的视觉-语言模型论文、模型与代码仓库的综合整理与综述。
 
