@@ -2,7 +2,7 @@
 
 > **🌐 Language**: **English** · [简体中文](README_zh.md)
 
-[![Website](https://img.shields.io/badge/🌐_Website-VLM_Survey-6366f1?style=for-the-badge)](https://zli12321.github.io/VLM_Survey/) [![Paper](https://img.shields.io/badge/📄_Paper-arXiv-b31b1b?style=for-the-badge)](https://arxiv.org/abs/2501.02189) [![Stars](https://img.shields.io/github/stars/zli12321/Vision-Language-Models-Overview?style=for-the-badge&color=f59e0b)](https://github.com/zli12321/Vision-Language-Models-Overview)
+[![Paper](https://img.shields.io/badge/📄_Paper-arXiv-b31b1b?style=for-the-badge)](https://arxiv.org/abs/2501.02189) [![Stars](https://img.shields.io/github/stars/zli12321/Vision-Language-Models-Overview?style=for-the-badge&color=f59e0b)](https://github.com/zli12321/Vision-Language-Models-Overview)
 
 A most Frontend Collection and survey of vision-language model papers, and models GitHub repository
 
