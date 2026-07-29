@@ -436,6 +436,7 @@ tbody tr.hidden{display:none}
     </div>
     <div class="hero-links">
       <a class="cite-link" href="https://arxiv.org/abs/2501.02189" target="_blank"><i class="fas fa-file-alt"></i>Read the Paper</a>
+      <a class="cite-link" href="https://zli12321.github.io/VLM_Survey/" target="_blank"><i class="fas fa-satellite-dish"></i>VLM Trends</a>
       <a class="cite-link github-link" href="https://github.com/zli12321/Vision-Language-Models-Overview" target="_blank"><i class="fab fa-github"></i>GitHub</a>
     </div>
   </div>

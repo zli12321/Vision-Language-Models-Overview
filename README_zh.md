@@ -2,7 +2,7 @@
 
 > **🌐 Language**: [English](README.md) · **简体中文**
 
-[![Paper](https://img.shields.io/badge/📄_Paper-arXiv-b31b1b?style=for-the-badge)](https://arxiv.org/abs/2501.02189) [![Stars](https://img.shields.io/github/stars/zli12321/Vision-Language-Models-Overview?style=for-the-badge&color=f59e0b)](https://github.com/zli12321/Vision-Language-Models-Overview)
+[![Paper](https://img.shields.io/badge/📄_Paper-arXiv-b31b1b?style=for-the-badge)](https://arxiv.org/abs/2501.02189) [![VLM Trends](https://img.shields.io/badge/📡_VLM_Trends-每日看板-2f4d5e?style=for-the-badge)](https://zli12321.github.io/VLM_Survey/) [![Stars](https://img.shields.io/github/stars/zli12321/Vision-Language-Models-Overview?style=for-the-badge&color=f59e0b)](https://github.com/zli12321/Vision-Language-Models-Overview)
 
 一个最前沿的视觉-语言模型论文、模型与代码仓库的综合整理与综述。
 
@@ -34,6 +34,10 @@
 - **后训练 / 对齐** 包括 RL、SFT 等 VLM 对齐方面的最新工作。
 - **应用** VLM 在具身智能、机器人等领域的应用。
 - 欢迎贡献相关的**综述**、**观点**与**数据集**。
+
+### 📡 VLM Trends
+
+**[VLM Trends](https://zli12321.github.io/VLM_Survey/)** 是本仓库的在线看板。本 README 记录*已有的工作*，而 VLM Trends 追踪*今天有什么变化* —— 每日从 arXiv、Hugging Face、GitHub 与 Semantic Scholar 抓取新发布的模型、论文、基准与数据集，按公开的评分标准打分，并按主题与模型系列归类。它同时把本综述做成可检索的形式，并以图表呈现各研究方向随时间的变化趋势。
 
 ### 渐进研究报告
 

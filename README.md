@@ -2,7 +2,7 @@
 
 > **🌐 Language**: **English** · [简体中文](README_zh.md)
 
-[![Paper](https://img.shields.io/badge/📄_Paper-arXiv-b31b1b?style=for-the-badge)](https://arxiv.org/abs/2501.02189) [![Stars](https://img.shields.io/github/stars/zli12321/Vision-Language-Models-Overview?style=for-the-badge&color=f59e0b)](https://github.com/zli12321/Vision-Language-Models-Overview)
+[![Paper](https://img.shields.io/badge/📄_Paper-arXiv-b31b1b?style=for-the-badge)](https://arxiv.org/abs/2501.02189) [![VLM Trends](https://img.shields.io/badge/📡_VLM_Trends-live_dashboard-2f4d5e?style=for-the-badge)](https://zli12321.github.io/VLM_Survey/) [![Stars](https://img.shields.io/github/stars/zli12321/Vision-Language-Models-Overview?style=for-the-badge&color=f59e0b)](https://github.com/zli12321/Vision-Language-Models-Overview)
 
 A most Frontend Collection and survey of vision-language model papers, and models GitHub repository
 
@@ -32,6 +32,10 @@ Below we compile *awesome* papers and model and github repositories that
 - **Post-training/Alignment** Newest related work for VLM alignment including RL, sft.
 - **Applications** applications of VLMs in embodied AI, robotics, etc.
 - Contribute **surveys**, **perspectives**, and **datasets** on the above topics.
+
+### 📡 VLM Trends
+
+**[VLM Trends](https://zli12321.github.io/VLM_Survey/)** is the live companion to this repository. This README records *what exists*; VLM Trends tracks *what changed today* — new model releases, papers, benchmarks, and datasets pulled daily from arXiv, Hugging Face, GitHub, and Semantic Scholar, scored on a published rubric, and grouped by topic and model family. It also makes this survey browsable, and charts how each research direction is moving over time.
 
 ### Progressive research reports
 
