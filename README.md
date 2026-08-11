@@ -42,9 +42,11 @@ Below we compile *awesome* papers and model and github repositories that
 We track new VLMs, benchmarks, and post-training methods that haven't yet been folded into the main tables in dated mini-surveys:
 
 <details>
-<summary><b>📂 Expand all 8 reports</b> — latest: <code>2026-07-22</code>, world models become the evaluators + July frontier wave (<b>19 new entries</b>)</summary>
+<summary><b>📂 Expand all 9 reports</b> — latest: <code>2026-08-10</code>, evaluation shifts from seeing to acting and remembering (<b>29 new entries</b>)</summary>
 
-- 📰 [`2026-07-22`](progressive%20reports/2026-07-22.md) — **latest**: World models become the **evaluators** — GigaWorld-1 + WMBench, RoboWorld (r = 0.989 vs real-world), World-Action-Model tutorial; Gemma 4 tech report (**encoder-free 12B**), PRA-GRPO (93.2% V-Star at 4B), VRRL (trained self-reflection), LingBot-VLA 2.0 (**60,000-hour** corpus), ROSA (robot-factory serving), ISPA (50% KV-cache cut), OmniFocus, MoHallBench / LongVQUBench / SciVis-literacy benchmarks; plus the **July frontier wave**: Gemini 3.6 Flash, Kimi K3 (2.8T open MoE), GPT-5.5 / GPT-5.6 Sol, Grok 4.5, Qwen3.7-Plus — **19 new entries** since June 27.
+- 📰 [`2026-08-10`](progressive%20reports/2026-08-10.md) — **latest**: **Evaluation stops asking whether a model sees** — HumanCLAW (can a VLM act through a body?), GST-Bench (global spatial awareness from video), ChronoVision (temporal reasoning via latent state), WorldExam (reactivity over appearance); *judging* becomes its own research problem via OSReward, ConfBench, TruthLens. On the model side: **Qwen3.8-Max** (2.4T · 95B active, Vision Arena #2), **DiffusionGemma** (26B-A4B diffusion Gemma), Hunyuan3D-Buffalo 1.0 (unified 3D); plus N₀-VTLA (tactile VLA), Metis, Ego2Robot, VideoCoCo, OmniPack — **29 new entries** since July 22.
+
+- 📰 [`2026-07-22`](progressive%20reports/2026-07-22.md) — World models become the **evaluators** — GigaWorld-1 + WMBench, RoboWorld (r = 0.989 vs real-world), World-Action-Model tutorial; Gemma 4 tech report (**encoder-free 12B**), PRA-GRPO (93.2% V-Star at 4B), VRRL (trained self-reflection), LingBot-VLA 2.0 (**60,000-hour** corpus), ROSA (robot-factory serving), ISPA (50% KV-cache cut), OmniFocus, MoHallBench / LongVQUBench / SciVis-literacy benchmarks; plus the **July frontier wave**: Gemini 3.6 Flash, Kimi K3 (2.8T open MoE), GPT-5.5 / GPT-5.6 Sol, Grok 4.5, Qwen3.7-Plus — **19 new entries** since June 27.
 - 📰 [`2026-06-27`](progressive%20reports/2026-06-27.md) — World-model foundation releases — **Cosmos 3** (NVIDIA omnimodal family: best open T2I/I2V + best RoboArena policy), **Kairos** (4B edge-real-time world-model stack, beats 14B), **DreamX-World 1.0** (5B MIT-licensed interactive world model); "Persistent State Core" critique + Echo-Memory; ZPPO (teacher-in-prompts beats GRPO), Qwen-RobotManip (38,100-hour corpus), Supervise What Survives, VisCritic (visual process rewards for GUI), HPP (long video), IMCBench (medical dialogue safety) — **11 new entries** since June 23.
 - 📰 [`2026-06-23`](progressive%20reports/2026-06-23.md) — **World Models** focus — NVIDIA OmniDreams (real-time closed-loop driving world model), Mirage (latent spatial memory), Reward-as-Agent (GRPO for world models), WorldOlympiad & LongSpace-Bench (world-model benchmarks); plus PP-OCRv6 (34.5M beats 235B VLMs on OCR), Occ-VLM (3D-grounded), discrete-diffusion RL reasoning, VLA layer pruning, Hy-Embodied-0.5-VLA, RT-VLA (44.8× faster driving), VLA language steering — **12 new entries** since June 2.
 - 📰 [`2026-06-02`](progressive%20reports/2026-06-02.md) — Mamoda2.5 (AR-Diffusion DiT-MoE, 95.9× faster editing), VLM3 (native 3D learners), AlphaGRPO (RL for unified-model generation), Stage-wise Preference Optimization, FastOCR / WindowQuant (KV-cache efficiency), Fast-dDrive / CLOVER / CoWorld-VLA (driving VLA), Lost in Fog (reasoning-as-safety-signal), LiteGUI (SFT-free GUI agents), Health-Conditioned VLA, POLAR, TOC-Bench / VGenST-Bench (video), HalluCXR (medical) — **16 new entries** since May 16.
@@ -125,6 +127,9 @@ Welcome to contribute and discuss!
 
 | Model                                                        | Year | Architecture   | Training Data               | Parameters     | Vision Encoder/Tokenizer                       | Pretrained Backbone Model                          |
 |--------------------------------------------------------------|------|----------------|-----------------------------|----------------|-----------------------------------------------|---------------------------------------------------|
+| [Qwen3.8-Max (Alibaba)](https://www.aimadetools.com/blog/qwen-3-8-max-vs-kimi-k3/) | 08/03/2026 | Sparse MoE + hybrid attention; text + vision in, 1M context; Vision Arena #2 | Undisclosed | 2.4T total · 95B active | Native multimodal | Qwen3.8 |
+| [DiffusionGemma (Google)](https://arxiv.org/abs/2608.00146) | 08/05/2026 | **Diffusion** (non-autoregressive) language model in the Gemma family | Undisclosed | 26B total · 4B active | Native multimodal | Gemma |
+| [Hunyuan3D-Buffalo 1.0 (Tencent)](https://arxiv.org/abs/2608.02711) | 08/05/2026 | Unified multimodal — 3D generation + understanding + editing | Undisclosed | Undisclosed | Undisclosed | Undisclosed |
 | [Gemini 3.6 Flash (Google)](https://deepmind.google/models/gemini/) | 07/21/2026 | Decoder-only / natively multimodal input (text, image, speech, video → text) | Undisclosed | Undisclosed | Native multimodal | Gemini 3.x |
 | [Kimi K3 (Moonshot AI)](https://openrouter.ai/moonshotai/kimi-k3) | 07/17/2026 | MoE, natively multimodal reasoning — text + image + video in one trunk (no separate vision module); 1M context; open weights due 07/27/2026 | Undisclosed | ~2.8T total (MoE) | Native (encoder-integrated) | New architecture |
 | [GPT-5.6 Sol (OpenAI)](https://openai.com/index/gpt-5-6/) | 07/09/2026 | Decoder-only; text + image in, 1.05M context / 128K output; max & ultra reasoning modes, sub-agent orchestration (Ultra); family: Luna / Terra / Sol | Undisclosed | Undisclosed | Undisclosed | Undisclosed |
@@ -205,6 +210,9 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 
 | Model | Date | Type | Scale / License | Key Result | Links |
 |-------|------|------|-----------------|------------|-------|
+| [HelloWorld](https://arxiv.org/abs/2608.05070) | 08/06/2026 | Video world model with **socially interactive characters** | — | Pushes world models past physics and navigation into social dynamics: characters that respond to the viewer rather than merely persisting | [Paper](https://arxiv.org/abs/2608.05070) |
+| [VideoCoCo](https://arxiv.org/abs/2607.27380) | 07/31/2026 | Agentic dual-engine text-to-video with **Code-as-CoT** | — | Infers temporal evolution symbolically via generated code instead of implicitly, then renders — a hybrid attack on physics violations in T2V | [Paper](https://arxiv.org/abs/2607.27380) |
+| [StatePlay](https://huggingface.co/papers/2607.26754) | 07/29/2026 | State-aware **game** world model | — | Enforces mechanics consistency through explicit state, an answer to the persistent-state critique below | [Paper](https://huggingface.co/papers/2607.26754) |
 | [Cosmos 3 (NVIDIA)](https://arxiv.org/abs/2606.02800) | 06/01/2026 | Omnimodal world-model family (language, image, video, audio, **action**) — mixture-of-transformers | Family; open code/checkpoints/data (OpenMDW-1.1) | SoTA across VL, video generation, robot policy; best open T2I/I2V + best RoboArena policy | [Paper](https://arxiv.org/abs/2606.02800) |
 | [Kairos](https://arxiv.org/abs/2606.16533) | 06/15/2026 | Native world-model stack (understanding + generation + prediction) | 4B unified; Hybrid Linear Temporal Attention | Cross-embodiment data curriculum; real-time rollout on edge hardware; beats 14B on embodied benchmarks | [Paper](https://arxiv.org/abs/2606.16533) |
 | [DreamX-World 1.0 (Alibaba AMAP)](https://arxiv.org/abs/2606.16993) | 06/15/2026 | General-purpose **interactive** T/I-to-video world model | 5B (Wan2.2-T2V-5B base); MIT open weights | Camera navigation, revisit consistency, promptable events; E-PRoPE encoding; few-step AR via causal forcing + DMD distillation | [HF](https://huggingface.co/GD-ML/DreamX-World-5B) · [Code](https://github.com/AMAP-ML/DreamX-World) |
@@ -216,6 +224,7 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 
 | Title | Date | What It Shows | Link |
 |-------|------|---------------|------|
+| WorldExam | 08/04/2026 | Separates *apparent appearance* from *inherent reactivity*: a world model can look right while reacting wrong, formalising the critique that visual realism has been over-weighted | [Paper](https://arxiv.org/abs/2608.02603) |
 | WorldOlympiad | 06/09/2026 | Physics / geometry / interaction "triathlon": SoTA world models show substantial gaps in physical reasoning, 3D consistency, long-horizon control | [Paper](https://arxiv.org/abs/2606.11129) |
 | Current World Models Lack a Persistent State Core | 06/18/2026 | World models treat the world as a "tracking shot" — off-screen entities freeze instead of evolving; persists across architectures and scales | [Paper](https://arxiv.org/abs/2606.20545) |
 | Echo-Memory | 06/08/2026 | Controlled memory study: raw context beats compressed memory for capacity; state-space recurrence best for revisit consistency | [Paper](https://arxiv.org/abs/2606.09803) |
@@ -264,6 +273,8 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 
 | Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
 |---------|------|---------------|------------|----------|-------------|
+| [GST-Bench](https://arxiv.org/abs/2608.05747) | Global Spatial Awareness from Continuous Video | Long-traversal scene integration (vs. single-viewpoint local perception) | - | - | [Paper](https://arxiv.org/abs/2608.05747) |
+| [ChronoVision](https://arxiv.org/abs/2608.05631) | Multi-step Temporal Reasoning | Latent state reconstruction | - | - | [Paper](https://arxiv.org/abs/2608.05631) |
 | [VGenST-Bench](https://arxiv.org/abs/2605.22570) | Spatio-temporal Reasoning via Active Video Synthesis | 3×2×2 taxonomy; synthesized controlled scenes decouple perception from reasoning | Multi-agent + Human QC | — | [Paper](https://arxiv.org/abs/2605.22570) |
 | [TOC-Bench](https://arxiv.org/abs/2605.09904) | Temporal Object Consistency for Video-LLMs | 3-layer temporal-necessity filtering; identity/continuity through occlusion & state change | Human-verified | 2.3 (2,323 QA / 1,951 videos) | [Paper](https://arxiv.org/abs/2605.09904) |
 | [VideoZeroBench](https://arxiv.org/abs/2604.01569) | Spatio-temporal Evidence Verification for Long-Video QA | 5-level progressive evidence tightening | Human | 0.5 (500 questions, 13 domains) | [Paper](https://arxiv.org/abs/2604.01569) |
@@ -293,6 +304,9 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 
 | Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
 |---------|------|---------------|------------|----------|-------------|
+| [HumanCLAW](https://arxiv.org/abs/2607.27180) | Can a VLM Act Through a Body? | Decouples the decision from motor control so failures attribute to perception, planning, or actuation | - | - | [Paper](https://arxiv.org/abs/2607.27180) |
+| [PerceptionBench](https://arxiv.org/abs/2607.24957) | Atomic Visual Perception | Decomposes perception into primitive operations rather than end-task accuracy | - | - | [Paper](https://arxiv.org/abs/2607.24957) |
+| [C$^3$PO](https://arxiv.org/abs/2608.05381) | Cross-Modal Composition & Counterfactuals (omni-modal) | Compositional and counterfactual probes for any-to-any models | - | - | [Paper](https://arxiv.org/abs/2608.05381) |
 | [OmniEarth](https://arxiv.org/abs/2603.09471) | Geospatial / Remote Sensing VLM Eval | MC + Open VQA | Human (verified) | 44.2 (9,275 images, 28 tasks) | [Paper](https://arxiv.org/abs/2603.09471) |
 |  [MultiHaystack](https://arxiv.org/abs/2603.05697) | Multimodal Retrieval & Reasoning | Retrieval + QA | Human | 0.75 (46K+ candidates) | [Paper](https://arxiv.org/abs/2603.05697) |
 |  [DatBench](https://arxiv.org/abs/2601.02316) | Discriminative, Faithful VLM Eval | MC (format-aware) | Synth | - | [Paper](https://arxiv.org/abs/2601.02316) |
@@ -324,6 +338,8 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 
 | Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
 |---------|------|---------------|------------|----------|-------------|
+| [ExtractBench](https://arxiv.org/abs/2607.29677) | Schema-Guided Enterprise Document Extraction | Scored against a target schema rather than free-form answers | - | - | [Paper](https://arxiv.org/abs/2607.29677) |
+| [ConfBench](https://arxiv.org/abs/2608.01792) | Confidence Calibration on Document Extraction | Asks whether the model knows when it is wrong, not only whether it is right | - | - | [Paper](https://arxiv.org/abs/2608.01792) |
 | [TableVision](https://arxiv.org/abs/2604.03660) | Spatially Grounded Table Reasoning | 3-level Cognitive Eval | Human | 6.8 (13 sub-categories) | [Paper](https://arxiv.org/abs/2604.03660) |
 | [TextVQA](https://arxiv.org/pdf/1904.08920) | Visual Text Understanding | Ans Match | Expert | 28.6 | [Repo](https://github.com/facebookresearch/mmf) |
 | [DocVQA](https://arxiv.org/pdf/2007.00398) | Document VQA | Ans Match | Crowd | 50 | [Site](https://www.docvqa.org/) |
@@ -334,6 +350,8 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 
 | Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
 |---------|------|---------------|------------|----------|-------------|
+| [FilmBench](https://arxiv.org/abs/2607.24241) | Film-Grade Cinematic Video Generation | Craft criteria — shot grammar, continuity, staging | - | - | [Paper](https://arxiv.org/abs/2607.24241) |
+| [MPIE-Bench](https://arxiv.org/abs/2607.27616) | Anatomically Plausible Multi-Person Interaction Editing | Anatomical plausibility under multi-subject edits | - | - | [Paper](https://arxiv.org/abs/2607.27616) |
 | [MSCOCO‑30K](https://arxiv.org/pdf/1405.0312) | Text‑to‑Image | BLEU, ROUGE, Sim | MTurks | 30 | [Site](https://cocodataset.org/#home) |
 | [GenAI‑Bench](https://arxiv.org/pdf/2406.13743) | Text‑to‑Image | Human Rating | Human | 80 | [HF](https://huggingface.co/datasets/BaiqiL/GenAI-Bench) |
 
@@ -358,6 +376,7 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 ### 2.3. <a name='DatasetforEmbodiedVLM'></a> Benchmark Datasets, Simulators, and Generative Models for Embodied VLM 
 | Benchmark                                                                                                                                     |             Domain              |                Type                |                                                     		Project					                                                     |
 |-----------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------:|:----------------------------------:|:----------------------------------------------------------------------------------------------------------------------:|
+| [OSReward](https://arxiv.org/abs/2607.28609) | Computer-Use Agents | Cross-platform reward-model evaluation | [Paper](https://arxiv.org/abs/2607.28609) |
 | [Drive-Bench](https://arxiv.org/abs/2501.04003) | Embodied AI | Autonomous Driving | [Website](https://drive-bench.github.io)  |
 | [Habitat](https://arxiv.org/pdf/1904.01201), [Habitat 2.0](https://arxiv.org/pdf/2106.14405), [Habitat 3.0](https://arxiv.org/pdf/2310.13724) |      Robotics (Navigation)      |        Simulator + Dataset         |                                           [Website](https://aihabitat.org/)                                            |
 | [Gibson](https://arxiv.org/pdf/1808.10654)                                                                                                    |      Robotics (Navigation)      |        Simulator + Dataset         |           [Website](http://gibsonenv.stanford.edu/), [Github Repo](https://github.com/StanfordVL/GibsonEnv)            |
@@ -424,6 +443,8 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 ### 3.2. <a name='sft'></a>Finetuning for VLM
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| Towards Physics of Multimodal Pretraining: Knowledge Flow, Modality Synergy, Early Unification, and Recipes | 08/2026 | [Paper](https://arxiv.org/abs/2608.05000) | - | - |
+| SpatialCLI: Learning to Reason With Spatial Tools, Then Without Them | 07/2026 | [Paper](https://huggingface.co/papers/2607.27703) | - | - |
 | Why Does RL Generalize Better Than SFT? A Data-Centric Perspective (DC-SFT) | 02/2026 | [Paper](https://arxiv.org/abs/2602.10815) | - | - |
 |  The Synergy Dilemma of Long-CoT SFT and RL | 2026 (TMLR) | [Paper](https://mlanthology.org/tmlr/2026/chen2026tmlr-synergy/) | - | - |
 |  Layer-wise Analysis of Supervised Fine-Tuning | 04/2026 | [Paper](https://arxiv.org/abs/2604.11838) | - | - |
@@ -468,6 +489,7 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 
 | Title | Year | Paper Link |
 |----------------|------|------------|
+| Metis: Memory Foundation Model | 07/2026 | [Paper](https://huggingface.co/papers/2607.26760) |
 | Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI | 2024 | [Paper](https://arxiv.org/pdf/2407.06886v1) |
 | ScreenAI: A Vision-Language Model for UI and Infographics Understanding | 2024 | [Paper](https://arxiv.org/pdf/2402.04615) |
 | ChartLlama: A Multimodal LLM for Chart Understanding and Generation | 2023 | [Paper](https://arxiv.org/pdf/2311.16483) |
@@ -482,6 +504,7 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 ### 4.2. <a name='GenerativeVisualMediaApplications'></a>Generative Visual Media Applications
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| Chimera: Designing and Chinchilla-Scaling Hybrid Visual Diffusion Transformers | 07/2026 | [📄 Paper](https://huggingface.co/papers/2607.28611) | - | - |
 | GPT4Motion: Scripting Physical Motions in Text-to-Video Generation via Blender-Oriented GPT Planning | 2023 | [📄 Paper](https://arxiv.org/pdf/2311.12631) | [🌍 Website](https://gpt4motion.github.io/) | [💾 Code](https://github.com/jiaxilv/GPT4Motion) |
 | Spurious Correlation in Multimodal LLMs | 2025 | [📄 Paper](https://arxiv.org/abs/2503.08884) | - | - |
 | WeGen: A Unified Model for Interactive Multimodal Generation as We Chat | 2025 |  [📄 Paper](https://arxiv.org/pdf/2503.01115) | - | [💾 Code](https://github.com/hzphzp/WeGen) |
@@ -529,6 +552,8 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 #### 4.3.1. <a name='Manipulation'></a>Manipulation
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data | 08/03/2026 | [📄 Paper](https://huggingface.co/papers/2608.02580) | - | - |
+| N₀-VTLA: Scaling Vision-Tactile-Language-Action Model with Latent Tactile Tokens | 07/26/2026 | [📄 Paper](https://huggingface.co/papers/2607.23782) | - | - |
 | Supervise What Survives: Geometry-Guided VLA Adaptation from Synthetic Robot Videos | 06/23/2026 | [📄 Paper](https://arxiv.org/abs/2606.24448) | - | - |
 | Qwen-RobotManip: Alignment Unlocks Scale for Robotic Manipulation Foundation Models (38,100-hour corpus) | 06/16/2026 | [📄 Paper](https://arxiv.org/abs/2606.17846) | - | - |
 | Hy-Embodied-0.5-VLA: From VLA Models to a Real-World Robot Learning Stack (10,000-hour UMI corpus) | 06/12/2026 | [📄 Paper](https://arxiv.org/abs/2606.14409) | - | - |
@@ -608,6 +633,8 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 #### 4.4.1. <a name='WebAgent'></a>Web Agent
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| Video-DeepResearch: Towards the Next-Generation Multimodal Deepresearch Agent | 08/05/2026 | [📄 Paper](https://arxiv.org/abs/2608.03979) | - | - |
+| StateAct: Program State, before Pixels, for Long-Horizon Computer-Use Agents | 07/24/2026 | [📄 Paper](https://huggingface.co/papers/2607.22798) | - | - |
 | A Real-World WebAgent with Planning, Long Context Understanding, and Program Synthesis | 2023 | [📄 Paper](https://arxiv.org/pdf/2307.12856) | - | - |
 | CogAgent: A Visual Language Model for GUI Agents | 2023 | [📄 Paper](https://arxiv.org/pdf/2312.08914) | - | [💾 Code](https://github.com/THUDM/CogAgent) |
 | WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2401.13919) | - | [💾 Code](https://github.com/MinorJerry/WebVoyager) |
@@ -633,6 +660,7 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 #### 4.4.3. <a name='Medical and Healthcare'></a>Healthcare
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| RESPClinBench: Multimodal Clinical Decision-Making and Longitudinal Disease Tracking | 08/07/2026 | [📄 Paper](https://arxiv.org/abs/2608.04514) | - | - |
 | IMCBench: Multimodal LLMs in Image-grounded Medical Conversations (safety drops on malignant/rare conditions) | 06/26/2026 | [📄 Paper](https://arxiv.org/abs/2606.28556) | - | - |
 | HalluCXR: Benchmarking & Mitigating Hallucinations in Medical VLMs for Chest Radiographs (61.9–82.3% outputs hallucinate) | 05/19/2026 | [📄 Paper](https://arxiv.org/abs/2605.20469) | - | - |
 | Medical Thinking with Multiple Images (MedThinkVQA) | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.16506) | - | - |
@@ -668,6 +696,7 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 ### 5.1 <a name='Hallucination'></a>Hallucination
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| TruthLens: Object Hallucination Detection via Self-Evaluating Truthfulness Scores in LVLMs | 08/07/2026 | [📄 Paper](https://arxiv.org/abs/2608.05616) | - | - |
 |  MVI-Bench: A Comprehensive Benchmark for Evaluating Robustness to Misleading Visual Inputs in LVLMs | 11/2025 | [📄 Paper](https://arxiv.org/abs/2511.14159) | [🌍 ICML 2026](https://icml.cc/) | [💾 Code](https://github.com/chenyil6/MVI-Bench) |
 | VL-Calibration: Decoupled Confidence Calibration for VLM Reasoning | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.09529) | - | - |
 |  Focus Matters: Phase-Aware Suppression for Hallucination in Vision-Language Models | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.03556) | - | - |
@@ -750,6 +779,8 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 ### 5.5 <a name=' EfficientTrainingandFineTuning'></a> Efficient Training and Fine-Tuning
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| OmniPack: Unified Token Compression for Efficient Omni-modal Large Language Models | 08/05/2026 | [📄 Paper](https://arxiv.org/abs/2608.03812) | - | - |
+| GSTEP: Global Spatio-Temporal Density-Driven Visual Token Pruning for Efficient Video LLMs | 08/05/2026 | [📄 Paper](https://arxiv.org/abs/2608.03083) | - | - |
 | FastOCR: Dynamic Visual Fixation via KV Cache Pruning (98% accuracy at 5% visual tokens, 3.0× faster) | 05/17/2026 | [📄 Paper](https://arxiv.org/abs/2605.17447) | - | - |
 | WindowQuant: Mixed-Precision KV Cache Quantization via Window-Level Similarity | 05/04/2026 | [📄 Paper](https://arxiv.org/abs/2605.02262) | - | - |
 | MODIX: Training-Free Multimodal Information-Driven Positional Index Scaling | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.12537) | - | - |

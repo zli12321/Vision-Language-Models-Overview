@@ -44,9 +44,11 @@
 我们用带日期的小型综述追踪那些尚未折叠到主表中的新 VLM、基准与后训练方法：
 
 <details>
-<summary><b>📂 展开全部 8 期报告</b> — 最新：<code>2026-07-22</code>，世界模型成为评估器 + 7 月前沿浪潮（<b>19 条新条目</b>）</summary>
+<summary><b>📂 展开全部 9 期报告</b> — 最新：<code>2026-08-10</code>，评测重心从"能否看见"转向"能否行动与记忆"（<b>29 条新条目</b>）</summary>
 
-- 📰 [`2026-07-22`](progressive%20reports/2026-07-22.md) — **最新**：世界模型成为**评估器** —— GigaWorld-1 + WMBench、RoboWorld（与真实世界相关性 r = 0.989）、世界-行动模型教程；Gemma 4 技术报告（**免编码器 12B**）、PRA-GRPO（4B 模型 V-Star 93.2%）、VRRL（可训练的自我反思）、LingBot-VLA 2.0（**60,000 小时**语料）、ROSA（机器人工厂推理服务）、ISPA（KV 缓存削减 50%）、OmniFocus、MoHallBench / LongVQUBench / 科学可视化素养基准；以及 **7 月前沿浪潮**：Gemini 3.6 Flash、Kimi K3（2.8T 开源 MoE）、GPT-5.5 / GPT-5.6 Sol、Grok 4.5、Qwen3.7-Plus —— 6 月 27 日以来 **19 条新条目**。
+- 📰 [`2026-08-10`](progressive%20reports/2026-08-10.md) — **最新**：**评测不再只问模型能否看见** —— HumanCLAW（VLM 能否通过身体行动？）、GST-Bench（从视频建立全局空间意识）、ChronoVision（基于潜在状态重建的时序推理）、WorldExam（重"反应"而非"外观"）；"评判"本身成为研究问题：OSReward、ConfBench、TruthLens。模型侧：**Qwen3.8-Max**（2.4T · 95B 激活，Vision Arena 第 2）、**DiffusionGemma**（26B-A4B 扩散版 Gemma）、Hunyuan3D-Buffalo 1.0（统一 3D）；以及 N₀-VTLA（触觉 VLA）、Metis、Ego2Robot、VideoCoCo、OmniPack —— 7 月 22 日以来 **29 条新条目**。
+
+- 📰 [`2026-07-22`](progressive%20reports/2026-07-22.md) — 世界模型成为**评估器** —— GigaWorld-1 + WMBench、RoboWorld（与真实世界相关性 r = 0.989）、世界-行动模型教程；Gemma 4 技术报告（**免编码器 12B**）、PRA-GRPO（4B 模型 V-Star 93.2%）、VRRL（可训练的自我反思）、LingBot-VLA 2.0（**60,000 小时**语料）、ROSA（机器人工厂推理服务）、ISPA（KV 缓存削减 50%）、OmniFocus、MoHallBench / LongVQUBench / 科学可视化素养基准；以及 **7 月前沿浪潮**：Gemini 3.6 Flash、Kimi K3（2.8T 开源 MoE）、GPT-5.5 / GPT-5.6 Sol、Grok 4.5、Qwen3.7-Plus —— 6 月 27 日以来 **19 条新条目**。
 - 📰 [`2026-06-27`](progressive%20reports/2026-06-27.md) — 世界模型基础模型密集发布 —— **Cosmos 3**（NVIDIA 全模态家族：最佳开源 T2I/I2V + RoboArena 最佳策略）、**Kairos**（4B 边缘实时世界模型栈，胜过 14B）、**DreamX-World 1.0**（5B MIT 开源交互式世界模型）；"持久状态核心"批判 + Echo-Memory；ZPPO（提示内教师胜过 GRPO）、Qwen-RobotManip（38,100 小时语料）、Supervise What Survives、VisCritic（GUI 视觉过程奖励）、HPP（长视频）、IMCBench（医疗对话安全）—— 6 月 23 日以来 **11 条新条目**。
 - 📰 [`2026-06-23`](progressive%20reports/2026-06-23.md) — 聚焦**世界模型** —— NVIDIA OmniDreams（实时闭环驾驶世界模型）、Mirage（隐空间空间记忆）、Reward-as-Agent（面向世界模型的 GRPO）、WorldOlympiad 与 LongSpace-Bench（世界模型基准）；以及 PP-OCRv6（34.5M 参数在 OCR 上超越 235B VLM）、Occ-VLM（3D 接地）、离散扩散 RL 推理、VLA 层剪枝、Hy-Embodied-0.5-VLA、RT-VLA（驾驶推理加速 44.8×）、VLA 语言引导 —— 6 月 2 日以来 **12 条新条目**。
 - 📰 [`2026-06-02`](progressive%20reports/2026-06-02.md) — Mamoda2.5（AR-扩散 DiT-MoE，编辑加速 95.9×）、VLM3（原生 3D 学习者）、AlphaGRPO（面向统一模型生成的 RL）、阶段式偏好优化、FastOCR / WindowQuant（KV 缓存高效化）、Fast-dDrive / CLOVER / CoWorld-VLA（驾驶 VLA）、Lost in Fog（推理一致性作为安全信号）、LiteGUI（免 SFT 的 GUI 智能体）、Health-Conditioned VLA、POLAR、TOC-Bench / VGenST-Bench（视频）、HalluCXR（医学）—— 5 月 16 日以来 **16 条新条目**。
@@ -68,6 +70,7 @@
 ## 目录
 * [📄 论文链接](https://arxiv.org/abs/2501.02189) / [⛑️ 引用](#Citations)
 * 1. [📚 前沿视觉-语言模型](#vlms)
+	* 1.1.  [🌍 世界模型](#worldmodels)
 * 2. [🗂️ 数据集与评估](#Dataset)
 	* 2.1.  [大规模预训练与后训练数据集](#TrainingDatasetforVLM)
 	* 2.2.  [VLM 数据集与评估](#DatasetforVLM)
@@ -128,6 +131,17 @@
 
 | 模型 | 年份 | 架构 | 训练数据 | 参数量 | 视觉编码器/分词器 | 预训练主干 |
 |--------------------------------------------------------------|------|----------------|-----------------------------|----------------|-----------------------------------------------|---------------------------------------------------|
+| [Qwen3.8-Max (Alibaba)](https://www.aimadetools.com/blog/qwen-3-8-max-vs-kimi-k3/) | 08/03/2026 | Sparse MoE + hybrid attention; text + vision in, 1M context; Vision Arena #2 | Undisclosed | 2.4T total · 95B active | Native multimodal | Qwen3.8 |
+| [DiffusionGemma (Google)](https://arxiv.org/abs/2608.00146) | 08/05/2026 | **Diffusion** (non-autoregressive) language model in the Gemma family | Undisclosed | 26B total · 4B active | Native multimodal | Gemma |
+| [Hunyuan3D-Buffalo 1.0 (Tencent)](https://arxiv.org/abs/2608.02711) | 08/05/2026 | Unified multimodal — 3D generation + understanding + editing | Undisclosed | Undisclosed | Undisclosed | Undisclosed |
+| [Gemini 3.6 Flash (Google)](https://deepmind.google/models/gemini/) | 07/21/2026 | Decoder-only / natively multimodal input (text, image, speech, video → text) | Undisclosed | Undisclosed | Native multimodal | Gemini 3.x |
+| [Kimi K3 (Moonshot AI)](https://openrouter.ai/moonshotai/kimi-k3) | 07/17/2026 | MoE, natively multimodal reasoning — text + image + video in one trunk (no separate vision module); 1M context; open weights due 07/27/2026 | Undisclosed | ~2.8T total (MoE) | Native (encoder-integrated) | New architecture |
+| [GPT-5.6 Sol (OpenAI)](https://openai.com/index/gpt-5-6/) | 07/09/2026 | Decoder-only; text + image in, 1.05M context / 128K output; max & ultra reasoning modes, sub-agent orchestration (Ultra); family: Luna / Terra / Sol | Undisclosed | Undisclosed | Undisclosed | Undisclosed |
+| [Grok 4.5 (xAI)](https://artificialanalysis.ai/models/grok-4-5) | 07/08/2026 | Decoder-only reasoning (extended thinking); text + image + files in, 500K context | Undisclosed | ~1.5T (reported) | Undisclosed | Undisclosed |
+| [Qwen3.7-Plus (Alibaba)](https://www.marktechpost.com/2026/06/02/alibabas-qwen-team-launches-qwen3-7-plus-adding-vision-deep-reasoning-tool-invocation-and-autonomous-iteration-on-the-bailian-platform/) | 06/01/2026 | Natively multimodal agent — image + video understanding, GUI grounding, tool invocation (note: Qwen3.7-**Max** is text-only) | Undisclosed | Undisclosed | Native multimodal ViT | Qwen3.7 |
+| [Mamoda2.5 (InclusionAI)](https://arxiv.org/abs/2605.02641) | 05/04/2026 | AR-Diffusion + DiT-MoE (unified understanding + generation; 128 experts, Top-8) | Multimodal und. + image/video generation & editing | 25B total · 3B active | Semantic tokenizer + DiT decoder head | Mamoda2 |
+| [Nemotron 3 Nano Omni (NVIDIA)](https://arxiv.org/abs/2604.24954) | 04/28/2026 | Hybrid MoE (omni-modal: vision + audio + text) | Vision + audio + text joint training | 30B total · 3B active | Dynamic-res ViT + Conv3D temporal | Nemotron 3 |
+| [GPT-5.5 (OpenAI)](https://openai.com/index/introducing-gpt-5-5/) | 04/23/2026 | Decoder-only; text + image in (GPT-5 input stack), computer-use screen reading in Codex; topped AA Intelligence Index at release | Undisclosed | Undisclosed | Undisclosed | Undisclosed |
 | [Qwen3.6-27B (Alibaba)](https://qwen.ai/blog?id=qwen3.6-27b) | 04/22/2026 | Decoder-only / natively multimodal input (thinking + non-thinking) | Multimodal pretraining + agentic mid-training | 27B dense | Native multimodal ViT | Qwen3.6 |
 | [Qwen3.6-35B-A3B (Alibaba)](https://qwen.ai/blog?id=qwen3.6-35b-a3b) | 04/15/2026 | MoE / natively multimodal input | Multimodal pretraining + agentic SFT/RL | 35B total · 3B active | Native multimodal ViT | Qwen3.6 |
 | [LFM2.5-VL-450M (Liquid AI)](https://www.marktechpost.com/2026/04/11/liquid-ai-releases-lfm2-5-vl-450m-a-450m-parameter-vision-language-model-with-bounding-box-prediction-multilingual-support-and-sub-250ms-edge-inference/) | 04/11/2026 | Liquid Foundation Model | Undisclosed | 450M | Non-overlapping tile ViT | LFM2.5 |
@@ -196,6 +210,35 @@
 
 
 
+###  1.1. <a name='worldmodels'></a>🌍 世界模型
+
+2026 年中，世界模型从研究演示走向可发布的工程产物：统一主干同时充当**生成器、感知器与策略**。下表先列基础模型发布，随后是记忆 / 状态分析与基准。
+
+| 模型 | 日期 | 类型 | 规模 / 许可 | 关键结果 | 链接 |
+|-------|------|------|-----------------|------------|-------|
+| [HelloWorld](https://arxiv.org/abs/2608.05070) | 08/06/2026 | Video world model with **socially interactive characters** | — | Pushes world models past physics and navigation into social dynamics: characters that respond to the viewer rather than merely persisting | [Paper](https://arxiv.org/abs/2608.05070) |
+| [VideoCoCo](https://arxiv.org/abs/2607.27380) | 07/31/2026 | Agentic dual-engine text-to-video with **Code-as-CoT** | — | Infers temporal evolution symbolically via generated code instead of implicitly, then renders — a hybrid attack on physics violations in T2V | [Paper](https://arxiv.org/abs/2607.27380) |
+| [StatePlay](https://huggingface.co/papers/2607.26754) | 07/29/2026 | State-aware **game** world model | — | Enforces mechanics consistency through explicit state, an answer to the persistent-state critique below | [Paper](https://huggingface.co/papers/2607.26754) |
+| [Cosmos 3 (NVIDIA)](https://arxiv.org/abs/2606.02800) | 06/01/2026 | Omnimodal world-model family (language, image, video, audio, **action**) — mixture-of-transformers | Family; open code/checkpoints/data (OpenMDW-1.1) | SoTA across VL, video generation, robot policy; best open T2I/I2V + best RoboArena policy | [Paper](https://arxiv.org/abs/2606.02800) |
+| [Kairos](https://arxiv.org/abs/2606.16533) | 06/15/2026 | Native world-model stack (understanding + generation + prediction) | 4B unified; Hybrid Linear Temporal Attention | Cross-embodiment data curriculum; real-time rollout on edge hardware; beats 14B on embodied benchmarks | [Paper](https://arxiv.org/abs/2606.16533) |
+| [DreamX-World 1.0 (Alibaba AMAP)](https://arxiv.org/abs/2606.16993) | 06/15/2026 | General-purpose **interactive** T/I-to-video world model | 5B (Wan2.2-T2V-5B base); MIT open weights | Camera navigation, revisit consistency, promptable events; E-PRoPE encoding; few-step AR via causal forcing + DMD distillation | [HF](https://huggingface.co/GD-ML/DreamX-World-5B) · [Code](https://github.com/AMAP-ML/DreamX-World) |
+| [NVIDIA OmniDreams](https://arxiv.org/abs/2606.03159) | 06/02/2026 | Real-time generative world model for closed-loop AV simulation | Mid/post-trained from Cosmos on 21k h driving | Action-conditioned sensor video; derived world-action model beats VLA-based Alpamayo 1.5 at 1/5 params | [Paper](https://arxiv.org/abs/2606.03159) |
+| [Mirage](https://arxiv.org/abs/2606.09828) | 06/08/2026 | Latent spatial memory for video world models | — | 3D scene memory in diffusion latent space via depth-guided back-projection; faster + lighter than explicit-3D baselines | [Paper](https://arxiv.org/abs/2606.09828) |
+| [Reward as An Agent](https://arxiv.org/abs/2606.19990) | 06/18/2026 | RL post-training for embodied world models | — | DynDiff-GRPO diversifies action-space exploration; agentic reward verification curbs reward hacking | [Paper](https://arxiv.org/abs/2606.19990) |
+
+**基准与分析**
+
+| 标题 | 日期 | 结论 | 链接 |
+|-------|------|---------------|------|
+| WorldExam | 08/04/2026 | Separates *apparent appearance* from *inherent reactivity*: a world model can look right while reacting wrong, formalising the critique that visual realism has been over-weighted | [Paper](https://arxiv.org/abs/2608.02603) |
+| WorldOlympiad | 06/09/2026 | Physics / geometry / interaction "triathlon": SoTA world models show substantial gaps in physical reasoning, 3D consistency, long-horizon control | [Paper](https://arxiv.org/abs/2606.11129) |
+| Current World Models Lack a Persistent State Core | 06/18/2026 | World models treat the world as a "tracking shot" — off-screen entities freeze instead of evolving; persists across architectures and scales | [Paper](https://arxiv.org/abs/2606.20545) |
+| Echo-Memory | 06/08/2026 | Controlled memory study: raw context beats compressed memory for capacity; state-space recurrence best for revisit consistency | [Paper](https://arxiv.org/abs/2606.09803) |
+| LongSpace / LongSpace-Bench | 06/04/2026 | Video MLLMs fail long-horizon spatial recall without explicit spatial memory (3D cues + layer-aware retrieval) | [Paper](https://arxiv.org/abs/2606.05677) |
+
+> 另见 [§2.3](#DatasetforEmbodiedVLM) 中更早的世界模型条目（UniSim、GAIA-1、LWM、Genesis、RoboGen），以及 [`2026-06-23`](progressive%20reports/2026-06-23.md) / [`2026-06-27`](progressive%20reports/2026-06-27.md) 两期渐进研究报告。
+
+
 ##  2. <a name='Dataset'></a>🗂️ 基准与评估
 ### 2.1. <a name='TrainingDatasetforVLM'></a> VLM 训练数据集
 
@@ -239,6 +282,8 @@
 
 | 数据集 | 任务 | 评估协议 | 标注者 | 规模 (K) | 代码 / 站点 |
 |---------|------|---------------|------------|----------|-------------|
+| [GST-Bench](https://arxiv.org/abs/2608.05747) | Global Spatial Awareness from Continuous Video | Long-traversal scene integration (vs. single-viewpoint local perception) | - | - | [Paper](https://arxiv.org/abs/2608.05747) |
+| [ChronoVision](https://arxiv.org/abs/2608.05631) | Multi-step Temporal Reasoning | Latent state reconstruction | - | - | [Paper](https://arxiv.org/abs/2608.05631) |
 | [MMOU](https://arxiv.org/abs/2603.14145) | Omni-modal Long Video Understanding | MC | Human | 15 (9,038 videos) | [Paper](https://arxiv.org/abs/2603.14145) |
 | [Video-MMMU](https://arxiv.org/abs/2501.13826) | Knowledge Acquisition from Professional Videos | MC + Knowledge Gain | Expert | 0.9 (300 videos) | [Paper](https://arxiv.org/abs/2501.13826) |
 | [MMVU](https://arxiv.org/abs/2501.12380) | Expert-Level Multi-Discipline Video Understanding | MC | Expert | 3 (27 subjects) | [Paper](https://arxiv.org/abs/2501.12380) |
@@ -263,6 +308,9 @@
 
 | 数据集 | 任务 | 评估协议 | 标注者 | 规模 (K) | 代码 / 站点 |
 |---------|------|---------------|------------|----------|-------------|
+| [HumanCLAW](https://arxiv.org/abs/2607.27180) | Can a VLM Act Through a Body? | Decouples the decision from motor control so failures attribute to perception, planning, or actuation | - | - | [Paper](https://arxiv.org/abs/2607.27180) |
+| [PerceptionBench](https://arxiv.org/abs/2607.24957) | Atomic Visual Perception | Decomposes perception into primitive operations rather than end-task accuracy | - | - | [Paper](https://arxiv.org/abs/2607.24957) |
+| [C$^3$PO](https://arxiv.org/abs/2608.05381) | Cross-Modal Composition & Counterfactuals (omni-modal) | Compositional and counterfactual probes for any-to-any models | - | - | [Paper](https://arxiv.org/abs/2608.05381) |
 | [OmniEarth](https://arxiv.org/abs/2603.09471) | Geospatial / Remote Sensing VLM Eval | MC + Open VQA | Human (verified) | 44.2 (9,275 images, 28 tasks) | [Paper](https://arxiv.org/abs/2603.09471) |
 || [MultiHaystack](https://arxiv.org/abs/2603.05697) | Multimodal Retrieval & Reasoning | Retrieval + QA | Human | 0.75 (46K+ candidates) | [Paper](https://arxiv.org/abs/2603.05697) |
 || [DatBench](https://arxiv.org/abs/2601.02316) | Discriminative, Faithful VLM Eval | MC (format-aware) | Synth | - | [Paper](https://arxiv.org/abs/2601.02316) |
@@ -294,6 +342,8 @@
 
 | 数据集 | 任务 | 评估协议 | 标注者 | 规模 (K) | 代码 / 站点 |
 |---------|------|---------------|------------|----------|-------------|
+| [ExtractBench](https://arxiv.org/abs/2607.29677) | Schema-Guided Enterprise Document Extraction | Scored against a target schema rather than free-form answers | - | - | [Paper](https://arxiv.org/abs/2607.29677) |
+| [ConfBench](https://arxiv.org/abs/2608.01792) | Confidence Calibration on Document Extraction | Asks whether the model knows when it is wrong, not only whether it is right | - | - | [Paper](https://arxiv.org/abs/2608.01792) |
 | [TableVision](https://arxiv.org/abs/2604.03660) | Spatially Grounded Table Reasoning | 3-level Cognitive Eval | Human | 6.8 (13 sub-categories) | [Paper](https://arxiv.org/abs/2604.03660) |
 | [TextVQA](https://arxiv.org/pdf/1904.08920) | Visual Text Understanding | Ans Match | Expert | 28.6 | [Repo](https://github.com/facebookresearch/mmf) |
 | [DocVQA](https://arxiv.org/pdf/2007.00398) | Document VQA | Ans Match | Crowd | 50 | [Site](https://www.docvqa.org/) |
@@ -304,6 +354,8 @@
 
 | 数据集 | 任务 | 评估协议 | 标注者 | 规模 (K) | 代码 / 站点 |
 |---------|------|---------------|------------|----------|-------------|
+| [FilmBench](https://arxiv.org/abs/2607.24241) | Film-Grade Cinematic Video Generation | Craft criteria — shot grammar, continuity, staging | - | - | [Paper](https://arxiv.org/abs/2607.24241) |
+| [MPIE-Bench](https://arxiv.org/abs/2607.27616) | Anatomically Plausible Multi-Person Interaction Editing | Anatomical plausibility under multi-subject edits | - | - | [Paper](https://arxiv.org/abs/2607.27616) |
 | [MSCOCO‑30K](https://arxiv.org/pdf/1405.0312) | Text‑to‑Image | BLEU, ROUGE, Sim | MTurks | 30 | [Site](https://cocodataset.org/#home) |
 | [GenAI‑Bench](https://arxiv.org/pdf/2406.13743) | Text‑to‑Image | Human Rating | Human | 80 | [HF](https://huggingface.co/datasets/BaiqiL/GenAI-Bench) |
 
@@ -331,6 +383,7 @@
 
 | 基准                                                                                                                                     |             领域              |                类型                |                                                     		项目					                                                     |
 |-----------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------:|:----------------------------------:|:----------------------------------------------------------------------------------------------------------------------:|
+| [OSReward](https://arxiv.org/abs/2607.28609) | Computer-Use Agents | Cross-platform reward-model evaluation | [Paper](https://arxiv.org/abs/2607.28609) |
 | [Drive-Bench](https://arxiv.org/abs/2501.04003) | Embodied AI | Autonomous Driving | [Website](https://drive-bench.github.io)  |
 | [Habitat](https://arxiv.org/pdf/1904.01201), [Habitat 2.0](https://arxiv.org/pdf/2106.14405), [Habitat 3.0](https://arxiv.org/pdf/2310.13724) |      Robotics (Navigation)      |        Simulator + Dataset         |                                           [Website](https://aihabitat.org/)                                            |
 | [Gibson](https://arxiv.org/pdf/1808.10654)                                                                                                    |      Robotics (Navigation)      |        Simulator + Dataset         |           [Website](http://gibsonenv.stanford.edu/), [Github Repo](https://github.com/StanfordVL/GibsonEnv)            |
@@ -394,6 +447,8 @@
 ### 3.2. <a name='sft'></a>VLM 监督微调 (SFT)
 | 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
+| Towards Physics of Multimodal Pretraining: Knowledge Flow, Modality Synergy, Early Unification, and Recipes | 08/2026 | [Paper](https://arxiv.org/abs/2608.05000) | - | - |
+| SpatialCLI: Learning to Reason With Spatial Tools, Then Without Them | 07/2026 | [Paper](https://huggingface.co/papers/2607.27703) | - | - |
 | AGFT: Alignment-Guided Fine-Tuning for Zero-Shot Adversarial Robustness of VLMs | 2026/03 | [Paper](https://arxiv.org/abs/2603.29410) | - | - |
 || CoVFT: Context-aware Visual Fine-tuning for Multimodal Large Language Models | 2026/03 | [Paper](https://arxiv.org/abs/2603.21077) | - | - |
 || MERGETUNE: Continued Fine-Tuning of Vision-Language Models | 2026/01 (ICLR 2026) | [Paper](https://arxiv.org/abs/2601.10497) | - | - |
@@ -435,6 +490,7 @@
 
 | 标题 | 年份 | 论文链接 |
 |----------------|------|------------|
+| Metis: Memory Foundation Model | 07/2026 | [Paper](https://huggingface.co/papers/2607.26760) |
 | Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI | 2024 | [Paper](https://arxiv.org/pdf/2407.06886v1) |
 | ScreenAI: A Vision-Language Model for UI and Infographics Understanding | 2024 | [Paper](https://arxiv.org/pdf/2402.04615) |
 | ChartLlama: A Multimodal LLM for Chart Understanding and Generation | 2023 | [Paper](https://arxiv.org/pdf/2311.16483) |
@@ -449,6 +505,7 @@
 ### 4.2. <a name='GenerativeVisualMediaApplications'></a>生成式视觉媒体应用
 | 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
+| Chimera: Designing and Chinchilla-Scaling Hybrid Visual Diffusion Transformers | 07/2026 | [📄 Paper](https://huggingface.co/papers/2607.28611) | - | - |
 | GPT4Motion: Scripting Physical Motions in Text-to-Video Generation via Blender-Oriented GPT Planning | 2023 | [📄 Paper](https://arxiv.org/pdf/2311.12631) | [🌍 Website](https://gpt4motion.github.io/) | [💾 Code](https://github.com/jiaxilv/GPT4Motion) |
 | Spurious Correlation in Multimodal LLMs | 2025 | [📄 Paper](https://arxiv.org/abs/2503.08884) | - | - |
 | WeGen: A Unified Model for Interactive Multimodal Generation as We Chat | 2025 |  [📄 Paper](https://arxiv.org/pdf/2503.01115) | - | [💾 Code](https://github.com/hzphzp/WeGen) |
@@ -492,6 +549,8 @@
 #### 4.3.1. <a name='Manipulation'></a>机械臂操作 (Manipulation)
 | 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
+| Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data | 08/03/2026 | [📄 Paper](https://huggingface.co/papers/2608.02580) | - | - |
+| N₀-VTLA: Scaling Vision-Tactile-Language-Action Model with Latent Tactile Tokens | 07/26/2026 | [📄 Paper](https://huggingface.co/papers/2607.23782) | - | - |
 | VIMA: General Robot Manipulation with Multimodal Prompts | 2022 | [📄 Paper](https://arxiv.org/pdf/2210.03094) | [🌍 Website](https://vimalabs.github.io/) |
 | Instruct2Act: Mapping Multi-Modality Instructions to Robotic Actions with Large Language Model | 2023 | [📄 Paper](https://arxiv.org/pdf/2305.11176) | - | - |
 | Creative Robot Tool Use with Large Language Models | 2023 | [📄 Paper](https://arxiv.org/pdf/2310.13065) | [🌍 Website](https://creative-robotool.github.io/) | - |
@@ -558,6 +617,8 @@
 #### 4.4.1. <a name='WebAgent'></a>网页 / GUI 智能体
 | 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
+| Video-DeepResearch: Towards the Next-Generation Multimodal Deepresearch Agent | 08/05/2026 | [📄 Paper](https://arxiv.org/abs/2608.03979) | - | - |
+| StateAct: Program State, before Pixels, for Long-Horizon Computer-Use Agents | 07/24/2026 | [📄 Paper](https://huggingface.co/papers/2607.22798) | - | - |
 | A Real-World WebAgent with Planning, Long Context Understanding, and Program Synthesis | 2023 | [📄 Paper](https://arxiv.org/pdf/2307.12856) | - | - |
 | CogAgent: A Visual Language Model for GUI Agents | 2023 | [📄 Paper](https://arxiv.org/pdf/2312.08914) | - | [💾 Code](https://github.com/THUDM/CogAgent) |
 | WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2401.13919) | - | [💾 Code](https://github.com/MinorJerry/WebVoyager) |
@@ -578,6 +639,7 @@
 #### 4.4.3. <a name='Medical and Healthcare'></a>医疗与健康 (Healthcare)
 | 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
+| RESPClinBench: Multimodal Clinical Decision-Making and Longitudinal Disease Tracking | 08/07/2026 | [📄 Paper](https://arxiv.org/abs/2608.04514) | - | - |
 | CARE: Towards Clinical Accountability in Multi-Modal Medical Reasoning with an Evidence-Grounded Agentic Framework | 03/2026 | [📄 Paper](https://arxiv.org/abs/2603.01607) | - | - |
 || MedMO: Grounding and Understanding Multimodal Large Language Model for Medical Images | 02/2026 | [📄 Paper](https://arxiv.org/abs/2602.06965) | - | - |
 || Colon-X: Advancing Intelligent Colonoscopy from Multimodal Understanding to Clinical Reasoning | 12/2025 | [📄 Paper](https://arxiv.org/abs/2512.03667) | - | [💾 Code](https://github.com/ai4colonoscopy/Colon-X) |
@@ -608,6 +670,7 @@
 ### 5.1 <a name='Hallucination'></a>幻觉 (Hallucination)
 | 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
+| TruthLens: Object Hallucination Detection via Self-Evaluating Truthfulness Scores in LVLMs | 08/07/2026 | [📄 Paper](https://arxiv.org/abs/2608.05616) | - | - |
 | Focus Matters: Phase-Aware Suppression for Hallucination in Vision-Language Models | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.03556) | - | - |
 || VLMs Need Words: Vision Language Models Ignore Visual Detail in Favor of Semantic Anchors | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.02486) | - | - |
 || HALP: Detecting Hallucinations in Vision-Language Models without Generating a Single Token | 03/2026 | [📄 Paper](https://arxiv.org/abs/2603.05465) | [🌍 ACL](https://aclanthology.org/2026.eacl-long.287/) | - |
@@ -688,6 +751,8 @@
 ### 5.5 <a name=' EfficientTrainingandFineTuning'></a> 高效训练与微调
 | 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
+| OmniPack: Unified Token Compression for Efficient Omni-modal Large Language Models | 08/05/2026 | [📄 Paper](https://arxiv.org/abs/2608.03812) | - | - |
+| GSTEP: Global Spatio-Temporal Density-Driven Visual Token Pruning for Efficient Video LLMs | 08/05/2026 | [📄 Paper](https://arxiv.org/abs/2608.03083) | - | - |
 | QAPruner: Quantization-Aware Vision Token Pruning for MLLMs | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.02816) | - | - |
 || Firebolt-VL: Efficient Vision-Language Understanding with Cross-Modality Modulation | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.04579) | - | - |
 || CoME-VL: Scaling Complementary Multi-Encoder Vision-Language Learning | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.03231) | - | - |
