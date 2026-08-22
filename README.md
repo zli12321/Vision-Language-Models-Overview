@@ -1,4 +1,4 @@
-# Benchmark and Evaluations, RL Alignment, Applications, and Challenges of Large Vision Language Models
+# Frontier Vision-Language Models: Architectural Evolution, Benchmarks, Applications, and Challenges
 
 > **🌐 Language**: **English** · [简体中文](README_zh.md)
 
