@@ -13,8 +13,8 @@ A most Frontend Collection and survey of vision-language model papers, and model
 VLM design has gone through **four distinct architectural eras** in just six years — and Era 3 has split into two parallel branches. Early models kept frozen vision and language towers, aligned contrastively (CLIP) or bridged by a learnable connector into a frozen LM (BLIP-2, Flamingo). The 2023–2025 generation made a pretrained **LLM the trunk** and treated vision as a bolt-on adapter (LLaVA, Qwen2.5-VL, GPT-4V). The 2025–2026 generation drops the bridge entirely and early-fuses all modalities into **a single transformer** — forking along the *output* axis — and in 2026 the trunk is becoming a **world model** that predicts and acts:
 
 - **Era 3a — Native Multimodal Input → Text Out.** Image, video, and (sometimes) audio enter a single early-fused token stream, but generation is still autoregressive text. This is the design used by today's general-purpose flagships: **Qwen3.5 / Qwen3.6, Gemma 4, Gemini 3, GPT-5.4, Phi-4-Reasoning-Vision, Claude Opus 4.6, Nemotron 3 Nano Omni**.
-- **Era 3b — Omni-Modal Unified I/O.** The same fused trunk plus dedicated **image / video decoder** (VAE / DiT / flow-matching) and/or **audio codec** decoder heads, so the model can also *generate* images, video, and speech — via autoregression or, increasingly, **discrete diffusion / AR-Diffusion** (LLaDA2.0-Uni, Mamoda2.5). This is the design used by unified models: **BAGEL, Qwen3.5-Omni, InternVL-U, Emu3 / Emu3.5, Erin 5.0, DeepSeek-Janus-Pro, LLaDA2.0-Uni, Mamoda2.5**. Generation-only specialists share the same decoder stack without the understanding half — **Sora 2, Veo 3, Kling** now generate video with **synchronized audio**, and they double as the substrate for Era 4 world models (DreamX-World builds on Wan, OmniDreams on Cosmos).
-- **Era 4 — World-Action Models (2026 →).** The unified trunk adds **action** as a first-class modality and closes the loop with the environment: it predicts future observations, maintains persistent state and spatial memory, and emits actions — **generator, perceiver, and policy in one network**: **Cosmos 3, Kairos, DreamX-World 1.0, OmniDreams** (see [§1.1 World Models](#worldmodels)).
+- **Era 3b — Omni-Modal Unified I/O.** The same fused trunk plus dedicated **image / video decoder** (VAE / DiT / flow-matching) and/or **audio codec** decoder heads, so the model can also *generate* images, video, and speech — via autoregression or, increasingly, **discrete diffusion / AR-Diffusion** (LLaDA2.0-Uni, Mamoda2.5) — and the newest 3b models (**SenseNova-U1.5**, 09/2026) are dropping the VAE too, running understanding + reasoning + generation through one **encoder-free and VAE-free** mixture-of-transformers trunk. This is the design used by unified models: **SenseNova-U1.5, BAGEL, Qwen3.5-Omni, InternVL-U, Emu3 / Emu3.5, Erin 5.0, DeepSeek-Janus-Pro, LLaDA2.0-Uni, Mamoda2.5**. Generation-only specialists share the same decoder stack without the understanding half — **Sora 2, Veo 3, Kling** now generate video with **synchronized audio**, and they double as the substrate for Era 4 world models (DreamX-World builds on Wan, OmniDreams on Cosmos, SolarWM on Wan2.2 / LTX-2.5 / MiniMax-H3).
+- **Era 4 — World-Action Models (2026 →).** The unified trunk adds **action** as a first-class modality and closes the loop with the environment: it predicts future observations, maintains persistent state and spatial memory, and emits actions — **generator, perceiver, and policy in one network**. Founding releases: **Cosmos 3, Kairos, DreamX-World 1.0, OmniDreams**; the 08–09/2026 wave: **DreamX-Phi 1.0** (WorldArena 2.0 winner), **SimWAM** (91.5 PDMS NAVSIM), **ZimaBlue** (120k h video pretraining), **G0.5** (one AR stream for reasoning+action), **Puffin-World** (native 3D world states), **SolarWM** (open 5B–33B, real-time minute-to-hour rollouts) (see [§1.1 World Models](#worldmodels)).
 
 <p align="center">
   <img src="assets/vlm_architecture_evolution.svg" alt="The Evolution of Vision-Language Model Architectures: contrastive/bridged two-towers, LLM-backbone adapter models, natively-fused-input text-output models, omni-modal unified-I/O models, and world-action models" width="100%"/>
@@ -42,9 +42,10 @@ Below we compile *awesome* papers and model and github repositories that
 We track new VLMs, benchmarks, and post-training methods that haven't yet been folded into the main tables in dated mini-surveys:
 
 <details>
-<summary><b>📂 Expand all 9 reports</b> — latest: <code>2026-08-10</code>, evaluation shifts from seeing to acting and remembering (<b>29 new entries</b>)</summary>
+<summary><b>📂 Expand all 10 reports</b> — latest: <code>2026-09-13</code>, Era 4 fills out and the unified trunk drops the VAE (<b>50 new entries</b>)</summary>
 
-- 📰 [`2026-08-10`](progressive%20reports/2026-08-10.md) — **latest**: **Evaluation stops asking whether a model sees** — HumanCLAW (can a VLM act through a body?), GST-Bench (global spatial awareness from video), ChronoVision (temporal reasoning via latent state), WorldExam (reactivity over appearance); *judging* becomes its own research problem via OSReward, ConfBench, TruthLens. On the model side: **Qwen3.8-Max** (2.4T · 95B active, Vision Arena #2), **DiffusionGemma** (26B-A4B diffusion Gemma), Hunyuan3D-Buffalo 1.0 (unified 3D); plus N₀-VTLA (tactile VLA), Metis, Ego2Robot, VideoCoCo, OmniPack — **29 new entries** since July 22.
+- 📰 [`2026-09-13`](progressive%20reports/2026-09-13.md) — **latest**: **Era 4 becomes a paradigm** — six world-action systems ship in five weeks: **DreamX-Phi 1.0** (WorldArena 2.0 winner), **SimWAM** (91.5 PDMS NAVSIM), **ZimaBlue** (120k h video pretraining, 30 Hz on RTX 4090), **G0.5** (one AR stream for reasoning+action), **Puffin-World** (native 3D world states), **SolarWM** (open 5B–33B). Unified stack keeps shedding components — **SenseNova-U1.5** ships 8B mixture-of-transformers *encoder-free **and** VAE-free* at native 4K. First VL *foundation* model for driving: **Qwen-Drive-1.0** (Alibaba). Speech unification: **AuK** (Tencent Hunyuan, 4.5× via 4-step). First open >700B multimodal RL post-training stack: **Miles v0.1** (GLM-5.2 744B-A40B, 64 GB300s, 263s/step). Frontier eval reopens on continuous settings — VideoGAIA puts GPT-5.5/Kimi K3 <60%; EgoMonth: 71.8% Gemini vs 94.2% human; StateSight probes latent state; **WorldReward** and **PAWBench** add reward/probabilistic-alignment axes for world models — **50 new entries** since August 10.
+- 📰 [`2026-08-10`](progressive%20reports/2026-08-10.md) — **Evaluation stops asking whether a model sees** — HumanCLAW (can a VLM act through a body?), GST-Bench (global spatial awareness from video), ChronoVision (temporal reasoning via latent state), WorldExam (reactivity over appearance); *judging* becomes its own research problem via OSReward, ConfBench, TruthLens. On the model side: **Qwen3.8-Max** (2.4T · 95B active, Vision Arena #2), **DiffusionGemma** (26B-A4B diffusion Gemma), Hunyuan3D-Buffalo 1.0 (unified 3D); plus N₀-VTLA (tactile VLA), Metis, Ego2Robot, VideoCoCo, OmniPack — **29 new entries** since July 22.
 
 - 📰 [`2026-07-22`](progressive%20reports/2026-07-22.md) — World models become the **evaluators** — GigaWorld-1 + WMBench, RoboWorld (r = 0.989 vs real-world), World-Action-Model tutorial; Gemma 4 tech report (**encoder-free 12B**), PRA-GRPO (93.2% V-Star at 4B), VRRL (trained self-reflection), LingBot-VLA 2.0 (**60,000-hour** corpus), ROSA (robot-factory serving), ISPA (50% KV-cache cut), OmniFocus, MoHallBench / LongVQUBench / SciVis-literacy benchmarks; plus the **July frontier wave**: Gemini 3.6 Flash, Kimi K3 (2.8T open MoE), GPT-5.5 / GPT-5.6 Sol, Grok 4.5, Qwen3.7-Plus — **19 new entries** since June 27.
 - 📰 [`2026-06-27`](progressive%20reports/2026-06-27.md) — World-model foundation releases — **Cosmos 3** (NVIDIA omnimodal family: best open T2I/I2V + best RoboArena policy), **Kairos** (4B edge-real-time world-model stack, beats 14B), **DreamX-World 1.0** (5B MIT-licensed interactive world model); "Persistent State Core" critique + Echo-Memory; ZPPO (teacher-in-prompts beats GRPO), Qwen-RobotManip (38,100-hour corpus), Supervise What Survives, VisCritic (visual process rewards for GUI), HPP (long video), IMCBench (medical dialogue safety) — **11 new entries** since June 23.
@@ -127,6 +128,7 @@ Welcome to contribute and discuss!
 
 | Model                                                        | Year | Architecture   | Training Data               | Parameters     | Vision Encoder/Tokenizer                       | Pretrained Backbone Model                          |
 |--------------------------------------------------------------|------|----------------|-----------------------------|----------------|-----------------------------------------------|---------------------------------------------------|
+| [SenseNova-U1.5](https://arxiv.org/abs/2609.11929) | 09/10/2026 | **Encoder-free and VAE-free** native unified visual intelligence; mixture-of-transformers; understanding + reasoning + generation in one trunk; native resolutions up to 4K | Undisclosed | 8B MoT | None (encoder-free) | Trained from scratch — [HF](https://huggingface.co/sensenova/SenseNova-U1.5-8B-MoT) · [Code](https://github.com/OpenSenseNova/SenseNova-U1) |
 | [Qwen3.8-Max (Alibaba)](https://www.aimadetools.com/blog/qwen-3-8-max-vs-kimi-k3/) | 08/03/2026 | Sparse MoE + hybrid attention; text + vision in, 1M context; Vision Arena #2 | Undisclosed | 2.4T total · 95B active | Native multimodal | Qwen3.8 |
 | [DiffusionGemma (Google)](https://arxiv.org/abs/2608.00146) | 08/05/2026 | **Diffusion** (non-autoregressive) language model in the Gemma family | Undisclosed | 26B total · 4B active | Native multimodal | Gemma |
 | [Hunyuan3D-Buffalo 1.0 (Tencent)](https://arxiv.org/abs/2608.02711) | 08/05/2026 | Unified multimodal — 3D generation + understanding + editing | Undisclosed | Undisclosed | Undisclosed | Undisclosed |
@@ -210,6 +212,13 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 
 | Model | Date | Type | Scale / License | Key Result | Links |
 |-------|------|------|-----------------|------------|-------|
+| [Puffin-World](https://arxiv.org/abs/2609.04196) | 09/03/2026 | Unified multimodal model with **native 3D world states** — jointly models gravity/latitude, depth, and image via Omni-Camera representation | Puffin-16M dataset; open code + weights | Ties physical understanding, spatial simulation, and 3D world generation/reconstruction into one architecture | [Paper](https://arxiv.org/abs/2609.04196) · [Project](https://kangliao929.github.io/projects/puffin-world/) |
+| [SolarWM](https://arxiv.org/abs/2609.02886) | 09/02/2026 | Open foundation for **interactive video world models**; reconfigurable multi-source data engine + backbone-native adaptation on Wan2.2 / LTX-2.5 / MiniMax-H3 | 5B, 12B, 20B, 33B; CC BY 4.0 | Real-time minute-to-hour rollouts after training on only 5 s sequences; data + pipeline + weights + framework released | [Paper](https://arxiv.org/abs/2609.02886) · [Project](https://junchao-cs.github.io/SolarWM-Web/) |
+| [ZimaBlue](https://arxiv.org/abs/2609.00188) | 08/31/2026 | Generalizable **world-action model** via video pre-training on >120k h human + robot egocentric video; asynchronous Slow-Fast | 120k+ h | Zero-shot real-robot success **36.1% → 77.8%** as pretraining video scales; 30 Hz on an RTX 4090 | [Paper](https://arxiv.org/abs/2609.00188) |
+| [Matrix-Game 3.5](https://arxiv.org/abs/2608.29910) | 08/30/2026 | Real-time streaming interactive world model with **parameter-free patch memory** + tiled-PRoPE geometry-aware memory + two-stage distillation | — | Minute-long real-time generation; extends v3.0 to answer the persistent-state critique | [Paper](https://arxiv.org/abs/2608.29910) · [Project](https://matrix-game-v3-5.github.io/) |
+| [DreamX-Phi 1.0](https://arxiv.org/abs/2608.13489) | 08/13/2026 | Action-conditioned video world model for **robotic manipulation**; per-arm SE(3) via PRoPE + depth branch + SAM3/V-JEPA object consistency + DMD few-step distillation | Open weights + code | **1st on Track 1, 2nd on Track 2** of the WorldArena 2.0 Challenge | [Paper](https://arxiv.org/abs/2608.13489) · [Code](https://github.com/AMAP-ML/DreamX-Phi) |
+| [SimWAM](https://arxiv.org/abs/2608.07468) | 08/07/2026 | **World-Action Model** for end-to-end autonomous driving; video expert + lightweight action expert co-trained via flow matching + RL | Open weights + code (CC BY 4.0) | **91.5 PDMS on NAVSIM** with zero-shot nuScenes transfer | [Paper](https://arxiv.org/abs/2608.07468) · [Code](https://github.com/H-EmbodVis/SimWAM/) |
+| [G0.5](https://arxiv.org/abs/2608.11739) | 08/12/2026 | **One AR stream for robot reasoning and action** — single transformer emits reasoning + action tokens under one objective; cross-embodiment action tokenizer + multi-second visual memory | — | 76.7% R1lite/R1pro (vs π0.5 53.3%, GR00T-N1.7 24.4%), 82.5% zero-shot DROID, 98.9% LIBERO, 87.3% SimplerEnv-Bridge | [Paper](https://arxiv.org/abs/2608.11739) |
 | [HelloWorld](https://arxiv.org/abs/2608.05070) | 08/06/2026 | Video world model with **socially interactive characters** | — | Pushes world models past physics and navigation into social dynamics: characters that respond to the viewer rather than merely persisting | [Paper](https://arxiv.org/abs/2608.05070) |
 | [VideoCoCo](https://arxiv.org/abs/2607.27380) | 07/31/2026 | Agentic dual-engine text-to-video with **Code-as-CoT** | — | Infers temporal evolution symbolically via generated code instead of implicitly, then renders — a hybrid attack on physics violations in T2V | [Paper](https://arxiv.org/abs/2607.27380) |
 | [StatePlay](https://huggingface.co/papers/2607.26754) | 07/29/2026 | State-aware **game** world model | — | Enforces mechanics consistency through explicit state, an answer to the persistent-state critique below | [Paper](https://huggingface.co/papers/2607.26754) |
@@ -224,13 +233,16 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 
 | Title | Date | What It Shows | Link |
 |-------|------|---------------|------|
+| WorldReward | 09/03/2026 | First VLM-based **pairwise preference reward model** for camera-conditioned world models; decomposes paired videos into action-aligned chunks with structured visual evidence; **beats GPT-5.5 by 3.42/1.45/3.56 pts** on three WorldReward-Bench dimensions and improves HY-WorldPlay 1.5 in RL post-training | [Paper](https://arxiv.org/abs/2609.03952) |
+| PAWBench | 08/27/2026 | **Probabilistic** alignment: evaluates video generators as stochastic samplers of world dynamics via PAWEval (repeated rollouts → empirical outcome distributions); no model across 50 scenarios / 11 systems consistently matches reference probabilities while covering valid behaviors | [Paper](https://arxiv.org/abs/2608.27345) |
+| GUI-CC | 09/01/2026 | Benchmarks contextual consistency of **GUI world models** as agent environments — extends the world-model-as-environment critique to computer-use | [Paper](https://arxiv.org/abs/2609.00048) |
 | WorldExam | 08/04/2026 | Separates *apparent appearance* from *inherent reactivity*: a world model can look right while reacting wrong, formalising the critique that visual realism has been over-weighted | [Paper](https://arxiv.org/abs/2608.02603) |
 | WorldOlympiad | 06/09/2026 | Physics / geometry / interaction "triathlon": SoTA world models show substantial gaps in physical reasoning, 3D consistency, long-horizon control | [Paper](https://arxiv.org/abs/2606.11129) |
 | Current World Models Lack a Persistent State Core | 06/18/2026 | World models treat the world as a "tracking shot" — off-screen entities freeze instead of evolving; persists across architectures and scales | [Paper](https://arxiv.org/abs/2606.20545) |
 | Echo-Memory | 06/08/2026 | Controlled memory study: raw context beats compressed memory for capacity; state-space recurrence best for revisit consistency | [Paper](https://arxiv.org/abs/2606.09803) |
 | LongSpace / LongSpace-Bench | 06/04/2026 | Video MLLMs fail long-horizon spatial recall without explicit spatial memory (3D cues + layer-aware retrieval) | [Paper](https://arxiv.org/abs/2606.05677) |
 
-> See also the earlier world-model entries in [§2.3](#DatasetforEmbodiedVLM) (UniSim, GAIA-1, LWM, Genesis, RoboGen) and the [`2026-06-23`](progressive%20reports/2026-06-23.md) / [`2026-06-27`](progressive%20reports/2026-06-27.md) progressive reports.
+> See also the earlier world-model entries in [§2.3](#DatasetforEmbodiedVLM) (UniSim, GAIA-1, LWM, Genesis, RoboGen) and the [`2026-06-23`](progressive%20reports/2026-06-23.md) / [`2026-06-27`](progressive%20reports/2026-06-27.md) / [`2026-09-13`](progressive%20reports/2026-09-13.md) progressive reports.
 
 
 ##  2. <a name='Dataset'></a>🗂️ Benchmarks and Evaluation
@@ -273,6 +285,10 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 
 | Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
 |---------|------|---------------|------------|----------|-------------|
+| [VideoGAIA](https://arxiv.org/abs/2608.14718) | Agentic Video Understanding (tool-augmented multi-turn) | Human/model co-designed, triple-expert-verified | Expert | 0.27 (271 tasks) | [Paper](https://arxiv.org/abs/2608.14718) |
+| [OmniAssistBench](https://arxiv.org/abs/2608.21360) | Real-Time Omni-LLM Assistants | Multi-turn guided interaction with predefined route priors | Expert (>1000 h) | - | [Project](https://xianyunsun.github.io/OmniAssistBench/) |
+| [EgoMonth](https://arxiv.org/abs/2608.13113) | Month-Level Egocentric Video / Long-Term Spatiotemporal Memory | 14-task Schema Consolidation / Episodic Indexing / Cascading Reasoning framework | Human | 1.44 (300+ h from 20 participants) | [Paper](https://arxiv.org/abs/2608.13113) |
+| [Video-IFBench](https://arxiv.org/abs/2608.25529) | Instruction Following in Video Understanding | - | - | - | [Paper](https://arxiv.org/abs/2608.25529) |
 | [GST-Bench](https://arxiv.org/abs/2608.05747) | Global Spatial Awareness from Continuous Video | Long-traversal scene integration (vs. single-viewpoint local perception) | - | - | [Paper](https://arxiv.org/abs/2608.05747) |
 | [ChronoVision](https://arxiv.org/abs/2608.05631) | Multi-step Temporal Reasoning | Latent state reconstruction | - | - | [Paper](https://arxiv.org/abs/2608.05631) |
 | [VGenST-Bench](https://arxiv.org/abs/2605.22570) | Spatio-temporal Reasoning via Active Video Synthesis | 3×2×2 taxonomy; synthesized controlled scenes decouple perception from reasoning | Multi-agent + Human QC | — | [Paper](https://arxiv.org/abs/2605.22570) |
@@ -304,6 +320,9 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 
 | Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
 |---------|------|---------------|------------|----------|-------------|
+| [StateSight](https://arxiv.org/abs/2608.20414) | Latent Spatial-State Reconstruction | Procedural single-image tasks (cube-nets, occluded towers, connected components); companion StateSight-Steps for intermediate visual states | Synth + oracle | 0.9 (300 items × 3 families) + 0.9 with interleaved steps | [Paper](https://arxiv.org/abs/2608.20414) |
+| [GUI-Primitives](https://arxiv.org/abs/2608.21832) | Spatial Reasoning in GUI Grounding | 7 spatial relations; contrastive pairs; strict point-in-box | Human validated | 0.99 (994 pairs) | [Paper](https://arxiv.org/abs/2608.21832) |
+| [MBA](https://arxiv.org/abs/2608.11616) | Real-World Business Ideation Agents | Multimodal agentic task quality | - | - | [Paper](https://arxiv.org/abs/2608.11616) |
 | [HumanCLAW](https://arxiv.org/abs/2607.27180) | Can a VLM Act Through a Body? | Decouples the decision from motor control so failures attribute to perception, planning, or actuation | - | - | [Paper](https://arxiv.org/abs/2607.27180) |
 | [PerceptionBench](https://arxiv.org/abs/2607.24957) | Atomic Visual Perception | Decomposes perception into primitive operations rather than end-task accuracy | - | - | [Paper](https://arxiv.org/abs/2607.24957) |
 | [C$^3$PO](https://arxiv.org/abs/2608.05381) | Cross-Modal Composition & Counterfactuals (omni-modal) | Compositional and counterfactual probes for any-to-any models | - | - | [Paper](https://arxiv.org/abs/2608.05381) |
@@ -350,6 +369,9 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 
 | Dataset | Task | Eval Protocol | Annotators | Size (K) | Code / Site |
 |---------|------|---------------|------------|----------|-------------|
+| [Sci-VBench](https://arxiv.org/abs/2608.09873) | Knowledge- & Reasoning-Intensive Video Generation (Science) | Rubric-based (Prompt Grounding, Scientific/Causal Correctness); MLLM-as-Judge validated | Expert | 1.25 (1,253 prompts × 60 subjects) | [Paper](https://arxiv.org/abs/2608.09873) |
+| [PAWBench](https://arxiv.org/abs/2608.27345) | Probabilistically Aligned World Modeling | PAWEval — repeated rollouts → empirical outcome distributions | Reference distributions | 50 scenarios × 11 systems | [Paper](https://arxiv.org/abs/2608.27345) |
+| [VGI-Bench](https://arxiv.org/abs/2608.19583) | Visual Intelligence in Video Generation Models | Probes scene understanding inside the generator | - | - | [Paper](https://arxiv.org/abs/2608.19583) |
 | [FilmBench](https://arxiv.org/abs/2607.24241) | Film-Grade Cinematic Video Generation | Craft criteria — shot grammar, continuity, staging | - | - | [Paper](https://arxiv.org/abs/2607.24241) |
 | [MPIE-Bench](https://arxiv.org/abs/2607.27616) | Anatomically Plausible Multi-Person Interaction Editing | Anatomical plausibility under multi-subject edits | - | - | [Paper](https://arxiv.org/abs/2607.27616) |
 | [MSCOCO‑30K](https://arxiv.org/pdf/1405.0312) | Text‑to‑Image | BLEU, ROUGE, Sim | MTurks | 30 | [Site](https://cocodataset.org/#home) |
@@ -405,6 +427,12 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 ### 3.1.  <a name='alignment'></a>RL Alignment for VLM
 | Title | Year | Paper | RL | Code |
 |----------------|------|--------|---------|------|
+| Miles v0.1: Production-Level Post-Training | 09/08/2026 | [Paper](https://arxiv.org/abs/2609.08368) | Full-stack open async agentic RL; demonstrated on **GLM-5.2 744B-A40B MoE** across 64 NVIDIA GB300 GPUs (263 s median step) | [Code](https://github.com/radixark/miles) |
+| Reason Through the Latent! (CVRR) | 09/06/2026 | [Paper](https://arxiv.org/abs/2609.06746) | Causal Visual Recurrent Reasoning — strips visual KV cache before decoding to force latent reasoning; strong retention on V*, MMVP, BLINK, MME-RealWorld-Lite | - |
+| Beyond Data Scaling: Representation-Centric Continued Pre-training for VLAs (VLAct) | 08/27/2026 | [Paper](https://arxiv.org/abs/2608.27550) | VLM-prior preservation + multi-head continuous action co-supervision + partial cross-embodiment unification; **82.6% LIBERO-Plus, 92.5% RoboTwin 2.0 with 20% of trajectories** | [Project](https://starvla.github.io/VLAct) |
+| Co-RL: Unsupervised Reasoning Emerges from Diverse Cohort in Multi-Agent RL | 08/18/2026 | [Paper](https://arxiv.org/abs/2608.17253) | Multi-agent cooperative RL with peer-derived rewards — **no ground-truth labels**; 3.0–8.6% avg gain on 7 LLM benchmarks, 2.3–7.2% on 4 VLM benchmarks | [Code](https://github.com/DrStranded/Co-RL) |
+| Spatial Memory Agent | 08/13/2026 | [Paper](https://arxiv.org/abs/2608.12743) | Experience-grounded runtime — self-evolves a **frozen** VLM's spatial reasoning via verifier-guided reflection distilled into lessons scored by a Transfer Reliability Score | - |
+| Evidence-RL: Towards Evidence-intensive Visual Reasoning | 08/08/2026 | [Paper](https://arxiv.org/abs/2608.08021) | **Counterfactual Evidence Disentanglement** inside GRPO — rewards evidence-grounded answers without evidence annotations; gains on 9 benchmarks × 4 backbones | - |
 | ZPPO: Zone of Proximal Policy Optimization — Teacher in Prompts, Not Gradients | 06/16/2026 | [Paper](https://arxiv.org/abs/2606.18216) | Teacher guidance via reformulated prompts; beats distillation & GRPO on Qwen3.5 VLMs (0.8B–9B, 31-benchmark suite) | - |
 | Efficient Reinforcement for Visual-Textual Thinking with Discrete Diffusion | 06/11/2026 | [Paper](https://arxiv.org/abs/2606.14792) | GRPO over multimodal discrete diffusion; localized visual editing cuts rollout compute 26.9% vs AR | - |
 | AlphaGRPO: Self-Reflective Multimodal Generation in UMMs | 05/12/2026 | [Paper](https://arxiv.org/abs/2605.12495) | GRPO for unified-model *generation*; LLM-decomposed verifiable reward (GenEval, TIIF, DPG, WISE) | - |
@@ -489,6 +517,15 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 
 | Title | Year | Paper Link |
 |----------------|------|------------|
+| Intern-S2-Preview: Scientific Agentic Foundation Model — 397B backbone + 4B memory decoder (Intern-MemDec-4B); Biology-Instructions 56.92 → 60.32 without touching the backbone | 08/13/2026 | [Paper](https://arxiv.org/abs/2608.13505) |
+| G0.5: One Autoregressive Stream for Robot Reasoning and Action | 08/12/2026 | [Paper](https://arxiv.org/abs/2608.11739) |
+| LightNav-0: Eliciting VLM Spatial Intelligence for Generalist Embodied Navigation | 08/31/2026 | [Paper](https://arxiv.org/abs/2608.30935) |
+| Embodied-Navigator (TAMP-Nav): Point, Think, Memorize, Align — 66.2% SR on R2R-CE | 08/18/2026 | [Paper](https://arxiv.org/abs/2608.17512) |
+| SimpleMemVLA: Native-Video Memory for Vision-Language-Action Models | 09/06/2026 | [Paper](https://arxiv.org/abs/2609.05533) |
+| UI-Mate: Open-Weight Foundation GUI Agent (UI-Mate-27B on Qwen3.6-27B; 77.0% OSWorld-Verified, 66.2% WindowsAgentArena) | 08/16/2026 | [Paper](https://arxiv.org/abs/2608.15930) |
+| UI-Venus-2 Technical Report — open-source foundation GUI agent (mobile, web, desktop) | 08/27/2026 | [Paper](https://arxiv.org/abs/2609.00028) |
+| WM-R1: Training GUI Agents to Reason and Leverage World Models with RL | 09/01/2026 | [Paper](https://arxiv.org/abs/2608.27508) |
+| ComBodied Agents: A New Paradigm of Human-Centric Agentic AI | 08/14/2026 | [Paper](https://arxiv.org/abs/2608.10915) |
 | Metis: Memory Foundation Model | 07/2026 | [Paper](https://huggingface.co/papers/2607.26760) |
 | Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI | 2024 | [Paper](https://arxiv.org/pdf/2407.06886v1) |
 | ScreenAI: A Vision-Language Model for UI and Infographics Understanding | 2024 | [Paper](https://arxiv.org/pdf/2402.04615) |
@@ -504,6 +541,7 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 ### 4.2. <a name='GenerativeVisualMediaApplications'></a>Generative Visual Media Applications
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| AuK (Tencent Hunyuan): open-source foundation model for **speech generation and editing** — multimodal LLM + jointly trained VAE + hybrid rectified-flow Transformer (MMDiT → single-stream DiT); AuK-Flash gives 4.5× wall-clock speedup via 4-step inference; trained on ~3.03B instruction-audio instances / 1.95M h | 09/08/2026 | [📄 Paper](https://arxiv.org/abs/2609.08936) | - | [💾 Code](https://github.com/Tencent-Hunyuan/AuK) |
 | Chimera: Designing and Chinchilla-Scaling Hybrid Visual Diffusion Transformers | 07/2026 | [📄 Paper](https://huggingface.co/papers/2607.28611) | - | - |
 | GPT4Motion: Scripting Physical Motions in Text-to-Video Generation via Blender-Oriented GPT Planning | 2023 | [📄 Paper](https://arxiv.org/pdf/2311.12631) | [🌍 Website](https://gpt4motion.github.io/) | [💾 Code](https://github.com/jiaxilv/GPT4Motion) |
 | Spurious Correlation in Multimodal LLMs | 2025 | [📄 Paper](https://arxiv.org/abs/2503.08884) | - | - |
@@ -552,6 +590,11 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 #### 4.3.1. <a name='Manipulation'></a>Manipulation
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| G0.5: One Autoregressive Stream for Robot Reasoning and Action — 76.7% R1lite/R1pro, 82.5% zero-shot DROID, 98.9% LIBERO | 08/12/2026 | [📄 Paper](https://arxiv.org/abs/2608.11739) | - | - |
+| DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation — WorldArena 2.0 Track 1 winner | 08/13/2026 | [📄 Paper](https://arxiv.org/abs/2608.13489) | - | [💾 Code](https://github.com/AMAP-ML/DreamX-Phi) |
+| ZimaBlue: Evolving Generalizable World-Action Models via >120k h video pre-training — 30 Hz on RTX 4090, 36.1% → 77.8% zero-shot real-robot success | 08/31/2026 | [📄 Paper](https://arxiv.org/abs/2609.00188) | - | - |
+| Beyond Data Scaling: Representation-Centric Continued Pre-training for VLAs (VLAct) — 82.6% LIBERO-Plus, 92.5% RoboTwin 2.0 with 20% of trajectories | 08/27/2026 | [📄 Paper](https://arxiv.org/abs/2608.27550) | [🌍 Project](https://starvla.github.io/VLAct) | - |
+| SimpleMemVLA: Native-Video Memory for Vision-Language-Action Models | 09/06/2026 | [📄 Paper](https://arxiv.org/abs/2609.05533) | - | - |
 | Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data | 08/03/2026 | [📄 Paper](https://huggingface.co/papers/2608.02580) | - | - |
 | N₀-VTLA: Scaling Vision-Tactile-Language-Action Model with Latent Tactile Tokens | 07/26/2026 | [📄 Paper](https://huggingface.co/papers/2607.23782) | - | - |
 | Supervise What Survives: Geometry-Guided VLA Adaptation from Synthetic Robot Videos | 06/23/2026 | [📄 Paper](https://arxiv.org/abs/2606.24448) | - | - |
@@ -576,6 +619,8 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 #### 4.3.2. <a name='Navigation'></a>Navigation
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| LightNav-0: Eliciting VLM Spatial Intelligence for Generalist Embodied Navigation — dual-channel pointing + residual-VQ action tokenizer; SoTA monocular success across 10 navigation sims | 08/31/2026 | [📄 Paper](https://arxiv.org/abs/2608.30935) | - | - |
+| Embodied-Navigator (TAMP-Nav): Point-Think-Memorize-Align with Space-Time Indicator memory — **66.2% SR on R2R-CE** using only 90k training trajectories | 08/18/2026 | [📄 Paper](https://arxiv.org/abs/2608.17512) | - | - |
 | ZSON: Zero-Shot Object-Goal Navigation using Multimodal Goal Embeddings | 2022 | [📄 Paper](https://arxiv.org/pdf/2206.12403) | - | - |
 | LOC-ZSON: Language-driven Object-Centric Zero-Shot Object Retrieval and Navigation | 2024 | [📄 Paper](https://arxiv.org/pdf/2405.05363) | - | - |
 | LM-Nav: Robotic Navigation with Large Pre-Trained Models of Language, Vision, and Action | 2022 | [📄 Paper](https://arxiv.org/pdf/2207.04429) | [🌍 Website](https://sites.google.com/view/lmnav) | - |
@@ -596,6 +641,8 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 #### 4.3.4. <a name='AutonomousDriving'></a>Autonomous Driving
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| Qwen-Drive-1.0 (Alibaba): first VL foundation model for autonomous driving — pretrained VLM backbone + BEV perception head + Planning Expert | 08/31/2026 | [📄 Paper](https://arxiv.org/abs/2609.00111) | - | [💾 Code](https://github.com/QwenLM/Qwen-Drive-1.0) |
+| SimWAM: Simple World-Action Model for End-to-End Autonomous Driving — 91.5 PDMS NAVSIM, zero-shot to nuScenes | 08/07/2026 | [📄 Paper](https://arxiv.org/abs/2608.07468) | - | [💾 Code](https://github.com/H-EmbodVis/SimWAM/) |
 | RT-VLA: Real-Time VLA via Knowledge Distillation (44.8× faster inference) | 06/12/2026 | [📄 Paper](https://arxiv.org/abs/2606.14010) | - | - |
 | Fast-dDrive: Efficient Block-Diffusion VLM for Autonomous Driving (12× throughput, 0.32m L2 nuScenes) | 05/22/2026 | [📄 Paper](https://arxiv.org/abs/2605.23163) | - | - |
 | CLOVER: Closed-Loop Value Estimation & Ranking for E2E Driving Planning (94.5 PDMS NAVSIM SoTA) | 05/14/2026 | [📄 Paper](https://arxiv.org/abs/2605.15120) | - | - |
