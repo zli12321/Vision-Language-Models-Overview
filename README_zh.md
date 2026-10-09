@@ -12,9 +12,9 @@
 
 ## 🧭 视觉-语言模型架构演进
 
-视觉-语言模型（VLM）的设计在短短六年间经历了**四个截然不同的架构时代** —— 而第三代又分化为两个并行的分支。早期模型保持冻结的视觉塔与语言塔，通过对比学习对齐（CLIP），或用一个可学习的连接器桥接到冻结的 LM（BLIP-2、Flamingo）。2023–2025 年的一代将**预训练 LLM 作为主干**，把视觉作为外挂适配器接入（LLaVA、Qwen2.5-VL、GPT-4V）。2025–2026 年的一代则完全抛弃了桥接器，将所有模态早期融合进**一个统一的 Transformer** —— 沿*输出*维度分叉为两支；而到了 2026 年，主干正在演变为能预测、能行动的**世界模型**：
+视觉-语言模型（VLM）的设计在短短六年间经历了**四个截然不同的架构时代** —— 而第三代又分化为两个并行的分支。早期模型保持冻结的视觉塔与语言塔，通过对比学习对齐（CLIP），或用一个可学习的连接器桥接到冻结的 LM（BLIP-2、Flamingo）。2023–2025 年的一代将**预训练 LLM 作为主干**，把视觉作为外挂适配器接入（LLaVA、Qwen2.5-VL、GPT-4V）。2025–2026 年的一代更强调多模态联合训练与共享主干，但仍可能保留视觉编码器和投影器 —— 沿*输出*维度分叉为两支；而到了 2026 年，主干正在演变为能预测、能行动的**世界模型**：
 
-- **第三代 a — 原生多模态输入 → 文本输出。** 图像、视频、（有时）音频统一进入早期融合的 token 流，但生成仍然是自回归文本。这是当今通用旗舰模型采用的设计：**Qwen3.5 / Qwen3.6、Gemma 4、Gemini 3、GPT-5.4、Phi-4-Reasoning-Vision、Claude Opus 4.6、Nemotron 3 Nano Omni**。
+- **第三代 a — 原生多模态输入 → 文本输出。** 图像、视频、（有时）音频统一进入早期融合的 token 流，但生成仍然是自回归文本。这一输入/输出类别涵盖以下模型；内部融合方式须按各自披露核实：**Qwen3.5 / Qwen3.6、Gemma 4、Gemini 3、GPT-5.4、Phi-4-Reasoning-Vision、Claude Opus 4.6、Nemotron 3 Nano Omni**。
 - **第三代 b — 全模态统一 I/O。** 同样的融合主干，再加上专用的**图像 / 视频解码器**（VAE / DiT / Flow-Matching）和/或**音频编解码器**解码头，使得模型也能*生成*图像、视频与语音 —— 通过自回归，或日益流行的**离散扩散 / AR-扩散**（LLaDA2.0-Uni、Mamoda2.5）。最新一批 3b 模型（**SenseNova-U1.5**，2026/09）连图像 VAE 也一并去掉，改用一条**免编码器且免 VAE**的混合 Transformer 主干同时完成理解、推理与生成。这是统一模型采用的设计：**SenseNova-U1.5、BAGEL、Qwen3.5-Omni、InternVL-U、Emu3 / Emu3.5、Erin 5.0、DeepSeek-Janus-Pro、LLaDA2.0-Uni、Mamoda2.5**。纯生成的专用模型共享同一解码栈而不含理解侧 —— **Sora 2、Veo 3、Kling** 现已能生成**带同步音频**的视频，并且它们正是第四代世界模型的底座（DreamX-World 基于 Wan，OmniDreams 基于 Cosmos，SolarWM 基于 Wan2.2 / LTX-2.5 / MiniMax-H3）。
 - **第四代 — 世界-行动模型（2026 →）。** 统一主干将**行动**作为一等模态纳入，并与环境闭环：模型预测未来观测、维持持久状态与空间记忆，并输出行动 —— **生成器、感知器与策略合而为一**。奠基之作：**Cosmos 3、Kairos、DreamX-World 1.0、OmniDreams**；2026 年 8–9 月这一波：**DreamX-Phi 1.0**（WorldArena 2.0 Track 1 冠军）、**SimWAM**（NAVSIM 91.5 PDMS）、**ZimaBlue**（12 万小时视频预训练）、**G0.5**（单条自回归流兼顾推理与行动）、**Puffin-World**（原生 3D 世界状态）、**SolarWM**（开源 5B–33B，实时分钟级到小时级 rollout）。
 
@@ -22,7 +22,9 @@
   <img src="assets/vlm_architecture_evolution.svg" alt="视觉-语言模型架构演进图：从对比/桥接式双塔，到 LLM 主干适配器模型，再到原生融合输入文本输出的模型、全模态统一 I/O 模型，以及世界-行动模型" width="100%"/>
 </p>
 
-> **图示阅读（从左至右）。** *第一代*采用**双塔**设计 —— 通过对比学习对齐（CLIP：没有生成式解码器），或经由可学习的跨模态桥（如 Q-Former）连接到冻结的 LM —— 仅文本输出。*第二代*以**预训练 LLM** 为中心；MLP/Resampler 将视觉 token 投影到 LLM 的词表空间，由 LLM 完成全部推理 —— 仍是文本输出。*第三代 a* 抛弃桥接器：图像、视频、音频与文本共享**单一分词器/嵌入空间**，并经过**一个早期融合的 Transformer** —— 但输出依然是自回归**文本**。*第三代 b* 保留这一融合主干，并加入**解码头**（图像/视频 DiT、VAE、音频编解码），使模型能原生输出*文本、图像、视频和/或语音* —— 纯生成的视频模型（Sora 2、Veo 3、Kling）复用同一解码栈，如今还带有同步音频。*第四代*加入**行动** token 流、持久状态与**策略头**，闭合"观测 → 行动 → 下一观测"的循环：世界-行动模型同时是生成器、感知器与策略。第三代 a、b 与第四代并存；选择基本上取决于"你需要模型*生成*多少 —— 以及是否要它*行动*？"。
+> **图示阅读（从左至右）。** *第一代*采用**双塔**设计 —— 通过对比学习对齐（CLIP：没有生成式解码器），或经由可学习的跨模态桥（如 Q-Former）连接到冻结的 LM —— 仅文本输出。*第二代*以**预训练 LLM** 为中心；MLP/Resampler 将视觉 token 投影到 LLM 的词表空间，由 LLM 完成全部推理 —— 仍是文本输出。*第三代 a* 联合处理多模态输入；视觉编码器、分词器与投影器的设计因模型而异 —— 但输出依然是自回归**文本**。*第三代 b* 保留这一融合主干，并加入**解码头**（图像/视频 DiT、VAE、音频编解码），使模型能原生输出*文本、图像、视频和/或语音* —— 纯生成的视频模型（Sora 2、Veo 3、Kling）复用同一解码栈，如今还带有同步音频。*第四代*加入**行动** token 流、持久状态与**策略头**，闭合"观测 → 行动 → 下一观测"的循环：世界-行动模型同时是生成器、感知器与策略。第三代 a、b 与第四代并存；选择基本上取决于"你需要模型*生成*多少 —— 以及是否要它*行动*？"。
+
+> **2026-10-09 主流模型更新：** [本期报告](progressive%20reports/2026-10-09.md#8-architecture-changes-worth-tracking) 聚焦 GPT、Claude、Qwen、Kimi、DeepSeek、腾讯混元，并补充 Gemini 与 GLM。架构重点为因果编码器–解码器、混合注意力、条件记忆与残差连接。上图是概念分类；“原生多模态”不意味着取消视觉编码器或投影器。闭源模型未公开的内部设计保留“未披露”。
 
 ---
 
@@ -44,9 +46,10 @@
 我们用带日期的小型综述追踪那些尚未折叠到主表中的新 VLM、基准与后训练方法：
 
 <details>
-<summary><b>📂 展开全部 10 期报告</b> — 最新：<code>2026-09-13</code>，第四代成型，统一主干继续"脱壳"（<b>50 条新条目</b>）</summary>
+<summary><b>📂 展开全部 11 期报告</b> — 最新：<code>2026-10-09</code>，主流闭源与开放权重模型：发布、架构与可用性</summary>
 
-- 📰 [`2026-09-13`](progressive%20reports/2026-09-13.md) — **最新**：**第四代（世界-行动模型）从个别宣言变为一种范式** —— 五周内六个世界-行动系统上线：**DreamX-Phi 1.0**（WorldArena 2.0 Track 1 冠军）、**SimWAM**（NAVSIM 91.5 PDMS）、**ZimaBlue**（12 万小时视频预训练，RTX 4090 上 30 Hz）、**G0.5**（一条自回归流同时输出推理与动作）、**Puffin-World**（原生 3D 世界状态）、**SolarWM**（开源 5B–33B）。统一模型继续"脱壳" —— **SenseNova-U1.5** 推出 8B 混合 Transformer 主干，*免视觉编码器**且**免 VAE*，原生 4K。首个面向自动驾驶的 VL *基础*模型：**Qwen-Drive-1.0**（阿里）。语音统一：**AuK**（腾讯 Hunyuan，4 步推理加速 4.5×）。首个开源 >700B 多模态 RL 后训练栈：**Miles v0.1**（GLM-5.2 744B-A40B，64 卡 GB300，263 秒/步）。评测在连续设定下重新拉开差距 —— VideoGAIA 让 GPT-5.5/Kimi K3 得分 <60%；EgoMonth：Gemini 71.8% vs 人类 94.2%；StateSight 探测潜在状态；**WorldReward** 与 **PAWBench** 为世界模型引入奖励模型与概率对齐两条新轴 —— 8 月 10 日以来 **50 条新条目**。
+- 📰 [`2026-10-09`](progressive%20reports/2026-10-09.md) — **最新：主流模型发布进展**。**GPT-6 / 6.1、Claude 5.5、Qwen3.8-Omni-Flash / Qwen-Image-2.1、DeepSeek V4.1-Flash、Kimi、腾讯 Hy Image 3.5 / Hy4、Gemini 3.8 Live / 4 Argon、GLM-5.3-Flash**。区分新发布、往期补录、论文披露与 API 更新；列出权重和许可状态，修正 Kimi K3 的视觉编码器描述。
+- 📰 [`2026-09-13`](progressive%20reports/2026-09-13.md) — **第四代（世界-行动模型）从个别宣言变为一种范式** —— 五周内六个世界-行动系统上线：**DreamX-Phi 1.0**（WorldArena 2.0 Track 1 冠军）、**SimWAM**（NAVSIM 91.5 PDMS）、**ZimaBlue**（12 万小时视频预训练，RTX 4090 上 30 Hz）、**G0.5**（一条自回归流同时输出推理与动作）、**Puffin-World**（原生 3D 世界状态）、**SolarWM**（开源 5B–33B）。统一模型继续"脱壳" —— **SenseNova-U1.5** 推出 8B 混合 Transformer 主干，*免视觉编码器**且**免 VAE*，原生 4K。首个面向自动驾驶的 VL *基础*模型：**Qwen-Drive-1.0**（阿里）。语音统一：**AuK**（腾讯 Hunyuan，4 步推理加速 4.5×）。首个开源 >700B 多模态 RL 后训练栈：**Miles v0.1**（GLM-5.2 744B-A40B，64 卡 GB300，263 秒/步）。评测在连续设定下重新拉开差距 —— VideoGAIA 让 GPT-5.5/Kimi K3 得分 <60%；EgoMonth：Gemini 71.8% vs 人类 94.2%；StateSight 探测潜在状态；**WorldReward** 与 **PAWBench** 为世界模型引入奖励模型与概率对齐两条新轴 —— 8 月 10 日以来 **50 条新条目**。
 - 📰 [`2026-08-10`](progressive%20reports/2026-08-10.md) — **评测不再只问模型能否看见** —— HumanCLAW（VLM 能否通过身体行动？）、GST-Bench（从视频建立全局空间意识）、ChronoVision（基于潜在状态重建的时序推理）、WorldExam（重"反应"而非"外观"）；"评判"本身成为研究问题：OSReward、ConfBench、TruthLens。模型侧：**Qwen3.8-Max**（2.4T · 95B 激活，Vision Arena 第 2）、**DiffusionGemma**（26B-A4B 扩散版 Gemma）、Hunyuan3D-Buffalo 1.0（统一 3D）；以及 N₀-VTLA（触觉 VLA）、Metis、Ego2Robot、VideoCoCo、OmniPack —— 7 月 22 日以来 **29 条新条目**。
 
 - 📰 [`2026-07-22`](progressive%20reports/2026-07-22.md) — 世界模型成为**评估器** —— GigaWorld-1 + WMBench、RoboWorld（与真实世界相关性 r = 0.989）、世界-行动模型教程；Gemma 4 技术报告（**免编码器 12B**）、PRA-GRPO（4B 模型 V-Star 93.2%）、VRRL（可训练的自我反思）、LingBot-VLA 2.0（**60,000 小时**语料）、ROSA（机器人工厂推理服务）、ISPA（KV 缓存削减 50%）、OmniFocus、MoHallBench / LongVQUBench / 科学可视化素养基准；以及 **7 月前沿浪潮**：Gemini 3.6 Flash、Kimi K3（2.8T 开源 MoE）、GPT-5.5 / GPT-5.6 Sol、Grok 4.5、Qwen3.7-Plus —— 6 月 27 日以来 **19 条新条目**。
@@ -132,12 +135,25 @@
 
 | 模型 | 年份 | 架构 | 训练数据 | 参数量 | 视觉编码器/分词器 | 预训练主干 |
 |--------------------------------------------------------------|------|----------------|-----------------------------|----------------|-----------------------------------------------|---------------------------------------------------|
+| [Claude Haiku 5.5](https://www.anthropic.com/claude-haiku-5-5) | 10/07/2026 | 架构未披露；面向快速智能体任务的托管模型 | 未披露 | 未披露 | 未披露 | 未披露 |
+| [GPT-6.1 Sol](https://openai.com/index/introducing-gpt-6-1-sol/) | 09/29/2026 | 架构未披露；托管文档理解 / 计算机操作模型 | 未披露 | 未披露 | 未披露 | 未披露 |
+| [Claude Sonnet 5.5](https://www.anthropic.com/claude-sonnet-5-5) | 09/28/2026 | 架构未披露；托管图像理解 / 智能体模型 | 未披露 | 未披露 | 未披露 | 未披露 |
+| [GPT-6 Sol / Luna](https://openai.com/index/introducing-gpt-6-sol-and-luna/) | 09/22/2026 | 架构未披露；文本 + 图像输入，文本输出 | 未披露 | 未披露 | 未披露 | 未披露 |
+| [Claude Opus 5.5](https://www.anthropic.com/claude-opus-5-5) | 09/22/2026 | 架构未披露；托管视觉 / 计算机操作模型 | 未披露 | 未披露 | 未披露 | 未披露 |
+| [Qwen3.8-Omni-Flash](https://arxiv.org/abs/2609.25611) | 09/18/2026 发布；09/22 论文 | 稀疏 MoE；原生多模态联合训练；1M 上下文 | 原生多模态联合训练 | 此处未列出 | 此处未列出 | Qwen3.8-Next；模型托管，智能体工具开源 |
+| [Gemini 3.8 Live / Extended Thinking](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/) | 09/15/2026 | 托管实时对话与视觉定位；架构未披露 | 未披露 | 未披露 | 未披露 | 未披露 |
+| [DeepSeek-V4.1-Flash](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash) | 09/10/2026 | 因果编码器–解码器 MoE；CSA2 | 45T 多模态 token | 552B 主干；另有 196B Engram；8B 输入 / 16B 输出激活 | DeepSeek-ViT + MLP 投影器 | 从头训练；MIT 权重 |
 | [SenseNova-U1.5](https://arxiv.org/abs/2609.11929) | 09/10/2026 | **免视觉编码器且免 VAE** 的原生统一视觉智能；混合 Transformer（MoT）；理解 + 推理 + 生成同一主干；原生分辨率支持 4K | Undisclosed | 8B MoT | 无（编码器已并入主干） | 从零预训练 — [HF](https://huggingface.co/sensenova/SenseNova-U1.5-8B-MoT) · [Code](https://github.com/OpenSenseNova/SenseNova-U1) |
+| [GPT-6 Astra](https://openai.com/index/gpt-6-astra/) | 09/03/2026 | 托管视觉 / 计算机操作；架构未披露 | 未披露 | 未披露 | 未披露 | 未披露 |
+| [Claude Fable 5.1 / Mythos 5.1](https://www.anthropic.com/claude-fable-and-mythos-5-1) | 09/01/2026 | 同一底层模型，不同安全措施；Mythos 为受限访问 | 未披露 | 未披露 | 未披露 | 未披露 |
+| [Qwen3.8-Flash-Next](https://huggingface.co/Qwen/Qwen3.8-Flash-Next) | 08/26/2026 | MoE；Gated DeltaNet + QSA；Gated Residual；n-gram 记忆 | 预训练 + 后训练 | 125B 主模型 / 6B 激活；另加 51B 嵌入与 4B MTP | 有视觉编码器 | Qwen4 架构预览；Qwen Community 1.0 权重 |
+| [Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B) | 08/14/2026 | 稠密视觉语言模型 | 见模型卡 | 27B 语言模型 | 见模型卡 | Qwen3.8；权重已发布 |
+| [GLM-5.3-Flash](https://huggingface.co/zai-org/GLM-5.3-Flash) | 2026 (往期补录) | MoE；混合稀疏 / 线性注意力；mHC | 30T 多模态 token | 320B 总参数 / 18B 激活 | 见模型卡 | 新预训练底座；MIT 权重 |
 | [Qwen3.8-Max (Alibaba)](https://www.aimadetools.com/blog/qwen-3-8-max-vs-kimi-k3/) | 08/03/2026 | Sparse MoE + hybrid attention; text + vision in, 1M context; Vision Arena #2 | Undisclosed | 2.4T total · 95B active | Native multimodal | Qwen3.8 |
 | [DiffusionGemma (Google)](https://arxiv.org/abs/2608.00146) | 08/05/2026 | **Diffusion** (non-autoregressive) language model in the Gemma family | Undisclosed | 26B total · 4B active | Native multimodal | Gemma |
 | [Hunyuan3D-Buffalo 1.0 (Tencent)](https://arxiv.org/abs/2608.02711) | 08/05/2026 | Unified multimodal — 3D generation + understanding + editing | Undisclosed | Undisclosed | Undisclosed | Undisclosed |
 | [Gemini 3.6 Flash (Google)](https://deepmind.google/models/gemini/) | 07/21/2026 | Decoder-only / natively multimodal input (text, image, speech, video → text) | Undisclosed | Undisclosed | Native multimodal | Gemini 3.x |
-| [Kimi K3 (Moonshot AI)](https://openrouter.ai/moonshotai/kimi-k3) | 07/17/2026 | MoE, natively multimodal reasoning — text + image + video in one trunk (no separate vision module); 1M context; open weights due 07/27/2026 | Undisclosed | ~2.8T total (MoE) | Native (encoder-integrated) | New architecture |
+| [Kimi K3 (Moonshot AI)](https://huggingface.co/moonshotai/Kimi-K3) | 07/16/2026 | MoE；KDA + Gated MLA；Attention Residuals；1M 上下文 | 见官方报告 | 2.8T 总参数 / 104B 激活 | MoonViT-V2（401M） | Kimi K3；权重已发布，Kimi K3 License |
 | [GPT-5.6 Sol (OpenAI)](https://openai.com/index/gpt-5-6/) | 07/09/2026 | Decoder-only; text + image in, 1.05M context / 128K output; max & ultra reasoning modes, sub-agent orchestration (Ultra); family: Luna / Terra / Sol | Undisclosed | Undisclosed | Undisclosed | Undisclosed |
 | [Grok 4.5 (xAI)](https://artificialanalysis.ai/models/grok-4-5) | 07/08/2026 | Decoder-only reasoning (extended thinking); text + image + files in, 500K context | Undisclosed | ~1.5T (reported) | Undisclosed | Undisclosed |
 | [Qwen3.7-Plus (Alibaba)](https://www.marktechpost.com/2026/06/02/alibabas-qwen-team-launches-qwen3-7-plus-adding-vision-deep-reasoning-tool-invocation-and-autonomous-iteration-on-the-bailian-platform/) | 06/01/2026 | Natively multimodal agent — image + video understanding, GUI grounding, tool invocation (note: Qwen3.7-**Max** is text-only) | Undisclosed | Undisclosed | Native multimodal ViT | Qwen3.7 |
