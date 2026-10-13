@@ -421,6 +421,7 @@
 
 | 基准                                                                                                                                     |             领域              |                类型                |                                                     		项目					                                                     |
 |-----------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------:|:----------------------------------:|:----------------------------------------------------------------------------------------------------------------------:|
+| [RoboQuest](https://arxiv.org/abs/2610.10388) | Robotics (Mobile Manipulation) | Benchmark + Dataset | [Website](https://declare-lab.github.io/RoboQuest/), [Github Repo](https://github.com/declare-lab/RoboQuest) |
 | [OSReward](https://arxiv.org/abs/2607.28609) | Computer-Use Agents | Cross-platform reward-model evaluation | [Paper](https://arxiv.org/abs/2607.28609) |
 | [Drive-Bench](https://arxiv.org/abs/2501.04003) | Embodied AI | Autonomous Driving | [Website](https://drive-bench.github.io)  |
 | [Habitat](https://arxiv.org/pdf/1904.01201), [Habitat 2.0](https://arxiv.org/pdf/2106.14405), [Habitat 3.0](https://arxiv.org/pdf/2310.13724) |      Robotics (Navigation)      |        Simulator + Dataset         |                                           [Website](https://aihabitat.org/)                                            |
