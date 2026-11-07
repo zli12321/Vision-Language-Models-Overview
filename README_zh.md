@@ -455,6 +455,8 @@
 
 | 标题 | 年份 | 论文 | RL 方法 | 代码 |
 |----------------|------|--------|---------|------|
+| TimeLens2: Generalist Video Temporal Grounding with Multimodal LLMs | 2026/07 | [Paper](https://arxiv.org/abs/2607.17423) | GRPO with temporal rewards | [Code](https://github.com/MCG-NJU/TimeLens2) |
+| Video-o3: Native Interleaved Clue Seeking for Long Video Multi-Hop Reasoning | 2026 (ICML) | [Paper](https://proceedings.mlr.press/v306/zeng26y.html) | SFT + trajectory-guided RL | [Code](https://github.com/MCG-NJU/Video-o3) |
 | Miles v0.1: Production-Level Post-Training | 09/08/2026 | [Paper](https://arxiv.org/abs/2609.08368) | 开源全栈异步 agentic RL；在 **GLM-5.2 744B-A40B MoE** 上 64 卡 NVIDIA GB300 演示（中位步耗 263 秒） | [Code](https://github.com/radixark/miles) |
 | Reason Through the Latent! (CVRR) | 09/06/2026 | [Paper](https://arxiv.org/abs/2609.06746) | 因果视觉递归推理 —— 解码前**丢弃视觉 KV 缓存**，强制依赖递归状态；V*, MMVP, BLINK, MME-RealWorld-Lite 上表现强劲 | - |
 | Beyond Data Scaling: Representation-Centric Continued Pre-training for VLAs (VLAct) | 08/27/2026 | [Paper](https://arxiv.org/abs/2608.27550) | 保留 VLM 先验 + 多头连续动作联合监督 + 跨形体部分统一；**仅用 20% 轨迹**即得 LIBERO-Plus 82.6%、RoboTwin 2.0 92.5% | [Project](https://starvla.github.io/VLAct) |
@@ -492,6 +494,9 @@
 ### 3.2. <a name='sft'></a>VLM 监督微调 (SFT)
 | 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
+| OneStreamer: Unifying Perception, Memory, and Proactive Response in Streaming Video Interaction | 2026/10 | [Paper](https://arxiv.org/abs/2610.01762) | - | [Code](https://github.com/MCG-NJU/OneStreamer) |
+| VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding | 2026/07 | [Paper](https://arxiv.org/abs/2607.14935) | - | [Code](https://github.com/MCG-NJU/VideoChat3) |
+| JoyAI-VL-Interaction: Real-Time Vision-Language Interaction Intelligence | 2026/06 | [Paper](https://arxiv.org/abs/2606.14777) | - | [Code](https://github.com/jd-opensource/JoyAI-VL-Interaction) |
 | Towards Physics of Multimodal Pretraining: Knowledge Flow, Modality Synergy, Early Unification, and Recipes | 08/2026 | [Paper](https://arxiv.org/abs/2608.05000) | - | - |
 | SpatialCLI: Learning to Reason With Spatial Tools, Then Without Them | 07/2026 | [Paper](https://huggingface.co/papers/2607.27703) | - | - |
 | AGFT: Alignment-Guided Fine-Tuning for Zero-Shot Adversarial Robustness of VLMs | 2026/03 | [Paper](https://arxiv.org/abs/2603.29410) | - | - |
@@ -523,6 +528,7 @@
 ### 3.4. <a name='vlm_prompt_engineering'></a>提示工程 / 提示优化
 | 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
+| Efficient Test-Time Prompt Tuning for Vision-Language Models | 2026 (IJCV) | [Paper](https://link.springer.com/article/10.1007/s11263-026-03019-3) | - | - |
 | EvoPrompt: Evolving Prompt Adaptation for Vision-Language Models | 2026/03 | [Paper](https://arxiv.org/abs/2603.09493) | - | - |
 || MMLoP: Multi-Modal Low-Rank Prompting for Efficient Vision-Language Adaptation | 2026/02 | [Paper](https://arxiv.org/abs/2602.21397) | - | - |
 || Multimodal Prompt Optimizer (MPO): Joint Optimization of Multimodal Prompts | 2025/10 | [Paper](https://arxiv.org/abs/2510.09201) | - | - |
@@ -559,6 +565,7 @@
 ### 4.2. <a name='GenerativeVisualMediaApplications'></a>生成式视觉媒体应用
 | 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
+| Motion-aware generative frame interpolation | 2026 (SCIS) | [Paper](https://link.springer.com/article/10.1007/s11432-025-4920-3) | - | [Code](https://github.com/MCG-NJU/MoG-VFI) |
 | AuK (Tencent Hunyuan): 开源**语音生成与编辑**基础模型 —— 多模态 LLM + 联合训练的 VAE + 混合修正流 Transformer（MMDiT → 单流 DiT）；AuK-Flash 通过 4 步推理达成 4.5× 挂钟加速；训练量约 3.03B 指令-音频样本 / 195 万小时 | 09/08/2026 | [📄 Paper](https://arxiv.org/abs/2609.08936) | - | [💾 Code](https://github.com/Tencent-Hunyuan/AuK) |
 | Chimera: Designing and Chinchilla-Scaling Hybrid Visual Diffusion Transformers | 07/2026 | [📄 Paper](https://huggingface.co/papers/2607.28611) | - | - |
 | GPT4Motion: Scripting Physical Motions in Text-to-Video Generation via Blender-Oriented GPT Planning | 2023 | [📄 Paper](https://arxiv.org/pdf/2311.12631) | [🌍 Website](https://gpt4motion.github.io/) | [💾 Code](https://github.com/jiaxilv/GPT4Motion) |
@@ -784,6 +791,7 @@
 #### 5.4.1 <a name='MultimodalityAlignment'></a>多模态对齐
 | 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
+| AWT: Transferring Vision-Language Models via Augmentation, Weighting, and Transportation | 2024 (NeurIPS) | [Paper](https://proceedings.neurips.cc/paper_files/paper/2024/hash/2d4eaf042567f1c03c086103cc154c1f-Abstract-Conference.html) | - | [Code](https://github.com/MCG-NJU/AWT) |
 | Mitigating Hallucinations in Large Vision-Language Models with Instruction Contrastive Decoding | 2024 | [📄 Paper](https://arxiv.org/pdf/2403.18715) | - | - |
 | Enhancing Visual-Language Modality Alignment in Large Vision Language Models via Self-Improvement | 2024 | [📄 Paper](https://arxiv.org/pdf/2405.15973) | - | - |
 | Assessing and Learning Alignment of Unimodal Vision and Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2412.04616) | [🌍 Website](https://lezhang7.github.io/sail.github.io/) | - |
@@ -815,6 +823,9 @@
 ### 5.5 <a name=' EfficientTrainingandFineTuning'></a> 高效训练与微调
 | 标题 | 年份 | 论文 | 站点 | 代码 |
 |----------------|------|--------|---------|------|
+| MJev-Spatial: System One Spatial Intelligence via Native Attention Matching | 2026/10 | [Paper](https://arxiv.org/abs/2610.22276) | - | [Code](https://github.com/Fr0zenCrane/MJev-Spatial) |
+| VideoJev: System One Model for Video Understanding and Interaction | 2026/10 | [Paper](https://arxiv.org/abs/2610.18615) | - | [Code](https://github.com/MCG-NJU/VideoJev) |
+| FreeRet: MLLMs as Training-Free Retrievers | 2026 (ICML) | [Paper](https://proceedings.mlr.press/v306/zhu26ba.html) | - | [Code](https://github.com/MCG-NJU/FreeRet) |
 | OmniPack: Unified Token Compression for Efficient Omni-modal Large Language Models | 08/05/2026 | [📄 Paper](https://arxiv.org/abs/2608.03812) | - | - |
 | GSTEP: Global Spatio-Temporal Density-Driven Visual Token Pruning for Efficient Video LLMs | 08/05/2026 | [📄 Paper](https://arxiv.org/abs/2608.03083) | - | - |
 | QAPruner: Quantization-Aware Vision Token Pruning for MLLMs | 04/2026 | [📄 Paper](https://arxiv.org/abs/2604.02816) | - | - |
