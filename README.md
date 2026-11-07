@@ -444,6 +444,8 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 ### 3.1.  <a name='alignment'></a>RL Alignment for VLM
 | Title | Year | Paper | RL | Code |
 |----------------|------|--------|---------|------|
+| TimeLens2: Generalist Video Temporal Grounding with Multimodal LLMs | 2026/07 | [Paper](https://arxiv.org/abs/2607.17423) | GRPO with temporal rewards | [Code](https://github.com/MCG-NJU/TimeLens2) |
+| Video-o3: Native Interleaved Clue Seeking for Long Video Multi-Hop Reasoning | 2026 (ICML) | [Paper](https://proceedings.mlr.press/v306/zeng26y.html) | SFT + trajectory-guided RL | [Code](https://github.com/MCG-NJU/Video-o3) |
 | Miles v0.1: Production-Level Post-Training | 09/08/2026 | [Paper](https://arxiv.org/abs/2609.08368) | Full-stack open async agentic RL; demonstrated on **GLM-5.2 744B-A40B MoE** across 64 NVIDIA GB300 GPUs (263 s median step) | [Code](https://github.com/radixark/miles) |
 | Reason Through the Latent! (CVRR) | 09/06/2026 | [Paper](https://arxiv.org/abs/2609.06746) | Causal Visual Recurrent Reasoning — strips visual KV cache before decoding to force latent reasoning; strong retention on V*, MMVP, BLINK, MME-RealWorld-Lite | - |
 | Beyond Data Scaling: Representation-Centric Continued Pre-training for VLAs (VLAct) | 08/27/2026 | [Paper](https://arxiv.org/abs/2608.27550) | VLM-prior preservation + multi-head continuous action co-supervision + partial cross-embodiment unification; **82.6% LIBERO-Plus, 92.5% RoboTwin 2.0 with 20% of trajectories** | [Project](https://starvla.github.io/VLAct) |
@@ -488,6 +490,9 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 ### 3.2. <a name='sft'></a>Finetuning for VLM
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| OneStreamer: Unifying Perception, Memory, and Proactive Response in Streaming Video Interaction | 2026/10 | [Paper](https://arxiv.org/abs/2610.01762) | - | [Code](https://github.com/MCG-NJU/OneStreamer) |
+| VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding | 2026/07 | [Paper](https://arxiv.org/abs/2607.14935) | - | [Code](https://github.com/MCG-NJU/VideoChat3) |
+| JoyAI-VL-Interaction: Real-Time Vision-Language Interaction Intelligence | 2026/06 | [Paper](https://arxiv.org/abs/2606.14777) | - | [Code](https://github.com/jd-opensource/JoyAI-VL-Interaction) |
 | Towards Physics of Multimodal Pretraining: Knowledge Flow, Modality Synergy, Early Unification, and Recipes | 08/2026 | [Paper](https://arxiv.org/abs/2608.05000) | - | - |
 | SpatialCLI: Learning to Reason With Spatial Tools, Then Without Them | 07/2026 | [Paper](https://huggingface.co/papers/2607.27703) | - | - |
 | Why Does RL Generalize Better Than SFT? A Data-Centric Perspective (DC-SFT) | 02/2026 | [Paper](https://arxiv.org/abs/2602.10815) | - | - |
@@ -522,6 +527,7 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 ### 3.4. <a name='vlm_prompt_engineering'></a>Prompt Optimization
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| Efficient Test-Time Prompt Tuning for Vision-Language Models | 2026 (IJCV) | [Paper](https://link.springer.com/article/10.1007/s11263-026-03019-3) | - | - |
 | EvoPrompt: Evolving Prompt Adaptation for Vision-Language Models | 2026/03 | [Paper](https://arxiv.org/abs/2603.09493) | - | - |
 |  MMLoP: Multi-Modal Low-Rank Prompting for Efficient Vision-Language Adaptation | 2026/02 | [Paper](https://arxiv.org/abs/2602.21397) | - | - |
 |  Multimodal Prompt Optimizer (MPO): Joint Optimization of Multimodal Prompts | 2025/10 | [Paper](https://arxiv.org/abs/2510.09201) | - | - |
@@ -558,6 +564,7 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 ### 4.2. <a name='GenerativeVisualMediaApplications'></a>Generative Visual Media Applications
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| Motion-aware generative frame interpolation | 2026 (SCIS) | [Paper](https://link.springer.com/article/10.1007/s11432-025-4920-3) | - | [Code](https://github.com/MCG-NJU/MoG-VFI) |
 | AuK (Tencent Hunyuan): open-source foundation model for **speech generation and editing** — multimodal LLM + jointly trained VAE + hybrid rectified-flow Transformer (MMDiT → single-stream DiT); AuK-Flash gives 4.5× wall-clock speedup via 4-step inference; trained on ~3.03B instruction-audio instances / 1.95M h | 09/08/2026 | [📄 Paper](https://arxiv.org/abs/2609.08936) | - | [💾 Code](https://github.com/Tencent-Hunyuan/AuK) |
 | Chimera: Designing and Chinchilla-Scaling Hybrid Visual Diffusion Transformers | 07/2026 | [📄 Paper](https://huggingface.co/papers/2607.28611) | - | - |
 | GPT4Motion: Scripting Physical Motions in Text-to-Video Generation via Blender-Oriented GPT Planning | 2023 | [📄 Paper](https://arxiv.org/pdf/2311.12631) | [🌍 Website](https://gpt4motion.github.io/) | [💾 Code](https://github.com/jiaxilv/GPT4Motion) |
@@ -812,6 +819,7 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 #### 5.4.1 <a name='MultimodalityAlignment'></a>Multi-modality Alignment
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| AWT: Transferring Vision-Language Models via Augmentation, Weighting, and Transportation | 2024 (NeurIPS) | [Paper](https://proceedings.neurips.cc/paper_files/paper/2024/hash/2d4eaf042567f1c03c086103cc154c1f-Abstract-Conference.html) | - | [Code](https://github.com/MCG-NJU/AWT) |
 | Mitigating Hallucinations in Large Vision-Language Models with Instruction Contrastive Decoding | 2024 | [📄 Paper](https://arxiv.org/pdf/2403.18715) | - | - |
 | Enhancing Visual-Language Modality Alignment in Large Vision Language Models via Self-Improvement | 2024 | [📄 Paper](https://arxiv.org/pdf/2405.15973) | - | - |
 | Assessing and Learning Alignment of Unimodal Vision and Language Models | 2024 | [📄 Paper](https://arxiv.org/pdf/2412.04616) | [🌍 Website](https://lezhang7.github.io/sail.github.io/) | - |
@@ -843,6 +851,9 @@ World models moved from research demos to release-grade artifacts in mid-2026: u
 ### 5.5 <a name=' EfficientTrainingandFineTuning'></a> Efficient Training and Fine-Tuning
 | Title | Year | Paper | Website | Code |
 |----------------|------|--------|---------|------|
+| MJev-Spatial: System One Spatial Intelligence via Native Attention Matching | 2026/10 | [Paper](https://arxiv.org/abs/2610.22276) | - | [Code](https://github.com/Fr0zenCrane/MJev-Spatial) |
+| VideoJev: System One Model for Video Understanding and Interaction | 2026/10 | [Paper](https://arxiv.org/abs/2610.18615) | - | [Code](https://github.com/MCG-NJU/VideoJev) |
+| FreeRet: MLLMs as Training-Free Retrievers | 2026 (ICML) | [Paper](https://proceedings.mlr.press/v306/zhu26ba.html) | - | [Code](https://github.com/MCG-NJU/FreeRet) |
 | OmniPack: Unified Token Compression for Efficient Omni-modal Large Language Models | 08/05/2026 | [📄 Paper](https://arxiv.org/abs/2608.03812) | - | - |
 | GSTEP: Global Spatio-Temporal Density-Driven Visual Token Pruning for Efficient Video LLMs | 08/05/2026 | [📄 Paper](https://arxiv.org/abs/2608.03083) | - | - |
 | FastOCR: Dynamic Visual Fixation via KV Cache Pruning (98% accuracy at 5% visual tokens, 3.0× faster) | 05/17/2026 | [📄 Paper](https://arxiv.org/abs/2605.17447) | - | - |
